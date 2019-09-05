@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto',sans-serif;
+	/*background-color: #1D0F5C;*/
+}
+
+.input{
+	margin: 100px auto;
+	width: 200px;
+	height: 30px;
+	border: 1px solid black;
+}
+.INPUT_LEFT{
+	position: relative;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.INPUT_LEFT:hover{
+	cursor: pointer;
+}
+.INPUT_LEFT::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -20px;
+	width: 20px;
+	height: 100%;
+	background-color: black;
+	transition: all 300ms ease;
+}
+.INPUT_LEFT::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: calc(100%);
+	height: 100%;
+	background-color: white;
+	transition: all 300ms ease;
+}
+.INPUT_LEFT:hover:before{
+	left: 100%;
+	transition: all 300ms ease;
+}
+.INPUT_LEFT:hover:after{
+	left: 100%;
+	transition: all 300ms ease;
+}
+
+
+
+.INPUT_TOP{
+	position: relative;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.INPUT_TOP:hover{
+	cursor: pointer;
+}
+.INPUT_TOP::before{
+	position: absolute;
+	content: "";
+	top: -20px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background-color: black;
+	transition: all 300ms ease;
+}
+.INPUT_TOP::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	transition: all 300ms ease;
+}
+.INPUT_TOP:hover:before{
+	top: 100%;
+	transition: all 300ms ease;
+}
+.INPUT_TOP:hover:after{
+	top: 100%;
+	transition: all 300ms ease;
+}
+
+
+.INPUT_TLEFT{
+	position: relative;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.INPUT_TLEFT:hover{
+	cursor: pointer;
+}
+.INPUT_TLEFT::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -100px;
+	width: 100px;
+	height: 100%;
+	transform: rotate(-45deg);
+	background-color: black;
+	transition: all 300ms ease;
+	z-index: 1;
+}
+.INPUT_TLEFT::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: -20px;
+	width: calc(100%);
+	height: 100%;
+	background-color: white;
+	transition: all 300ms ease;
+	z-index: 0;
+}
+.INPUT_TLEFT:hover:before{
+	left: calc(100% +  20px);
+	transition: all 300ms ease;
+}
+.INPUT_TLEFT:hover:after{
+	left: 100%;
+	transition: all 300ms ease;
+}
+
+
+.INPUT_OUT{
+	position: relative;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+	color: white;
+	justify-content: center;
+	border-radius: 100px;
+	/*overflow: hidden;*/
+}
+.INPUT_OUT:hover{
+	cursor: pointer;
+	color: black;
+}
+.INPUT_OUT::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-color: black;
+	transition: all 300ms ease;
+	border-radius: 100px;
+	z-index: -1;
+}
+.INPUT_OUT:hover:before{
+	transform: scale(1.5);
+	opacity: 0;
+	transition: all 300ms ease;
+}

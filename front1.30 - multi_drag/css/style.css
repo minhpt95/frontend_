@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+/*
+	1.CONFIG
+	2.BACKGROUND
+	3.BODY
+		3.1.Execute_Buy
+		3.2.MAP
+		3.3.ORDER_BOOK
+		3.4.SEARCH
+
+
+*/
+/*........................................... CONFIG .............................................*/
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Dosis', 'Roboto',sans-serif;
+}
+button{
+	cursor: pointer;
+}
+.display{
+	display: block;
+	transition: all 100ms linear;
+}
+/*........................................... CONFIG .............................................*/
+
+
+
+
+
+/*........................................... BACKGROUND .............................................*/
+.background{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.background img{
+	width: 100%;
+}
+.background_color{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}
+/*........................................... BACKGROUND .............................................*/
+
+
+
+/*........................................... BODY .............................................*/
+.BODY{
+	position: relative;
+	width: 100%;
+}
+.BODY_IN{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 5%;
+	height: 100%;
+}
+.bound{
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	width: calc(95% - 40px);
+	overflow: hidden;
+	min-height: calc(100vh - 40px);
+}
+.header_item{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+}
+.header_item .header{
+	width: 100%;
+	padding: 0 10px;
+	overflow: hidden;
+}
+/*........................................... BODY .............................................*/
+
+
+/*........................................... NAV .............................................*/
+.nav .Nav_In{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(38, 48, 70, .9);
+}
+.nav .Nav_In .OpenNav{
+	margin: auto;
+	padding: 10px 0;
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	transition: all 300ms ease;
+}
+.nav .Nav_In .OpenNav:hover{
+	cursor: pointer;
+	color: white;
+	transition: all 300ms ease;
+}
+.nav .Nav_In ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.nav .Nav_In ul li{
+	margin: 5px auto;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #17b25b;
+	background-color: rgba(38, 48, 70, .9);
+}
+.nav .Nav_In ul li:hover{
+	cursor: pointer;
+}
+
+.Red{
+	color: #e13d49;
+} 
+.Green{
+	color: #17b25b;
+}
+
+
+/*........................................... NAV .............................................*/
+
+
+
+
+/*........................................... Execute_Buy .............................................*/
+.Execute_Buy{
+	/*overflow: scroll;*/
+}
+.Execute_Buy .ratio{
+	float: left;
+	color: white;
+	font-weight: bold;
+}
+.Execute_Buy .spread{
+	float: right;
+	color: white;
+	font-weight: bold;
+}
+.Execute_Buy .spread span{
+	color: #979797;
+	font-weight: bold;
+}
+.Execute_Buy .Component{
+	width: 100%;
+	padding: 8px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+}
+.Execute_Buy .Component_header{
+	width: calc(100% - 20px);
+	/*height: 30px;*/
+	padding: 5px 10px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+.Execute_Buy .Component_body{
+	width: calc(100% - 20px);
+	/*height: 30px;*/
+	padding: 5px 10px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+.Execute_Buy .Component_body button{
+	width: 30%;
+	height: 40px;
+	border: none;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #ccc;
+	color: #ccc;
+	transition: all 300ms ease;
+}
+.buy:hover{
+	color: white !important;
+	background-color: green !important;
+	transition: all 300ms ease;
+}
+.sell:hover{
+	color: white !important;
+	background-color: red !important;
+	transition: all 300ms ease;
+}
+.Execute_Buy .Component_body input{
+	padding: 0;
+	border: none;
+	width: 40%;
+	height: 40px;
+	padding-left: 10px;
+	background-color: #1d2637;
+	color: white;
+}
+.mg_type{
+	margin-right: 5%;
+}
+.mg_type:hover{
+	color: #dcbe00 !important;
+	background-color: #1d2637 !important;
+}
+.Execute_Buy .limit_price .Component_body .price{
+	width: 100%;
+	height: 40px;
+	background-color: #1d2637;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.Execute_Buy .percen_button button{
+	width: 24%;
+	height: 40px;
+	border: none;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #ccc;
+	color: #ccc;
+	transition: all 300ms ease;
+}
+.Execute_Buy .percen_button button:hover{
+	color: #dcbe00 !important;
+	background-color: #1d2637 !important;
+}
+.mg_percen{
+	margin-right: 1%;
+}
+.EXECUTE .Component_body button{
+	width: 100%;
+	background-color: #1d2637;
+	border: 1px solid #ccc !important;
+}
+/*........................................... Execute_Buy .............................................*/
+
+
+/*........................................... MAP .............................................*/
+.Map{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*........................................... MAP .............................................*/
+
+
+
+/*........................................... ORDER_BOOK .............................................*/
+
+.ORDER_BOOK{
+	/*overflow: scroll;*/
+}
+.ORDER_BOOK .ratio{
+	float: left;
+	color: white;
+	font-weight: bold;
+}
+.ORDER_BOOK .Component{
+	width: 100%;
+	/*height: 100px;*/
+	/*background-color: red;*/
+	overflow: hidden;
+}
+
+.ORDER_BOOK .Component .Component_body{
+	float: left;
+	width: 49%;
+	overflow: hidden;
+}
+.Item{
+	width: 100%;
+	height: 30px;
+}
+
+.Item:hover{
+	cursor: pointer;
+	background-color: #181e2d;
+}
+.Item .col50{
+	float: left;
+	width: 50%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+.Item .col25{
+	float: left;
+	width: 25%;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+.Item p{
+	color: #4b5873;
+}
+.Item .Red{
+	color: #e13d49;
+}
+.Item .Green{
+	color: #17b25b;
+}
+
+/*........................................... ORDER_BOOK .............................................*/
+
+
+
+
+/*........................................... SEARCH .............................................*/
+.SEARCH{
+
+}
+.SEARCH .header_item{
+	overflow: hidden;
+}
+.SEARCH .ratio{
+	float: left;
+	color: #dcbe00;
+	background-color: #181e2d;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+
+.SEARCH .search input{
+	float: right;
+	height: 30px;
+	color: white;
+	background-color: #181e2d;
+	/*font-weight: bold;*/
+	padding-left: 5px;
+}
+
+
+/*........................................... SEARCH .............................................*/
+
+
+.zoom{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+	z-index: 1000;
+}
+.zoom:hover{
+	cursor: se-resize;
+}
+.demo_bound{
+	/*position: relative;*/
+	width: 400px;
+	overflow: hidden;
+}
+
+

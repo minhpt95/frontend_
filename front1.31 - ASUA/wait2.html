@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	
+	<link rel="stylesheet" href="css/menu.css" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+	<div class="header">
+		<div class="header_in">
+			<div class="title">
+				<div id="sidebar-menu">
+					<div class="home_menu" id="openmenu">
+						<i class="fas fa-times" id="back"></i>
+						<i class="fas fa-bars" id="next"></i>
+					</div>
+				    
+
+				    <div class="drawer_menu">
+				        <div class="drawer_bg" id="drawer_bg"></div>
+
+				        <nav class="drawer_nav_wrapper">
+				            <ul class="drawer_nav" style="overflow:hidden;">
+				                <h3>患者 MENU</h3>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('history');return false;">
+				                        履歴
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('inputs');return false;">
+				                        サブカルテ
+				                    </a>
+				                </li>
+				                <li>
+				                    <a class="sub_menu_title">検査</a>
+				                    <ul class="sub_menu">
+				                            <li><a href="javascript:void(0)" onClick="goNext('periodontal');return false;">歯周基本検査</a></li>
+				                            <li><a href="">プラーク検査</a></li>
+				                            <li><a href="">口腔診査</a></li>
+				                    </ul>
+				                </li>
+				                <li>
+				                    <a class="sub_menu_title" style="cursor:pointer;font-size:24px;line-height:50px;">画像</a>
+				                    <ul class="sub_menu">
+				                        <li><a href="javascript:void(0)" onClick="displayFolder('folder');return false;">パントモ</a></li>
+				                        <li><a href="javascript:void(0)" onClick="displayFolder('folder');return false;">その他画像</a></li>
+				                    </ul>
+				                </li>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('edit_sheet');return false;">
+				                        工程表
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('edit_sheet');return false;">
+				                        問診票
+				                    </a>
+				                </li>
+				                <li>
+				                    <a class="dropdown-item" href="{{ route('logout') }}">
+				                        {{ __('Logout') }}
+				                    </a>
+				                </li>
+				            </ul>
+				        </nav>
+				    </div>
+				</div>
+
+				<!-- <div class="home_menu">
+					<i class="fas fa-bars"></i>
+				</div> -->
+				<span>待ち患者一覧</span>
+			</div>
+			<div class="menu">
+				<ul style="width: 120px;">
+					<li>
+						<a href=""><i class="fas fa-home"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fas fa-search"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="body">
+		<div class="body_in">
+			<div class="">
+				<div class="table">
+					<table style="width:100%">
+		                <thead>
+		                    <tr class="table_header">
+		                        <th>No.</th>
+		                        <th>氏名</th>
+		                        <th>部位</th>
+		                        <th>内容</th>
+		                        <th>予約</th>
+		                        <th>経過時間</th>
+		                        <th>状態</th>
+		                        <th>次回</th>
+		                        <th></th>
+		                    </tr>
+		                </thead>
+		                <tbody>
+		                    <tr>
+		                        <td>{!! $i !!}</td>
+		                        <td><a href="">診察待</a></td>
+		                        <td>診察待</td>
+		                        <td></td>
+		                        <td>【急患】</td>
+		                        <td>284分</td>
+		                        <td>診察待</td>
+		                        <td><a href="">予約入力</a></td>
+		                        <td><a href="#"><span data-toggle="modal" data-target="#myModal{!! $i !!}">...</span></a></td>
+		                    </tr>
+		                    <tr>
+		                        <td>{!! $i !!}</td>
+		                        <td><a href="">診察待</a></td>
+		                        <td>診察待</td>
+		                        <td></td>
+		                        <td>【急患】</td>
+		                        <td>284分</td>
+		                        <td>診察待</td>
+		                        <td><a href="">予約入力</a></td>
+		                        <td><a href="#"><span data-toggle="modal" data-target="#myModal{!! $i !!}">...</span></a></td>
+		                    </tr>
+		                    <tr>
+		                        <td>{!! $i !!}</td>
+		                        <td><a href="">診察待</a></td>
+		                        <td>診察待</td>
+		                        <td></td>
+		                        <td>【急患】</td>
+		                        <td>284分</td>
+		                        <td>診察待</td>
+		                        <td><a href="">予約入力</a></td>
+		                        <td><a href="#"><span data-toggle="modal" data-target="#myModal{!! $i !!}">...</span></a></td>
+		                    </tr>
+		                    <tr>
+		                        <td>{!! $i !!}</td>
+		                        <td><a href="">診察待</a></td>
+		                        <td>??????</td>
+		                        <td></td>
+		                        <td>【急患】</td>
+		                        <td>284分</td>
+		                        <td>診察待</td>
+		                        <td><a href="">予約入力</a></td>
+		                        <td><a href="#"><span data-toggle="modal" data-target="#myModal{!! $i !!}">...</span></a></td>
+		                    </tr>
+		                    <tr>
+		                        <td>{!! $i !!}</td>
+		                        <td><a href="">診察待</a></td>
+		                        <td>診察待</td>
+		                        <td></td>
+		                        <td>【急患】</td>
+		                        <td>284分</td>
+		                        <td>診察待</td>
+		                        <td><a href="">予約入力</a></td>
+		                        <td><a href="#"><span data-toggle="modal" data-target="#myModal{!! $i !!}">...</span></a></td>
+		                    </tr>
+		                    <tr>
+		                        <td>{!! $i !!}</td>
+		                        <td><a href="">診察待</a></td>
+		                        <td>診察待</td>
+		                        <td></td>
+		                        <td>【急患】</td>
+		                        <td>284分</td>
+		                        <td>診察待</td>
+		                        <td><a href="">予約入力</a></td>
+		                        <td><a href="#"><span data-toggle="modal" data-target="#myModal{!! $i !!}">...</span></a></td>
+		                    </tr>
+
+		                    <div class="modal fade" id="myModal{!! $i !!}" role="dialog">
+		                        <div class="modal-dialog modal-sm">
+		                            <div class="modal-content">
+		                                <div class="modal-body">
+		                                    <div class="modal_item">
+		                                        診察待
+		                                    </div>
+		                                    <div class="modal_item">
+		                                        診察中
+		                                    </div>
+		                                    <div class="modal_item">
+		                                        会計待
+		                                    </div>
+		                                    <div class="modal_item">
+		                                        終了
+		                                    </div>
+		                                    <div class="modal_item" style="color: red;">
+		                                        削除
+		                                    </div>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </tbody>
+					</table> 
+				</div>
+				<div class="Pagination" id="pagination">
+					<ul class="pagination">
+					  	<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+					  	<li class="page-item"><a class="page-link" href="#">1</a></li>
+					  	<li class="page-item"><a class="page-link" href="#">2</a></li>
+					  	<li class="page-item"><a class="page-link" href="#">3</a></li>
+					  	<li class="page-item"><a class="page-link" href="#">Next</a></li>
+					</ul> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/effect_custom.js"></script>
+</html>

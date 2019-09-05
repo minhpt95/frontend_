@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Front-1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+
+<body>
+    <div class="Navigation">
+        <div class="Navigation_Item">
+        	<div class="admin">
+        		
+        	</div>
+        	<div class="OpenBar" id="OpenBar">
+        		<i class="fas fa-bars" id="Icon"></i>
+        	</div>
+        </div>
+    </div>
+    <div class="Bar" id="Bar">
+    	
+    </div>
+</body>
+<script type="text/javascript">
+	var OpenBar = document.getElementById("OpenBar");
+	var Bar = document.getElementById("Bar");
+	var Icon = document.getElementById("Icon");
+
+	OpenBar.addEventListener("click", OpenNav);
+
+	var num = 0;
+	function OpenNav() {
+	 	if(num == 0){
+	    	Bar.style.left = '0px';
+	    	Icon.classList.remove("fa-bars");
+	    	Icon.classList.add("fa-times");
+	    	num = 1;
+	 	}else{
+	    	Bar.style.left = '-100%';
+	    	Icon.classList.remove("fa-times");
+	    	Icon.classList.add("fa-bars");
+	    	num = 0;
+	 	}
+	}
+</script>
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto',sans-serif;
+}
+.body{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+.body img{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.plane{
+	position: absolute;
+	width: 200px;
+	top: 285px;
+	left: -200px;
+	z-index: 2;
+	/*overflow: hidden;*/
+
+  	animation-name: example;
+  	animation-delay: 2s;
+  	animation-duration: .5s;
+  	animation-fill-mode: forwards;
+}
+.plane img{
+	width: 100%;
+}
+.island{
+	position: absolute;
+	width: 200px;
+	top: 215px;
+	left: 100%;
+	opacity: 0;
+	z-index: 2;
+
+  	animation-name: island;
+  	animation-delay: 1.5s;
+  	animation-duration: .5s;
+  	animation-fill-mode: forwards;
+}
+.plane img{
+	width: 100%;
+}
+.ballon{
+	position: absolute;
+	width: 20px;
+	top: 215px;
+	left: 10%;
+	opacity: 1;
+	z-index: 2;
+
+	background-color: red;
+
+  	/*animation-name: island;*/
+  	/*animation-delay: 2.3s;
+  	animation-duration: .5s;
+  	animation-fill-mode: forwards;*/
+}
+.ballon img{
+	width: 100%;
+}
+
+
+
+
+@keyframes example {
+	0%{
+		left: -200px;
+	}
+	100%{
+		left: 500px;
+	}
+}
+
+@keyframes island {
+	0%{
+		left: 100%;
+		opacity: 0;
+	}
+	100%{
+		left: 10%;
+		opacity: 1;
+	}
+}

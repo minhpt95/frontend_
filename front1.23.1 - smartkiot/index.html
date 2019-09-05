@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/aos.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<!-- <link rel="stylesheet" href="css/jquery.treeSelector.css" /> -->
+	
+    <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.css'> -->
+    <link rel="stylesheet" href="css/multi-select-menu.css">
+
+	<link rel="stylesheet" href="vendon/Dropdown/css/nice-select.css">
+
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> -->
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+<body>	
+	<div class="BODY">
+		<div class="BODY_BACKGROUND">
+			<!-- <video preload="auto" autoplay="autoplay" loop="loop"> <source src="1.mp4" type="video/mp4"> </video> -->
+			<!-- <img src="img/1.jpg"> -->
+			<img src="img/background.jpg">
+		</div>
+		<div class="Nav" id="Nav">
+			<div class="LOGO">
+				<img src="img/logo.png">
+				<div class="NAME" id="NAME">
+					CHAINOS&#160;SOLUTION
+				</div>
+			</div>
+		</div>
+		<div class="Bar" id="Bar">
+			<!-- CONTROL NAV -->
+			<div class="Control_Nav" id="Control_Nav">
+				<!-- <i class="fas fa-bars"></i> -->
+				<i class="fas fa-arrow-left"></i>
+			</div>
+
+			<!-- CONTROL NAV IN Responsive -->
+			<div class="Control_Nav_Responsive" id="Control_Nav_Responsive">
+				<i class="fas fa-bars"></i>
+				<!-- <i class="fas fa-arrow-left"></i> -->
+			</div>
+			<div class="SelectShop">
+				<select class="SELECT_SHOP">
+				  	<option data-display="Shop1" value="Shop1">Shop1</option>
+				  	<option value="Shop2">Shop2</option>
+				  	<option value="Shop3">Shop3</option>
+				  	<option value="Shop4">Shop4</option>
+				</select> 
+			</div>
+		</div>
+		<div class="Main" id="Main">
+			<div class="Main_In">
+				<!-- <input type="" name="dates"> -->
+				<script type="text/javascript">$('input[name="dates"]').daterangepicker();</script>
+				<div class="row Customer">
+					<div class="col-md-4" style="margin: 3px 0;">
+						<div class="Customer_Item Repeaters">
+							<div class="Infomation">
+								<i class="far fa-eye"></i>
+								<div class="MoreInfo">
+									Repeaters
+								</div>
+								<div class="Count">
+									3,600
+								</div>
+							</div>
+							<div class="Percent">
+								<div class="In">
+									90%
+								</div>
+							</div>
+							<div class="progress">
+							  	<div class="progress-bar" style="width:90%"></div>
+							</div> 
+							<div class="Customer_Link Repeaters"></div>
+							<a href=""><i class="fas fa-share"></i></a>
+						</div>
+					</div>
+					<div class="col-md-4" style="margin: 3px 0;">
+						<div class="Customer_Item New_Customer">
+							<div class="Infomation">
+								<i class="fas fa-plus"></i>
+								<div class="MoreInfo">
+									New customers
+								</div>
+								<div class="Count">
+									400
+								</div>
+							</div>
+							<div class="Percent">
+								<div class="In">
+									10%
+								</div>
+							</div>
+							<div class="progress">
+							  	<div class="progress-bar" style="width:10%"></div>
+							</div> 
+							<div class="Customer_Link New_Customer"></div>
+							<a href=""><i class="fas fa-share"></i></a>
+						</div>
+					</div>
+					<div class="col-md-4" style="margin: 3px 0;">
+						<div class="Customer_Item All_Customer">
+							<div class="Infomation">
+								<i class="fas fa-users"></i>
+								<div class="MoreInfo">
+									All customers
+								</div>
+								<div class="Count">
+									4,000
+								</div>
+							</div>
+							<div class="Percent">
+								<div class="In">
+									100%
+								</div>
+							</div>
+							<div class="progress">
+							  	<div class="progress-bar" style="width:100%"></div>
+							</div> 
+							<div class="Customer_Link All_Customer"></div>
+							<a href=""><i class="fas fa-share"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="CHART">
+					<div class="row" style="width: 99%;margin: auto;">
+						<div class="col-md-12 col-lg-4">
+							<div class="MultiSelectShop mg">
+								<select id="shop" name="shop[]" multiple="">
+									<option value="Shop1">Shop1</option>
+									<option value="Shop2" >Shop2</option>
+									<option value="Shop3" >Shop3</option>
+									<option value="Shop4" >Shop4</option>
+									<option value="Shop3" >Shop3</option>
+									<option value="Shop4" >Shop4</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-12 col-lg-4 mg">
+							 <select class="SELECT_SHOP">
+							  	<option data-display="Visited" value="Visited">Visited</option>
+							  	<option value="Age">Age</option>
+							  	<option value="Emotion">Emotion</option>
+							</select> 
+						</div>
+						<div class="col-md-12 col-lg-2 mg">
+							 <select class="SELECT_SHOP">
+							  	<option data-display="Visited" value="Visited">Visited</option>
+							  	<option value="Age">Age</option>
+							  	<option value="Emotion">Emotion</option>
+							</select> 
+						</div>
+						<div class="col-md-12 col-lg-2 mg">
+							<button type="button" class="btn btn-success" style="width: 100%; height:100%;">Search</button>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+</body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/effect_custom.js"></script>
+
+<script src="vendon/Dropdown/js/jquery.js"></script> 
+<script src="vendon/Dropdown/js/jquery.nice-select.js"></script>
+
+<script src="js/multi-select.min.js"></script>
+<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.min.js'></script> -->
+<script type="text/javascript"> $('#shop').multiSelect(); </script>
+<!-- <script src="js/jquery.treeSelector.js"></script> -->
+<script type="text/javascript"> $(document).ready(function() { $('.SELECT_SHOP').niceSelect(); }); </script>
+</html>

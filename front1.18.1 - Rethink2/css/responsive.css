@@ -1,0 +1,301 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	.Table_Edit_Part{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+
+/**************************************************************************************************************************
+8. 1024px
+**************************************************************************************************************************/
+
+@media only screen and (min-width: 1024px)
+{
+	.bigsize{
+		display: block;
+	}
+	.smallsize{
+		display: none;
+	}
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	.Navigation{
+		z-index: 2;
+	}
+	.Navigation_Item .OpenBar{
+		display: block;
+	}
+	.Bar{
+		width: 100%;
+		left: -100%;
+		height: calc(100vh + 60px);
+		overflow: scroll;
+		transition: all 300ms ease;
+		z-index: 1;
+	}
+	.LOGO_MIDDLE{
+		display: block;
+	}
+	/*.Bar .logo{
+		display: none;
+	}*/
+	.Index{
+		left: 0;
+		min-width: 100%;
+	}
+	.Bar ul li:hover .open img{
+		transform: rotate(0);
+		transition: all 300ms ease;
+	}
+	.Bar ul li .open{
+		position: absolute;
+		width: 90px;
+		height: 45px;
+		top: 0px;
+		right: -15px;
+		transition: all 300ms ease;
+		z-index: 3;
+	}
+
+	.ListItem:hover .multiSelect{
+		left: 0;
+		transition: all 300ms ease;
+	}
+	.multiSelect{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		z-index: 0;
+		opacity: 1;
+		display: block;
+		box-shadow: none;
+	}
+	.multiSelect ul{
+		position: absolute;
+		bottom: 0;
+		width: 85%;
+		margin: 46px 0 0 15%;
+	}
+	.multiSelect ul li{
+		/*background-color: red;*/
+	}
+	.bigsize{
+		display: none;
+	}
+	.smallsize{
+		display: block;
+	}
+
+	.Table_Title{
+		padding: 0;
+	}
+	.Table_Banner{
+		margin: 0;
+	}
+	.Table_Status button{
+		margin: 0;
+	}
+	.Table_Edit_Part{
+		float: left;
+		width: 20%;
+		/*overflow: hidden;	*/
+		display: flex;
+		justify-content: center;
+	}
+
+	.smallsize tr{
+		border: solid 1px #d8e5ff !important;
+	}
+	.Table_Edit_Part{
+		margin-bottom: 0;
+	}
+
+	.EDIT_FRAME{
+		position: absolute;
+		top: 70px;
+		left: -100px;
+		width: 300px;
+		height: 410px;
+		background-color: white;
+	}
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+	
+}
+
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+}

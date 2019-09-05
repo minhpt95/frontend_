@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+
+	
+    <link rel="stylesheet" href="css/gridstack.css"/>
+    <!-- <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css" /> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.0/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/shim.min.js"></script> -->
+    <script src="js/gridstack.js"></script>
+    <script src="js/gridstack.jQueryUI.js"></script>
+
+  
+
+    <style type="text/css">
+        .grid-stack {
+            /*background: lightgoldenrodyellow;*/
+        }
+
+        .grid-stack-item-content {
+            color: #2c3e50;
+            background-color: rgba(38, 48, 70, .7);
+        }
+    </style>
+</head>
+<body>
+  	<div class="BODY">
+		<div class="background"> <img src="img/mainbg.jpg"> </div>
+		<div class="background_color"></div>
+		<div class="BODY_IN">
+			<div class="nav">
+				<div class="Nav_In">
+					<div class="OpenNav">
+						<i class="fas fa-bars"></i>
+					</div>
+					<ul>
+						<li id="O_USD"><i class="fas fa-dollar-sign"></i></li>
+						<li id="O_History"><i class="fas fa-history"></i></li>
+						<li id="O_Map"><i class="fas fa-map-marked-alt"></i></li>
+						<li id="O_Order_Book"><i class="fas fa-shopping-cart"></i></li>
+						<li id="O_Pay"><i class="fas fa-money-bill-wave-alt"></i></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bound">
+				<!-- <div class="in"> -->
+					<div class="grid-stack grid-stack-animate">
+					    <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide display" id="Pay" 
+					        data-gs-x="8" data-gs-y="0"
+					        data-gs-width="4" data-gs-height="7">
+					        <div class="grid-stack-item-content">
+					        	<div class="Execute_Buy">
+					        		<div class="header_item">
+					        			<div class="header">
+					        				<div class="ratio">
+						        				VND/USD
+						        			</div>
+						        			<div class="spread">
+						        				<span>Spread:</span> 0.22%
+						        			</div>
+					        			</div>
+					        		</div>
+				        			<div class="Component">
+				        				<div class="Component_header">
+				        					Quantity :
+				        				</div>
+				        				<div class="Component_body">
+				        					<button class="buy">
+				        						BUY<br>97.56
+				        					</button>
+				        					<input type="" name="" placeholder="VND Quantity">
+				        					<button class="sell">
+				        						SELL<br>97.21
+				        					</button>
+				        				</div>
+				        			</div>
+				        			<div class="Component">
+				        				<div class="Component_header">
+				        					Type :
+				        				</div>
+				        				<div class="Component_body">
+				        					<button class="mg_type">
+				        						MARKET
+				        					</button>
+				        					<button class="mg_type">
+				        						LIMIT
+				        					</button>
+				        					<button>
+				        						ADVANCED
+				        					</button>
+				        				</div>
+				        				<div class="limit_price">
+					        				<div class="Component_header">
+					        					Limit Price :
+					        				</div>
+				        					<div class="Component_body">
+				        						<div class="price">97.08</div>
+				        					</div>
+				        				</div>
+				        				<div class="percen_button">
+					        				<div class="Component_header">
+					        					Limit Price :
+					        				</div>
+				        					<div class="Component_body">
+				        						<button class="mg_percen">
+					        						25%
+					        					</button>
+					        					<button class="mg_percen">
+					        						50%
+					        					</button>
+					        					<button class="mg_percen">
+					        						75%
+					        					</button>
+					        					<button>
+					        						100%
+					        					</button>
+				        					</div>
+				        				</div>
+				        				<div class="limit_price">
+					        				<div class="Component_header">
+					        					Total amount :
+					        				</div>
+				        					<div class="Component_body">
+				        						<div class="price">0.00 USD</div>
+				        					</div>
+				        				</div>
+			        				</div>
+			        				<div class="Component">
+			        					<div class="EXECUTE">
+			        						<div class="Component_body">
+					        					<button>
+					        						EXECUTE
+					        					</button>
+					        				</div>
+			        					</div>
+			        				</div>
+					        	</div>
+					        </div>
+					    </div>
+					    <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide display" id="Maps" 
+					        data-gs-x="0" data-gs-y="0"
+					        data-gs-width="4" data-gs-height="4">
+					            <div class="grid-stack-item-content">
+					            	<div class="Map">
+					            		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.016355062127!2d105.78066575035686!3d21.03203158592787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aba64da7e267%3A0xcda9cf81000e0d91!2sChainos+Solution!5e0!3m2!1svi!2s!4v1565073758860!5m2!1svi!2s"frameborder="0" style="border:0;width: 100%;height: 91%;padding-top: 5%" allowfullscreen></iframe>
+					            	</div>
+					            </div>
+					    </div>
+					    <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide display" id="Order_Book" 
+					        data-gs-x="0" data-gs-y="0"
+					        data-gs-width="4" data-gs-height="4">
+					            <div class="grid-stack-item-content">
+					            	<div class="ORDER_BOOK">
+					            		<div class="header_item">
+						        			<div class="header">
+						        				<div class="ratio">
+							        				ORDER BOOK [ VND/USD ]
+							        			</div>
+						        			</div>
+						        		</div>
+						        		<div class="Component">
+					        				<div class="Component_body">
+					        					<div class="Item" style="border-bottom: 1px solid #ccc">
+					        						<div class="col25">
+					        							Total
+					        						</div>
+					        						<div class="col25">
+					        							Quantity
+					        						</div>
+					        						<div class="col50">
+					        							Price
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col50 Green">
+					        							4.4664
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col50 Green">
+					        							4.4664
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col50 Green">
+					        							4.4664
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col50 Green">
+					        							4.4664
+					        						</div>
+					        					</div>
+					        				</div>
+					        				<div class="Component_body" style="border-left: 1px solid #ccc">
+					        					
+					        					<div class="Item" style="border-bottom: 1px solid #ccc">
+					        						<div class="col50">
+					        							Price
+					        						</div>
+					        						<div class="col25">
+					        							Quantity
+					        						</div>
+					        						<div class="col25">
+					        							Total
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						
+					        						<div class="col50 Red">
+					        							4.466.444.664
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						
+					        						<div class="col50 Red">
+					        							4.4664
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						
+					        						<div class="col50 Red">
+					        							4.4664
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						
+					        						<div class="col50 Red">
+					        							4.4664
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        					</div>
+					        					<div class="Item">
+					        						<div class="col50 Red">
+					        							4.4664
+					        						</div>
+					        						<div class="col25">
+					        							0.8244
+					        						</div>
+					        						<div class="col25">
+					        							3.6821
+					        						</div>
+					        					</div>
+					        				</div>
+					        			</div>
+					            	</div>
+					            	
+					            </div>
+					    </div>
+					    <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide display" id="History" 
+					        data-gs-x="4" data-gs-y="0"
+					        data-gs-width="4" data-gs-height="4">
+					            <div class="grid-stack-item-content">
+					            	<div class="ORDER_BOOK">
+					            		<div class="header_item">
+						        			<div class="header">
+						        				<div class="ratio">
+							        				HISTORY TRADE [ VND/USD ]
+							        			</div>
+						        			</div>
+						        		</div>
+										<div class="Item" style="border-bottom: 1px solid #ccc">
+			        						<div class="col25">
+			        							Price
+			        						</div>
+			        						<div class="col25">
+			        							Total
+			        						</div>
+			        						<div class="col50">
+			        							Date
+			        						</div>
+			        					</div>
+			        					<div class="Item">
+			        						<div class="col25 Red">
+			        							4.4664
+			        						</div>
+			        						<div class="col25">
+			        							0.8244
+			        						</div>
+			        						<div class="col50">
+			        							<p>06/08/19 - </p>14:38
+			        						</div>
+			        					</div>
+			        					
+			        					<div class="Item">
+			        						<div class="col25 Red">
+			        							4.466.444.664
+			        						</div>
+			        						<div class="col25">
+			        							0.8244
+			        						</div>
+			        						<div class="col50">
+			        							<p>06/08/19 - </p>14:38
+			        						</div>
+			        					</div>
+			        					
+			        					<div class="Item">
+			        						<div class="col25 Green">
+			        							4.4664
+			        						</div>
+			        						<div class="col25">
+			        							0.8244
+			        						</div>
+			        						<div class="col50">
+			        							<p>06/08/19 - </p>14:38
+			        						</div>
+			        					</div>
+			        					
+					            	</div>
+					            </div>
+					    </div>
+					    <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide display" id="USD" 
+					        data-gs-x="4" data-gs-y="0"
+					        data-gs-width="4" data-gs-height="4">
+					            <div class="grid-stack-item-content">
+					            	<div class="SEARCH">
+					            		<div class="header_item">
+						        			<div class="header">
+						        				<div class="ratio">
+							        				USD
+							        			</div>
+							        			<div class="search">
+							        				<input type="" name="" placeholder="Search...">
+							        			</div>
+						        			</div>
+						        		</div>
+			        					<div class="Item" style="border-bottom: 1px solid #ccc">
+			        						<div class="col25">
+			        							Pair
+			        						</div>
+			        						<div class="col25">
+			        							Last Price
+			        						</div>
+			        						<div class="col25">
+			        							24h Change
+			        						</div>
+			        						<div class="col25">
+			        							Volume
+			        						</div>
+			        					</div>
+			        					<div class="Item">
+			        						<div class="col25">
+			        							TAT/USD
+			        						</div>
+			        						<div class="col25">
+			        							4.4691 / $4.46
+			        						</div>
+			        						<div class="col25 Green">
+			        							2.89 %
+			        						</div>
+			        						<div class="col25">
+			        							138,397.04
+			        						</div>
+			        					</div>
+			        					<div class="Item">
+			        						<div class="col25">
+			        							TAT/USD
+			        						</div>
+			        						<div class="col25">
+			        							4.4691 / $4.46
+			        						</div>
+			        						<div class="col25 Green">
+			        							2.89 %
+			        						</div>
+			        						<div class="col25">
+			        							138,397.04
+			        						</div>
+			        					</div>
+			        					<div class="Item">
+			        						<div class="col25">
+			        							TAT/USD
+			        						</div>
+			        						<div class="col25">
+			        							4.4691 / $4.46
+			        						</div>
+			        						<div class="col25 Green">
+			        							2.89 %
+			        						</div>
+			        						<div class="col25">
+			        							138,397.04
+			        						</div>
+			        					</div>
+					            	</div>
+					            </div>
+					    </div>
+					    <!-- <div class="grid-stack-item ui-draggable ui-resizable ui-resizable-autohide"
+					        data-gs-x="4" data-gs-y="0"
+					        data-gs-width="4" data-gs-height="4">
+					            <div class="grid-stack-item-content"></div>
+					    </div> -->
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+		$(function () {
+		    $('.grid-stack').gridstack();
+		});
+		</script>
+		<script type="text/javascript" src="js/effect_custom.js"></script>
+  	</div>
+  
+</div>
+
+</body>
+</html>

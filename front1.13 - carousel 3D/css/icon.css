@@ -1,0 +1,28 @@
+.fas{
+	position: relative;
+}
+.i0000::before{
+	position: absolute;
+	content: "\0000";
+	color: black;
+}
+.i0001::before{
+	position: absolute;
+	content: "\0001";
+	color: black;
+}
+.i0002::before{
+	position: absolute;
+	content: "\0002";
+	color: black;
+}
+.i0003::before{
+	position: absolute;
+	content: "\0003";
+	color: black;
+}
+.i0004::before{
+	position: absolute;
+	content: "\0004";
+	color: black;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	
+	<link rel="stylesheet" href="css/menu.css" />
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+	<div class="header">
+		<div class="header_in">
+			<div class="title">
+				<div id="sidebar-menu">
+					<div class="home_menu" id="openmenu">
+						<i class="fas fa-times" id="back"></i>
+						<i class="fas fa-bars" id="next"></i>
+					</div>
+				    
+
+				    <div class="drawer_menu">
+				        <div class="drawer_bg" id="drawer_bg"></div>
+
+				        <nav class="drawer_nav_wrapper">
+				            <ul class="drawer_nav" style="overflow:hidden;">
+				                <h3>患者 MENU</h3>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('history');return false;">
+				                        履歴
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('inputs');return false;">
+				                        サブカルテ
+				                    </a>
+				                </li>
+				                <li>
+				                    <a class="sub_menu_title">検査</a>
+				                    <ul class="sub_menu">
+				                            <li><a href="javascript:void(0)" onClick="goNext('periodontal');return false;">歯周基本検査</a></li>
+				                            <li><a href="">プラーク検査</a></li>
+				                            <li><a href="">口腔診査</a></li>
+				                    </ul>
+				                </li>
+				                <li>
+				                    <a class="sub_menu_title" style="cursor:pointer;font-size:24px;line-height:50px;">画像</a>
+				                    <ul class="sub_menu">
+				                        <li><a href="javascript:void(0)" onClick="displayFolder('folder');return false;">パントモ</a></li>
+				                        <li><a href="javascript:void(0)" onClick="displayFolder('folder');return false;">その他画像</a></li>
+				                    </ul>
+				                </li>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('edit_sheet');return false;">
+				                        工程表
+				                    </a>
+				                </li>
+				                <li>
+				                    <a href="javascript:void(0)" onClick="goNext('edit_sheet');return false;">
+				                        問診票
+				                    </a>
+				                </li>
+				                <li>
+				                    <a class="dropdown-item" href="{{ route('logout') }}">
+				                        {{ __('Logout') }}
+				                    </a>
+				                </li>
+				            </ul>
+				        </nav>
+				    </div>
+				</div>
+
+				<!-- <div class="home_menu">
+					<i class="fas fa-bars"></i>
+				</div> -->
+				<span>待ち患者一覧</span>
+			</div>
+			<div class="menu">
+				<ul style="width: 120px;">
+					<li>
+						<a href=""><i class="fas fa-home"></i></a>
+					</li>
+					<li>
+						<a href=""><i class="fas fa-search"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="body" id="body">
+		<div class="body_in">
+	        <div class="row">
+				 <div class="col-md-12 col-lg-6">
+					<div class="caution">
+						<p>治療計画</p>
+						<textarea></textarea>
+						<p>注意点</p>
+						<textarea></textarea>
+						<p>受付記入欄</p>
+						<textarea style="height: 100px;"></textarea>
+						<button>保　存</button>
+					</div>
+	            </div>
+				
+	            <div class="col-md-12 col-lg-5">
+	            	<div class="tooth">
+						<img src="{{url('images/UR1.png')}}" style="position: absolute;width: 32px;top: 0;left: 133px;">
+						<img src="{{url('images/UR2.png')}}" style="position: absolute;width: 32px;top: 13px;left: 102px;">
+						<img src="{{url('images/UR3.png')}}" style="position: absolute;width: 32px;top: 30px;left: 79px;">
+						<img src="{{url('images/UR4.png')}}" style="position: absolute;width: 32px;top: 55px;left: 61px;">
+						<img src="{{url('images/UR5.png')}}" style="position: absolute;width: 32px;top: 81px;left: 	46px;">
+						<img src="{{url('images/UR6.png')}}" style="position: absolute;width: 32px;top: 109px;left: 32px;">
+						<img src="{{url('images/UR7.png')}}" style="position: absolute;width: 32px;top: 142px;left: 22px;">
+						<img src="{{url('images/UR8.png')}}" style="position: absolute;width: 32px;top: 174px;left: 21px;">
+
+
+						<img src="{{url('images/UL1.png')}}" style="position: absolute;width: 32px;top: 0;right: 133px;">
+						<img src="{{url('images/UL2.png')}}" style="position: absolute;width: 32px;top: 13px;right: 102px;">
+						<img src="{{url('images/UL3.png')}}" style="position: absolute;width: 32px;top: 30px;right: 79px;">
+						<img src="{{url('images/UL4.png')}}" style="position: absolute;width: 32px;top: 55px;right: 61px;">
+						<img src="{{url('images/UL5.png')}}" style="position: absolute;width: 32px;top: 81px;right: 46px;">
+						<img src="{{url('images/UL6.png')}}" style="position: absolute;width: 32px;top: 109px;right: 32px;">
+						<img src="{{url('images/UL7.png')}}" style="position: absolute;width: 32px;top: 142px;right: 22px;">
+						<img src="{{url('images/UL8.png')}}" style="position: absolute;width: 32px;top: 174px;right: 21px;">
+
+						<img src="{{url('images/ULA.png')}}" style="position: absolute;width: 25px;top: 55px;right: 139px;">
+						<img src="{{url('images/ULB.png')}}" style="position: absolute;width: 25px;top: 63px;right: 116px;">
+						<img src="{{url('images/ULC.png')}}" style="position: absolute;width: 25px;top: 80px;right: 101px;">
+						<img src="{{url('images/ULD.png')}}" style="position: absolute;width: 25px;top: 103px;right: 88px;">
+						<img src="{{url('images/ULE.png')}}" style="position: absolute;width: 25px;top: 123px;right: 81px;">
+
+						<img src="{{url('images/URA.png')}}" style="position: absolute;width: 25px;top: 55px;left: 139px;">
+						<img src="{{url('images/URB.png')}}" style="position: absolute;width: 25px;top: 63px;left: 116px;">
+						<img src="{{url('images/URC.png')}}" style="position: absolute;width: 25px;top: 80px;left: 101px;">
+						<img src="{{url('images/URD.png')}}" style="position: absolute;width: 25px;top: 103px;left: 88px;">
+						<img src="{{url('images/URE.png')}}" style="position: absolute;width: 25px;top: 123px;left: 81px;">
+
+
+						<img src="{{url('images/LR1.png')}}" style="position: absolute;width: 29px;top: 360px;left: 137px;">
+						<img src="{{url('images/LR2.png')}}" style="position: absolute;width: 29px;top: 358px;left: 111px;">
+						<img src="{{url('images/LR3.png')}}" style="position: absolute;width: 29px;top: 345px;left: 88px;">
+						<img src="{{url('images/LR4.png')}}" style="position: absolute;width: 29px;top: 330px;left: 69px;">
+						<img src="{{url('images/LR5.png')}}" style="position: absolute;width: 29px;top: 314px;left: 54px;">
+						<img src="{{url('images/LR6.png')}}" style="position: absolute;width: 29px;top: 289px;left: 38px;">
+						<img src="{{url('images/LR7.png')}}" style="position: absolute;width: 29px;top: 265px;left: 25px;">
+						<img src="{{url('images/LR8.png')}}" style="position: absolute;width: 29px;top: 237px;left: 17px;">
+						
+
+						<img src="{{url('images/LL1.png')}}" style="position: absolute;width: 29px;top: 360px;right: 137px;">
+						<img src="{{url('images/LL2.png')}}" style="position: absolute;width: 29px;top: 358px;right: 111px;">
+						<img src="{{url('images/LL3.png')}}" style="position: absolute;width: 29px;top: 345px;right: 88px;">
+						<img src="{{url('images/LL4.png')}}" style="position: absolute;width: 29px;top: 330px;right: 69px;">
+						<img src="{{url('images/LL5.png')}}" style="position: absolute;width: 29px;top: 314px;right: 54px;">
+						<img src="{{url('images/LL6.png')}}" style="position: absolute;width: 29px;top: 289px;right: 38px;">
+						<img src="{{url('images/LL7.png')}}" style="position: absolute;width: 29px;top: 265px;right: 25px;">
+						<img src="{{url('images/LL8.png')}}" style="position: absolute;width: 29px;top: 237px;right: 17px;">
+
+						<img src="{{url('images/LLA.png')}}" style="position: absolute;width: 25px;bottom: 105px;right: 139px;">
+						<img src="{{url('images/LLB.png')}}" style="position: absolute;width: 25px;bottom: 117px;right: 116px;">
+						<img src="{{url('images/LLC.png')}}" style="position: absolute;width: 25px;bottom: 132px;right: 96px;">
+						<img src="{{url('images/LLD.png')}}" style="position: absolute;width: 25px;bottom: 152px;right: 80px;">
+						<img src="{{url('images/LLE.png')}}" style="position: absolute;width: 25px;bottom: 169px;right: 70px;">
+
+						<img src="{{url('images/LRA.png')}}" style="position: absolute;width: 25px;bottom: 105px;left: 139px;">
+						<img src="{{url('images/LRB.png')}}" style="position: absolute;width: 25px;bottom: 117px;left: 116px;">
+						<img src="{{url('images/LRC.png')}}" style="position: absolute;width: 25px;bottom: 132px;left: 96px;">
+						<img src="{{url('images/LRD.png')}}" style="position: absolute;width: 25px;bottom: 152px;left: 80px;">
+						<img src="{{url('images/LRE.png')}}" style="position: absolute;width: 25px;bottom: 169px;left: 70px;">
+
+						<div class="line_1"></div>
+						<div class="line_2"></div>
+					</div>
+	            </div>
+	                
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="js/effect_custom.js"></script>
+</html>

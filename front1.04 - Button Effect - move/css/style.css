@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto',sans-serif;
+}
+
+.classbound{
+	width: 100%;
+	padding: 100px 0;
+	overflow: hidden;
+}
+.text-bound{
+	width: 100vw;
+	height: 50px;
+	background-color: red;
+	display: flex;
+	align-items: center;
+}
+.text-in{
+	position: relative;
+	margin: auto;
+	width: 80%;
+	height: 30px;
+	overflow: hidden;
+}
+.text-text1{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	color: black;
+
+
+  	animation-name: example;
+  	animation-duration: 3s;
+  	animation-fill-mode: forwards;
+}
+
+.text-text2{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	color: black;
+
+
+  	animation-name: example2;
+  	animation-duration: 3s;
+  	animation-delay: 3s;
+  	animation-fill-mode: forwards;
+
+}
+
+
+@keyframes example {
+
+  	from {
+  		right: 0;
+		opacity: 0;
+  	}
+	to {
+	  	right: 90%;
+		opacity: 1;
+	}
+  	/*0%{
+		right: 0;
+		opacity: 0;
+  	}
+  	100%{
+		right: 90%;
+		opacity: 1;
+  	}*/
+}
+
+@keyframes example2 {
+  	0%{
+		right: 0;
+		opacity: 0;
+  	}
+  	100%{
+		right: 90%;
+		opacity: 1;
+  	}
+}
+
+
+
+.border-auto {
+display: flex;
+}
+.border-auto div {
+flex: 1;
+}
+.border-auto div:nth-child(2) {
+flex: none;
+width: 50px;
+}
+.border-auto div:nth-child(1) {
+height: 100px;
+background: #0088ce;
+border-radius: 0 0 65px 0;
+position: relative;
+z-index: 2;
+}
+.border-auto div:nth-child(2) {
+background: #0088ce;
+margin-left: -10px;
+margin-right: -10px;
+z-index: 1;
+height: 100px;
+width: 62px;
+}
+
+.border-auto div:nth-child(2):after {
+content: '';
+display: block;
+background: #ffffff;
+height: 100px;
+width: 100px;
+margin-left: -19px;
+margin-top: 59px;
+border-radius: 146px;
+}
+
+.border-auto div:nth-child(3) {
+z-index: 2;
+height: 100px;
+background: #0088ce;
+border-radius: 0 0 0 65px;
+}
+
+
+
+
+
+
+
+/*------------------------------------------------Texts--------------------------------------------*/
+.text-shadow{
+	margin: auto;
+	display: block;
+	width: 200px;
+	padding: 20px;
+	overflow: hidden;
+	font-size: 50px;
+	text-shadow: 6px 6px 9px #000;
+	transition: all 300ms ease;
+}
+
+/*------------------------------------------------Texts--------------------------------------------*/
+
+
+
+
+
+/*------------------------------------------------bound--------------------------------------------*/
+.bbound{
+	padding-top: 100px;
+	background-color: #0088ce;
+	width: 100%;
+	height: 500px;
+}
+.bound{
+	position: relative;
+	margin: 100px 0;
+	width: 100%;
+	height: 300px;
+	background-color: white;
+}
+.bound-left{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 42%;
+	height: 10vw;
+	background-color: #0088ce;
+	border-radius: 0 0 115px 0;
+	z-index: 1;
+}
+.bound-mid{
+	position: relative;
+	width: 100%;
+	height: 10vw;
+	overflow: hidden;
+	z-index: 2;
+}
+.bound-mid-top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background-color: #0088ce;
+	z-index: 4;
+}
+.bound-mid-in{
+	position: absolute;
+	top: 0;
+	left: 40%;
+	width: 20%;
+	height: 20vw;
+	left: 40%;
+	bottom: -50%;
+	border-radius: 150px;
+	background-color: white;
+	z-index: 5;
+}
+.bound-right{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 42%;
+	height: 10vw;
+	background-color: #0088ce;
+	border-radius: 0 0 0 115px;
+	z-index: 1;
+}
+/*------------------------------------------------bound--------------------------------------------*/
+
+
+
+
+
+/*------------------------------------------------BUTTON--------------------------------------------*/
+.button{
+	position: relative;
+	margin: 20px auto;
+	width: 300px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+.button:before{
+	position: absolute;
+	content: "";
+	top: -30px;
+	left: 150px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .4);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button:after{
+	position: absolute;
+	content: "";
+	top: 20px;
+	left: 150px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .4);
+	transform: rotate(-45deg);
+	transition: all 300ms ease;
+	transition-delay: 150ms;
+}
+.button:hover:before{
+	left: -150px;
+	transition: all 300ms ease;
+	transition-delay: 150ms;
+}
+.button:hover:after{
+	left: -150px;
+	transition: all 300ms ease;
+}
+.color1{
+	background-color: #490C5C;
+}
+.color2{
+	background-color: #F8A00A;
+}
+.color3{
+	background-color: #BD194B;
+}
+.color4{
+	background-color: #B72200;
+}
+.color5{
+	background-color: #385328;
+}
+
+.button-click{
+	position: relative;
+	margin: 20px auto;
+	width: 300px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0px 5px 1px #59744a;
+	transition: all 300ms ease;
+}
+
+.button-click:hover{
+	transform: translateY(5px);
+	box-shadow: 0px 0px 1px #59744a;
+	transition: all 300ms ease;
+}
+
+.button2{
+	position: relative;
+	margin: 20px auto;
+	width: 300px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	box-shadow: 0px 5px 1px black;
+	transition: all 300ms ease;
+	border-radius: 5px;
+}
+.button2:before{
+	position: absolute;
+	content: "";
+	top: -30px;
+	left: 150px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .4);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button2:after{
+	position: absolute;
+	content: "";
+	top: 20px;
+	left: 150px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .4);
+	transform: rotate(-45deg);
+	transition: all 300ms ease;
+	transition-delay: 150ms;
+}
+.button2:hover:before{
+	left: -150px;
+	transition: all 300ms ease;
+}
+.button2:hover:after{
+	left: -150px;
+	transition: all 300ms ease;
+	transition-delay: 150ms;
+}
+.button2:hover{
+	transform: translateY(5px);
+	box-shadow: 0px 0px 1px black;
+	transition: all 300ms ease;
+}
+/*------------------------------------------------BUTTON--------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------BUTTON3--------------------------------------------*/
+.button3{
+	position: relative;
+	margin: 20px auto;
+	width: 300px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	box-shadow: 0px 5px 1px black;
+	transition: all 300ms ease;
+	border-radius: 5px;
+}
+.button3:before{
+	position: absolute;
+	content: "";
+	filter: blur(4px);
+	top: -30px;
+	left: 290px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .5);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button3:after{
+	position: absolute;
+	content: "";
+	filter: blur(4px);
+	top: 20px;
+	left: 290px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .5);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button3:hover:before{
+	left: -290px;
+	transition: all 300ms ease;
+}
+.button3:hover:after{
+	left: -290px;
+	transition: all 300ms ease;
+}
+.button3:hover{
+	transform: translateY(5px);
+	box-shadow: 0px 0px 1px black;
+	transition: all 300ms ease;
+	background-color: #FFC666;
+	cursor: pointer;
+}
+/*------------------------------------------------BUTTON3--------------------------------------------*/
+
+
+
+
+
+
+/*------------------------------------------------BUTTON4--------------------------------------------*/
+.button4{
+	position: relative;
+	margin: 20px auto;
+	width: 300px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	transition: all 300ms ease;
+	background-color: #BD194B;
+}
+
+.button4:before{
+	position: absolute;
+	content: "";
+	filter: blur(4px);
+	top: -30px;
+	left: 290px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .5);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button4:after{
+	position: absolute;
+	content: "";
+	filter: blur(4px);
+	top: 20px;
+	left: 290px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .5);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button4:hover:before{
+	left: -290px;
+	transition: all 300ms ease;
+}
+.button4:hover:after{
+	left: -290px;
+	transition: all 300ms ease;
+}
+
+
+.button4-top{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(90deg, #000, #4a4a4a00);
+}
+.button4-bottom{
+	position: absolute;
+	bottom: 0;
+	left: -100%;
+	width: 100%;
+	height: 4px;
+	background: linear-gradient(270deg, #000, #4a4a4a00);
+}
+.button4-left{
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 4px;
+	height: 100%;
+	background: linear-gradient(360deg, #000, #4a4a4a00);
+}
+.button4-right{
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: 4px;
+	height: 100%;
+	background: linear-gradient(180deg, #000, #4a4a4a00);
+}
+.button4-animation{
+  	animation-duration: 500ms;
+  	animation-timing-function: linear;	
+  	animation-iteration-count: infinite;
+}
+.button4-animation-delay{
+  	animation-delay: 250ms; /* bằng 1/2 duration */
+}
+
+.button4:hover .button4-left{
+	animation-name: left;
+}
+.button4:hover .button4-right{
+	animation-name: right;
+}
+.button4:hover .button4-top{
+	  animation-name: top;
+}
+.button4:hover .button4-bottom{
+	animation-name: bottom;
+}
+.button4:hover{
+	background-color: #FF004E;
+	/*border-radius: 5px;*/
+}
+
+
+@keyframes top {
+  	0%{
+  		left: 100%;
+  	}
+  	100%{
+  		left: -100%;
+  	}
+}
+@keyframes bottom {
+  	0%{
+  		left: -100%;
+  	}
+  	100%{
+  		left: 100%;
+  	}
+}
+@keyframes left {
+  	0%{
+  		top: -100%;
+  	}
+  	100%{
+  		top: 100%;
+  	}
+}
+@keyframes right {
+  	0%{
+  		top: 100%;
+  	}
+  	100%{
+  		top: -100%;
+  	}
+}
+
+/*------------------------------------------------BUTTON4--------------------------------------------*/

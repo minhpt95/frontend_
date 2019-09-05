@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multi Drag</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+    .draggable {
+        width: 150px;
+        height: 150px;
+        padding: 0.5em;
+        border: 1px solid black;
+        background-color: rgba(255, 255, 255, 1);
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+</head>
+
+<body>
+    <div id="draggable" class="ui-widget-content draggable">
+        <p>Drag me around Tab A</p>
+    </div>
+    <div id="draggable2" class="ui-widget-content draggable">
+        <p>Drag me around Tab B</p>
+    </div>
+    <div id="draggable2" class="ui-widget-content draggable">
+        <p>Drag me around Tab C</p>
+    </div>
+    <div id="draggable2" class="ui-widget-content draggable">
+        <p>Drag me around Tab D</p>
+    </div>
+</body>
+<script>
+
+    $(function() {
+        $(".draggable").draggable();
+        // $( "#draggable2" ).draggable();
+
+    });
+    </script>
+<script type="text/javascript">
+    var drag = document.getElementsByClassName("draggable");
+
+    var arrID = new Array();
+    update(arrID);
+    function update(arrID) {
+        // tạo ID
+        var max = drag.length;
+        for (var i = 0; i < drag.length; i++) {
+            drag[i].setAttribute("id", "drag_" + i);
+            drag[i].style.zIndex = i;
+            // max--;
+        }
+        // tạo mảng chứa danh sách ID
+        for (var i = 0; i < drag.length; i++) {
+            arrID.push(drag[i]);
+            // if (ID == drag[i] ) {
+            //     drag[i].style.zIndex = 1;
+            // }else{
+            //     drag[i].style.zIndex = 0;
+            // }
+            
+        }
+    }
+
+    var click = false;
+    $('.draggable').click(function(e) {
+
+        echo($(this).attr('id'),arrID)
+    });
+    $('.draggable').mouseup(function() {
+        click = false;
+
+    });  
+    $('.draggable').mousedown(function() {
+        click = true;
+        
+    });   
+    $('.draggable').mousemove(function() {
+        if (click) {
+            echo($(this).attr('id'),arrID)
+        }
+        
+    });  
+    function echo(id,arrID){
+        // for (var i = 0; i < arrID.length; i++) {
+        //     console.log(arrID[i]);
+        // }
+
+        // // var MAX = drag.length;
+        var ID             = document.getElementById(id);
+        // console.log(ID);
+        for (var i = 0; i < arrID.length; i++) {
+            if (arrID[i].style.zIndex == ID.style.zIndex) {
+                var NOW = i;
+            }
+        }
+        // var NOW = ID.style.zIndex;
+        // console.log(NOW);
+        // // ID.style.zIndex = MAX;
+        // // for (var i = Things.length - 1; i >= 0; i--) {
+        // //     Things[i]
+        // // }
+
+        var delta = ID;
+        // console.log(delta);
+        for (var i = NOW+1; i < arrID.length; i++) {
+            arrID[i-1] = arrID[i];
+            // console.log(arrID[i]);
+        }
+        arrID[arrID.length - 1] = delta;
+
+        // arrID[arrID.length - 1] = delta;
+        // // config lại z-index
+        for (var i = 0; i < arrID.length; i++) {
+            arrID[i].style.zIndex = i;
+            // drag[i].style.zIndex = i;
+            // console.log(arrID[i]);
+        }
+        
+        for (var i = 0; i < arrID.length; i++) {
+            console.log(arrID[i]);
+        }
+    }
+</script>
+</html>

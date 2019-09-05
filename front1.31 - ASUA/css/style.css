@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto',sans-serif;
+	/*background-color: #1D0F5C;*/
+}
+
+/* config table*/
+table {
+  	border-collapse: collapse;
+}
+
+.table_header table, th, td {
+  	border: 1px solid white;
+	text-align: center;
+}
+.table_header{
+	height: 40px;
+	background-color: #2b616d;
+	/*background-color: rgba(43, 97, 109, .8);*/
+}
+.table_header th{
+	padding: 0 10px;
+	color: white;
+}
+td{
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+}
+tr{
+	height: 45px;
+	border-bottom: 1px solid #ccc;
+}
+
+table a{
+	text-decoration: none;
+}
+table a:hover{
+	text-decoration: none;
+}
+
+/********************************************************** header *********************************************************/
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	/*height: 90px;*/
+	overflow: hidden;
+	/*background-color: #29dae8;*/
+	background-color: rgba(41, 218, 232, .9);
+	z-index: 2;
+}
+.header_in{
+	position: relative;
+	width: 100%;
+	/*height: 40px;*/
+	/*background-color: red;*/
+	padding: 20px;
+}
+.header_in .title{
+	float: left;
+	/*width: calc(50% - 60px);*/
+	width: 50%;
+	text-align: left;
+	color: white;
+	padding: 10px 0px;
+	height: 30px;
+	font-size: 20px;
+	transition: all 300ms ease;
+}
+.header_in .home_menu{
+	position: absolute;
+	/*top: 20px;*/
+	/*left: 10px;*/
+	float: left;
+	/*margin: 0 10px;*/
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	color: white;
+	overflow: hidden;
+	z-index: 4;
+	transition: all 300ms ease;
+	/*background-color: red;*/
+}
+
+#next{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 300ms ease;
+}
+#back{
+	position: absolute;
+	top: -100%;
+	left: 4px;
+	transition: all 300ms ease;
+}
+.header_in .title span{
+	margin-left: 60px;
+}
+.header_in .menu{
+	float: left;
+	width: 50%;
+	transition: all 300ms ease;
+}
+.header_in .menu ul{
+	float: right;
+	margin: 0;
+	padding: 0;
+	/*width: 240px;*/
+	list-style-type: none;
+	overflow: hidden;
+}
+.header_in .menu ul li{
+	float: right;
+	margin: 0 10px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header_in .menu ul li a{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	font-size: 35px;
+	color: white;
+	text-decoration: none;
+}
+.header_in .menu ul li img{
+	position: absolute;
+	top: -10px;
+	width: 100%;
+}
+/********************************************************** header *********************************************************/
+
+.body{
+
+}
+
+.body_in{
+	width: 100%;
+	min-height: calc(100vh - 120px);
+	margin-top: 100px;
+	/*height: calc(100vh - 180px);*/
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+	transition: all 300ms ease;
+}
+
+.body_in .menu{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.body_in .menu .bound{
+	display: grid;
+	grid-template-columns: 120px 120px 120px;
+	grid-gap: 10px;
+	margin: auto;
+}
+.body_in .menu .bound .item{
+	float: left;
+	width: 120px;
+	height: 135px;
+	/*background-color: red;*/
+	/*margin: 5px 10px;*/
+	overflow: hidden;
+}
+.body_in .menu .bound .item a{
+	width: 100%;
+	height: 100%;
+}
+
+.body_in .menu .bound .item img{
+	width: 100%;
+}
+
+
+
+
+.table{
+	margin: auto;
+	width: 100%;
+	max-width: 900px;
+}
+
+
+.modal_item{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 100ms ease;
+}
+
+.modal_item:hover{
+	cursor: pointer;
+	background-color: #ccc;
+	transition: all 100ms ease;
+}
+
+
+.Pagination{
+	margin: 10px 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+
+/********************************************************** visit *********************************************************/
+.search_form{
+	/*float: left;*/
+	margin: auto;
+	width: 300px;
+	/*height: 500px;*/
+	/*overflow: hidden;*/
+	padding: 10px 100px;
+}
+
+.search_form p{
+	color:  #2b616d;
+}
+.search_form input{
+	width: 100%;
+	padding-left: 5px;
+	margin-bottom: 20px;
+}
+.search_form button{
+	width: 120px;
+	margin: 0 90px;
+	background-color: white;
+	border-radius: 5px;
+	border: none;
+	border: 2px solid #f99f48;
+	padding: 15px;
+	color: #f99f48;
+}
+.table_search_form{
+	/*float: left;*/
+	margin: auto;
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	/*padding: 0 100px;*/
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+}
+
+
+
+
+
+/********************************************************** visit *********************************************************/
+
+/********************************************************** profile *********************************************************/
+
+/*.bound{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}*/
+.tooth{
+	position: relative;
+	margin: 30px auto;
+	width: 330px;
+	height: 450px;
+	/*background-color: red;*/
+}
+.line_1{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: black;
+}
+.line_2{
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	height: 100%;
+	width: 1px;
+	background-color: black;
+}
+
+.modal_item{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 100ms ease;
+}
+
+.modal_item:hover{
+	cursor: pointer;
+	background-color: #ccc;
+	transition: all 100ms ease;
+}
+
+
+.caution{
+	width: 400px;
+	margin: 0 auto;
+}
+.caution textarea{
+	width: 100%;
+	height: 100px;
+	background-color: #f2f2f2;
+	border: none;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-top: 5px;
+	resize: none;
+	margin-bottom: 10px;
+}
+.caution button{
+	width: 120px;
+	margin: 10px 140px;
+	background-color: white;
+	border-radius: 5px;
+	border: none;
+	border: 2px solid #f99f48;
+	padding: 15px;
+	color: #f99f48;
+	transition: all 100ms ease;
+}
+
+.caution button:hover{
+	background-color: #f99f48;
+	color: white;
+	transition: all 100ms ease;
+}
+
+
+/********************************************************** profile *********************************************************/
+
+
+
+/********************************************************** history *********************************************************/
+
+.nav_menu{
+	position: fixed;
+	top: 100px;
+	left: 0;
+	width: 100px;
+	height: 500px;
+}
+
+.nav_menu .item{
+	width: 100px;
+	height: 100px;
+}
+
+.nav_menu .item a{
+	width: 100%;
+	height: 100%;
+}
+.History{
+	margin: 10px auto;
+	width: 100%;
+	max-width: 850px;
+	padding: 10px 0;
+	/*height: 500px;*/
+	overflow: hidden;
+	background-color: #acdcf2;
+}
+.History p{
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.History .item{
+	width: 100%;
+	margin: 5px 0;
+	overflow: hidden;
+}
+.History .item .H_card{
+	position: relative;
+	float: left;
+	width: calc(100% - 50px);
+	overflow: hidden;
+	border: 1px solid black;
+	margin-left: 5px;
+	background-color: white;
+}
+.Line{
+	width: 1px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 49.9%;
+	color: black;
+	background-color: black;
+}
+.History .item .H_card .before{
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.History .item .H_card .after{
+	float: left;
+	width: 49.9%;
+	overflow: hidden;
+}
+.History .item .H_card .head_card{
+	width: 100%;
+	height: 25px;
+	/*background-color: red;*/
+}
+.History .item .H_card .head_card span{
+	color: #b4b4c4;
+}
+.History .item .H_card .body_card{
+	width: 100%;
+	overflow:hidden;
+	padding: 5px 0;
+	border-bottom: 1px dotted #aaa;
+}
+.History .item .H_card .body_card .table_teeth{
+	float: left;
+	width: 50%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.History .item .H_card .body_card table{
+}
+.History .item .H_card .body_card .diagnose{
+	float: left;
+	height: 90px;
+	/*padding: 0 30px;*/
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.History .item .H_card .conclude{
+	padding: 5px 10px;
+}
+.History .item .action{
+	float: left;
+	margin: 1px;
+	width: 40px;
+}
+.History .item .action .edit{
+	margin: 5px 0;
+	width: 40px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+}
+.History .item .action .delete{
+	margin: 5px 0;
+	width: 40px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+}
+.History .item .action a{
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+/********************************************************** history *********************************************************/
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Resizable - Default functionality</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+ 
+
+<div data-info="abc1" data-info2="abc2" class="intro">This is a paragraph.</div>
+<div data-info="abc2" class="intro">This is a paragraph.</div>
+<div data-info="abc3" class="intro">This is a paragraph.</div>
+<div data-info="abc4" class="intro">This is a paragraph.</div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("div").on('click', function (){
+            if($(this).hasClass("intro")){
+                var data = $(this).attr("data-info")
+                alert(data);
+            }
+        })
+    });
+</script>
+</html>

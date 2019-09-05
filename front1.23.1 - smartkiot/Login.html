@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Bootstrap core CSS -->
+</head>
+<style type="text/css">
+
+	ul{
+		display: block;
+		list-style-type: none;
+		overflow: hidden;
+	}
+	ul li{
+		float: left;
+		background-color: #333;
+		color: white;
+		margin: 0 10px;
+		padding: 5px 10px;
+	}
+	.BUTTON{
+		width: 50px;
+		height: 50px;
+		background-color: red;
+		display: none;
+	}
+	@media only screen and (max-width: 991px)
+	{
+		ul{
+			display: none;
+		}
+		
+		.BUTTON{
+			display: block;
+		}
+	}
+</style>
+<body>
+	<ul id="nav">
+		<li>abc</li>
+		<li>abc</li>
+		<li>abc</li>
+		<li>abc</li>
+		<li>abc</li>
+	</ul>
+	<div class="BUTTON" id="open">
+		
+	</div>
+</body>
+
+<script type="text/javascript">
+	
+	var open 			= document.getElementById("open");
+	var nav 			= document.getElementById("nav");
+
+	open.addEventListener("click", ControlNav);
+	// CloseEditFramesm.addEventListener("click", ClosePanelEditsm);
+	var numControlNav = 0;
+
+	function ControlNav() {
+		if(numControlNav == 0){
+	    	console.log(numControlNav);
+	    	nav.style.display = "block";
+	    	numControlNav = 1;
+	 	}else{
+	    	
+	    	console.log(numControlNav);
+	    	nav.style.display = "none";
+	    	numControlNav = 0;
+	 	}
+	}
+	console.log(0.1 + 0.1);
+	console.log(0.1 + 0.2);
+	console.log(0.2 + 0.2);
+</script>
+</html>

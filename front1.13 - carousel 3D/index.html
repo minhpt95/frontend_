@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+
+
+	<!---------------------------------------------- Bootstrap ------------------------------------------------>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	
+	<!----------------------------------- ------------ JQuery ------------------------------------------------->
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!----------------------------------- Animation On Scroll ------------------------------------------------->
+	<link rel="stylesheet" href="css/aos.css" />
+	<script src="js/aos.js"></script>
+	
+	<!---------------------------------------------- Carousel ------------------------------------------------->
+	<link rel="stylesheet" href="css/flexslider-rtl-min.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<script src="js/jquery.flexslider-min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="leps-slider.css">
+	<script type="text/javascript" src="leps-slider.js"></script>
+
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+	<div id="box">
+        <img src="https://i.imgur.com/r8lIYKb.jpg" alt="">
+        <img src="https://i.imgur.com/ep8T10F.jpg" alt="">
+        <img src="https://i.imgur.com/c1ivCvF.jpg" alt="">
+        <img src="https://i.imgur.com/qXCdzo2.jpg" alt="">
+        <img src="https://i.imgur.com/edZ45MH.jpg" alt="">
+        <img src="https://i.imgur.com/imRujFM.jpg" alt="">
+        <img src="https://i.imgur.com/w3ns4Ds.jpg" alt="">
+        <img src="https://i.imgur.com/esASB2h.jpg" alt="">
+        <p>Livicis Nguyễn J2Team</p>
+    </div>
+</body>
+<script type="text/javascript">
+	setTimeout(init, 100);
+
+var obox = document.getElementById('box');
+var aImg = obox.getElementsByTagName('img');
+var radius = 300;
+
+function init(notDelay) {
+  for (var i = 0; i < aImg.length; i++) {
+    aImg[i].style.transform = "rotateY(" + (i * (360 / aImg.length)) + "deg) translateZ(" + radius + "px)";
+    aImg[i].style.transition = "transform 1s";
+
+    if(!notDelay) aImg[i].style.transitionDelay = (aImg.length - i) / 4 + "s";
+  }
+}
+var sX, sY, nX, nY, desX = 0,
+    desY = 0,
+    tX = 0,
+    tY = 10,
+    index = 0;
+document.onmousedown = function(e) {
+  clearInterval(obox.timer);
+  e = e || window.event;
+  var sX = e.clientX,
+      sY = e.clientY;
+
+  this.onmousemove = function(e) {
+    e = e || window.event;
+    var nX = e.clientX,
+        nY = e.clientY;
+    desX = nX - sX;
+    desY = nY - sY;
+    tX += desX * 0.1;
+    tY += desY * 0.1;
+    obox.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+    sX = nX;
+    sY = nY;
+  }
+
+  this.onmouseup = function(e) {
+    this.onmousemove = this.onmouseup = null;
+    obox.timer = setInterval(function() {
+      desX *= 0.95;
+      desY *= 0.95;
+      tX += desX * 0.1;
+      tY += desY * 0.1;
+      obox.style.transform = "rotateX(" + (-tY) + "deg) rotateY(" + (tX) + "deg)";
+      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+        clearInterval(obox.timer);
+      }
+    }, 13);
+  }
+
+  return false;
+}
+document.onmousewheel = function(e) {
+  e = e || window.event;
+  var d = e.wheelDelta / 20 || -e.detail;
+  // if (d > 0) {
+  //     index -= 20;
+  // } else {
+  //     index += 30;
+  // }
+  // if (index < -1050) {
+  //     index = -1050;
+  // }
+  // document.body.style.perspective = (1000 + index) + "px";
+  radius += d;
+  init(true);
+};
+
+function mousewheel(obj, fn) {
+  document.onmousewheel === null ? obj.onmousewheel : null;
+}
+// function addEvent(obj, eName, fn) {
+// 	obj.attackEvent?obj.attackEvent("on", eName, fn):null;
+// }
+</script>
+</html>

@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+body{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-family: Dosis;
+}
+
+
+/*
+
+1. NAVIGATION
+2. BAR
+
+
+
+
+
+
+*/ 
+
+/*___________________________________________________ CONFIG ___________________________________________________*/
+
+.BOUND_BODY{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+tr:not(:first-child){
+	border-bottom: solid 1px #d8e5ff !important;
+}
+td:not(:last-child){
+	border-top: none !important;
+	border-right: solid 1px #d8e5ff !important;
+}
+
+/*_________________________________________________ END CONFIG _________________________________________________*/
+
+
+/* ________________________________________________  NAVIGATION ________________________________________________ */
+.Navigation{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 3px 6px 0 rgba(216, 229, 255, 0.5);
+	border: 1px solid #d8e5ff;
+	transition: all 300ms ease;
+	z-index: 1;
+}
+
+.Navigation_Item{
+	width: 100%;
+	overflow: hidden;
+}
+.LOGO_MIDDLE{
+	float: left;
+	width: 28%;
+	max-width: 250px;
+	height: 28px;
+	margin-top: 5px;
+	overflow: hidden;
+	display: none;
+}
+.LOGO_MIDDLE img{
+	height: 100%;
+}
+.Navigation_Item .OpenBar{
+	float: left;
+	margin: 0 5%;
+	margin-top: 5px;
+	width: 30px;
+	height: 30px;
+	display: none;
+}
+.Navigation_Item .OpenBar:hover{
+	cursor: pointer;
+}
+
+.Navigation_Item .OpenBar i{
+	font-size: 30px;
+}
+
+.Navigation_Item .Admin{
+	float: right;
+	padding-top: 6px;
+	padding-right: 30px;	
+  	font-family: Dosis;
+  	font-size: 20px;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-stretch: normal;
+  	line-height: 1.3;
+  	letter-spacing: normal;
+}
+.Navigation_Item .img{
+	margin-right: 6px;
+	float: right;  
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: #fffae5;
+	display: flex;
+	align-items: center;
+}
+.Navigation_Item .img img{
+	float: right;
+	width: 12.7px;
+	margin-left: 13.5px;
+}
+/* ________________________________________________  BAR ________________________________________________ */
+.Bar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	/*min-height: 350px;*/
+	height: 100vh;
+	background-color: white;
+	box-shadow: 0 3px 6px 0 rgba(216, 229, 255, 0.5);
+	border: 1px solid #d8e5ff;
+	transition: all 300ms ease;
+	z-index: 1;
+}
+.Bar .logo{
+	display: block;
+	width: 250px;
+	height: 59px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #d8e5ff;
+}
+.Bar .logo img{
+	margin: auto;
+	width: 120px;
+	height: 37.5px;
+}
+.Bar ul{
+	position: relative;
+	margin: 15px 16px 0 9px;
+	z-index: 0;
+}
+.Bar ul li{
+	position: relative;
+	width: 100%;
+  	height: 46px;
+  	border-radius: 5px;
+	transition: all 300ms ease;
+	/*background-color: white;*/
+}
+.Bar ul li a{
+	position: relative;
+	width: 100%;
+	height: 46px;
+	display: flex;
+	align-items: center;
+	font-family: Dosis;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	letter-spacing: normal;
+	color: #000;
+  	border-radius: 5px;
+  	background-color: #fff;
+	transition: all 300ms ease;
+	z-index: 2;
+}
+
+.ListItem{
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+	height: 46px;
+}
+.multiSelect{
+	position: absolute;
+	top: 0;
+	left: 250px;
+	background-color: white;
+	width: 100%;
+	height: 138px;
+	border-radius: 5px;
+	box-shadow: 0 3px 6px 0 rgba(216, 229, 255, 0.5);
+	transition: all 300ms ease;
+	opacity: 0;
+	display: none;
+	z-index: -2;
+}
+.multiSelect ul{
+	margin: 0;
+}
+.ListItem:hover .multiSelect{
+	/*display: block;*/
+	opacity: 1;
+	left: 230px;
+	transition: all 300ms ease;
+}
+.Bar ul li a:hover{
+	text-decoration: none;
+ 	background-color: #ffd000;
+	transition: all 300ms ease;
+}
+.Bar ul li a img{
+	margin: 1px 8px 0 22px;
+	height: 17px;
+	width: 20px;
+}
+.Bar ul li .open{
+	position: absolute;
+	top: 0px;
+	right: 40px;
+	transition: all 300ms ease;
+	z-index: 2;
+}
+.Bar ul li .open:hover{
+	cursor: pointer;
+}
+.Bar ul li .open img{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	width: 6px;
+	height: 10px;
+	transition: all 300ms ease;
+}
+.Bar ul li:hover .open img{
+	transform: rotate(180deg);
+	transition: all 300ms ease;
+}
+/* ________________________________________________  INDEX ________________________________________________ */
+
+
+.Index{
+	position: absolute;
+	top: 61px;
+	left: 250px;
+	min-width: calc(100% - 250px);
+	min-height: calc(100% - 61px);
+	overflow: hidden;
+	padding-bottom: 600px;
+	background-color: #f5f7fb;
+	transition: all 300ms ease;
+	z-index: 0;
+}
+.Index .Container{
+	margin: 0 30px;
+}
+.Index .Title{
+	width: 100%;  
+	color: #000000;
+	padding: 15px 0;
+	font-size: 30px;
+	overflow: hidden;
+	font-weight: bold;
+	font-style: normal;
+	font-family: Dosis;
+	position: relative;
+	font-stretch: normal;
+	letter-spacing: normal;
+}
+.Index .Title::before{
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 265px;
+	width: 100%;
+	height: 1px;
+	background-color: #e8effc;
+}
+.Index .addNewBanner{
+	float: right;
+	position: relative;
+	width: 100%;
+	height: 40px;
+	/*overflow: scroll;*/
+	z-index: 1000;
+}
+
+.Index .addNewBanner .button_Add{
+	float: right;
+	width: 25px;
+	height: 25px;
+	border: none;
+	padding: 0;
+	margin-right: 11px;
+}
+.Index .addNewBanner .button_Add:hover{
+	cursor: pointer;
+}
+.Index .addNewBanner .button_Add img{
+	width: 100%
+}
+.Index .addNewBanner p{
+	float: right;
+	padding-top: 7px;
+	font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.88;
+    letter-spacing: normal;
+    text-align: center;
+}
+.Index .PanelAddBanner{
+	position: absolute;
+	top: 70px;
+	right: 0;
+	width: 300px;
+	height: 450px;
+	background-color: white;
+	border-radius: 5px;
+	display: none;
+  	background-color: #ffffff;
+  	opacity: 0;
+	transition: all 300ms ease;
+	box-shadow: 0 3px 6px 0 rgba(216, 229, 255, 0.5);
+	/*overflow: scroll;*/
+	z-index: 5;
+}
+.TitleBanner{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;  
+	font-size: 16px;
+  	font-weight: bold;
+	width: 300px;
+  	height: 40px;
+  	background-color: #f5f7fb;
+}
+.TitleBanner .CloseAddBanner{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.TitleBanner .CloseAddBanner:hover{
+	cursor: pointer;
+}
+.InputAddBanner{
+	padding: 0 25px;
+}
+.Banner_Order{
+	padding-top: 5px;
+	font-family: Dosis;
+  	font-size: 16px;
+}
+.Banner_Order input{
+	padding-left: 5px;
+	width: 250px;
+	height: 40px;
+	border-radius: 3px;
+	border: solid 1px #d8e5ff;
+	background-color: #ffffff;
+}
+.Banner_Title{
+	padding-top: 5px;
+	font-family: Dosis;
+  	font-size: 16px;
+}
+.InputAddBanner textarea{
+	padding-top: 5px;
+	padding-left: 5px;
+	width: 250px;
+	height: 60px;
+	border-radius: 3px;
+	border: solid 1px #d8e5ff;
+	font-family: Dosis;
+  	font-size: 16px;
+}
+.Banner_Banner{
+	padding-top: 5px;
+	font-family: Dosis;
+  	font-size: 16px;
+}
+.img_Uploaded{
+	padding-top: 5px;
+	font-size: 8px;
+}
+.dropZone {
+	margin: auto;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	width: 250px;
+	height: 100px;
+  	background-color: #ffffff;
+	color: #d8e5ff;
+	border-radius: 3px;
+  	border: dashed 1px #d8e5ff;
+  	transition: all 300ms ease;
+}
+.dropZone:hover {
+	color: #336cdf;
+  	transition: all 300ms ease;
+}
+
+.dropZone i{
+	padding: 10px 20px;
+	width: 25px;
+	font-size: 25px;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.InputAddBanner button{
+	margin-top: 25px;
+	width: 250px;
+	height: 40px;
+	font-family: Dosis;
+  	font-size: 16px;
+	border-radius: 3px;
+	background-color: #f5f7fb;
+	border: solid 1px #d8e5ff;
+	font-family: Dosis;
+  	font-size: 16px;
+}
+.InputAddBanner button:hover{
+	cursor: pointer;
+}
+.table{
+	border-radius: 5px;
+	overflow: hidden;
+	padding-bottom: 500px;
+	background-color: white;
+	box-shadow: 1px 3px 20px 0 rgba(216, 229, 255, 0.5);
+}
+.table table{
+	width: 100%;
+}
+.table table tr{
+	background-color: white;
+}
+.table table tr th{
+	text-align: center;
+	border: none;
+}
+.table table tr td{
+	border: none;
+}
+.Table_Title{
+	padding: 0 15px;
+}
+.Table_Banner{
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
+}
+.Table_Banner_Img{
+	width: 200px;
+	margin: auto;
+}
+.Table_Banner_Img img{
+	width: 100%;
+}
+.Table_Status{}
+.Table_Status button{
+	margin: auto;
+	width: 100px;
+	height: 35px;	
+	border: none;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.button4{
+	position: relative;
+	overflow: hidden;
+	transition: all 300ms ease;
+	color: white;
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #fff;
+}
+.button4:hover{
+	opacity: .9;
+	transition: all 300ms ease;
+	cursor: pointer;
+}
+
+.button4:before{
+	position: absolute;
+	content: "";
+	filter: blur(4px);
+	top: -30px;
+	left: 290px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .5);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button4:after{
+	position: absolute;
+	content: "";
+	filter: blur(4px);
+	top: 20px;
+	left: 290px;
+	width: 300px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, .5);
+	transform: rotate(45deg);
+	transition: all 300ms ease;
+}
+.button4:hover:before{
+	left: -290px;
+	transition: all 300ms ease;
+}
+.button4:hover:after{
+	left: -290px;
+	transition: all 300ms ease;
+}
+
+.Disabled{
+	background-color: #000;
+	color: #fff;
+}
+.Enable{
+	background-color: #ffd000;
+	color: #000;
+}
+.Table_Edit{
+	width: 100%;
+	/*overflow: hidden;*/
+}
+.Table_Edit_Part{
+	float: left;
+	width: 50%;
+	/*margin: 0 5%;*/
+	/*overflow: hidden;	*/
+	display: flex;
+	justify-content: center;
+	/*background-color: red;*/
+}
+.Table_Edit_Part .EDIT_BUTTON{
+	width: 35px;
+	height: 35px;
+	border: none;
+	padding: 0;
+	border-radius: 2px;
+}
+.Table_Edit_Part button:hover{
+	cursor: pointer;
+}
+.EDIT img{
+	margin-top: -5px;
+	width: 11px;
+	height: 14px;
+}
+.EDIT{
+	position: relative;
+}
+.EDIT_FRAME{
+	position: absolute;
+	top: 0;
+	left: -310px;
+	width: 300px;
+	height: 410px;
+	display: none;
+	opacity: 0;
+	transition: all 300ms ease;
+	/*transform: scale(0);*/
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 3px 6px 0 rgba(216, 229, 255, 0.5);
+
+}
+.DELETE{
+	/*position: relative;*/
+}
+
+

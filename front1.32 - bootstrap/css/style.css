@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Dosis', 'Roboto', sans-serif;
+	/*background-color: #1D0F5C;*/
+}
+.header{
+	width: 100%;
+	height: 100vh;
+}
+.body{
+	width: 100%;
+	height: 100vh;
+}
+.footer{
+
+}
+
+
+
+.bound_header{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.background{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+.background img{
+	width: 100%;
+}
+.background_color{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 2;
+}
+
+.body .title{
+	position: relative;
+	margin: 50px 0;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 50px;
+	/*background-color: #af00ff;*/
+	background-color: #fff;
+	overflow: hidden;
+
+	/*animation-name: color;*/
+  	animation-duration: 3000ms;
+  	animation-timing-function: linear;	
+  	animation-iteration-count: infinite;
+}
+.body .title:before{
+	content: "";
+	position: absolute;
+	top: -100%;
+	left: -100px;
+	width: 30px;
+	height: 300%;
+	transform: rotate(45deg);
+	background-color: white;
+	filter: blur(8px);
+
+	animation-name: title;
+  	animation-duration: 1500ms;
+  	animation-timing-function: linear;	
+  	animation-iteration-count: infinite;
+}
+.body .title:after{
+	content: "";
+	position: absolute;
+	top: -100%;
+	left: -115px;
+	width: 60px;
+	height: 300%;
+	transform: rotate(45deg);
+	background-color: rgba(255, 255, 255, .5);
+	filter: blur(8px);
+
+	animation-name: title2;
+  	animation-duration: 1500ms;
+  	animation-timing-function: linear;	
+  	animation-iteration-count: infinite;
+}
+.list{
+	margin: auto;
+	width: 80%;
+	overflow: hidden;
+}
+.list .item{
+	margin: 10px;
+	/*width: 100%;*/
+	height: 300px;
+	background-color: red;
+	transition: all 300ms ease;
+}
+
+.Block{
+	margin: 10px 0;
+	width: 100%;
+}
+.Bound_Item{
+	margin: auto;
+	display: grid;
+	justify-content: center;
+	max-width: 1280px;
+	width: 100%;
+	grid-template-columns: 25% 25% 25% 25%  ; /*Make the grid smaller than the container*/
+	grid-gap: 2px;
+	/*background-color: rgba(0, 0, 0, .3);*/
+	border-radius: 3px;
+	overflow: hidden;
+	/*display: flex;*/
+	/*justify-content: center;*/
+	transition: all 300ms ease;
+}
+
+.Item{
+	float: left;
+	margin: 1%;
+	width: 98%;
+	height: 300px;
+	background-color: red;
+	overflow-x: hidden;
+	padding: 2px;
+	transition: all 300ms ease;
+}
+
+@keyframes title {
+  	0%{
+  		left: -100px;
+  	}
+  	100%{
+  		left: 100%;
+  	}
+}
+@keyframes title2 {
+  	0%{
+  		left: -115px;
+  	}
+  	100%{
+  		left: 100%;
+  	}
+}
+@keyframes color {
+  	0%{
+		background-color: #fff;
+  	}
+  	50%{
+		background-color: #af00ff;
+  	}
+  	100%{
+		background-color: #fff;
+  	}
+}
+
+

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto',sans-serif;
+}
+h1 span{
+	width: 960px;
+	margin: 0 auto;
+	font-size: 140px;
+	line-height: 160px;
+	top: -10px;
+	font-family: "quatro-slab-1","quatro-slab-2";
+	text-transform: uppercase;
+	background: url(../img/4x1.1.png) 0px 0px no-repeat;
+	background-size: cover;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #0000; 
+}
+
+/*h1 {
+   color: white;
+   background: url(../img/background.png) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}*/

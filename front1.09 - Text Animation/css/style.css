@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto',sans-serif;
+}
+.bound{
+	width: 100vw;
+	height: 100vh;
+	background-color: #333;
+}
+ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 200px;
+}
+ul li{
+	float: left;
+	font-size: 44px;
+	font-weight: bold;
+	color: black;
+	transition: all 300ms ease;
+}
+ul:hover li{
+	animation: animate 4s linear infinite;
+}
+ul:hover{
+	cursor: pointer;
+}
+@keyframes animate{
+	0%{
+		color: black;
+		transition: all 300ms ease;
+	}
+	12%{
+		color: red;
+		transition: all 300ms ease;
+	}
+	25%{
+		color: black;
+		transition: all 300ms ease;
+	}
+	100%{
+		color: black;
+		transition: all 300ms ease;
+	}
+}
+ul li:nth-child(1){
+	animation-delay: .2s;
+}
+ul li:nth-child(2){
+	animation-delay: .3s;
+}
+ul li:nth-child(3){
+	animation-delay: .4s;
+}
+ul li:nth-child(4){
+	animation-delay: .5s;
+}
+ul li:nth-child(5){
+	animation-delay: .6s;
+}
+ul li:nth-child(6){
+	animation-delay: .7s;
+}
+ul li:nth-child(7){
+	animation-delay: .8s;
+}
+ul li:nth-child(8){
+	animation-delay: .9s;
+}
+ul li:nth-child(9){
+	animation-delay: 1s;
+}
+
+
+
+
+
+
+
+
+.button{
+	margin: auto;
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	transition: all 300ms ease;
+}
+.button:hover{
+	border-radius: 50px;
+	transition: all 300ms ease;
+	animation: animate2 1s linear infinite;
+	transition: all 300ms ease;
+}
+@keyframes animate2{
+	25%{
+		border-top: 2px solid black;
+		transition: all 300ms ease;
+	}
+	50%{
+		border-right: 2px solid black;
+		transition: all 300ms ease;
+	}
+	75%{
+		border-bottom: 2px solid black;
+		transition: all 300ms ease;
+	}
+	100%{
+		border-left: 2px solid black;
+		transition: all 300ms ease;
+	}
+}

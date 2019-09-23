@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang chủ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap3.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+	<!-- <input type="file" id="i_file" value="" multiple>    -->
+	<!-- <span></span> -->
+
+	<div>
+    <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
+    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+  </div>
+  <div class="preview">
+    <p>No files currently selected for upload</p>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+	<!-- <img src="" width="200" style="display:none;" class="images" /> -->
+	<!-- <img src="" width="200" style="display:none;" class="images" /> -->
+	<!-- <img src="" width="200" style="display:none;" class="images" /> -->
+	<!-- <form id="fileupload" action="php/index.php" method="POST" enctype="multipart/form-data">
+	   	<div class="row">
+	        <div class="span16 fileupload-buttonbar">
+	            <div class="progressbar fileupload-progressbar"><div style="width:0%;"></div></div>
+	            <span class="btn success fileinput-button">
+	                <span>Add files...</span>
+	                <input type="file" name="files[]" multiple>
+	            </span>
+	            <span class="btn fileinput-button">
+	                <span>Other...</span>
+	                <input type="file" name="files2[]" multiple>
+	            </span>
+	            <button type="submit" class="btn primary start">Start upload</button>
+	            <button type="reset" class="btn info cancel">Cancel upload</button>
+	            <button type="button" class="btn danger delete">Delete selected</button>
+	            <input type="checkbox" class="toggle">
+	        </div>
+	    </div>
+	    <br>
+	    <div class="row">
+	        <div class="span16">
+	            <table class="zebra-striped"><tbody class="files"></tbody></table>
+	        </div>
+	    </div>
+	</form> -->
+	<script type="text/javascript">
+		var input = document.querySelector('input');
+		var preview = document.querySelector('.preview');
+
+		input.style.opacity = 0;input.addEventListener('change', updateImageDisplay);
+		function updateImageDisplay() {
+		  while(preview.firstChild) {
+		    preview.removeChild(preview.firstChild);
+		  }
+
+		  var curFiles = input.files;
+		  if(curFiles.length === 0) {
+		    var para = document.createElement('p');
+		    // para.textContent = 'No files currently selected for upload';
+		    preview.appendChild(para);
+		  } else {
+		    var list = document.createElement('ol');
+		    preview.appendChild(list);
+		    for(var i = 0; i < curFiles.length; i++) {
+		      var listItem = document.createElement('li');
+		      var para = document.createElement('p');
+		      if(validFileType(curFiles[i])) {
+		        // para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
+		        var image = document.createElement('img');
+		        image.src = window.URL.createObjectURL(curFiles[i]);
+
+		        listItem.appendChild(image);
+		        listItem.appendChild(para);
+
+		      } else {
+		        // para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+		        listItem.appendChild(para);
+		      }
+
+		      list.appendChild(listItem);
+		    }
+		  }
+		}var fileTypes = [
+		  'image/jpeg',
+		  'image/pjpeg',
+		  'image/png'
+		]
+
+		function validFileType(file) {
+		  for(var i = 0; i < fileTypes.length; i++) {
+		    if(file.type === fileTypes[i]) {
+		      return true;
+		    }
+		  }
+
+		  return false;
+		}function returnFileSize(number) {
+		  if(number < 1024) {
+		    return number + 'bytes';
+		  } else if(number >= 1024 && number < 1048576) {
+		    return (number/1024).toFixed(1) + 'KB';
+		  } else if(number >= 1048576) {
+		    return (number/1048576).toFixed(1) + 'MB';
+		  }
+		}
+
+		// $(document).click(function() {
+		// 	$('#i_file').change( function(event) {
+		// 		console.log($('#i_file').get(0).files.length);
+		// 		for (var i = 0; i < $('#i_file').get(0).files.length; i++) {
+		// 			// $( document.body ).append( $( "<div>" ) );
+		// 			console.log(i);
+		// 			var tmppath = URL.createObjectURL(event.target.files[i]);
+		// 			console.log(tmppath);
+		// 			$( document.body ).append( 
+		// 				$( "<img src=\"\" width=\"200\" style=\"display:none;\"/>" ) 
+		// 			);
+		// 		    $(".images:eq(i)").fadeIn("fast").attr('src',tmppath)
+						
+		// 		}
+		// 	    // var n = $( "div" ).length;
+		// 	    // $( "span" ).text( "There are " + n + " divs." +
+		// 	    //   "Click to add more.");
+				
+
+		// 		// $( document.body ).append( $( "<div>" ) );
+		// 	 //    var n = $( "div" ).length;
+		// 	 //    $( "span" ).text( "There are " + n + " divs." +
+		// 	 //      "Click to add more.");
+		// 	});
+
+
+		// 	    // $( document.body ).append( $( "<div>" ) );
+		// 	    // var n = $( "div" ).length;
+		// 	    // $( "span" ).text( "There are " + n + " divs." +
+		// 	    //   "Click to add more.");
+		// })
+	</script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function(){
+			$('#i_file').change( function(event) {
+				    $( document.body ).append( $( "<img>" ) );
+				    var n = $( "img" ).length;
+				    $( "span" ).text( "There are " + n + " divs." +
+				      "Click to add more.");
+				// console.log($('#i_file').length());
+				var tmppath = URL.createObjectURL(event.target.files[0]);
+			    $(".images").fadeIn("fast").attr('src',URL.createObjectURL(event.target.files[0]));
+			});
+		})
+	</script> -->
+</body>
+
+<script src="js/bootstrap3.js"></script>
+<!-- <script type="text/javascript" src="js/effect_custom.js"></script> -->
+
+</html>

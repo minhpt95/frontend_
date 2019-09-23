@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*min-width: 1200px;*/
+	/*overflow: scroll;*/
+	/*background-color: #1D0F5C;*/
+}
+
+
+.body{
+	width: 100%;
+	min-height: 100vh;
+}
+.item{
+	float: left;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+}
+
+.linear1{
+	background: linear-gradient(15deg, #eebd89, #d13abd);
+}
+.linear2{
+	background: linear-gradient(15deg, #9600ff, #aebaf8);
+}
+.linear3{
+	background: linear-gradient(15deg, #f6ea41, #f048c6);
+}
+.linear4{
+	background: linear-gradient(15deg, #bb73e0, #ff8ddb);
+}
+.linear5{
+	background: linear-gradient(15deg, #0ccda3, #c1fcd3);
+}
+.linear6{
+	background: linear-gradient(15deg, #c973ff, #aebaf8);
+}
+.linear7{
+	background: linear-gradient(15deg, #f9957f, #f2f5d0);
+}
+.linear8{
+	background: linear-gradient(15deg, #b60f46, #d592ff);
+}
+.linear9{
+	background: linear-gradient(15deg, #a3c9e2, #9618f7);
+}
+.linear6{
+	background: linear-gradient(15deg, #c973ff, #aebaf8);
+}
+.linear6{
+	background: linear-gradient(15deg, #c973ff, #aebaf8);
+}
+.linear6{
+	background: linear-gradient(15deg, #c973ff, #aebaf8);
+}
+.linear6{
+	background: linear-gradient(15deg, #c973ff, #aebaf8);
+}
+
+
+.item2{
+	float: left;
+	margin: 10px;
+	width: 800px;
+	height: 50px;
+	border-radius: 5px;
+}
+.linear21{
+	background: linear-gradient(90deg, #808c97, #7e8071, #edbc81, #a76b56);
+}
+.linear22{
+	background: linear-gradient(90deg, #60e3d5, #0567a8, #f6f0f0);
+}
+.linear23{
+	background: linear-gradient(90deg, #101b37, #e41476, #53cceb);
+}
+
+
+
+
+
+
+

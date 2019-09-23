@@ -514,7 +514,7 @@ border-radius: 0 0 0 65px;
 	animation-name: right;
 }
 .button4:hover .button4-top{
-	  animation-name: top;
+	animation-name: top;
 }
 .button4:hover .button4-bottom{
 	animation-name: bottom;

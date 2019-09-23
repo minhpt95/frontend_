@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Arial');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Kalam');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
 body{
 	margin: 0;
@@ -133,7 +134,7 @@ body{
 .nav{
 	float: right;
 	/*margin: auto;*/
-	width: 500px;
+	width: 550px;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -248,7 +249,7 @@ body{
 .Body{
 	position: relative;
 	width: 100%;
-	height: 30000px;
+	/*height: 30000px;*/
 	overflow: hidden;
 	background-color: white;
 }
@@ -326,18 +327,19 @@ body{
 
 
 
+
 /* carousel */
 .carousel{
-	width: 100%;
-	/*margin-top: 105px;*/
+	width: 80%;
+	margin: 105px auto;
 	/*height: 500px;*/
 	overflow: hidden;
-	display: flex;
+	/*display: flex;*/
 	/*align-items: center;*/
-	justify-content: center;
+	/*justify-content: center;*/
 }
 .carousel img{
-	min-width: 1200px;
+	/*min-width: 1200px;*/
 	width: 100%;
 }
 /* carousel */
@@ -362,17 +364,346 @@ body{
 	color: #777777;
 	font-weight: bold;
 	font-size: 15px;
+	transition: all 300ms ease;
 }
 .nav_url ul li a:hover{
+	color: #76aa6f !important;
 	text-decoration: none;
+	transition: all 300ms ease;
+}
+
+
+/* product_item ******************************************************************************88*/
+.bound_product{
+	/*margin: 50px;*/
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.product_item{
+	overflow: hidden;
+	margin: 10px 0;
+}
+.product_item .image{
+	width: 100%;
+	overflow: hidden;
+}
+.product_item img{
+	width: 100%;
+}
+.product_item .title_product_item{
+	width: 100%;
+	color: #151515;
+	font-size: 36px;
+	font-family: "lato";
+}
+
+.product_item .cost_product_item{
+	font-size: 24px;
+	color: #76aa6f;
+	font-weight: bold;	
+}
+.product_item .describe_product_item{
+	margin-top: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+.product_item .category_bound{
+	width: 100%;
+	overflow: hidden;
+}
+.product_item .info_product_item{
+	padding-top: 30px;
+}
+
+.product_item .info_product_item .category{
+	float: left;
+}
+
+.product_item .info_product_item .category_text{
+	float: left;
+	padding-left: 5px;
+	color: #777;
+}
+
+.product_item .add_cart{
+	overflow: hidden;
+	padding: 20px 0;
+	border-bottom: 1px solid #ccc;
+}
+.product_item .add_cart .count{
+	float: left;
+	width: 70px;
+	height: 70px;
+	border-radius: 3px;
+	background-color: #ccc;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product_item .add_cart .change_count{
+	float: left;
+	width: 40px;
+	height: 70px;
+	border-radius: 3px;
+	margin-left: 5px;
+}
+.product_item .add_cart .change_count .up{
+	width: 30px;
+	height: 30px;
+	background-color: #ccc;
+	border-radius: 3px;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.product_item .add_cart .change_count .down{
+	margin-top: 10px;
+	width: 30px;
+	height: 30px;
+	background-color: #ccc;
+	border-radius: 3px;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product_item .add_cart .add_to_cart{
+	float: left;
+	width: 210px;
+	height: 70px;
+	margin-left: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-style: 14px;
+	font-weight: bold;
+	background-color: #e9da5d;
+	border-radius: 3px;
 }
 
 
 
+/* product_item ******************************************************************************88*/
 
+
+
+
+
+/* search ******************************************************************************88*/
+
+
+
+
+
+
+
+
+
+/* search ******************************************************************************88*/
+
+
+
+
+
+/* list_item ******************************************************************************88*/
+
+
+.title_item{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+.list_item{
+	margin: 20px auto;
+}
+.list_item .bound_list{
+	/*height: 360px;*/
+	padding: 50px 0;
+}
+.list_item .bound_item{
+	height: 320px;
+	margin: 35px auto;
+}
+.item{
+	max-width: 270px;
+	width: 100%;
+	height: 320px;
+	border-radius: 6px;
+	background-color: #f5f5f5;
+	/*background-color: red;*/
+	/*box-shadow: 2px 2px 2px 2px;*/
+	transition: all 300ms ease;
+	padding: 10px;
+	margin: auto;
+}
+.item:hover{
+	height: 350px;
+	box-shadow: 0px 0px 6px 1px;
+	transition: all 300ms ease;
+}
+.item .offer{
+	width: 100%;
+	height: 50px;
+	/*background-color: blue;*/
+}
+.offer_title{
+	float: right;
+	margin: 12px 0;
+	/*width: 60px;*/
+	height: 25px;
+	border-radius: 6px;
+	padding: 5px 12px;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+	color: white;
+}
+.new{
+	background-color: #76aa6f;
+}
+.sale{
+	background-color: #f96666;
+}
+.hot{
+	background-color: #e9da5d;
+}
+.none{
+	background-color: rgba(0, 0, 0, 0);
+}
+.item .image{
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+}
+.item .image img{
+	width: 100%;
+}
+
+.item .title{
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.item .title a{
+	font-weight: bold;
+	font-size: 18px;
+	color: black;
+	transition: all 300ms ease;
+}
+
+.item .title a:hover{
+	text-decoration: none;
+	color: #a03e02 !important;
+	transition: all 300ms ease;
+}
+
+.item .cost{
+	width: 100%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+.item .cost .sell{
+	text-decoration: line-through;
+	color: rgba(21,21,21,.5);
+	margin: 0 5px;
+}
+.item .cost .buy{
+	color: #76aa6f;
+	font-weight: bold;
+	margin: 0 5px;
+}
+
+.item .more{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.item .more .view{
+	margin: 0 150px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: #e9da5d;
+	transition: all 300ms ease;
+	font-size: 25px;
+	color: white;
+}
+.item .more a{
+	color: white;
+}
+.item .more a:hover{
+	color: white;
+}
+.item .more .view i{
+	margin: 13px;
+}
+
+.item .more .add{
+	margin: 0 150px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: #76aa6f;
+	transition: all 300ms ease;
+	font-size: 25px;
+	color: white;
+}
+.item .more a{
+	color: white;
+}
+.item .more a:hover{
+	color: white;
+}
+
+.item .more .add i{
+	margin: 13px 10px;
+}
+
+
+
+.item:hover .more .view{
+	margin: 0 5px;
+	transition: all 300ms ease;
+}
+.item:hover .more .add{
+	margin: 0 5px;
+	transition: all 300ms ease;
+}
+
+/* list_item ******************************************************************************88*/
 
 
 
 
 /* body ******************************************************************************88*/
 
+
+
+/* footer ******************************************************************************88*/
+
+
+.footer{
+	width: 100%;
+	height: 200px;
+	background-color: #393535;
+}
+
+
+/* footer ******************************************************************************88*/

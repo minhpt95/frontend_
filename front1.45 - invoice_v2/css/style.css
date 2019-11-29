@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+}
+
+.canvas{
+	width: 800px;
+	/*height: 300px;*/
+	overflow: hidden;
+	/*background-color: red;*/
+	margin: auto;
+}
+.hidden{
+	display: none;
+}
+.bound{
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(15deg, #c973ff, #aebaf8);
+}
+.draggable {
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    overflow: hidden;
+    /*padding: 0.5em;*/
+	border: 3px solid blue;
+    /*background-color: rgba(38, 48, 70, .7);*/
+}
+.in{
+	width: 100px;
+	height: 100px;
+	border: 13px solid blue;
+	/*margin: 5px;*/
+	/*padding: 5px;*/
+	transform: translateX(200%) translateY(100%);
+}
+.hienthi{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 50px;
+	background: linear-gradient(15deg, #f9957f, #f2f5d0);
+	color: white;
+}
+
+

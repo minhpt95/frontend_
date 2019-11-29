@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+}
+.button{
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin: 20px;
+	border: 1px solid red;
+	cursor: pointer;
+}
+.output{
+	position: relative;
+	float: left;
+	width: 600px;
+	height: 600px;
+	margin: 20px;
+	border: 1px solid red;
+	overflow: hidden;
+}
+#ONTOP{
+	z-index: 1000;
+}
+.custom_canvas{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 1;
+}
+.top_canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(0, 0, 0, .1);*/
+	z-index: 3;
+}
+.bound_canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.color{
+	background-color: green;
+}
+.rect1{
+	position: absolute;
+	border: 1px solid red;
+}
+.canvas_{
+	position: absolute;
+}
+.delta_rect{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 3;
+}
+

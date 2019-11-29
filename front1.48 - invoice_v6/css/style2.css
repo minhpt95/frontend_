@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+    background-color: white;
+    transition: all 300ms ease;
+}
+a{
+	color: black;
+}
+.component{
+	width: 50%;
+	height: 100vh;
+}
+.nav{
+	height: 100%;
+}
+.nav ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.nav ul li{
+	width: 100%;
+	height: 50px;
+}
+.main{
+	height: 100%;
+}
+.list-image{
+	height: calc(100vh - 102px);
+}
+.debug{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 37.5%;
+	height: 30%;
+}
+.debug textarea{
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	resize: none;
+}
+.debug .title{
+	position: absolute;
+	top: -9px;
+	left: 16px;
+	padding: 0 5px;
+	width: 60px;
+	height: 20px;
+	background-color: white;
+	cursor: pointer;
+}
+.canvas-output{
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+	min-width: 200px;
+	max-width: 200px;
+	height: 100%;
+}
+
+.active{
+	margin-left: 5px;
+	height: 26px;
+	width: 26px;
+	background-color: green;
+	transition: all 300ms ease;
+}
+
+.export{
+	width: 100%;
+	height: 100px;
+}
+
+
+/* ____________________________________________ Canvas ____________________________________________ */
+.output_canvas{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#ONTOP{
+	z-index: 1000;
+}
+.custom_canvas{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0);
+	z-index: 1;
+}
+.top_canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(0, 0, 0, .1);*/
+	z-index: 3;
+}
+.bound_canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.color{
+	background-color: red !important;
+}
+.rect1{
+	position: absolute;
+	border: 1px solid red;
+}
+.canvas_{
+	position: absolute;
+}
+.delta_rect{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	background-color: rgba(0, 0, 0, .3);
+	z-index: 3;
+}
+/* ____________________________________________ End Canvas ____________________________________________ */
+
+
+
+.list-image{
+	width: calc(100% - 10px);
+	/*margin: 5px;*/
+	height: calc(100vh - 100px);
+	/*height: 100%;*/
+	border: 2px solid white;
+	background: rgb(34, 34, 34);
+	overflow: scroll;
+}
+.list-image ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.list-image ul canvas{
+	margin: 5%;
+	width: 90%;
+}
+.list-image ul li{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	/*margin: 10px 0;*/
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+}
+.list-image ul li:hover{
+	cursor: pointer;
+}
+
+.list-image ul li img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+.border{
+	border-width: 1px;
+	border-style: solid;
+	border-color: black;
+}
+.back-black{
+	background-color: black !important;
+}
+.font-white{
+	color: white !important;
+}
+.font-white{
+	color: white !important;
+}
+.bor-white{
+	border-color: white !important;
+}
+tr:hover{
+	background-color: #ccc !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.W10{
+	width: 10%;
+}
+.W20{
+	width: 20%;
+}
+.W25{
+	width: 25%;
+}
+.W30{
+	width: 30%;
+}
+.W40{
+	width: 40%;
+}
+.W50{
+	width: 50%;
+}
+.W60{
+	width: 60%;
+}
+.W70{
+	width: 70%;
+}
+.W75{
+	width: 75%;
+}
+.W80{
+	width: 80%;
+}
+.W90{
+	width: 90%;
+}
+.W100{
+	width: 100%;
+}
+.H50{
+	height: 50%;
+}
+.H100{
+	height: 100%;
+}
+.H50p{
+	height: 50px;
+}
+.H40p{
+	height: 30px;
+}
+.H30p{
+	height: 30px;
+}
+.P0{
+	padding: 0 !important;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.block{
+	display: block;
+}
+.textcenter{
+	text-align: center;
+}
+.FMiddle{
+	display: block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.none{
+	display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+

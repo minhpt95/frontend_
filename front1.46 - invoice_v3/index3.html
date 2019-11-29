@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trang chủ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap3.css" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body  onkeyup="keyupHandler(event)" onkeypress="keypressHandler(event)">
+    <div class="header" id="header">
+        <!-- <div class="bound_in bound_bot" style="top: 98px;left: 98px;">
+
+            <div class="in_TL" id="in_TL"></div>
+            <div class="in_TR" id="in_TR"></div>
+            <div class="in_BL" id="in_BL"></div>
+            <div class="in_BR" id="in_BR"></div>
+
+            <div class="in_top" id="in_top"> </div>
+            <div class="in_bot" id="in_bot"> </div>
+            <div class="in_left" id="in_left"> </div>
+            <div class="in_right" id="in_right"> </div>
+            
+        </div>
+        <div class="bound_in bound_top" id="item" style="top: 100px;left: 100px;">
+            
+        </div> -->
+    </div>
+    <div class="body" id="body">
+       <!--  <div class="bound">
+            <div class="canvas_bound zoom" >
+                <canvas id="canvas" class="canvas"> </canvas>
+            </div>
+            <div class="bound_in bound_bot" style="top: -2px;left: -2px;">
+                <div class="in_TL" id="in_TL"></div>
+                <div class="in_TR" id="in_TR"></div>
+                <div class="in_BL" id="in_BL"></div>
+                <div class="in_BR" id="in_BR"></div>
+
+                <div class="in_top" id="in_top"> </div>
+                <div class="in_bot" id="in_bot"> </div>
+                <div class="in_left" id="in_left"> </div>
+                <div class="in_right" id="in_right"> </div>
+            </div>
+        </div> -->
+            <input type="file" name="" id="input">
+            <div id="output"></div>
+        <div style="float: left;width: 50%;">
+            
+            <div class="bound_output1 bound_canvas" id="bound_output1" style="border: 1px solid red;float: left;">
+                <div class="canvas_bound zoom2" id="zoom2" style="width: 600px; overflow: hidden;">  </div>
+            </div>
+            <div class="closeButton" id="close2" >
+                close2
+            </div>
+            <div class="bound_output1 bound_canvas" id="bound_output2" style="border: 1px solid red;float: left;">
+                <div class="canvas_bound zoom2" id="zoom3" style="width: 600px; overflow: hidden;">  </div>
+            </div>
+            <div class="closeButton" id="close3">
+                close3
+            </div>
+
+            <div class="bound_output1 bound_canvas" id="bound_output3" style="border: 1px solid red;float: left;">
+                <div class="canvas_bound zoom2" id="zoom4" style="width: 600px; overflow: hidden;">  </div>
+            </div>
+            <div class="closeButton" id="close4">
+                close4
+            </div>
+
+            <div class="bound_output1 bound_canvas" id="bound_output4" style="border: 1px solid red;float: left;">
+                <div class="canvas_bound zoom2" id="zoom5" style="width: 600px; overflow: hidden;">  </div>
+            </div>
+            <div class="closeButton" id="close5">
+                close5
+            </div>
+
+            <div class="bound_output1 bound_canvas" id="bound_output5" style="border: 1px solid red;float: left;">
+                <div class="canvas_bound zoom2" id="zoom6" style="width: 600px; overflow: hidden;">  </div>
+            </div>
+            <div class="closeButton" id="close6">
+                close6
+            </div>
+        </div>
+        <div style="float: left;width: 50%;">
+            <div class="bound" id="border_canvas">
+                <img src="images/background.jpg" style="display: none;" id="Home_Image">
+                <!-- <div class="canvas_bound zoom" id="zoom">
+                    <canvas id="canvas" class="canvas"> </canvas>
+                </div> -->
+                
+                <div class="canvas_bound zoom" id="zoom">
+                    <!-- <canvas id="canvas" class="canvas"> </canvas> -->
+                </div>
+
+                <div class="bound_in bound_bot" style="top: -2px;left: -2px;background-color: #8cc5ca6e">
+                    <div class="in_TL" id="in_TL"></div>
+                    <div class="in_TR" id="in_TR"></div>
+                    <div class="in_BL" id="in_BL"></div>
+                    <div class="in_BR" id="in_BR"></div>
+
+                    <div class="in_top" id="in_top"> </div>
+                    <div class="in_bot" id="in_bot"> </div>
+                    <div class="in_left" id="in_left"> </div>
+                    <div class="in_right" id="in_right"> </div>
+                </div>
+                <div class="bound_in bound_top" id="item" style="top: 0px;left: 0px;">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/move_canvas.js"></script>
+<script type="text/javascript" src="js/rect_move.js"></script>
+<script type="text/javascript" src="js/effect_custom.js"></script>
+
+<script type="text/javascript" src="js/canvastotiff.js"></script>
+<script type="text/javascript">
+
+    $( "#bound_output1" ).click(function() {
+        saveTIFF();
+    });
+    // var canvas = document.getElementById("canvas");
+    function saveTIFF() {
+        CanvasToTIFF.toObjectURL(document.getElementById("canvas"), function(url) {
+            window.location.href = url;
+            var a = btn = document.querySelector("a");
+            // a.innerHTML = "Right-click this link to download";
+            a.href = url;
+        });
+    }
+</script>
+<script type="text/javascript" src="js/tiff.min.js"></script>
+</html>

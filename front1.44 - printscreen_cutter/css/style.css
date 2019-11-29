@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+    /*min-width: 1200px;*/
+    /*overflow: scroll;*/
+    /*background-color: #1D0F5C;*/
+    perspective-origin: 0% 50%;
+    perspective: 800px;
+}

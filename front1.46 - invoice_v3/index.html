@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang chủ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap3.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+<body>
+	<img src="images/background.jpg" style="display: none" id="data2">
+	<div class="" id="data">
+		
+	</div>
+	<div class="bound">
+		<div class=" ui-widget-content draggable"  id="item">
+			
+		</div>
+	</div>
+	<div class="hienthi" id="hienthi">
+		show
+	</div>
+	<input type="" name="" value="" disabled="" id="datafile" style="width: 500px;">
+	<input type="file" name="" id="loadfile">
+	<div class="canvas" id="canvas">
+		<canvas id="canvas_Image" ></canvas>
+	</div>
+</body>
+
+<script src="js/bootstrap3.js"></script>
+<script type="text/javascript" src="js/effect_custom.js"></script>
+<script> 
+$( function() {  
+   $( "#item" ).resizable().draggable();
+} );
+</script>
+<!-- <script type="text/javascript">
+		var canvas = document.getElementById("canvas_Image");
+	  	var ctx = canvas.getContext("2d");
+		var output = document.getElementById("dataImage");
+		
+	    // canvas.width = output.width;
+	    // canvas.height = output.height;
+	    canvas.width = 100;
+	    canvas.height = 100;
+	  	ctx.drawImage(output, 0, 0);
+</script> -->
+</html>

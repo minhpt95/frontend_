@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+}
+
+.header{
+	width: 100%;
+	height: 90px;
+	background-color: #f98989;
+	box-shadow: 0 .125rem .25rem #00000013 !important;
+	display: flex;
+	align-items: center;
+	padding: 8px 16px;
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+}
+.header_in{
+	position: relative;
+	width: 100%;
+}
+.header .title{
+	float: left;
+}
+.header .menu{
+	float: right;
+}
+.header .menu .logout{
+	width: 250px;
+	height: 50px;
+	background-color: white;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+}
+
+.header .title{
+	float: left;
+}
+.body{
+	width: 100%;
+	overflow: hidden;
+}
+.body .menu{
+	width: 100%;
+	height: 400px;
+}
+.body .menu .list_menu{
+	width: 700px;
+	height: 400px;
+	margin: auto;
+}
+.body .menu .list_menu .menu_button{
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 150px;
+	margin: 25px;
+}
+.body .menu .list_menu .menu_button img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.body .menu .list_menu .menu_button .title_button{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.home_menu{
+	position: absolute;
+	float: left;
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	overflow: hidden;
+	z-index: 4;
+	transition: all 300ms ease;
+}
+#next{
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 300ms ease;
+}
+#back{
+	position: absolute;
+	top: 0;
+	left: 4px;
+	transition: all 300ms ease;
+}
+.up100{
+	top: 100% !important;
+}
+.up-100{
+	top: -100% !important;
+}
+
+.body_in{
+	width: 100%;
+	min-height: calc(100vh - 120px);
+	transition: all 300ms ease;
+}
+.form_wait{
+	padding: 0 20px;
+	width: 100%; 
+	max-width: 1000px;
+	margin: 20px auto;
+}
+.form_wait .search_form{
+	margin: auto;
+	max-width: 250px;
+}
+.form_wait .search_form p{
+	font-size: 120%;
+	font-weight: bold;
+	color: #2b616d;
+}
+.form_wait .search_form input{
+	width: 100%;
+	padding-left: 5px;
+	margin-bottom: 20px;
+	border: 2.5px solid #7f7f7f;
+}
+
+.form_wait .search_form button{
+	width: 100%;
+	background-color: #fff;
+	border-radius: 5px;
+	border: none;
+	border: 3px solid #f99f48;
+	padding: 5px 12px;
+	color: #f99f48;
+	font-size: 1.9em;
+	font-weight: bolder;
+}
+.table_search_form_text{
+	font-size: 120%;
+	font-weight: bold;
+	color: #2b616d;
+}
+.table_search_form{
+	margin: auto;
+	width: 100%;
+	/*max-width: 500px;*/
+	height: 500px;
+	overflow: auto;
+	/*padding-right: 10px;*/
+}
+.table_search_form table{
+	width: 100%;
+}
+.table_header{
+	height: 40px;
+	background-color: #c0504d;
+}
+.table_header th {
+    padding: 0 10px;
+    color: #fff;
+    vertical-align: middle !important;
+    text-align: center;
+}
+.table_body td{
+    padding: 10px;
+    color: #000;
+    vertical-align: middle !important;
+    text-align: center;
+}
+.table_body tr{
+	height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+.login{
+	width: 100%;
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login .form-login{
+	width: 300px;
+	overflow: hidden;
+}
+.login .form-login input{
+	height: 50px;
+	margin-bottom: 30px;
+}
+.login .form-login button{
+	width: 100%;
+	height: 50px;
+	background-color: #7c7c7c;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+.logo{
+	position: relative;
+	width: 100%;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*float: middle;*/
+}
+.logo .image{
+	width: 100px;
+	height: 50px;
+	/*margin: auto;*/
+}
+.logo .setting{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	top: 50px;
+	right: 50px;
+}
+.logo .image img{
+	width: 100%;
+}
+.custom_button{
+	width: 100px;
+	height: 40px;
+	padding: 0;
+}
+
+
+.modal-dialog.wait_modal{
+	width: 300px;
+}
+.modal_item{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 100ms ease;
+}
+
+.modal_item:hover{
+	cursor: pointer;
+	background-color: #ccc;
+	transition: all 100ms ease;
+}
+
+
+
+

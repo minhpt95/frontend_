@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+    /*min-width: 1200px;*/
+    /*overflow: scroll;*/
+    /*background-color: #1D0F5C;*/
+    perspective-origin: 0% 50%;
+    perspective: 800px;
+}
+
+.bound {
+    width: 400px;
+    height: 600px;
+    margin: 10px auto;
+    background-color: rgba(0, 0, 0, .1);
+    transition: all 300ms ease;
+    /*transform: scale3d(0.5, 1, 1.7);*/
+    /*transform: rotateY(10deg);*/
+}
+.bound ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.bound ul li{
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+}
+.bound ul li:hover{
+    background-color: red;
+    transition: all 300ms ease;
+}
+
+.bound:hover {
+    transform:  rotateY(15deg);
+    transition: all 300ms ease;
+}
+.bound:hover .left {
+    transform: rotateY(0deg);
+    transition: all 300ms ease;
+}
+.left{
+    float: left;
+    width: 40px;
+    height: 100%;
+    background-color: red;
+    transform: rotateY(90deg);
+    transition: all 300ms ease;
+}
+.text{
+    float: left;
+    width: 40px;
+    height: 100%;
+    padding: 0 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90px;
+
+}

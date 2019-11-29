@@ -84,7 +84,14 @@ body{
 .linear23{
 	background: linear-gradient(90deg, #101b37, #e41476, #53cceb);
 }
-
+.linear24{
+	background: radial-gradient(180px at top right,#685e31,transparent),radial-gradient(180px at top left,#0d92c3,transparent),radial-gradient(180px at bottom left,#8a43bd,transparent),radial-gradient(180px at bottom right,#1d8d42,transparent);
+}
+.linear25{
+	background: linear-gradient(#100e17,#100e17) padding-box,linear-gradient(90deg,#db1d60,#ed4f32) 0/50% no-repeat border-box,linear-gradient(-90deg,#eb7d01,#ed4f32 37.5vw,#ed4f3200) 100% 101%/65% 75% no-repeat border-box;
+	border: 4px solid transparent;
+	border-radius: 2.5rem 0 3.5rem 2.5rem;
+}
 
 
 

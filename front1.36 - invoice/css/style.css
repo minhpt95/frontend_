@@ -24,7 +24,7 @@ ol li{
 }
 .body{
 	margin: auto;
-	width: 100vw;
+	width: 100%;
 	min-width: 1500px;
 	min-height: 100vh;
 	background-color: rgba(45, 45, 48, 1);
@@ -441,5 +441,19 @@ ol li{
 	width: 100%;
 	color: white;
 	font-size: 30px;
+}
+.demoul a{
+	display: block;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.canvas{
+	border: 1px solid black;
+}
+.listItem .ref{
+	display: none !important;
 }
 

@@ -1,0 +1,64 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+/*@import url('https://fonts.googleapis.com/css?family=Dosis');*/
+/*@import url('https://fonts.googleapis.com/css?family=Arial');*/
+/*@import url('https://fonts.googleapis.com/css?family=Poppins');*/
+/*@import url('https://fonts.googleapis.com/css?family=Kalam');*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+}
+
+.image{
+	position: relative;
+	float: left;
+	margin: 20px;
+	width: 400px;
+	height: 400px;
+	border: 1px solid red;
+	overflow: hidden;
+}
+.output{
+	float: left;
+	margin: 20px;
+	width: 400px;
+	height: 400px;
+	border: 1px solid red;
+}
+.out{
+	float: left;
+	width: 300px;
+	height: 40px;
+	border: 1px solid red;
+	margin: 5px;
+}
+.setup{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border: 1px solid red;
+	margin: 5px;
+	cursor: pointer;
+}
+canvas{
+	position: absolute;
+}
+.color{
+	background-color: #29e329b0;
+}
+#Main_canvas{
+	position: absolute;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+

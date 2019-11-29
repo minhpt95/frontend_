@@ -13,7 +13,7 @@ function showPDF(pdf_url) {
         	a.className = "ref";
        		var listItem = document.createElement('canvas');
         	listItem.className = "canvas";
-        	listItem.width = "1200";
+        	listItem.width = "1000";
 		    a.appendChild(listItem);
 		    data.appendChild(a);
 
@@ -52,7 +52,7 @@ function showPage(page_no, __CANVAS, __CANVAS_CTX) {
 
 
 	$('.ref').on('click', function() {
-		$('.ref:eq('+ (page_no-1) +')').attr('href', __CANVAS.toDataURL()).attr('download', 'page.png');
+		$('.ref:eq('+ (page_no-1) +')').attr('href', __CANVAS.toDataURL()).attr('download', 'page_'+ (page_no) +'.png');
 	});
 }
 

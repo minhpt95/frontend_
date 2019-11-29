@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body{
+	margin: 0;
+	padding: 0;
+    font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*background-color: #1D0F5C;*/
+}
+
+/* CONFIG */
+.component{
+	margin: auto;
+	width: 80%;
+	max-width: 1200px;
+	height: 100%;
+}
+.MX-flex{
+	display: flex;
+	justify-content: center;
+}
+.MY-flex{
+	display: flex;
+	align-items: center;
+}
+.MA-flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.b-black{
+	background-color: black !important;
+}
+.c-black{
+	color: black !important;
+}
+
+
+
+
+
+
+.W0{
+	width: 0 !important;
+}
+.W10{
+    width: 10% !important;
+}
+.W20{
+    width: 20%  !important;
+}
+.W25{
+    width: 25%  !important;
+}
+.W30{
+    width: 30%  !important;
+}
+.W35{
+    width: 35%  !important;
+}
+.W40{
+    width: 40%  !important;
+}
+.W50{
+    width: 50%  !important;
+}
+.W60{
+    width: 60%  !important;
+}
+.W70{
+    width: 70%  !important;
+}
+.W75{
+    width: 75%  !important;
+}
+.W80{
+    width: 80%  !important;
+}
+.W90{
+    width: 90%  !important;
+}
+.W100{
+    width: 100%  !important;
+}
+
+.left{
+    float: left !important;
+}
+.right{
+    float: right !important;
+}
+
+
+.r-0{
+	right: 0 !important;
+}
+.r-100{
+	right: -100%;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+
+/* CONFIG */
+
+
+
+
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: rgba(255, 255, 255, .5);
+	transition: all 300ms ease;
+}
+.search_form{
+	position: fixed;
+	top: 60px;
+	right: -100%;
+	width: 100%;
+	padding: 12px 10px;
+	max-width: 300px;
+	height: 60px;
+	background-color: rgba(255, 255, 255, 1);
+	transition: all 300ms ease;
+}
+.search_form input{
+	width: 80%;
+	border: none;
+	padding: 5px;
+	color: #a3865b;
+	border-bottom: 1px solid #666;
+}
+.header_in{
+	width: 100%;
+	height: 100%;
+	border-bottom: 1px solid #666;
+}
+.header_in .navication{
+	height: 100%;
+}
+.header_in .navication ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.header_in .navication ul li{
+	float: left;
+	padding: 0 10px;
+}
+.header_in .navication ul li a{
+	transition: all 300ms ease;
+	color: #666;
+}
+.header_in .navication ul li a:hover{
+	text-decoration: none;
+	color: #a3865b;
+	transition: all 300ms ease;
+}
+
+.header_in .action{
+	height: 100%;
+}
+.header_in .action ul{
+	margin: 0;
+	margin-left: auto;
+	padding: 0;
+	list-style-type: none;
+}
+.header_in .action ul li{
+	float: left;
+	padding: 0 5px;
+}
+.header_in .action ul li a{
+	color: #666;
+	font-size: 25px;
+}
+.header_in .action ul li a:hover{
+	text-decoration: none;
+	color: #666;
+}
+.header_in .action ul li .icon{
+	position: relative;
+	font-size: 25px;
+	margin: 5px;
+	color: #666;
+}
+.header_in .action ul li .icon .item{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	top: 0;
+	right: -5px;
+	border-radius: 12px;
+	background-color:  #a3865b;
+	font-size: 9px;
+	color: white;
+}
+
+.header_in .action ul li .cart{
+	font-size: 12px;
+	margin: 5px;
+	color: #666;
+}
+.header_in .action ul li .cart .money{
+	color: #a3865b;
+}
+
+
+
+
+.body{
+	width: 100%;
+	height: 10000px;
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

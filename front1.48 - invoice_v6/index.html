@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trang chủ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/bootstrap3.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+
+	<!-- Left -->
+	<div class="component left border">
+
+		<!-- Menu -->
+		<div class="nav W30 left border">
+			<ul class="border">
+				<li>
+					<a href="" class="border FMiddle">text1</a>
+				</li>
+				<li>
+					<a href="" class="border FMiddle">text1</a>
+				</li>
+				<li>
+					<a href="" class="border FMiddle">text1</a>
+				</li>
+			</ul>
+		</div>
+		<!-- End Menu -->
+		
+		<!-- Canvas -->
+		<div class="main W70 left" class="border">
+			<div class="output_canvas" id="output">
+				<div class="custom_canvas" id="ONTOP">
+					<div class="delta_rect" id="delta_rect"> </div>
+				</div>
+				<div class="custom_canvas" id="custom_canvas">
+					<div class="top_canvas" id="top_canvas"> </div>
+					<div class="top_canvas" id="middle_canvas"> 
+						<div class="rect1" id="rect1"> </div>
+						<div class="rect1" id="rect2"> </div>
+						<div class="rect1" id="rect3"> </div>
+						<div class="rect1" id="rect4"> </div>
+						<div class="rect1" id="rect5"> </div>
+					</div>
+					<div class="bound_canvas" id="bound_canvas"> </div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- End Canvas -->
+
+	</div>
+	<!-- End Left -->
+
+
+	<!-- Right -->
+	<div class="component left">
+
+		<!-- List Image -->
+		<div class="nav W25 left">
+			<ul>
+				<li>
+					<input type="file" id="LoadImage" value="" class="none" multiple> 
+					<label class="border FMiddle" for="LoadImage" id="LoadImageLabel">
+						Load Image
+					</label>
+				</li>
+				<li>
+					<!-- <input type="file" id="LoadImage" value="" class="none" multiple>  -->
+					<label class="border FMiddle" for="LoadImage">
+						PDF
+					</label>
+				</li>
+			</ul>
+			<div class="list-image W100 border">
+				<ul id="list-image"></ul>
+			</div>
+		</div>
+		<!-- End List Image -->
+
+		<!-- Output -->
+		<div class="main W75 left border">
+
+			<!-- Output Form -->
+			<table class="table table-hover">
+			    <thead>
+			      	<tr>
+			        	<th class="W20 textcenter">Title</th>
+			        	<th class="W30 textcenter">Image</th>
+			        	<th class="W40 textcenter">Select + output</th>
+			        	<th class="W10 textcenter"> - </th>
+			      	</tr>
+			    </thead>
+			    <tbody>
+			      	<tr class="H50p">
+			        	<td class="textcenter">Text</td>
+			        	<td class="P0"> <div class="canvas-output H50p border" id="out_canvas1"> </div> </td>
+			        	<td> 
+			        		<input type="" name="" class="W75 left" disabled=""> 
+			        		<div class="active left border" id="button1"></div> 
+			        	</td>
+			        	<td class="textcenter"> - </td>
+			     	</tr>
+			      	<tr class="H50p">
+			        	<td class="textcenter">John</td>
+			        	<td class="P0"> <div class="canvas-output H50p border" id="out_canvas2"></div> </td>
+			        	<td> 
+			        		<input type="" name="" class="W75 left" disabled=""> 
+				        	<div class="active left border" id="button2"></div> 
+				        </td>
+			        	<td class="textcenter"> - </td>
+			     	</tr>
+			      	<tr class="H50p">
+			        	<td class="textcenter">John</td>
+			        	<td class="P0"> <div class="canvas-output H50p border" id="out_canvas3"></div> </td>
+			        	<td> 
+			        		<input type="" name="" class="W75 left" disabled=""> 
+			        		<div class="active left border" id="button3"></div> 
+			        	</td>
+			        	<td class="textcenter"> - </td>
+			     	</tr>
+			      	<tr class="H50p">
+			        	<td class="textcenter">John</td>
+			        	<td class="P0"> <div class="canvas-output H50p border" id="out_canvas4"></div> </td>
+			        	<td> 
+			        		<input type="" name="" class="W75 left" disabled=""> 
+			        		<div class="active left border" id="button4"></div> 
+			        	</td>
+			        	<td class="textcenter"> - </td>
+			     	</tr>
+			      	<tr class="H50p">
+			        	<td class="textcenter">John</td>
+			        	<td class="P0"> <div class="canvas-output H50p border" id="out_canvas5"></div> </td>
+			        	<td> 
+			        		<input type="" name="" class="W75 left" disabled=""> 
+			        		<div class="active left border" id="button5"></div> 
+			        	</td>
+			        	<td class="textcenter"> - </td>
+			     	</tr>
+			    </tbody>
+			</table>
+			<!-- End Output Form -->
+
+			<!-- Export -->
+			<div class="export border">
+				<div class="W20 left border H100">
+					
+				</div>
+				<div class="W40 left border H100">
+					<div class="W100 left H50">
+						<a href="" class="border FMiddle">Search</a>
+					</div>
+					<div class="W100 left H50">
+						<a href="" class="border FMiddle">Excel</a>
+					</div>
+				</div>
+				<div class="W40 left border H100">
+					<div class="W100 left H50">
+						<a href="" class="border FMiddle">Save</a>
+					</div>
+					<div class="W100 left H50">
+						<a href="" class="border FMiddle">Upload</a>
+					</div>
+				</div>
+			</div>
+			<!-- End Export -->
+
+			<!-- Debug -->
+			<div class="debug border">
+				<div class="title" id="change_color"> debug </div>
+				<textarea></textarea>
+			</div>
+			<!-- End Debug -->
+
+		</div>
+		<!-- End Output -->
+
+	</div>
+	<!-- End Right -->
+
+</body>
+<script src="js/bootstrap3.js"></script>
+<script type="text/javascript" src="js/effect_custom.js"></script>
+<script type="text/javascript" src="js/tiff.min.js"></script>
+</html>

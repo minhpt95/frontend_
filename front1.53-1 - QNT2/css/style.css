@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url('https://fonts.googleapis.com/css?family=Arial');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	min-width: 350px;
+	/*overflow: hidden;*/
+	/*background-color: #1D0F5C;*/
+}
+.middleX{
+	display: flex;
+	justify-content: center;
+}
+.middleY{
+	display: flex;
+	align-items: center;
+}
+.middle{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.block{
+	display: block !important;
+}
+.relative{
+	position: relative !important;
+}
+.pd-0{
+	padding: 0 !important;
+}
+.pd-40{
+	padding: 40px !important;
+}
+.mg-0{
+	margin: 0 !important;
+}
+.mg-40{
+	margin: 40px !important;
+}
+section.sticker{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 10000;
+	background-color: rgba(0, 0, 0, .1);
+	display: none;
+}
+
+section.header{
+	width: 100%;
+	height: 120px;
+	background-color: rgba(255, 255, 255, .7);
+}
+section.header nav.sex-menu{
+	float: left;
+	height: 80px;
+}
+section.header nav.sex-menu ul{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	list-style-type: none;
+}
+section.header nav.sex-menu ul li{
+	float: left;
+	padding: 10px;
+}
+section.header nav.sex-menu ul li a{
+	position: relative;
+	color: black;
+}
+section.header nav.sex-menu ul li a:before{
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background-color: #00b5ad;
+	transition: all 300ms ease;
+}
+section.header nav.sex-menu ul li a:hover{
+	text-decoration: none;
+	color: black;
+}
+section.header nav.sex-menu ul li a:hover:before{
+	width: 100%;
+	transition: all 300ms ease;
+}
+
+section.header nav.checkout-menu{
+	float: right;
+	height: 80px;
+}
+section.header nav.checkout-menu ul{
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	list-style-type: none;
+}
+section.header nav.checkout-menu ul li{
+	float: left;
+	padding: 10px;
+}
+section.header nav.checkout-menu ul li a{
+	position: relative;
+	color: black;
+}
+section.header nav.checkout-menu ul li a:before{
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background-color: #00b5ad;
+	transition: all 300ms ease;
+}
+section.header nav.checkout-menu ul li a:hover{
+	text-decoration: none;
+	color: black;
+}
+section.header nav.checkout-menu ul li a:hover:before{
+	width: 100%;
+	transition: all 300ms ease;
+}
+section.header div.logo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(0, 0, 0, .8);*/
+}
+section.header div.logo .bound-logo{
+	margin: auto;
+	width: 100px;
+	overflow: hidden;
+}
+section.header div.logo .bound-logo img{
+	width: 100%;
+}
+section.header nav.menu{
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	height: 40px;
+	/*overflow: hidden;*/
+	/*padding: 10px;*/
+}
+section.header nav.menu menu{
+	margin: 0 20px;
+	padding: 0;
+	list-style-type: none;
+}	
+section.header nav.menu menu li{
+	position: relative;
+	float: left;
+	width: 100px;
+	padding: 10px;
+}
+section.header nav.menu menu li a{
+	color: black;
+}
+section.header nav.menu menu li a:hover{
+	text-decoration: none;
+}
+
+section.header nav.menu menu li ul{
+	position: absolute;
+	top: 40px;
+	/*border: 1px solid #ccc;*/
+	background-color: white;
+	left: 0;
+	list-style-type: none;
+	overflow: hidden;
+	width: 100px;
+	border-radius: 5px;
+	margin: 0;
+	padding: 0;
+	display: none;
+	z-index: 2;
+}
+
+section.body{
+	width: 100%;
+	/*height: 10000px;*/
+	overflow: hidden;
+	/*background-color: red;*/
+}
+
+section.body h3{
+	text-align: center;
+	overflow: hidden;
+}
+
+section.body nav{
+	width: 100%;
+	height: 80px;
+	/*background-color: red;*/
+	/*display: flex;*/
+	/*align-items: center;*/
+	/*justify-content: center;*/
+}
+section.body nav ul{
+	margin: 0 auto;
+	padding: 0;
+	/*width: 50%;*/
+	list-style-type: none;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.body nav ul li{
+	/*float: left;*/
+	padding: 10px;
+}
+section.body nav ul li a{
+	position: relative;
+	color: black;
+	display: block;
+	overflow: hidden;
+}
+section.body nav ul li a:hover{
+	text-decoration: none;
+	color: black;
+}
+section.body nav ul li a:before{
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 3px;
+	background-color: black;
+}
+.item{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.item .view{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 36px;
+	color: white;
+	background-color: rgba(0, 0, 0, .3);
+	opacity: 0;
+	transition: all 300ms ease;
+	cursor: pointer;
+	z-index: 2;
+}
+.view:hover {
+	opacity: 1;
+	text-decoration: none;
+	transition: all 300ms ease;
+}
+.item img{
+	width: 100%;
+}
+.listitem .bound-price-title{
+	margin: 20px 0;
+}
+.listitem .title{
+	width: 100%;
+	margin-bottom: 5px;
+	display: block;
+	padding: 0 20px;
+}
+.listitem .price{
+	width: 100%;
+	padding: 0 20px;
+}
+.seemore{
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.seemore button{
+	width: 300px;
+	height: 40px;
+	border: 2px solid #19b5ac;
+	background-color: white;
+	transition: all 300ms ease;
+}
+.seemore button:hover{
+	color: white;
+	background-color: #19b5ac;
+	transition: all 300ms ease;
+}
+
+.checkout{
+	width: 100%;
+	overflow: hidden;
+}
+.checkout .img{
+	margin: auto;
+	width: 50%;
+	overflow: hidden;
+}
+.checkout .img img{
+	width: 100%;
+}
+.checkout .order{
+	width: 100%;
+	overflow: hidden;
+}
+.checkout .img img{
+	width: 100%;
+}
+.checkout .size{
+	width: 100%;
+	overflow: hidden;
+}
+.checkout .size .sub-size{
+	float: left;
+	margin: 2px;
+	padding: 3px;
+	border-radius: 3px;
+	background-color: #ccc;
+}
+.checkout .info{
+	margin: 10px 0;
+	width: 80%;
+}
+section.footer{
+	width: 100%;
+	height: 300px;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+
+.glyphicon-chevron-right::before{
+	content: "" !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

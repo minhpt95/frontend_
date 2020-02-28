@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+/************
+4. 1024px
+************/
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+.I-slider .slider-carousel{
+	padding: 15px;
+}
+.I-slider .slider-carousel .owl-dots{
+	display: none;
+}
+.I-slider .slider .slider-control-large{
+	display: none;
+} 
+.I-slider .slider .slider-control-medium{
+	height: 80px;
+}
+.I-slider .slider .slider-control-medium .respon-prev{
+	display: block;
+}
+.I-slider .slider .slider-control-medium .respon-next{
+	display: block;
+}
+.I-slider .slider .slider-control-medium .index-control{
+	align-items: center;
+	height: 100%;
+}
+.I-slider .notification .notification-wrapper{
+	width: 100%;
+	overflow: hidden;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 15px 85px 15px;
+}
+.I-slider .notification .notice{
+	float: left;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.I-slider .notification .notice .notice-text{
+	font-size: 2.2rem;
+	color: white;
+}
+.I-slider .notification .seemore{
+	float: right;
+	width: 100%;
+}
+.I-slider .notification .seemore .seemore-button{
+	position: relative;
+	width: 156px;
+	height: 40px;
+	background-color: #B59C63;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+}
+.I-slider .notification .seemore .seemore-button{
+	font-size: 1.4rem;
+	color: #fff;
+	margin: auto;
+}
+.I-slider .notification .seemore .seemore-button .seemore-button-icon{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+.I-slider .notification .content{
+	float: right;
+	width: 100%;
+	min-height: auto;
+	padding: 0;
+	margin-bottom: 40px;
+}
+.I-slider .notification .content .content-item{
+	color: #fff;
+	padding: 0 0 10px 0;
+	overflow: hidden;
+}
+.I-slider .notification .content .content-item .content-item-time{
+	float: left;
+	font-size: 1.4rem;
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+.I-slider .notification .content .content-item .content-item-detail{
+	float: left;
+	width: 100%;
+}
+.I-slider .notification .content .content-item .content-item-detail .content-item-text{
+	float: left;
+	font-size: 1.3rem;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+
+
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+
+
+}
+
+/************
+15. 320px
+************/
+
+@media only screen and (max-width: 320px)
+{
+
+
+}

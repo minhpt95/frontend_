@@ -1,0 +1,145 @@
+
+/*________________ 6. Steps ________________*/
+.I-steps{
+	background-color: #F6F7FB;
+	padding: 0 0 35px 0;
+}
+.I-steps .step{
+	width: 100%;
+	height: 420px;
+	overflow: hidden;
+}
+.I-steps .step.step-1{
+	background-color: #fff;
+}
+.I-steps .step.step-2{
+	background-color: #F6F7FB;
+}
+.I-steps .step.step-3{
+	background-color: #F6F7FB;
+}
+.I-steps .step .step-image{
+	width: 100%;
+	height: 420px;
+}
+.I-steps .step.step-1 .step-image img{
+	float: right;
+	height: 100%;
+}
+.I-steps .step.step-2 .step-image img{
+	float: left;
+	height: 100%;
+}
+.I-steps .step.step-3 .step-image img{
+	float: right;
+	height: 100%;
+}
+.I-steps .step.step-1 .step-describe{
+	text-align: left;
+}
+.I-steps .step.step-2 .step-describe{
+	text-align: right;
+}
+.I-steps .step.step-3 .step-describe{
+	text-align: left;
+}
+.I-steps .step .step-describe .step-location{
+	position: relative;
+	margin: 60px 0 0 0;
+	padding: 0 0 0 65px;
+	font-size: 6rem;
+	line-height: 82px;
+	font-family: "Open Sans";
+	color: #2AA1AF;
+}
+.I-steps .step.step-1 .step-describe .step-location{
+	padding: 0 0 0 65px;
+}
+.I-steps .step.step-2 .step-describe .step-location{
+	padding: 0 65px 0 0;
+}
+.I-steps .step.step-3 .step-describe .step-location{
+	padding: 0 0 0 65px;
+}
+.I-steps .step .step-describe .step-location::before{
+	position: absolute;
+	content: "";
+	width: 60px;
+	height: 3px;
+	top: 50%;
+	background-color: #2AA1AF;
+}
+.I-steps .step.step-1 .step-describe .step-location::before{
+	left: 0;
+}
+.I-steps .step.step-2 .step-describe .step-location::before{
+	right: 0;
+}
+.I-steps .step.step-3 .step-describe .step-location::before{
+	left: 0;
+}
+.I-steps .step .step-describe .step-title{
+	margin: 0 0 23px 0;
+}
+.I-steps .step.step-1 .step-describe .step-title{
+	padding: 0 0 0 60px;
+}
+.I-steps .step.step-2 .step-describe .step-title{
+	padding: 0 60px 0 0 ;
+}
+.I-steps .step.step-3 .step-describe .step-title{
+	padding: 0 0 0 60px;
+}
+.I-steps .step .step-describe .step-title .step-title-content{
+	font-size: 3rem;
+	font-weight: bold;
+	line-height: 41px;
+	color: #000;
+}
+.I-steps .step .step-describe .step-title .step-title-detail{
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 22px;
+	color: #000;
+}
+.I-steps .step .step-describe .step-detail{
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: 25px;
+	color: #000;
+}
+.I-steps .step.step-1 .step-describe .step-detail{
+	padding: 0 0 0 60px;
+}
+.I-steps .step.step-2 .step-describe .step-detail{
+	padding: 0 60px 0 0 ;
+}
+.I-steps .step.step-3 .step-describe .step-detail{
+	padding: 0 0 0 60px;
+}
+.I-steps .step.step-3 .step-describe  .step-goto{
+	width: 150px;
+	height: 40px;
+	margin: 15px 0 0 60px;
+}
+.I-steps .step-goto button{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 5px;
+	background-color: #E1E1E1;
+	color: #000;
+	font-size: 1.4rem;
+	line-height: 19px;
+}
+/*________________ End Steps ________________*/
+
+
+
+
+
+
+
+
+
+

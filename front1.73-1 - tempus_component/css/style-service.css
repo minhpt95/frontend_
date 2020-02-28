@@ -1,0 +1,52 @@
+.I-service{
+	padding: 120px 0;
+}
+.I-service .wrapper{
+	padding: 0 150px;
+}
+.I-service .title-service{
+	color: #3a3a3a;
+	text-transform: uppercase;
+	margin: 0 0 50px 0;
+	font-weight: bold;
+	overflow: hidden;
+}
+.I-service .list-service .row{
+	margin-bottom: 80px;
+}
+.I-service .wrapper-title{
+	padding: 0 60px 0 0;
+	margin: 30px 0;
+}
+.I-service .item-title{
+	color: #3a3a3a;
+	text-transform: uppercase;
+	margin: 20px 0 20px 0;
+	font-size: 26px;
+	overflow: hidden;
+}
+.I-service .item-detail{
+	color: #3a3a3a;
+	font-size: 18px;
+	overflow: hidden;
+}
+.I-service .item-image{
+	width: 100%;
+}
+.I-service .item-image img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*background-color: black;*/
+	letter-spacing: .5px;
+	background-color: #f6f6f6;
+}
+.component{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 10px;
+}
+.text-left{
+	justify-content: flex-start;
+}
+.text-right{
+	justify-content: flex-end;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #3a3a3a;
+	z-index: 1000;
+}
+header section{
+	
+}
+header section.tele{
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #a1a1a1;
+	background-color: #f6f6f6;
+}
+
+
+header section.tele .component{
+	height: 100%;
+	/*display: flex;*/
+	/*align-items: center;*/
+}
+header section.main .component .open_menu{
+	display: none;
+}
+header section.tele .component .tel{
+	padding: 15px 0;
+}
+
+header section.main{
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #a1a1a1;
+	transition: all 300ms ease;
+	background-color: #f6f6f6;
+}
+header section.main .component{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header section.main .component .language{
+	width: 200px;
+	margin-right: auto;
+}
+header section.main .component .logo{
+	width: 200px;
+}
+header section.main .component .logo img{
+	width: 100%;
+}
+header section.main .component .search{
+	position: relative;
+	width: 250px;
+	margin-left: auto;
+}
+header section.main .component .open_search{
+	display: none;
+	width: 200px;
+	margin-left: auto;
+}
+
+header section.main .component .search .close_search{
+	display: none;
+}
+header section.main .component .search input{
+	width: 250px;
+	height: 30px;
+	border: none;
+	/*box-shadow: 1px 1px 2px -1px;*/
+	padding: 5px;
+}
+header section.main .component .search button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border: none;
+}
+header nav{
+	width: 100%;
+	height: 45px;
+	background-color: #f6f6f6;
+}
+header nav .component{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header nav .component ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+header nav .component ul li a{
+	color: #3a3a3a;
+}
+header nav .component ul li.between{
+	width: 18.5%;
+	height: 100%;
+	float: left;
+}
+header nav .component ul li.dot{
+	width: 13%;
+	height: 100%;
+	float: left;
+}
+header nav .component ul li.between a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header nav .component ul li.dot a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+header nav .component ul li a:hover{
+	text-decoration: none;
+}
+
+main{
+	margin-top: 195px;
+}
+main .banner{
+	width: 100%;
+	overflow: hidden;
+}
+main .banner img{
+	width: 100%;
+}
+main .listitem{
+	padding: 50px 0;
+}
+main .listitem .component{
+
+}
+main .listitem .item{
+	width: 100%;
+	height: 500px;
+}
+main .listitem .item .image{
+	margin: auto;
+	width: 80%;
+	border-radius: 100%;
+	overflow: hidden;
+}
+main .listitem .item .image img{
+	width: 100%;
+}
+main .listitem .item h3.content{
+	text-align: center;
+	font-weight: bold;
+}
+main .listitem .item p.detail{
+	text-align: center;
+}
+
+main .I-library{
+	padding: 180px 0 120px 0;
+}
+
+
+footer{
+	width: 100%;
+	padding: 100px 0;
+}
+footer .call{
+	display: none;
+}
+footer .logo{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+footer .logo .image{
+	width: 200px;
+}
+footer .logo .image img{
+	width: 100%;
+}
+footer h5.bold{
+	font-weight: bold;
+}
+footer .left-text{
+	text-align: left;
+}
+footer .center-text{
+	text-align: center;
+}
+footer .right-text{
+	text-align: right;
+}
+
+
+
+
+
+.glyphicon-chevron-left::before{
+	content: "" !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

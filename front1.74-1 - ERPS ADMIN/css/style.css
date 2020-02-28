@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+@font-face {
+  	font-family: 'Noto Sans CJK KR';
+  	src: url('../font/NotoSansCJKkr/NotoSansCJKkr-Black.otf');
+}
+@font-face {
+  	font-family: 'Noto Sans CJK KR DemiLight';
+  	src: url('../font/NotoSansCJKkr/NotoSansCJKkr-DemiLight.otf');
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', sans-serif;
+	font-size: 62.5%;
+}
+
+section.I-loginform{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-width: 1600px;
+	min-height: 960px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #EBEEF7;
+}
+section.I-loginform .version{
+	position: absolute;
+	bottom: 32px;
+	width: 100%;
+	text-align: center;
+	font-family: Noto Sans CJK KR;
+	font-size: 1.2rem;
+	line-height: 16px;
+	color: #000000;
+}
+section.I-loginform .form-wrapper{
+	position: relative;
+	height: 100%;
+	float: left;
+	width: 529px;
+	overflow: hidden;
+}
+section.I-loginform .content{
+	width: 946px;
+	height: 692px;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #fff;
+}
+section.I-loginform .content .content-banner{
+	position: relative;
+	float: left;
+	width: 417px;
+	height: 100%;
+	background: url("../images/banner.png");
+}
+section.I-loginform .content .content-banner .logo{
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+section.I-loginform .content .content-banner .logo img{
+	width: 100%;
+}
+section.I-loginform .content .content-banner .title{
+	margin: 188px 0 0 0;
+}
+section.I-loginform .content .content-banner .title h1{
+	text-align: center;
+	font-size: 4rem;
+	line-height: 53px;
+	font-family: 'Noto Sans CJK KR';
+	color: #fff;
+	margin: 0 0 17px 0;
+}
+section.I-loginform .content .content-banner .title p{
+	text-align: center;
+	font-size: 1.6rem;
+	line-height: 21px;
+	font-family: 'Noto Sans CJK KR';
+	color: #3A4E81;
+	margin: 0;
+}
+section.I-loginform .content .content-form{
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 529px;
+	height: 100%;
+	padding: 48px 114px 20px 114px;
+	background-color: #fff;
+	transition: all 300ms ease;
+}
+section.I-loginform .content .content-form.page1{
+	z-index: 2;
+}
+section.I-loginform .content .content-form.page2{
+	z-index: 1;
+}
+section.I-loginform .content .content-form.page3{
+	z-index: 1;
+}
+section.I-loginform .content .content-form.page4{
+	z-index: 1;
+}
+section.I-loginform .content .content-form.page5{
+	z-index: 1;
+}
+section.I-loginform .content .content-form .titleform{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 27px 0;
+}
+section.I-loginform .content .content-form .titleform .titleform-back{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	cursor: pointer;
+}
+section.I-loginform .content .content-form .titleform .titleform-text{
+	text-align: center;
+	font-family: 'Roboto';
+	width: 100%;
+	height: 39px;
+	font-size: 3rem;
+	line-height: 39px;
+	color: #122A3B;
+	margin: 0 0 13px 0;
+}
+section.I-loginform .content .content-form .titleform .titleform-detail{
+	text-align: center;
+	font-family: 'Noto Sans CJK KR';
+	width: 100%;
+	height: 16px;
+	font-size: 1.2rem;
+	line-height: 16px;
+	color: #000000;
+}
+section.I-loginform .content .content-form .mainform{
+	width: 100%;
+}
+section.I-loginform .content .content-form .mainform .wrapper{
+	overflow: hidden;
+}
+section.I-loginform .content .content-form .mainform .wrapper .mainform-title{
+	width: 100%;
+	margin: 5px 0;
+	font-family: 'Noto Sans CJK KR';
+	line-height: 16px;
+	font-size: 1.2rem;
+}
+section.I-loginform .content .content-form .mainform .wrapper .select{
+	width: 100%;
+	font-size: 1.2rem;
+}
+section.I-loginform .content .content-form .mainform .wrapper .select select{
+	padding: 6px 12px;
+}
+section.I-loginform .content .content-form .mainform .wrapper .input input{
+	width: 100%;
+}
+section.I-loginform .content .content-form .mainform .wrapper .input{
+	float: left;
+	width: 100%;
+}
+section.I-loginform .content .content-form .mainform .wrapper .input.phonenumber{
+	float: left;
+	width: 214px;
+	margin: 0 6px 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper .input.certification{
+	float: left;
+	width: 214px;
+	margin: 0 6px 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper .input.email{
+	float: left;
+	width: 195px;
+	margin: 0 6px 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper .check{
+	float: left;
+}
+section.I-loginform .content .content-form .mainform .wrapper .check button{
+	width: 80px;
+	background-color: #838EAB;
+	border: none;
+	font-family: 'Noto Sans CJK KR';
+	line-height: 19px;
+	color: #fff;
+	font-size: 1.4rem;
+	border-radius: 4px;
+	height: 32px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action{
+	margin: 88px 0 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action .saveID{
+	float: left;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action .saveID input[type=checkbox]{
+	float: left;
+	margin: 0 10px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action .saveID .saveID-text{
+	float: left;
+	font-family: 'Noto Sans CJK KR DemiLight';
+	font-size: 1.3rem;
+	line-height: 17px;
+	color: #000000;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action .forgotpassword{
+	float: right;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action .forgotpassword a{
+	float: right;	
+	font-family: 'Noto Sans CJK KR DemiLight';
+	font-size: 1.3rem;
+	line-height: 17px;
+	color: #000000;
+	cursor: pointer;
+}
+section.I-loginform .content .content-form .mainform .wrapper.action .forgotpassword a:hover{
+	text-decoration: none;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event{
+	margin: 25px 0 0 0;
+	display: flex;
+	justify-content: center;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event.modification{
+	margin: 191px 0 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event.editpassword{
+	margin: 58px 0 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event button{
+	height: 40px;
+	font-family: 'Noto Sans CJK KR';
+	font-size: 1.4rem;
+	line-height: 19px;
+	border: none;
+	border-radius: 4px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .system{
+	margin-right: auto;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .general{
+	margin-left: auto;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .system button{
+	background-color: #5598FF;
+	color: #fff;
+	width: 140px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .general button{
+	background-color: #3A4E81;
+	color: #fff;
+	width: 140px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .forgotpassword button{
+	background-color: #EBEEF7;
+	color: #D4D6DA;
+	width: 140px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .modification-password button{
+	background-color: #5598FF;
+	color: #fff;
+	width: 225px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .edit-password button{
+	background-color: #5598FF;
+	color: #fff;
+	width: 140px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.event .goto-login button{
+	background-color: #5598FF;
+	color: #fff;
+	width: 300px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.setting{
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.I-loginform .content .content-form .mainform .wrapper.setting .setting-icon{
+	margin: 0 10px 0 0;
+}
+section.I-loginform .content .content-form .mainform .wrapper.setting .setting-text a{
+	font-family: 'Noto Sans CJK KR';
+	font-size: 1.2rem;
+	line-height: 16px;
+	color: #8587AD;
+}
+section.I-loginform .content .content-form .mainform .wrapper.setting .setting-text a:hover{
+	text-decoration: none;
+}
+section.I-loginform .content .content-form .mainform .wrapper.email .check button{
+	width: 100px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.wanning{
+	margin: 26px 0 61px 0;
+	height: 53px;
+}
+section.I-loginform .content .content-form .mainform .wrapper.wanning .mainform-title{
+	border-radius: 4px;
+	background-color: #FDFCF3;
+	width: 100%;
+	height: 43px;
+	font-size: 13px;
+	line-height: 17px;
+	color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+section.I-loginform .content .content-form .mainform .wrapper.wanning.successfully{
+	margin: 60px 0 100px 0;
+	height: 150px;
+	width: 100%;
+}
+section.I-loginform .content .content-form .mainform .wrapper.wanning.successfully .mainform-title{
+	height: 100%;
+	padding: 52px 58px 34px 73px;
+	line-height: 21px;
+	font-size: 1.6rem;
+}
+
+
+
+.input input{
+	height: 32px;
+	background-color: #fff;
+	border-radius: 4px;
+	font-family: 'Noto Sans CJK KR';
+	font-size: 1.2rem;
+	line-height: 16px;
+	font-weight: normal;
+	border: 1px solid #E5E5E5;
+	padding: 8px 12px;
+}
+.select{
+	margin-left: auto;
+	position: relative;
+	height: 32px;
+	background-color: #fff;
+	border-radius: 4px;
+	width: 120px;
+	font-family: 'Noto Sans CJK KR';
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #000;
+	font-weight: normal;
+}
+.select select {
+	position: absolute;
+	padding-left: 15px;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	border: 1px solid #E5E5E5;
+	cursor: pointer;
+   	-moz-appearance: none;
+  	-webkit-appearance:none;
+  	appearance: none;
+  	background-color: rgba(255, 255, 255, 0);
+  	z-index: 2;
+}
+.select .icon{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 32px;
+	border-left: 1px solid #E5E5E5;
+	width: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 1;
+}
+.select.icon.chevron-down{
+	
+}

@@ -1,0 +1,120 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+/*@import url('https://fonts.googleapis.com/css?family=Dosis');*/
+/*@import url('https://fonts.googleapis.com/css?family=Arial');*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/*@import url('https://fonts.googleapis.com/css?family=Kalam');*/
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*min-width: 550px;*/
+	/*overflow: hidden;*/
+	/*background-color: #1D0F5C;*/
+	font-size: 67.5%;
+	background-color: white;
+	height: 10000px;
+}
+
+
+/*TASK 1*/
+/*
+.process_bar{
+
+	margin: 20px auto;
+
+	width: 600px;
+	height: 20px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+
+}
+.process_bar .point_bar{
+
+	width: 0px;
+	height: 20px;
+	background-color: #62d3e9;
+	transition: all 300ms ease;
+}
+
+.control{
+	cursor: pointer;
+}
+*/
+/*End TASK 1*/
+
+.component{
+	margin: 50px auto;
+	width: 800px;
+	height: 100px;
+}
+
+.process_bar{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	font-size: 1rem;
+}
+
+.process_bar .point_bar{
+	width: 100%;
+	height: 3px;
+	background-color: #62d3e9;
+	transition: all 300ms ease;
+}
+
+.process_bar .circle_point{
+	position: absolute;
+	top: -15px;
+	left: -15px;
+	/*border-radius: 15px;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	width:65px;
+	height: 30px;
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	box-shadow: 1px 1px 1px 1px black;
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	transition: all 300ms ease;
+}
+.process_bar .circle_point.hasClick{
+	cursor: pointer;
+}
+.process_bar .circle_point.clearBorder{
+	border-color: #fff !important;
+}
+.process_bar .circle_point.done{
+	border-color: #62d3e9;
+	background-color: #62d3e9;
+}
+.process_bar .circle_point.edit{
+	border-color: #6aa1ac;
+	background-color: #6aa1ac;
+}
+.process_bar .circle_point.wait{
+	background-color: #ccc;
+}
+
+.control{
+	font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+footer{
+	width: 100%;
+	overflow: hidden;
+}
+.I-footer{
+	padding: 50px 0 0 0;
+	width: 100%;
+	background-color: #f6f6f6;
+}
+.I-footer .logo{
+	height: 90px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-footer .logo .logo-image{
+	width: 280px;
+	overflow: hidden;
+}
+.I-footer .logo .logo-image img{
+	width: 100%;
+}
+.I-footer .information{
+	overflow: hidden;
+	width: 100%;
+	padding: 70px 0 30px 0;
+}
+.I-footer .information .component{
+	float: left;
+	width: 33%;
+	height: 150px;
+}
+.I-footer .information .component.address{
+	/*width: 100%;*/
+}
+.I-footer .information .component.address .address-title{
+	text-align: left;
+	width: 200px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.I-footer .information .component.time{
+
+}
+.I-footer .information .component.time .time-title{
+	text-align: center;
+	width: 100%;
+	font-size: 15px;
+	font-weight: bold;
+}
+.I-footer .information .component.time .time-content{
+	text-align: center;
+	width: 200px;
+	margin: auto
+}
+.I-footer .information .component.contact{
+	
+}
+.I-footer .information .component.contact .contact-title{
+	float: right;
+	text-align: right;
+	width: 100%;
+	font-size: 15px;
+	font-weight: bold;
+}
+.I-footer .information .component.contact .contact-content{
+	text-align: right;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

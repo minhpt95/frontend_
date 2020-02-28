@@ -1,0 +1,166 @@
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*overflow: hidden;*/
+	z-index: 1000;
+}
+.I-header{
+	width: 100%;
+	height: 100%;
+	background-color: #f6f6f6;
+}
+.I-header .menu-respon{
+	display: none;
+}
+.I-header .telephone{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #a1a1a1;
+}
+.I-header .telephone .wrapper{
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.I-header .telephone .telephone-text{
+	margin: 0 auto 0 0;
+}
+.I-header .content{
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #a1a1a1;
+}
+.I-header .content .wrapper{
+	position: relative;
+	height: 100%;
+}
+.I-header .content .logo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+}
+.I-header .content .logo .logo-image{
+	width: 300px;
+	overflow: hidden;
+}
+.I-header .content .logo .logo-image img{
+	width: 100%;
+}
+.I-header .content .body{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.I-header .content .body .language{
+	margin: 0 auto 0 0;
+	color: #000;
+}
+.I-header .content .body .search{
+	position: relative;
+	width: 200px;
+	height: 25px;
+	margin: 0 0 0 auto;
+}
+.I-header .content .body .search-respon{
+	display: none;
+}
+.I-header .content .body .search a.search-button{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 25px;
+	background-color: #fff; 
+	z-index: 2;
+}
+.I-header .content .body .search a.search-button img{
+	width: 50%;
+}
+
+.I-header .content .body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+.I-header .menu{
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #a1a1a1;
+}
+.I-header .menu .wrapper{
+	height: 40px;
+}
+.I-header .menu ul{
+	width: 100%;
+	height: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.I-header .menu ul li{
+	float: left;
+	width: 16.66%;
+	height: 100%;
+}
+.I-header .menu ul li a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	color: #000;
+}
+.I-header .menu ul li a:hover{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

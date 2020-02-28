@@ -1,0 +1,278 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+/*@import url('https://fonts.googleapis.com/css?family=Dosis');*/
+/*@import url('https://fonts.googleapis.com/css?family=Arial');*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/*@import url('https://fonts.googleapis.com/css?family=Kalam');*/
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*min-width: 550px;*/
+	/*overflow: hidden;*/
+	/*background-color: #1D0F5C;*/
+	background-color: white;
+	/*font-size: 67.5%;*/
+}
+
+.glyphicon-chevron-left::before{
+	content: "" !important;
+}
+.R-0{
+	right: 0;
+}
+h1, h2, h3, h4, h5, h6{
+	text-align: center;
+}
+header{
+	position: fixed;
+	width: 100%;
+	height: 50px;
+	background-color: #f3f3f3;
+	z-index: 1000;
+}
+header .header_in{
+	padding: 0 50px;
+	width: 100%;
+	max-width: 1200px;
+	overflow: hidden;
+	margin: auto;
+}
+header .logo{
+	float: left;
+	width: 80px;
+	height: 100%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+header .logo img{
+	width: 100%;
+}
+header nav{
+	float: right;
+	overflow: hidden;
+}
+header nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	transition: all 300ms ease;
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	font-weight: bold;
+	color: black;
+	display: block;
+	padding: 15px 20px;
+	transition: all 300ms ease;
+}
+header nav ul li a:hover{
+	text-decoration: none;
+	background-color: #c4161c;
+	color: white;
+}
+header nav ul li a:focus{
+	text-decoration: none;
+	background-color: #c4161c;
+	color: white;
+}
+header .open_nav{
+	float: right;
+	padding: 7px;
+	cursor: pointer;
+	font-size: 25px;
+	display: none;
+}
+
+main{
+	width: 100%;
+	overflow: hidden;
+}
+
+
+main .bound_slide{
+	margin-top: 50px;
+	width: 100%;
+	/*height: 500px;*/
+	overflow: hidden;
+}
+
+main .how_to_use{
+	margin: 50px 0;
+	width: 100%;
+	padding: 0 50px;
+	/*height: 500px;*/
+	overflow: hidden;
+}
+main .how_to_use h3{
+	margin: 20px 0;
+}
+main .how_to_use .item .image{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+main .how_to_use .item .image img{
+
+}
+main .how_to_use .item p{
+	text-align: center;
+}
+
+main .menu {
+	margin: 50px 0;
+	width: 100%;
+	padding: 0 50px;
+}
+
+main .menu .item{
+	display: block;
+	border: 3px solid #fff;
+	transition: all 100ms ease;
+	color: black;
+}
+main .menu .item h4{
+	padding: 20px 0;
+	transition: all 100ms ease;
+}
+main .menu .item:hover{
+	text-decoration: none;
+	color: white;
+	border: 3px solid #c4161c;
+}
+main .menu .item:hover h4{
+	background-color:  #c4161c;
+}
+main .menu .item .image{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+main .menu .item .image img{
+	width: 100%;
+}
+
+main .contact_us{
+	width: 100%;
+	height: 300px;
+	background-color: #f3f3f3;
+	margin: 50px 0;
+}
+main .sub_item{
+	width: 100%;
+	padding: 0 50px;
+	margin: 100px 0;
+}
+main .sub_item h2{
+	text-align: left;
+}
+main .sub_item h3{
+	text-align: left;
+	color:  #c4161c;
+}
+main .sub_item .image{
+	width: 100%;
+	border: 3px solid   #c4161c;
+}
+main .sub_item .image img{
+	width: 100%;
+}
+main .sub_item button{
+	width: 100%;
+	margin: 10px 0;
+}
+
+main .sub_item ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+main .sub_item li {
+	width: 100%;
+	overflow: hidden;
+	display: block;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+main .sub_item li .image{
+	float: left;
+	width: 10%;
+	border: 3px solid   #c4161c;
+}
+main .sub_item li a{
+	float: left;
+	padding: 0 5px;
+}
+
+main .checkout{
+	width: 100%;
+	padding: 0 50px;
+	margin: 100px 0;
+
+}
+main .checkout td{
+
+}
+
+main .checkout .image{
+	width: 100px;
+}
+
+main .checkout .image img{
+	width: 100px;
+}
+
+main .relate_to{
+	width: 100%;
+	padding: 0 50px;
+	margin: 100px 0;
+}
+
+main .relate_to .item{
+	display: block;
+	border: 3px solid #fff;
+	transition: all 100ms ease;
+	color: black;
+}
+main .relate_to h2{
+	text-align: left;
+}
+main .relate_to .item h4{
+	padding: 10px 0;
+	color: #c4161c;
+}
+main .relate_to .item:hover{
+	text-decoration: none;
+}
+main .relate_to .item .image{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+main .relate_to .item .image img{
+	width: 100%;
+}
+
+footer{
+	margin-top: 50px;
+	width: 100%;
+	height: 300px;
+	background-color: #f3f3f3;
+}
+
+
+
+
+
+
+
+.padding-0{
+	padding: 0;
+}
+
+

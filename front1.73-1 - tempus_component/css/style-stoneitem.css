@@ -1,0 +1,228 @@
+.I-stoneitem.large{
+	margin: 80px 0;
+	display: block;
+}
+.I-stoneitem.large .list-item{
+	overflow: hidden;
+}
+.I-stoneitem.large .list-item .item{
+	float: left;
+	margin: 5px;
+	width: calc(33% - 10px);
+	height: 600px;
+	/*background-color: red;*/
+	/*overflow: hidden;*/
+}
+.I-stoneitem.large .list-item .item .item-title{
+	float: left;
+	width: 100%;
+	height: 600px;
+}
+.I-stoneitem.large .list-item .item .item-title .item-image{
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 90%;
+}
+.I-stoneitem.large .list-item .item .item-title .item-image img{
+	width: 100%;
+}
+.I-stoneitem.large .list-item .item .item-title .item-name{
+	width: 90%;
+	margin: 30px auto;
+	text-align: center;
+	font-size: 24px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+.I-stoneitem.large .list-item .item .item-title .item-detail{
+	width: 90%;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 16px;
+	overflow: hidden;
+}
+
+.I-stoneitem.large .list-item .item .item-content{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 800px;
+	/*overflow-y: scroll;*/
+}
+
+.I-stoneitem.large .list-item .item .item-content .content-wrapper{
+	z-index: -1;
+}
+.I-stoneitem.large .list-item .item:nth-child(1) .item-content .content-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	max-width: 1140px;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 1);
+	display: none;
+}
+.I-stoneitem.large .list-item .item:nth-child(1) .item-content .content-wrapper::before{
+	position: absolute;
+	content: "";
+	top: -30px;
+	left: 14%;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	transform: rotate(45deg);
+}
+.I-stoneitem.large .list-item .item:nth-child(2) .item-content .content-wrapper{
+	position: absolute;
+	top: 0;
+	left: -103%;
+	width: 100vw;
+	max-width: 1140px;
+	height: 100%;
+	background-color: #fff;
+	display: none;
+}
+.I-stoneitem.large .list-item .item:nth-child(2) .item-content .content-wrapper::before{
+	position: absolute;
+	content: "";
+	top: -30px;
+	left: 48%;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	transform: rotate(45deg);
+}
+.I-stoneitem.large .list-item .item:nth-child(3) .item-content .content-wrapper{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100vw;
+	max-width: 1140px;
+	height: 100%;
+	background-color: #fff;
+	display: none;
+}
+.I-stoneitem.large .list-item .item:nth-child(3) .item-content .content-wrapper::before{
+	position: absolute;
+	content: "";
+	top: -30px;
+	left: 81%;
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	transform: rotate(45deg);
+}
+.I-stoneitem.large .list-item .item.is-select{
+	height: auto;
+}
+.I-stoneitem.large .list-item .item.is-select .item-content .content-wrapper{
+	display: block;
+	padding: 30px 0;
+	z-index: 2;
+}
+.I-stoneitem.large .list-item .item.is-select .item-content .content-wrapper .content-detail{
+	width: 100%;
+	height: 700px;
+	overflow-y: scroll;
+	padding: 40px 30px;
+	position: absolute;
+	z-index: 2;
+}
+
+.I-stoneitem.large .list-item .item.is-select .item-content .content-wrapper img{
+	width: 100%;
+}
+
+
+.I-stoneitem.respon{
+	display: none;
+}
+.I-stoneitem.respon .item{
+	margin: 20px 0;
+	width: 100%;
+	/*height: 300px;*/
+	/*background-color: red;*/
+	overflow: hidden;
+}
+.I-stoneitem.respon .item.is-select{
+	height: auto;
+}
+.I-stoneitem.respon .item .item-title{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+.I-stoneitem.respon .item .item-title .item-image{
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 90%;
+}
+.I-stoneitem.respon .item .item-title .item-image img{
+	width: 100%;
+}
+.I-stoneitem.respon .item .item-title .item-name{
+	width: 90%;
+	margin: 30px auto;
+	text-align: center;
+	font-size: 24px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+.I-stoneitem.respon .item .item-title .item-detail{
+	width: 90%;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 16px;
+	overflow: hidden;
+}
+.I-stoneitem.respon .item .item-content{
+	display: none;
+}
+.I-stoneitem.respon .item.is-select .item-content{
+	/*position: relative;*/
+	display: block;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	padding: 50px 30px;
+	background-color: #fff;
+}
+.I-stoneitem.respon .item.is-select .item-content img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

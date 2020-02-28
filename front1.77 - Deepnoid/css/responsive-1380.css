@@ -1,0 +1,93 @@
+@charset "utf-8";
+/************
+3. 1380px
+************/
+
+@media only screen and (min-width: 1380px) and (max-width: 1439px)
+{
+
+
+/*________________ 3. Header ________________*/
+.I-header{ }
+.I-header .navibar{
+	height: 85px; 
+}
+.I-header .navibar .navibar-brand{
+	width: 240px;
+}
+.I-header .navibar .navibar-brand img{ }
+.I-header .navibar .navibar-nav{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a.is-visited .text{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .text{
+	font-size: 1.8rem;
+	line-height: 25px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .icon{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .icon img{ }
+.I-header .navibar .navibar-nav .navibar-nav-login{  
+	width: 160px;
+	height: 42px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-login button{
+	font-size: 1.8rem;
+}
+
+/*________________ End Header ________________*/
+
+/*________________ 4. Content_Header ________________*/
+.I-content_header{
+	margin: 80px 0;
+	padding: 0 55px;
+}
+.I-content_header .content_header-description{ }
+.I-content_header .content_header-description .description-title{ }
+.I-content_header .content_header-description .description-title h1{
+	font-size: 5rem;
+	line-height: 72px;
+	margin: 5 0 13px 0;
+}
+.I-content_header .content_header-description .description-detail{
+	width: 400px;
+	margin: 20px 0 33px 0;
+}
+.I-content_header .content_header-description .description-detail .row{ }
+.I-content_header .content_header-description .description-detail .row .pd-0{ }
+.I-content_header .content_header-description .description-detail .row .pd-0:not(:last-child):before{ }
+.I-content_header .content_header-description .description-detail .description-detail-item{ }
+.I-content_header .content_header-description .description-detail .description-detail-item .item-title{
+	font-size: 1.8rem;
+	line-height: 24px;
+	margin: 0 0 11px 0;
+}
+.I-content_header .content_header-description .description-detail .description-detail-item .item-data{
+	font-size: 4.4rem;
+	line-height: 60px;
+}
+.I-content_header .content_header-description .description-action{ }
+.I-content_header .content_header-description .description-action .action-login{
+	width: 160px;
+	height: 44px;
+}
+.I-content_header .content_header-description .description-action .action-login button{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-content_header .content_header-description .description-action .action-search{
+	width: 230px;
+	height: 44px;
+}
+.I-content_header .content_header-description .description-action .action-search img{ }
+.I-content_header .content_header-description .description-action .action-search button{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-content_header .content_header-banner{ }
+.I-content_header .content_header-banner img{ }
+/*________________ End Content_Header ________________*/
+
+}
+

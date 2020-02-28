@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+/************
+4. 1024px
+************/
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+.I-movie .content .content-video{
+	width: 100%;
+	height: 450px;
+}
+
+.I-movie .content .content-listvideo{
+	margin-top: 45px;
+	width: 100%;
+	height: auto;
+	overflow-y: inherit;
+}
+.I-movie .content .content-listvideo .video{
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.I-movie .content .content-listvideo .video .video-image{
+	float: left;
+	width: 50%;
+}
+.I-movie .content .content-listvideo .video .video-image img{
+	width: 100%;
+}
+.I-movie .content .content-listvideo .video .video-title{
+	margin: 0;
+	padding: 0 0 0 10px;
+	float: left;
+	width: 50%;
+	font-size: 1.4rem;
+	color: #717171;
+}
+
+.I-movie .banner{
+	padding: 0 15px;
+}
+.I-movie .banner .banner-pc{
+	display: none;
+}
+.I-movie .banner .banner-sp{
+	display: block;
+}
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+
+.I-movie .content .content-video{
+	width: 100%;
+	height: 250px;
+}
+
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+.I-movie .content .content-video{
+	width: 100%;
+	height: 180px;
+}
+
+}
+
+/************
+15. 320px
+************/
+
+@media only screen and (max-width: 320px)
+{
+
+
+}

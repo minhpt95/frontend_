@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.666" height="22.062" viewBox="0 0 15.666 22.062">
+  <g id="wishlist" transform="translate(-92 -216)">
+    <g id="Group_886" data-name="Group 886" transform="translate(-807.839 -24)">
+      <path id="bookmark_2_" data-name="bookmark (2)" d="M15.39,0H.814A.545.545,0,0,0,.269.545V20.971A1.09,1.09,0,0,0,2,21.857L8.1,17.48l6.107,4.377a1.091,1.091,0,0,0,1.726-.886V.545A.546.546,0,0,0,15.39,0Zm-.545,20.971L8.42,16.365a.545.545,0,0,0-.635,0L1.36,20.971V1.091H14.844Zm0,0" transform="translate(899.57 240)"/>
+    </g>
+    <path id="check" d="M10.066,6,5.9,10.17,4,8.275" transform="translate(93.5 217.33)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

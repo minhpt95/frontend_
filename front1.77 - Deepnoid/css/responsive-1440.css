@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/************
+2. 1440px
+************/
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px)
+{
+	
+/*________________ 3. Header ________________*/
+.I-header{ }
+.I-header .navibar{
+	height: 90px; 
+}
+.I-header .navibar .navibar-brand{
+	width: 245px;
+}
+.I-header .navibar .navibar-brand img{ }
+.I-header .navibar .navibar-nav{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a.is-visited .text{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .text{
+	font-size: 2rem;
+	line-height: 25px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .icon{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .icon img{ }
+.I-header .navibar .navibar-nav .navibar-nav-login{  
+	width: 170px;
+	height: 44px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-login button{
+	font-size: 2rem;
+}
+/*________________ End Header ________________*/
+
+/*________________ 4. Content_Header ________________*/
+.I-content_header{
+	margin: 90px 0;
+	padding: 0 60px;
+}
+.I-content_header .content_header-description{ }
+.I-content_header .content_header-description .description-title{ }
+.I-content_header .content_header-description .description-title h1{
+	font-size: 5.5rem;
+	line-height: 75px;
+	margin: 5 0 14px 0;
+}
+.I-content_header .content_header-description .description-detail{
+	width: 430px;
+	margin: 20px 0 36px 0;
+}
+.I-content_header .content_header-description .description-detail .row{ }
+.I-content_header .content_header-description .description-detail .row .pd-0{ }
+.I-content_header .content_header-description .description-detail .row .pd-0:not(:last-child):before{ }
+.I-content_header .content_header-description .description-detail .description-detail-item{ }
+.I-content_header .content_header-description .description-detail .description-detail-item .item-title{
+	font-size: 2rem;
+	line-height: 26px;
+	margin: 0 0 12px 0;
+}
+.I-content_header .content_header-description .description-detail .description-detail-item .item-data{
+	font-size: 4.8rem;
+	line-height: 65px;
+}
+.I-content_header .content_header-description .description-action{ }
+.I-content_header .content_header-description .description-action .action-login{
+	width: 170px;
+	height: 48px;
+}
+.I-content_header .content_header-description .description-action .action-login button{
+	font-size: 2rem;
+	line-height: 26px;
+}
+.I-content_header .content_header-description .description-action .action-search{
+	width: 240px;
+	height: 48px;
+}
+.I-content_header .content_header-description .description-action .action-search img{ }
+.I-content_header .content_header-description .description-action .action-search button{
+	font-size: 2rem;
+	line-height: 26px;
+}
+.I-content_header .content_header-banner{ }
+.I-content_header .content_header-banner img{ }
+/*________________ End Content_Header ________________*/
+
+}
+

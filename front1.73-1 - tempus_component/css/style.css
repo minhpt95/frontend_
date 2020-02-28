@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family:  'poppins', 'Noto Sans', sans-serif;
+	/*background-color: #f6f6f6;*/
+}
+.wrapper{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 20px;
+}
+main{
+	padding: 200px 0 0 0;
+	width: 100%;
+	/*background-color: #ccc;*/
+	background-color: #f6f6f6;
+	overflow: hidden;
+}
+
+
+.glyphicon-chevron-left::before{
+	content: "" !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/*
+	********************************** TABLE OF CONTENTS ****************************************************************
+	1. header
+		1.1. header->logo
+		1.2. header->nav
+			1.2.1 header->nav->language
+			1.2.2 header->nav->menu
+	2. main
+		1.1. header->logo
+	
+
+
+
+
+
+	*********************************************************************************************************************
+*/
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans JP', 'poppins', sans-serif;
+  font-size: 62.5%;
+}
+.wrapper{
+	width: 100%;
+	max-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+
+/*_____________________________________ 1. header _____________________________________*/
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: white;
+	width: 100%;
+	height: 95px;
+	border-bottom: 2px solid #d8caac;
+	z-index: 1000;
+}
+header .wrapper.I-header{
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	height: 100%;
+	overflow: initial;
+}
+/*________________________________ 1.1. header->logo __________________________________*/
+header .wrapper.I-header .logo{
+	width: 40%;
+	max-width: 210px;
+	overflow: hidden;
+}
+header .wrapper.I-header .logo .logo-image{
+	width: 100%;
+}
+/*________________________________ END header -> logo __________________________________*/
+/*________________________________ 1.2. header->nav ____________________________________*/
+header .wrapper.I-header .headercontent {
+	margin-left: auto;
+}
+/*________________________________ 1.2.1 header->nav->language _________________________*/
+header .wrapper.I-header .headercontent .language {
+	overflow: hidden;
+}
+header .wrapper.I-header .headercontent .language .language-nav-logo {
+	float: right;
+	font-size: 1.4rem;
+}
+header .wrapper.I-header .headercontent .language .language-nav-logo .language-nav-logo-image{
+	width: 100%;
+}
+header .wrapper.I-header .headercontent .language .language-nav-respontitle{
+	float: right;
+	display: none;
+}
+header .wrapper.I-header .headercontent .language .language-nav-respontitle .language-nav-respontitle-text{
+	font-size: 1.4rem;
+}
+
+header .wrapper.I-header .headercontent .language .language-nav {
+	float: right;
+}
+header .wrapper.I-header .headercontent .language .language-nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+header .wrapper.I-header .headercontent .language .language-nav ul li{
+	float: left;
+	padding: 0 10px;
+}
+header .wrapper.I-header .headercontent .language .language-nav ul li:not(:last-child){
+	border-right: 2px solid #D9D9D9;
+}
+header .wrapper.I-header .headercontent .language .language-nav ul li a{
+	color: #797979;
+	font-size: 1.4rem;
+}
+header .wrapper.I-header .headercontent .language .language-nav ul li a:hover{
+	color: #797979;
+	text-decoration: none;
+}
+/*________________________________ END 1.2.1 header->nav->language ______________________*/
+/*________________________________ 1.2.2 header->nav->menu ______________________________*/
+header .wrapper.I-header .headercontent .menu{
+	margin-top: 15px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu{
+	float: left;
+	padding: 0 20px;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu a{
+	color: #4D4D4D;
+	font-size: 1.4rem;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu a:hover{
+	color: #B59C63;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu.large_search{
+	position: absolute;
+	top: 95px;
+	right: 0;
+	padding: 45px;
+	background-color: #F8F8F8;
+	display: none;
+	font-size: 1.4rem;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu.large_search.is-active{
+	display: block !important;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu.large_search .searchform{
+	position: relative;
+	width: 490px;
+	height: 50px;
+	background-color: red;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu.large_search .searchform input{
+	padding: 15px;
+	border: none;
+	width: 100%;
+	border-bottom: 1px solid #8D7131;
+}
+header .wrapper.I-header .headercontent .menu ul.menu-listmenu li.menu-listmenu-itemmenu.large_search .searchform button{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 46px;
+	height: 46px;
+	border: none;
+	background-color: #B59C63;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .wrapper.I-header .headercontent .menu .open_search_form{
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	background-color: #EAEAEA;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+header .wrapper.I-header .headercontent .menu .open_search_form .open_searchform{
+	display: none;
+}
+header .wrapper.I-header .headercontent .menu .open_search_form .close_searchform{
+	display: block;
+}
+header .wrapper.I-header .headercontent .menu .open_search_form.is-active .open_searchform{
+	display: block;
+}
+header .wrapper.I-header .headercontent .menu .open_search_form.is-active .close_searchform{
+	display: none;
+}
+/*________________________________ END 1.2.2 header->nav->menu __________________________*/
+header .wrapper.I-header .open_listmenu{
+	display: none;
+}
+/*________________________________ END header -> nav ____________________________________*/
+/*_____________________________________ END header ______________________________________*/
+
+/*_________________________________________ 2. main _____________________________________*/
+/*_____________________________________ END 2. main _____________________________________*/
+main{
+	/*height: 1000px;*/
+	margin-top: 95px;
+}
+main .wrapper.I-content{
+	position: relative;
+	padding: 0 15px;
+	/*overflow: inherit;*/
+}
+main .wrapper.I-content .slider{
+	margin-top: 15px;
+	width: 100%;
+	height: 650px;
+}
+main .wrapper.I-content .slider .slider-content{
+	
+}
+main .wrapper.I-content .slider .slider-footer{
+	
+}
+
+.item{
+  opacity:0.4;
+  transition:.4s ease all;
+  margin:0 20px;
+  transform:scale(1);
+}
+@media(max-width:768px){
+  .item{margin:0; transform:scale(1)}
+}
+.active .item{
+  opacity:1;
+  transform:scale(1);
+} 
+.owl-carousel{
+	position: relative;
+}
+.owl-nav{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	background-color: red;
+	top: 50%;
+	left: 0;
+}
+.owl-nav .owl-prev{
+	float: left;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+}
+.owl-nav .owl-next{
+	float: left;
+	width: 50%;
+	height: 100%;
+	margin: 0;
+}
+.owl-item {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+.owl-nav span{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.inner{position:absolute; bottom:30px; left:0; right:0; text-align:center;}
+
+
+.owl-controls{position:absolute; margin-top:300px;}
+
+
+
+
+
+
+main .wrapper.I-content .movie{
+	margin: 80px 0;
+}
+main .wrapper.I-content .movie-header{
+	width: 100%;
+	margin-bottom: 20px;
+	/*height: 70px;*/
+}
+main .wrapper.I-content .movie-header h2,
+main .wrapper.I-content .movie-header h4 {
+	text-align: center;
+	margin: 0;
+}
+main .wrapper.I-content .movie-header h2.movie-header-title-jp{
+	color: #4D4D4D;
+	font-size: 2.8rem;
+}
+main .wrapper.I-content .movie-header h4.movie-header-title-en{
+	color: #B59C63;
+	font-size: 2rem;
+}
+main .wrapper.I-content .movie-content{
+	height: 430px;
+	margin-bottom: 40px;
+}
+main .wrapper.I-content .movie-content .movie-selectedvideo{
+	width: 100%;
+	height: 430px;
+}
+main .wrapper.I-content .movie-content .movie-selectedvideo iframe{
+	width: 100%;
+	/*overflow: hidden;*/
+}
+main .wrapper.I-content .movie-content .movie-listvideo{
+	width: 100%;
+	height: 430px;
+	overflow-y: scroll;
+}
+main .wrapper.I-content .movie-content .movie-listvideo .movie-listvideo-item {
+	padding: 5px;
+	margin-bottom: 25px;
+	overflow: hidden;
+	cursor: pointer;
+}
+main .wrapper.I-content .movie-content .movie-listvideo .movie-listvideo-item .movie-listvideo-item-image{
+	float: left;
+	width: 100%;
+}
+main .wrapper.I-content .movie-content .movie-listvideo .movie-listvideo-item .movie-listvideo-item-image img{
+	width: 100%;
+}
+main .wrapper.I-content .movie-content .movie-listvideo .movie-listvideo-item p.movie-listvideo-item-title{
+	float: left;
+	width: 100%;
+	color: #717171;
+	padding: 5px 0;
+	font-size: 1.4rem;
+}
+main .wrapper.I-content .movie-footer{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main .wrapper.I-content .movie-footer .movie-footer-channel{
+	position: relative;
+	width: 100%;
+	max-width: 355px;
+	height: 56px;
+	background-color: #B59C63;
+}
+main .wrapper.I-content .movie-footer .movie-footer-channel .movie-footer-channel-link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+main .wrapper.I-content .movie-footer .movie-footer-channel .movie-footer-channel-link:hover{
+	text-decoration: none;
+}
+main .wrapper.I-content .movie-footer .movie-footer-channel .movie-footer-channel-link .movie-footer-channel-title{
+	color: white;
+	font-size: 1.4rem;
+}
+main .wrapper.I-content .movie-footer .movie-footer-channel .movie-footer-channel-link .movie-footer-channel-icon{
+	position: absolute;
+	top: 17px;
+	right: 15px;
+	font-size: 1.4rem;
+}
+
+main .wrapper.I-content .news{
+	margin: 80px 0;
+	font-size: 1.4rem;
+}
+main .wrapper.I-content .news-header{
+	width: 100%;
+	margin-bottom: 20px;
+	/*height: 70px;*/
+}
+main .wrapper.I-content .news-header h2,
+main .wrapper.I-content .news-header h4 {
+	text-align: center;
+	margin: 0;
+}
+main .wrapper.I-content .news-header h2.news-header-title-jp{
+	color: #4D4D4D;
+	font-size: 2.8rem;
+}
+main .wrapper.I-content .news-header h4.news-header-title-en{
+	color: #B59C63;
+	font-size: 2rem;
+}
+main .wrapper.I-content .news-content{
+	width: 100%;
+	margin-bottom: 20px;
+}
+main .wrapper.I-content .news-content .news-content-navication{
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	overflow: hidden;
+}
+main .wrapper.I-content .news-content .news-content-navication ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+main .wrapper.I-content .news-content .news-content-navication ul li{
+	float: left;
+}
+main .wrapper.I-content .news-content .news-content-navication ul li a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 40px;
+	border: 1px solid #8D7131;
+	border-radius: 5px;
+	color: #8D7131;
+	margin: 5px;
+}
+main .wrapper.I-content .news-content .news-content-navication ul li a:hover{
+	background-color: #8D7131;
+	color: white;
+}
+main .wrapper.I-content .news-content .news-content-navication ul li a.selected{
+	background-color: #8D7131;
+	color: white;
+}
+main .wrapper.I-content .news-content .news-content-listnews{
+	width: 100%;
+	height: 560px;
+	overflow-y: scroll;
+	margin-bottom: 40px;
+	padding-right: 20px;
+}
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem{
+	width: 100%;
+	min-height: 95px;
+	border-bottom: 1px solid #C7B58A;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem-image{
+	float: left;
+	width: 120px;
+	height: 75px;
+	overflow: hidden;
+	margin-right: 30px;
+}
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem-image img{
+	width: 100%;
+}
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem-content{
+	float: left;
+	width: calc(100% - 150px);
+}
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem-time{
+	float: left;
+	color: #4D4D4D;
+	margin: 6px 20px 0 0;
+}
+
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem-category{
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*width: 75px;*/
+	padding: 0 5px;
+	height: 25px;
+	border: 1px solid #8D7131;
+	border-radius: 5px;
+	color: #8D7131;
+	margin: 5px;
+}
+main .wrapper.I-content .news-content .news-content-listnews .wrapper-newsitem-describe{
+	float: left;
+	width: 100%;
+	color: #4D4D4D;
+	margin-top: 10px;
+}
+main .wrapper.I-content .news-footer{
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main .wrapper.I-content .news-footer .news-footer-channel{
+	position: relative;
+	width: 100%;
+	max-width: 355px;
+	height: 56px;
+	background-color: #B59C63;
+}
+main .wrapper.I-content .news-footer .news-footer-channel .news-footer-channel-link{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+main .wrapper.I-content .news-footer .news-footer-channel .news-footer-channel-link:hover{
+	text-decoration: none;
+}
+main .wrapper.I-content .news-footer .news-footer-channel .news-footer-channel-link .news-footer-channel-title{
+	color: white;
+}
+main .wrapper.I-content .news-footer .news-footer-channel .news-footer-channel-link .news-footer-channel-icon{
+	position: absolute;
+	top: 17px;
+	right: 15px;
+}
+
+
+
+main .wrapper.I-content .back-to-top{
+	position: absolute;
+	bottom: 50px;
+	right: 10px;
+	width: 45px;
+	height: 45px;
+	background-color: #EAEAEA;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*_____________________________________ END 2. main _____________________________________*/
+
+
+
+
+footer{
+	width: 100%;
+	height: 300px;
+	background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.W5{
+    width: 5% !important;
+}
+.W10{
+    width: 10% !important;
+}
+.W15{
+    width: 15% !important;
+}
+.W20{
+    width: 20%  !important;
+}
+.W25{
+    width: 25%  !important;
+}
+.W30{
+    width: 30%  !important;
+}
+.W35{
+    width: 35%  !important;
+}
+.W40{
+    width: 40%  !important;
+}
+.W45{
+    width: 45%  !important;
+}
+.W50{
+    width: 50%  !important;
+}
+.W55{
+    width: 55%  !important;
+}
+.W60{
+    width: 60%  !important;
+}
+.W65{
+    width: 65%  !important;
+}
+.W70{
+    width: 70%  !important;
+}
+.W75{
+    width: 75%  !important;
+}
+.W80{
+    width: 80%  !important;
+}
+.W85{
+    width: 85%  !important;
+}
+.W90{
+    width: 90%  !important;
+}
+.W95{
+    width: 95%  !important;
+}
+.W100{
+    width: 100%  !important;
+}

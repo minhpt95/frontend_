@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*background-color: black;*/
+}
+aside{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #b3945c;
+	background-color: #222d32;
+	z-index: 2;
+}
+aside .logout{
+	float: right;
+	padding: 0 20px;
+	width: 130px;
+	height: 50px;
+}
+aside .logout a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	color: white;
+}
+aside .logout a i{
+	padding: 0 0 0 10px;
+}
+aside .logout a:hover{
+	text-decoration: none;
+}
+
+
+
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100vh;
+	background-color: #b3945c;
+	background-color: #222d32;
+	border-right: 1px solid #ccc;
+	transition: all 300ms ease;
+	z-index: 3;
+}
+nav.active{
+	width: 50px;
+}
+nav .control_nav{
+	position: fixed;
+	top: 0;
+	left: 250px;
+	width: 50px;
+	height: 50px;
+	transition: all 300ms ease;
+	cursor: pointer;
+	background-color: #b3945c;
+	background-color: #222d32;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+nav .control_nav i{
+	font-size: 24px;
+	color: white;
+}
+nav .control_nav.active{
+	left: 50px;
+}
+nav .content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	color: white;
+	font-weight: bold;
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+}
+nav .content .fullname{
+	display: block;
+}
+nav .content .subname{
+	display: none;
+}
+nav .content.active .fullname{
+	display: none;
+}
+nav .content.active .subname{
+	display: block;
+}
+nav .admin{
+	width: 100%;
+	height: 30px;
+	background-color: #1a2226;
+}
+nav .menu{
+	width: 100%;
+}
+nav .listmenu{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav .listmenu .itemmenu{
+	width: 100%;
+	height: 40px;
+	overflow: hidden;
+	transition: all 300ms ease;
+}
+nav .listmenu .itemmenu .linkmenu{
+	display: block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #97c7ce;
+	cursor: pointer;
+}
+nav .listmenu .itemmenu .linkmenu:hover{
+	text-decoration: none;
+	background-color: #1e282c;
+	color: white;
+}
+nav .listmenu .itemmenu .linkmenu .title{
+	display: block;
+}
+nav .listmenu .itemmenu .linkmenu.active .title{
+	display: none;
+}
+nav .listmenu .itemmenu .linkmenu .icon{
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+nav .listmenu .itemmenu .linkmenu i{
+}
+nav .listmenu .itemmenu .linkmenu.open{
+	background-color: #1e282c;
+	color: white;
+}
+nav .listmenu .itemmenu .linkmenu .sub-icon{
+	margin-left: auto;
+	transition: all 300ms ease;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+nav .listmenu .itemmenu .linkmenu.open .sub-icon{
+	transform: rotate(90deg);
+}
+
+
+nav .listmenu .itemmenu.open{
+	height: auto;
+	transition: all 300ms ease;
+}
+nav .listmenu .itemmenu.open ul{
+	list-style-type: none;
+	background-color: #2c3b41;
+}
+nav .listmenu .itemmenu.open ul li{
+	width: 100%;
+	height: 40px;
+	overflow: hidden;
+	transition: all 300ms ease;
+}
+nav .listmenu .itemmenu.open ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #97c7ce;
+	cursor: pointer;
+	transition: all 300ms ease;
+}
+nav .listmenu .itemmenu.open ul li a:hover{
+	text-decoration: none;
+	color: white;
+}
+
+nav .listmenu .itemmenu.active.open ul{
+	position: absolute;
+	top: 80px;
+	left: 50px;
+	width: 250px;
+	z-index: 4;
+}
+
+nav .listmenu .itemmenu.active ul{
+	list-style-type: none;
+	background-color: #2c3b41;
+}
+nav .listmenu .itemmenu.active ul li{
+	width: 100%;
+	height: 40px;
+	overflow: hidden;
+	transition: all 300ms ease;
+}
+nav .listmenu .itemmenu.active ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #97c7ce;
+	cursor: pointer;
+	transition: all 300ms ease;
+}
+nav .listmenu .itemmenu.active ul li a:hover{
+	text-decoration: none;
+	color: white;
+}
+nav .listmenu .itemmenu.active:hover ul{
+	position: absolute;
+	top: 80px;
+	left: 50px;
+	width: 250px;
+	z-index: 4;
+}
+
+
+main{
+	/*position: fixed;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+}
+main .main_in{
+	padding: 10px 20px;
+	margin-top: 50px;
+	margin-left: 250px;
+	width: calc(100% - 250px);
+	/*height: calc(100vh - 50px);*/
+	transition: all 300ms ease;
+}
+main .main_in.active{
+	margin-left: 50px;
+	width: calc(100% - 50px);
+}
+main .close_nav{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: calc(100% - 50px);
+	height: calc(100vh - 50px);
+	transition: all 300ms ease;
+	background-color: rgba(0, 0, 0, .0);
+	z-index: -1;
+}
+
+.content-wrapper{
+	background-color: white !important;
+}
+.task_col{
+	min-height: 50px;
+	padding: 5px;
+	overflow: hidden;
+}
+.task_col .task_body{
+	float: left;
+	min-height: 40px;
+	overflow: hidden;
+}
+.task_col .task_body .bound_output{
+	width: 100%;
+	min-height: 40px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+}
+.task_col .task_body .bound_output .image{
+	float: left;
+	width: 30%;
+	height: 100%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.task_col .task_body .bound_output .image img{
+	width: 100%;
+}
+.task_col .task_body .bound_output .content{
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+.task_col .task_body .bound_output .title_content{
+	width: 100%;
+	height: 40%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	padding: 5px;
+	font-weight: bold;
+}
+.task_col .task_body .bound_output .detail_content{
+	width: 100%;
+	height: 60%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	padding: 5px;
+}
+.task_col .task_body a{
+	display: flex;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	color: black;
+	font-weight: bold;
+	transition: all 300ms ease;
+}
+.task_col .task_body button{
+	display: flex;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	color: white;
+	font-weight: bold;
+	transition: all 300ms ease;
+}
+.task_col .task_body a:hover{
+	text-decoration: none;
+	background-color: #ccc;
+	/*color: white;*/
+}
+.task_col .task_body .header_title{
+	font-weight: bold;
+}
+
+
+.task_col .task_body .title{
+	padding: 10px 0;
+}
+.task_col .task_body input{
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.task_col .task_body select{
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.task_col .task_body label{
+	margin: 0;
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.task_col .task_body textarea{
+	min-height: 40px;
+	padding: 10px;
+	border: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.task_col .task_body .btn{
+	float: left;
+}
+.task_col .task_body .btn:hover{
+	background-color: #222d32;
+	color: white;
+}
+.task_col .task_body .btn.active{
+	background-color: #222d32;
+	color: white;
+}
+
+
+.W5{
+    width: 5% !important;
+}
+.W10{
+    width: 10% !important;
+}
+.W15{
+    width: 15% !important;
+}
+.W20{
+    width: 20%  !important;
+}
+.W25{
+    width: 25%  !important;
+}
+.W30{
+    width: 30%  !important;
+}
+.W35{
+    width: 35%  !important;
+}
+.W40{
+    width: 40%  !important;
+}
+.W45{
+    width: 45%  !important;
+}
+.W50{
+    width: 50%  !important;
+}
+.W55{
+    width: 55%  !important;
+}
+.W60{
+    width: 60%  !important;
+}
+.W65{
+    width: 65%  !important;
+}
+.W70{
+    width: 70%  !important;
+}
+.W75{
+    width: 75%  !important;
+}
+.W80{
+    width: 80%  !important;
+}
+.W85{
+    width: 85%  !important;
+}
+.W90{
+    width: 90%  !important;
+}
+.W95{
+    width: 95%  !important;
+}
+.W100{
+    width: 100%  !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

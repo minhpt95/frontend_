@@ -1,0 +1,130 @@
+
+/*________________ 8. Footer ________________*/
+.I-footer{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	background-color: #104358;
+	padding: 30px 55px 0 55px;
+}
+.I-footer .information{
+	
+}
+.I-footer .information .logo{
+	width: 100%;
+	overflow: hidden;
+}
+.I-footer .information .logo .logo-image{
+	float: left;
+	width: 125px;
+}
+.I-footer .information .logo .logo-image img{
+	width: 100%;
+}
+.I-footer .information .address{
+	width: 100%;
+	margin: 0 0 10px 0;
+	overflow: hidden;
+}
+.I-footer .information .address .address-text{
+	font-size: 1.4rem;
+	font-weight: bold;
+	line-height: 24px;
+	color: #F3F3FD;
+}
+.I-footer .information .contact{
+	width: 100%;
+	overflow: hidden;
+}
+.I-footer .information .contact .contact-icon{
+	float: left;
+	margin: 0 10px 12px 0;
+	width: 15px;
+	height: 15px;
+}
+.I-footer .information .contact .contact-icon img{
+	width: 100%;
+}
+.I-footer .information .contact .contact-text{
+	float: left;
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #F3F3FD;
+}
+.I-footer .footer-item{
+	
+}
+.I-footer .footer-item .title{
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #E1E1E1;
+	margin: 0 0 15px 0
+}
+.I-footer .footer-item .title .title-text{
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 2rem;
+	line-height: 27px;
+	color: #fff;
+	font-weight: bold;
+	float: left;
+}
+.I-footer .footer-item .title .title-text:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #2AA1AF;
+	left: 0;
+	bottom: -1px;
+}
+.I-footer .footer-item .content{
+	
+}
+.I-footer .footer-item .content ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.I-footer .footer-item .content ul li{
+	float: left;
+	width: 100%;
+	margin: 5px 0;
+}
+.I-footer .footer-item .content ul li a{
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #F3F3FD;
+}
+.I-footer .footer-item .content ul li a .text{
+	float: left;
+}
+.I-footer .footer-item .content ul li a .icon{
+	float: left;
+	margin: -3px 0 0 15px;
+}
+.I-footer .copyright{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid #F3F3FD;
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #F3F3FD;
+}
+	
+
+
+
+
+
+
+
+

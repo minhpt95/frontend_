@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Front-1</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!---------------------------------------------- Bootstrap ------------------------------------------------>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	
+	<!----------------------------------- ------------ JQuery ------------------------------------------------->
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!----------------------------------- Animation On Scroll ------------------------------------------------->
+	<!-- <link rel="stylesheet" href="css/aos.css" /> -->
+	<!-- <script src="js/aos.js"></script> -->
+	
+	<!---------------------------------------------- Carousel ------------------------------------------------->
+	<!-- <link rel="stylesheet" href="css/flexslider-rtl-min.css" /> -->
+	<!-- <link rel="stylesheet" href="css/flexslider.css" /> -->
+	<!-- <script src="js/jquery.flexslider-min.js"></script> -->
+
+	<link rel="stylesheet" href="css/docs.theme.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<script src="js/owl.carousel.js"></script>
+	
+	<!-- <link rel="stylesheet" type="text/css" href="leps-slider.css"> -->
+	<!-- <script type="text/javascript" src="leps-slider.js"></script> -->
+
+	<link rel="stylesheet" href="css/style2.css" />
+	<link rel="stylesheet" href="css/responsive.css" />
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> -->
+
+
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+	<div class="index">
+		<div class="owl-carousel">
+		  <div class="democontent"> Your Content1 </div>
+		  <div class="democontent"> Your Content2 </div>
+		  <div class="democontent"> Your Content3 </div>
+		  <div class="democontent"> Your Content4 </div>
+		  <div class="democontent"> Your Content5 </div>
+		  <div class="democontent"> Your Content6 </div>
+		  <div class="democontent"> Your Content7 </div>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function(){
+	  	$(".owl-carousel").owlCarousel();
+	});
+	$('.owl-carousel').owlCarousel({
+	    loop:true,
+	    margin:10,
+	    items:4,
+	    autoplay:true,
+	    autoplayTimeout:1000,
+	    autoplayHoverPause:true,
+	    responsiveClass:true,
+	    responsive:{
+	        0:{
+	            items:1,
+	            nav:true
+	        },
+	        600:{
+	            items:3,
+	            nav:false
+	        },
+	        1000:{
+	            items:5,
+	            nav:true,
+	        }
+	    }
+	})
+      // var owl = $('.owl-carousel');
+      // owl.owlCarousel({
+      //   // margin: 10,
+      //   loop: true,
+      //   responsive: {
+      //     0: {
+      //       items: 1
+      //     },
+      //     600: {
+      //       items: 2
+      //     },
+      //     1000: {
+      //       items: 3
+      //     }
+      //   }
+      // })
+    </script>
+</html> 

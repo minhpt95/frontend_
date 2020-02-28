@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+/************
+1920px
+************/
+
+@media only screen and (min-width: 1920px)
+{
+	
+/* CARD */
+.C_A_R_D{
+	padding: 15px;
+}
+.C_A_R_D .C_A_R_D-mg{ }
+.C_A_R_D .C_A_R_D-pd{ }
+.C_A_R_D-header{
+	margin: 0 0 10px 0;
+}
+.C_A_R_D-header .C_A_R_D-image{ }
+.C_A_R_D-header .C_A_R_D-image img{ }
+.C_A_R_D-header .C_A_R_D-vote{
+	margin: 0 0 10px 0;
+}
+.C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item{
+	width: 20px;
+	height: 20px;
+}
+.C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item.is-select{ }
+.C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item:not(:last-child){
+	margin: 0 10px 0 0;
+}
+.C_A_R_D-header .C_A_R_D-comment{
+	font-size: 1.6rem;
+	line-height: 22px;
+}
+.C_A_R_D-body{
+	padding: 0 5px;
+	margin: 0 0 35px 0;
+}
+.C_A_R_D-body .C_A_R_D-body-title{
+	font-size: 2.2rem;
+	line-height: 30px;
+	margin: 0 0 25px 0;
+}
+.C_A_R_D-body .C_A_R_D-body-describe{
+	font-size: 1.6rem;
+	line-height: 22px;
+}
+.C_A_R_D-body .C_A_R_D-body-category{ }
+.C_A_R_D-body .C_A_R_D-body-category .category-item{
+	width: 100%;
+	height: 35px;
+	font-size: 1.6rem;
+	line-height: 22px;
+}
+.C_A_R_D-footer{
+	margin: 0 0 25px 0;
+}
+.C_A_R_D-footer .C_A_R_D-detail{ }
+.C_A_R_D-footer .C_A_R_D-detail .detail-item{ }
+.C_A_R_D-footer .C_A_R_D-detail .C_A_R_D-pd{ }
+.C_A_R_D-footer .C_A_R_D-detail .C_A_R_D-pd:not(:last-child) .detail-item:before{ }
+.C_A_R_D-footer .C_A_R_D-detail .detail-item{ }
+.C_A_R_D-footer .C_A_R_D-detail .detail-item .detail-item-title{
+	margin: 0 0 10px 0;
+	font-size: 1.6rem;
+	line-height: 22px;
+}
+.C_A_R_D-footer .C_A_R_D-detail .detail-item .detail-item-data{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+/*________________ 3. Header ________________*/
+.I-header{ }
+.I-header .navibar{
+	height: 100px; 
+}
+.I-header .navibar .navibar-brand{
+	width: 270px;
+}
+.I-header .navibar .navibar-brand img{ }
+.I-header .navibar .navibar-nav{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a.is-visited .text{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .text{
+	font-size: 2.5rem;
+	line-height: 33px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .icon{ }
+.I-header .navibar .navibar-nav .navibar-nav-menu ul li a .icon img{ }
+.I-header .navibar .navibar-nav .navibar-nav-login{  
+	width: 200px;
+	height: 50px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-login button{
+	font-size: 2.5rem;
+}
+
+.I-header .navibar .navibar-nav .navibar-nav-user{
+	width: 190px;
+	height: 50px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-user .user-logo{
+	width: 45px;
+	height: 45px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-user .user-logo img{ }
+.I-header .navibar .navibar-nav .navibar-nav-user .user-name{
+	font-size: 2.5rem;
+	line-height: 34px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-user .user-dropdown{
+	margin: 0 0 0 10px;
+	width: 10px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-user .user-dropdown img{ }
+.I-header .navibar .navibar-nav .navibar-nav-notification{
+	width: 50px;
+	height: 50px; 
+}
+.I-header .navibar .navibar-nav .navibar-nav-notification .image{
+	width: 30px;
+}
+.I-header .navibar .navibar-nav .navibar-nav-notification .image img{
+	width: 100%;
+}
+.I-header .navibar .navibar-nav .navibar-nav-notification .value{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 20px;
+	height: 20px;
+	font-size: 1.1rem;
+	line-height: 15px;
+}
+/*________________ End Header ________________*/
+
+/*________________ 4. Content_Header ________________*/
+.I-content_header{
+	margin: 110px 0;
+	padding: 0 55px;
+}
+.I-content_header .content_header-description{ }
+.I-content_header .content_header-description .description-title{ }
+.I-content_header .content_header-description .description-title h1{
+	font-size: 7rem;
+	line-height: 72px;
+	margin: 5 0 13px 0;
+}
+.I-content_header .content_header-description .description-detail{
+	width: 570px;
+	margin: 20px 0 45px 0;
+}
+.I-content_header .content_header-description .description-detail .row{ }
+.I-content_header .content_header-description .description-detail .row .pd-0{ }
+.I-content_header .content_header-description .description-detail .row .pd-0:not(:last-child):before{ }
+.I-content_header .content_header-description .description-detail .description-detail-item{ }
+.I-content_header .content_header-description .description-detail .description-detail-item .item-title{
+	font-size: 2.5rem;
+	line-height: 34px;
+	margin: 0 0 13px 0;
+}
+.I-content_header .content_header-description .description-detail .description-detail-item .item-data{
+	font-size: 6rem;
+	line-height: 82px;
+}
+.I-content_header .content_header-description .description-action{ }
+.I-content_header .content_header-description .description-action .action-login{
+	width: 230px;
+	height: 60px;
+}
+.I-content_header .content_header-description .description-action .action-login button{
+	font-size: 2.5rem;
+	line-height: 33px;
+}
+.I-content_header .content_header-description .description-action .action-search{
+	width: 330px;
+	height: 60px;
+}
+.I-content_header .content_header-description .description-action .action-search img{ }
+.I-content_header .content_header-description .description-action .action-search button{
+	font-size: 2.5rem;
+	line-height: 33px;
+}
+.I-content_header .content_header-banner{ }
+.I-content_header .content_header-banner img{ }
+/*________________ End Content_Header ________________*/
+
+
+/*________________ Most_Used ________________*/
+.I-most_used{
+	padding: 60px 75px 90px 75px;
+}
+
+.I-most_used .control-listitem{ }
+.I-most_used .control-listitem .listitem-prev{
+	width: 50px;
+	height: 50px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-prev:hover{
+	filter: invert(48%) sepia(86%) saturate(343%) hue-rotate(138deg) brightness(93%) contrast(97%);
+}
+.I-most_used .control-listitem .listitem-next{
+	width: 50px;
+	height: 50px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-next:hover{
+	filter: invert(48%) sepia(86%) saturate(343%) hue-rotate(138deg) brightness(93%) contrast(97%);
+}
+.I-most_used .indicators-listitem{
+	height: 100px;
+}
+.I-most_used .indicators-listitem ol{ }
+.I-most_used .indicators-listitem ol li{
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+}
+.I-most_used .indicators-listitem ol li:not(:last-child){ }
+.I-most_used .indicators-listitem ol li.active{ }
+.I-most_used .most_used-listitem{ }
+.I-most_used .most_used-listitem .pd-custom{ }
+.I-most_used .most_used-detail{ }
+.I-most_used .most_used-detail .title{
+	margin: 0 0 30px 0;
+}
+.I-most_used .most_used-detail .title .title-content{
+	font-size: 4rem;
+	line-height: 55px;
+}
+.I-most_used .most_used-detail .title .title-detail{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+.I-most_used .most_used-detail .content{
+	font-size: 2.2rem;
+	line-height: 27px;
+}
+.I-most_used .most_used-detail .detail{ }
+.I-most_used .most_used-detail .detail .detail-button{
+	width: 225px;
+	height: 60px;
+}
+.I-most_used .most_used-detail .detail .detail-button button{
+	font-size: 2rem;
+	line-height: 27px;
+}
+.I-most_used .most_used-detail .detail .detail-button button:hover{ }
+/*________________ End 5. Most_Used ________________*/
+
+/*________________ 6. Steps ________________*/
+.I-steps{
+	padding: 0 0 55px 0;
+}
+.I-steps .step{
+	height: 645px;
+}
+.I-steps .step.step-1{ }
+.I-steps .step.step-2{ }
+.I-steps .step.step-3{ }
+.I-steps .step .step-image{
+	height: 645px;
+}
+.I-steps .step.step-1 .step-image img{ }
+.I-steps .step.step-2 .step-image img{ }
+.I-steps .step.step-3 .step-image img{ }
+.I-steps .step.step-1 .step-describe{ }
+.I-steps .step.step-2 .step-describe{ }
+.I-steps .step.step-3 .step-describe{ }
+.I-steps .step .step-describe .step-location{
+	margin: 90px 0 0 0;
+	padding: 0 0 0 80px;
+	font-size: 9rem;
+	line-height: 122px;
+}
+.I-steps .step.step-1 .step-describe .step-location{
+	padding: 0 0 0 80px;
+}
+.I-steps .step.step-2 .step-describe .step-location{
+	padding: 0 80px 0 0;
+}
+.I-steps .step.step-3 .step-describe .step-location{
+	padding: 0 0 0 80px;
+}
+.I-steps .step .step-describe .step-location::before{
+	width: 75px;
+	height: 3px;
+}
+.I-steps .step.step-1 .step-describe .step-location::before{ }
+.I-steps .step.step-2 .step-describe .step-location::before{ }
+.I-steps .step.step-3 .step-describe .step-location::before{ }
+.I-steps .step .step-describe .step-title{
+	margin: 0 0 35px 0;
+}
+.I-steps .step.step-1 .step-describe .step-title{
+	padding: 0 0 0 80px;
+}
+.I-steps .step.step-2 .step-describe .step-title{
+	padding: 0 80px 0 0 ;
+}
+.I-steps .step.step-3 .step-describe .step-title{
+	padding: 0 0 0 80px;
+}
+.I-steps .step .step-describe .step-title .step-title-content{
+	font-size: 5rem;
+	line-height: 68px;
+}
+.I-steps .step .step-describe .step-title .step-title-detail{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+.I-steps .step .step-describe .step-detail{
+	font-size: 2rem;
+	line-height: 25px;
+}
+.I-steps .step.step-1 .step-describe .step-detail{
+	padding: 0 0 0 80px;
+}
+.I-steps .step.step-2 .step-describe .step-detail{
+	padding: 0 80px 0 0 ;
+}
+.I-steps .step.step-3 .step-describe .step-detail{
+	padding: 0 0 0 80px;
+}
+.I-steps .step.step-3 .step-describe  .step-goto{
+	width: 225px;
+	height: 60px;
+	margin: 40px 0 0 80px;
+}
+.I-steps .step-goto button{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+/*________________ End Steps ________________*/
+
+/*________________ 7. Partner ________________*/
+.I-partner{
+	width: 100%;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-partner img{
+	width: 260px;
+	margin: 0 45px;
+}
+/*________________ End Partner ________________*/
+
+/*________________ 8. Footer ________________*/
+.I-footer{
+	height: 515px;
+	padding: 30px 80px 0 80px;
+}
+.I-footer .information{ }
+.I-footer .information .logo{ }
+.I-footer .information .logo .logo-image{
+	width: 190px;
+}
+.I-footer .information .logo .logo-image img{ }
+.I-footer .information .address{
+	margin: 0 0 20px 0;
+}
+.I-footer .information .address .address-text{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-footer .information .contact{ }
+.I-footer .information .contact .contact-icon{
+	margin: 0 15px 22px 0;
+	width: 20px;
+	height: 20px;
+}
+.I-footer .information .contact .contact-icon img{ }
+.I-footer .information .contact .contact-text{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-footer .footer-item{ }
+.I-footer .footer-item .title{
+	width: 100%;
+	height: 55px;
+	border-bottom: 1px solid #E1E1E1;
+	margin: 0 0 15px 0
+}
+.I-footer .footer-item .title .title-text{
+	font-size: 3rem;
+	line-height: 41px;
+}
+.I-footer .footer-item .title .title-text:before{
+	bottom: -2px; 
+}
+.I-footer .footer-item .content{ }
+.I-footer .footer-item .content ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.I-footer .footer-item .content ul li{
+	margin: 10px 0;
+}
+.I-footer .footer-item .content ul li a{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-footer .footer-item .content ul li a .text{ }
+.I-footer .footer-item .content ul li a .icon{
+	margin: -3px 0 0 20px;
+}
+.I-footer .copyright{
+	height: 85px;
+	font-size: 2.4rem;
+	line-height: 33px;
+}
+	
+
+
+}

@@ -1,0 +1,94 @@
+.I-slider{
+	width: 100%;
+	overflow: hidden;
+	background-color: #f6f6f6;
+}
+.I-slider .wrapper{
+	width: 100%;
+	overflow: hidden;
+	background-color: #f6f6f6;
+	padding: 0;
+}
+.I-slider .carousel .item{
+	
+}
+.I-slider .carousel .item .item-wrapper{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.I-slider .carousel .item .item-wrapper .item-image{
+	width: 100%;
+}
+.I-slider .carousel .item .item-wrapper .item-image img{
+	width: 100%
+}
+.I-slider .carousel .item .item-wrapper .item-inner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	height: 100%;
+	padding: 0 15% 0 15%;
+	display: flex;
+	align-items: center;
+}
+.I-slider .carousel .item .item-wrapper .item-inner .inner-wrapper{
+	margin: 0 0 0 0;
+}
+.I-slider .carousel .item .item-wrapper .item-inner .inner-title{
+	color: #fff;
+}
+.I-slider .carousel .item .item-wrapper .item-inner .inner-content{
+	margin: 40px 0 40px 0;
+	color: #fff;
+}
+.I-slider .carousel .item .item-wrapper .item-inner .inner-seemore{
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+.I-slider .carousel .item .item-wrapper .item-inner .inner-seemore a{
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 8px 12px;
+	display: block;
+	float: left;
+}
+.I-slider .carousel .item .item-wrapper .item-inner .inner-seemore a:hover{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

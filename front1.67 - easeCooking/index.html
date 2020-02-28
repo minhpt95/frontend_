@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Easy Cooking</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+		<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<header>
+			<div class="header_in">
+				<div class="logo">
+					<img src="images/logo2.jpg">
+				</div>
+				<div class="bound_select">
+					<div class="select">
+						<select data-placeholder="Hôm Nay Bạn Có Gì ?" multiple class="chosen-select" name="test">
+						    <option value=""></option>
+						    <option>Rau Muống</option>
+						    <option>Thịt Bò</option>
+						    <option>THịt Lợn</option>
+						    <option>Thịt Gà</option>
+						    <option>1 chút cute :></option>
+						</select>
+						<input type="submit" name="" value="" style="display: none;">
+					</div>
+					<button><i class="fas fa-search"></i></button>
+				</div>
+				<div class="notification">
+					<i class="fas fa-bell"></i>
+					<div class="noti">
+						1
+					</div>
+				</div>
+				<div class="notification bars">
+					<i class="fas fa-bars" id="open_menu"></i>
+					<div class="menu menu1">
+						<ul>
+							<li><a href=""><i class="fas fa-qrcode"></i> Scan </a></li>
+							<li><a href=""><i class="fas fa-comments"></i> Cộng Đồng </a></li>
+							<li><a href=""><i class="fas fa-heart"></i> Yêu Thích</a></li>
+							<li><a href=""><i class="fas fa-code-branch"></i> Hoạt Động </a></li>
+							<li><a href=""><i class="fas fa-user"></i> Tài Khoản </a></li>
+						</ul>
+					</div>
+					<div class="menu menu2">
+						<ul>
+							<li><a href="#trangchu"> Trang chủ </a></li>
+							<li><a href="#gioithieu"> Giới Thiệu</a></li>
+							<li><a href="#thuvien"> Thư Viện Món Ngon </a></li>
+							<li><a href="#contact"> Liên Hệ </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="sub_menu">
+				<ul>
+					<li><a href="#trangchu"> Trang chủ </a></li>
+					<li><a href="#gioithieu"> Giới Thiệu</a></li>
+					<li><a href="#thuvien"> Thư Viện Món Ngon </a></li>
+					<li><a href="#contact"> Liên Hệ </a></li>
+				</ul>
+			</div>
+		</header>
+		<main>
+			<!-- <div class="banner">
+				<img src="images/banner2.jpg">
+			</div> -->
+			<div class="header_carousel" id="trangchu">
+				<div class="owl-carousel">
+					<div class="item_carousel">
+						<div class="header_front"> </div>
+						<img src="images/banner2.jpg">
+					</div>
+					<div class="item_carousel">
+						<div class="header_front"> </div>
+						<img src="images/banner3.jpg">
+					</div>
+					<div class="item_carousel">
+						<div class="header_front"> </div>
+						<img src="images/banner4.jpg">
+					</div>
+				</div>
+			</div>
+			<h1 class="title">"Happy Life By Easy Cooking"</h1>
+			<div class="sub_menu2">
+				<ul>
+					<li>
+						<a href=""> <img src="images/family.png"> </a>
+					</li>
+					<li>
+						<a href=""> <img src="images/baby.png"> </a>
+					</li>
+					<li>
+						<a href=""> <img src="images/heartbeat.png"> </a>
+					</li>
+					<li>
+						<a href=""> <img src="images/calendar.png"> </a>
+					</li>
+				</ul>
+			</div>
+			<div class="component" id="gioithieu">
+				<div class="component_in">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pd-0">
+							<h1>Giới thiệu</h1>
+							<p>Easy cooking được tạo nên với mong muốn có thể giúp cho người nội trợ sẽ dễ dàng hơn trong việc nấu ăn hàng ngày của mình. Từ công việc chuẩn bị các nguyên liệu, phải chọn món ăn hàng ngày hoặc lựa chọn những thiết bị dùng bếp sẽ trở nên dễ dàng hơn. </p>
+							<p>Easy cooking muốn công việc của một nội trợ sẽ trở nên nhẹ nhàng và dễ dàng hơn trước.</p>
+							<p>Tìm kiếm công thức dễ dàng hơn Bạn có thể tìm kiếm công thức các món ăn ưa thích một cách nhanh chóng hơn với công cụ tìm kiếm của Easy cooking.</p>
+							<p>+Theo tên</p>
+							<p>+Theo nguyên liệu</p>
+							<p>+Theo mục đích</p>
+							<p>+Theo chế độ dinh dưỡng (giảm cân, ...)</p>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 pd-0 relative_content">
+							<img class="content1" src="images/content1.jpg">
+							<img class="content2" src="images/content2.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<h1>Đề xuất</h1>
+			<div class="component component1">
+				<div class="component_in">
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food1.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food2.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food3.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food4.jpg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+			<div class="component" id="thuvien">
+			<h1>Thư Viện Món Ngon</h1>
+				<div class="component_in">
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food1.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food2.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food3.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food4.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food4.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food3.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food2.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food1.jpg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h1>Được yêu thích</h1>
+			<div class="component component2">
+				<div class="component_in">
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food5.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food6.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food7.jpg">
+							</a>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 pd-0">
+							<a href="" class="item">
+								<div class="top">Gà hấp lá chanh</div>
+								<img src="images/food8.jpg">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact_us" id="contact">
+				<div class="contact_bound">
+					<img src="images/logo.jpg">
+				</div>
+				<div class="bg"></div>
+				
+			</div>
+		</main>
+
+		<footer>
+			<div class="item">
+				<a href=""><i class="fas fa-qrcode"></i></a>
+			</div>
+			<div class="item">
+				<a href=""><i class="fas fa-comments"></i></a>
+			</div>
+			<div class="item">
+				<a href=""><i class="fas fa-heart"></i></a>
+			</div>
+			<div class="item">
+				<a href=""><i class="fas fa-code-branch"></i></a>
+			</div>
+			<div class="item">
+				<a href=""><i class="fas fa-user"></i></a>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		$(".chosen-select").chosen({
+        	width: '100%',
+		  	no_results_text: "Không tìm thấy kết quả :"
+		})
+
+		
+	</script>
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/bootstrap3.js"></script>
+	<script type="text/javascript" src="js/effect_custom.js"></script>
+</html>

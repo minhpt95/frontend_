@@ -1,0 +1,253 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+/************
+1. 1920px
+************/
+
+@media only screen and (min-width: 1920px)
+{
+
+#login-modal .modal-dialog{
+	width: 550px;
+	height: 550px;
+}
+#login-modal .modal-dialog .modal-header{
+	padding: 27px 45px;
+}
+#login-modal .modal-dialog .modal-body{
+	padding: 0 45px;
+}
+#login-modal .modal-dialog .modal-body .item-form{
+	margin: 0 0 25px 0;
+}
+#login-modal .modal-dialog .modal-body .item-form .text{
+	font-size: 1.8rem;
+	line-height: 24px;
+	margin: 0 0 11px 0;
+}
+#login-modal .modal-dialog .modal-body .item-form .input{
+	height: 60px;
+}
+#login-modal .modal-dialog .modal-body .item-form .input input{
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #000;
+	padding: 21px 19px;
+}
+#login-modal .modal-dialog .modal-body .item-form .input input::placeholder{
+	color: #E1E1E1;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form{
+	width: 100%;
+	height: 20px;
+	display: flex;
+	align-items: center;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox .tick{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active .tick{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active .tick img{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .text{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#login-modal .modal-dialog .modal-footer{
+	padding: 45px 45px 35px 45px;
+}
+#login-modal .modal-dialog .modal-footer button[type=submit]{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#login-modal .modal-dialog .modal-footer button[type=submit]:hover{ }
+
+
+
+}
+/************
+1. 1600px
+************/
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (min-width: 1380px) and (max-width: 1439px)
+{
+
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+}

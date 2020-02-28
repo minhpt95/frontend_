@@ -1,0 +1,26 @@
+
+/*________________ 2. Background ________________*/
+.I-background{
+	position: relative;
+	width: 100%;
+	z-index: -1;
+}
+.I-background .background-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.I-background .background-image img{
+	width: 100%;
+}
+/*________________ End Background ________________*/
+
+
+
+
+
+
+
+
+

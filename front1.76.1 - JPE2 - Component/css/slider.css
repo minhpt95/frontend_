@@ -1,0 +1,211 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans JP', 'poppins', sans-serif;
+  	font-size: 62.5%;
+}
+.I-slider .slider{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+.I-slider .owl-carousel .owl-stage-outer{
+	overflow: visible;
+}
+.I-slider .slider .slider-wrapper{
+	position: relative;
+	width: 1150px;
+	margin: auto;
+}
+.I-slider .slider-carousel{
+}
+.I-slider .slider-carousel .item{
+  	opacity: 0.4;
+  	transition:.4s ease all;
+  	width: 100%;
+}
+.I-slider .slider-carousel .item .inner{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background-color: #383225;
+	overflow: hidden;
+	padding: 25px 30px;
+}
+.I-slider .slider-carousel .item .inner a:hover{
+	text-decoration: none;
+}
+.I-slider .slider-carousel .item .inner h4{
+	margin: 0 0 15px 0;
+	color: #fff;
+	font-size: 2rem;
+	width: 80%;
+}
+.I-slider .slider-carousel .item .inner p{
+	color: #fff;
+	font-size: 1.6rem;
+	width: 80%;
+}
+.I-slider .slider-carousel .item .inner .inner-icon{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	margin-right: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-slider .slider-carousel .item .inner .inner-icon img{
+	width: 100%;
+}
+.I-slider .slider-carousel .active .item{
+  	opacity: 1;
+  	width: 100%;
+  	/*width: 750px;*/
+} 
+.I-slider .slider{
+	/*overflow: hidden;*/
+	position: relative;
+}
+.I-slider .slider .slider-control-large{
+	display: block;
+} 
+.I-slider .slider .slider-control-large .control-prev{
+	position: absolute;
+	top: 210px;
+	left: 153px;
+	width: 37px;
+	height: 113px;
+	background-color: #EFEFEF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 2;
+}
+.I-slider .slider .slider-control-large .control-next{
+	position: absolute;
+	top: 210px;
+	right: 153px;
+	width: 37px;
+	height: 113px;
+	background-color: #EFEFEF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 2;
+}
+.I-slider .slider .slider-control-medium{
+	width: 100%;
+	height: 90px;
+}
+.I-slider .slider .slider-control-medium .index-control{
+	height: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 1.8rem;
+	color: white;
+	letter-spacing: 5px;
+}
+.I-slider .slider .slider-control-medium .respon-prev{
+	display: none;
+	padding: 0 20px;
+}
+.I-slider .slider .slider-control-medium .respon-next{
+	display: none;
+	padding: 0 20px;
+}
+.I-slider .slider-bg{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 300px;
+	background-color: #B59C63;
+	z-index: -1;
+}
+.I-slider .notification{
+	width: 100%;
+	overflow: hidden;
+	background-color: #383225;
+}
+.I-slider .notification .notification-wrapper{
+	width: 100%;
+	overflow: hidden;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px 130px;
+}
+.I-slider .notification .notice{
+	float: left;
+	width: 20%;
+	margin-bottom: 30px;
+}
+.I-slider .notification .notice .notice-text{
+	font-size: 2.2rem;
+	color: white;
+}
+.I-slider .notification .seemore{
+	float: right;
+	width: 20%;
+}
+.I-slider .notification .seemore .seemore-button{
+	position: relative;
+	width: 156px;
+	height: 40px;
+	background-color: #B59C63;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+}
+.I-slider .notification .seemore .seemore-button{
+	font-size: 1.4rem;
+	color: #fff;
+}
+.I-slider .notification .seemore .seemore-button .seemore-button-icon{
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+.I-slider .notification .content{
+	float: right;
+	width: 80%;
+	min-height: 100px;
+	padding: 0 30px;
+}
+.I-slider .notification .content .content-item{
+	color: #fff;
+	padding: 0 0 10px 0;
+	overflow: hidden;
+}
+.I-slider .notification .content .content-item .content-item-time{
+	float: left;
+	font-size: 1.4rem;
+	width: 75px;
+	margin-right: 15px;
+}
+.I-slider .notification .content .content-item .content-item-detail{
+	float: left;
+	width: calc(100% - 105px);
+}
+.I-slider .notification .content .content-item .content-item-detail .content-item-text{
+	float: left;
+	font-size: 1.4rem;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+

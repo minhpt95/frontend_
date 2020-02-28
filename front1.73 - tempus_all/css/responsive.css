@@ -1,0 +1,421 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+	
+header section.tele {
+	display: none;
+}
+header section.main{
+	height: 65px;
+}
+header section.main .component .logo{
+	padding-top: 15px;
+	width: 200px;
+}
+header section.main .component .open_menu{
+	display: block;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin: 5px 0;
+	/*border: 1px solid #a1a1a1;*/
+	background-color: #f6f6f6;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+header section.main .component .language{
+	width: 0px;
+	margin-right: auto;
+}
+header section.main .component .open_search{
+	display: block;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header section.main .component .search{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all 300ms ease;
+	background-color: rgba(0, 0, 0, .0);
+	z-index: -1;
+}
+header section.main .component .search.active{
+	transition: all 300ms ease;
+	border: none;
+	height: 100vh;
+	box-shadow: 1px 1px 2px -1px;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, .9);
+	z-index: 1;
+}
+header section.main .component .search.active .close_search{
+	display: block;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	color: white;
+	border: 1px solid #fff;
+}
+.chosen-container{
+	margin: 30px 0 15px 0;
+}
+header section.main .component .search.active input{
+	/*margin: 30px 0;*/
+	float: left;
+	width: calc(100% - 30px);
+	height: 30px;
+	border: none;
+	/*box-shadow: 1px 1px 2px -1px;*/
+	padding: 5px;
+}
+header section.main .component .search.active button{
+	/*margin: 15px 0 0 0;*/
+	/*float: left;*/
+	margin: auto;
+	position: static;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border: none;
+}
+header section.main .component .search.active button img{
+	width: 30px;
+}
+header nav{
+	position: fixed;
+	top: 65px;
+	left: -100%;
+	width: 50%;
+	max-width: 300px;
+	height: 100vh;
+	background-color: #f6f6f6;
+	border-right: 1px solid #a1a1a1;
+	transition: all 300ms ease;
+	z-index: 1000;
+}
+main .close_nav{
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	width: calc(100%);
+	height: calc(100vh - 50px);
+	transition: all 300ms ease;
+	background-color: rgba(0, 0, 0, .0);
+	z-index: -1;
+}
+main .close_nav.active{
+	background-color: rgba(0, 0, 0, .8);
+	z-index: 1;
+}
+header nav.active{
+	left: 0;
+}
+header nav .component{
+	height: 100%;
+}
+header nav .component ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+header nav .component ul{
+	float: left;
+	width: 100%;
+}
+header nav .component ul li a{
+	color: #3a3a3a;
+	justify-content: center !important;
+}
+header nav .component ul li.between{
+	width: 100%;
+	height: 45px;
+}
+header nav .component ul li.dot{
+	width: 100%;
+	height: 45px;
+}
+header nav .component ul li.between a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+header nav .component ul li.dot a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+header nav .component ul li a:hover{
+	text-decoration: none;
+}
+main{
+	margin-top: 65px;
+}
+footer .call{
+	position: fixed;
+	bottom: 30px;
+	left: 30px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: #ccc;
+	font-size: 24px;
+	color: #3577dd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	transition: all 300ms ease;
+	animation: call 1s ease-in-out infinite;
+}
+footer .left-text{
+	padding: 20px 0;
+	text-align: center;
+}
+footer .center-text{
+	padding: 20px 0;
+	text-align: center;
+}
+footer .right-text{
+	padding: 20px 0;
+	text-align: center;
+}
+@keyframes call{
+	0%{
+		box-shadow: 0px 0px 8px 0px;
+	}
+	10%{
+		box-shadow: 0px 0px 8px 1px;
+	}
+	20%{
+		box-shadow: 0px 0px 8px 2px;
+	}
+	30%{
+		box-shadow: 0px 0px 8px 3px;
+	}
+	40%{
+		box-shadow: 0px 0px 8px 4px;
+	}
+	50%{
+		box-shadow: 0px 0px 8px 5px;
+	}
+	60%{
+		box-shadow: 0px 0px 8px 4px;
+	}
+	70%{
+		box-shadow: 0px 0px 8px 3px;
+	}
+	80%{
+		box-shadow: 0px 0px 8px 2px;
+	}
+	90%{
+		box-shadow: 0px 0px 8px 1px;
+	}
+	100%{
+		box-shadow: 0px 0px 8px 0px;
+	}
+}
+
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+}

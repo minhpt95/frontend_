@@ -1,0 +1,365 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+/************
+1. 1920px
+************/
+
+@media only screen and (min-width: 1920px)
+{
+	
+/*________________ Most_Used ________________*/
+.I-most_used{
+	padding: 60px 75px 90px 75px;
+}
+.I-most_used .control-listitem{ }
+.I-most_used .control-listitem .listitem-prev{
+	width: 50px;
+	height: 50px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-prev:hover{ }
+.I-most_used .control-listitem .listitem-next{
+	width: 50px;
+	height: 50px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-next:hover{ }
+.I-most_used .indicators-listitem{
+	height: 100px;
+}
+.I-most_used .indicators-listitem ol{ }
+.I-most_used .indicators-listitem ol li{
+	width: 15px;
+	height: 15px;
+	border-radius: 15px;
+}
+.I-most_used .indicators-listitem ol li:not(:last-child){ }
+.I-most_used .indicators-listitem ol li.active{ }
+.I-most_used .most_used-listitem{ }
+.I-most_used .most_used-listitem .pd-custom{ }
+.I-most_used .most_used-detail{ }
+.I-most_used .most_used-detail .title{
+	margin: 0 0 30px 0;
+}
+.I-most_used .most_used-detail .title .title-content{
+	font-size: 4rem;
+	line-height: 55px;
+}
+.I-most_used .most_used-detail .title .title-detail{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+.I-most_used .most_used-detail .content{
+	font-size: 2.2rem;
+	line-height: 27px;
+}
+.I-most_used .most_used-detail .detail{ }
+.I-most_used .most_used-detail .detail .detail-button{
+	width: 225px;
+	height: 60px;
+}
+.I-most_used .most_used-detail .detail .detail-button button{
+	font-size: 2rem;
+	line-height: 27px;
+}
+.I-most_used .most_used-detail .detail .detail-button button:hover{ }
+/*________________ End 5. Most_Used ________________*/
+
+}
+/************
+1. 1600px
+************/
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px)
+{
+
+/*________________ Most_Used ________________*/
+.I-most_used{
+	padding: 85px 70px;
+}
+.I-most_used .control-listitem{ }
+.I-most_used .control-listitem .listitem-prev{
+	width: 35px;
+	height: 35px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-prev:hover{ }
+.I-most_used .control-listitem .listitem-next{
+	width: 35px;
+	height: 35px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-next:hover{ }
+.I-most_used .indicators-listitem{
+	height: 60px;
+}
+.I-most_used .indicators-listitem ol{ }
+.I-most_used .indicators-listitem ol li{
+	width: 12px;
+	height: 12px;
+	border-radius: 15px;
+}
+.I-most_used .indicators-listitem ol li:not(:last-child){ }
+.I-most_used .indicators-listitem ol li.active{ }
+.I-most_used .most_used-listitem{ }
+.I-most_used .most_used-listitem .pd-custom{ }
+.I-most_used .most_used-detail{ }
+.I-most_used .most_used-detail .title{
+	margin: 0 0 28px 0;
+}
+.I-most_used .most_used-detail .title .title-content{
+	font-size: 3.5rem;
+	line-height: 43px;
+}
+.I-most_used .most_used-detail .title .title-detail{
+	font-size: 2.1rem;
+	line-height: 28px;
+}
+.I-most_used .most_used-detail .content{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-most_used .most_used-detail .detail{ }
+.I-most_used .most_used-detail .detail .detail-button{
+	width: 200px;
+	height: 50px;
+}
+.I-most_used .most_used-detail .detail .detail-button button{
+	font-size: 1.7rem;
+	line-height: 27px;
+}
+.I-most_used .most_used-detail .detail .detail-button button:hover{ }
+
+/*________________ End 5. Most_Used ________________*/
+
+}
+
+
+/************
+3. 1380px
+************/
+
+@media only screen and (min-width: 1380px) and (max-width: 1599px)
+{
+
+/*________________ Most_Used ________________*/
+.I-most_used{
+	padding: 50px 60px;
+}
+.I-most_used .control-listitem{ }
+.I-most_used .control-listitem .listitem-prev{
+	width: 35px;
+	height: 35px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-prev:hover{ }
+.I-most_used .control-listitem .listitem-next{
+	width: 35px;
+	height: 35px;
+	top: -25px;
+}
+.I-most_used .control-listitem .listitem-next:hover{ }
+.I-most_used .indicators-listitem{
+	height: 60px;
+}
+.I-most_used .indicators-listitem ol{ }
+.I-most_used .indicators-listitem ol li{
+	width: 12px;
+	height: 12px;
+	border-radius: 15px;
+}
+.I-most_used .indicators-listitem ol li:not(:last-child){ }
+.I-most_used .indicators-listitem ol li.active{ }
+.I-most_used .most_used-listitem{ }
+.I-most_used .most_used-listitem .pd-custom{ }
+.I-most_used .most_used-detail{ }
+.I-most_used .most_used-detail .title{
+	margin: 0 0 20px 0;
+}
+.I-most_used .most_used-detail .title .title-content{
+	font-size: 3.2rem;
+	line-height: 43px;
+}
+.I-most_used .most_used-detail .title .title-detail{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+.I-most_used .most_used-detail .content{
+	font-size: 1.5rem;
+	line-height: 24px;
+}
+.I-most_used .most_used-detail .detail{ }
+.I-most_used .most_used-detail .detail .detail-button{
+	width: 200px;
+	height: 50px;
+}
+.I-most_used .most_used-detail .detail .detail-button button{
+	font-size: 1.7rem;
+	line-height: 27px;
+}
+.I-most_used .most_used-detail .detail .detail-button button:hover{ }
+
+/*________________ End 5. Most_Used ________________*/
+
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+}

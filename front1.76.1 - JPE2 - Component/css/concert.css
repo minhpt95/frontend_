@@ -1,0 +1,156 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans JP', 'poppins', sans-serif;
+  	font-size: 62.5%;
+}
+.bg-01{
+	background: url("../images/bg.png");
+}
+.I-concert{
+	width: 100%;
+	overflow: hidden;
+	padding: 80px 60px 60px 60px;
+}
+.I-concert .concert-wrapper{
+	margin: auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.I-concert .title{
+	margin-bottom: 40px;
+}
+.I-concert .title h3{
+	text-align: center;
+	font-size: 2.8rem;
+}
+.I-concert .title h4{
+	text-align: center;
+	font-size: 2rem;
+	color: #B59C63
+}
+.I-concert .slider{
+	position: relative;
+	margin-bottom: 30px;
+}
+.I-concert .slider .item{
+
+}
+.I-concert .slider .item .item-image{
+
+}
+.I-concert .slider .item .item-inner{
+
+}
+.I-concert .slider .item .item-inner-time{
+	margin-top: 15px;
+	font-size: 1.4rem;
+	color: #797979;
+}
+.I-concert .slider .item .item-inner-title{
+	font-size: 1.6rem;
+	color: #4D4D4D;
+	margin: 12px 0 10px 0;
+}
+.I-concert .slider .item .item-inner-title h4{
+	line-height: 2;
+}
+.I-concert .slider .item .item-inner-detail{
+	font-size: 1.2rem;
+	color: #717171;
+	margin-bottom: 17px;
+}
+.I-concert .slider .item .item-inner-category{
+	float: left;
+	font-size: 1.3rem;
+	padding: 4px 16px;
+	color: #8D7131;
+	border: 1px solid #B09760;
+	border-radius: 5px;
+}
+.I-concert .slider .slider-control{
+	display: block;
+}
+.I-concert .slider .slider-control .control-prev{
+	position: absolute;
+	top: 40%;
+	left: -67px;
+	width: 37px;
+	height: 113px;
+	background-color: #EFEFEF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 2;
+}
+.I-concert .slider .slider-control .control-next{
+	position: absolute;
+	top: 40%;
+	right: -67px;
+	width: 37px;
+	height: 113px;
+	background-color: #EFEFEF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 2;
+}
+.I-concert .seemore{
+	width: 100%;
+	height: 56px;
+	padding: 0 15px;
+}
+.I-concert .seemore .goto{
+	position: relative;
+	width: 100%;
+	max-width: 355px;
+	margin: auto;
+	height: 56px;
+	background-color: #B59C63;
+}
+.I-concert .seemore .goto .goto-link{
+	width: 100%;
+	height: 100%;
+}
+.I-concert .seemore .goto .goto-link a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 1.4rem;
+}
+.I-concert .seemore .goto .goto-link a:hover{
+	text-decoration: none;
+}
+.I-concert .seemore .goto .goto-icon{
+	position: absolute;
+	top: 23px;
+	right: 20px;
+}
+.I-concert .seemore .goto .goto-icon img{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

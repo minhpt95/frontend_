@@ -1,0 +1,123 @@
+
+/* CARD */
+.C_A_R_D{
+	padding: 7px;
+	border-radius: 7px;
+	background-color: #fff;
+}
+.C_A_R_D .C_A_R_D-mg{
+	margin: 0;
+}
+.C_A_R_D .C_A_R_D-pd{
+	padding: 0 5px;
+}
+.C_A_R_D-header{
+	margin: 0 0 5px 0;
+}
+.C_A_R_D-header .C_A_R_D-image{
+	width: 100%;
+}
+.C_A_R_D-header .C_A_R_D-image img{
+	width: 100%;
+}
+.C_A_R_D-header .C_A_R_D-vote{
+	float: right;
+	margin: 0 0 8px 0;
+}
+.C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item{
+	float: left;
+	width: 14px;
+	height: 14px;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background-color: #E1E1E1;
+}
+.C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item.is-select{
+	background-color: #FFE500;
+}
+.C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item:not(:last-child){
+	margin: 0 5px 0 0;
+}
+.C_A_R_D-header .C_A_R_D-comment{
+	float: left;
+	width: 100%;
+	text-align: right;
+	font-size: 1.2rem;
+	line-height: 17px;
+	color: #02052E;
+}
+.C_A_R_D-body{
+	padding: 0 5px;
+	margin: 0 0 20px 0;
+}
+.C_A_R_D-body .C_A_R_D-body-title{
+	font-size: 1.4rem;
+	line-height: 19px;
+	font-weight: bold;
+	color: #02052E;
+	margin: 0 0 15px 0;
+}
+.C_A_R_D-body .C_A_R_D-body-describe{
+	font-size: 1.2rem;
+	line-height: 17px;
+	color: #60ABCB;
+}
+.C_A_R_D-body .C_A_R_D-body-category{ }
+.C_A_R_D-body .C_A_R_D-body-category .category-item{
+	width: 100%;
+	height: 25px;
+	border-radius: 2px;
+	background-color: #F2F2F2;
+	color: #000;
+	font-size: 1.1rem;
+	line-height: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.C_A_R_D-footer{
+	padding: 0 5px;
+	margin: 0 0 15px 0;
+}
+.C_A_R_D-footer .C_A_R_D-detail{ }
+.C_A_R_D-footer .C_A_R_D-detail .detail-item{
+	position: relative;
+}
+.C_A_R_D-footer .C_A_R_D-detail .C_A_R_D-pd{
+	padding: 0;
+}
+.C_A_R_D-footer .C_A_R_D-detail .C_A_R_D-pd:not(:last-child) .detail-item:before{
+	position: absolute;
+	content: "";
+	top: 0%;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background-color: #E1E1E1;
+}
+.C_A_R_D-footer .C_A_R_D-detail .detail-item{
+	
+}
+.C_A_R_D-footer .C_A_R_D-detail .detail-item .detail-item-title{
+	margin: 0 0 8px 0;
+	color: #000;
+	font-size: 1.2rem;
+	line-height: 17px;
+	text-align: center;
+}
+.C_A_R_D-footer .C_A_R_D-detail .detail-item .detail-item-data{
+	color: #2AA1AF;
+	font-size: 1.4rem;
+	line-height: 19px;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,390 @@
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
+/*@import url('https://fonts.googleapis.com/css?family=Dosis');*/
+/*@import url('https://fonts.googleapis.com/css?family=Arial');*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+/*@import url('https://fonts.googleapis.com/css?family=Kalam');*/
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'poppins', 'Arial', 'Dosis', 'Roboto', sans-serif;
+	/*min-width: 550px;*/
+	/*overflow: hidden;*/
+	/*background-color: #1D0F5C;*/
+	background-color: white;
+}
+
+.component{
+	margin: auto;
+	width: 100%;
+	max-width: 1170px;
+	padding: 0 20px;
+	/*overflow: hidden;*/
+}
+.block{
+	display: block !important;
+}
+.W0{
+	width: 0% !important;
+}
+.W10{
+	width: 10% !important;
+}
+.W20{
+	width: 20% !important;
+}
+.W30{
+	width: 30% !important;
+}
+.W40{
+	width: 40% !important;
+}
+.W50{
+	width: 50% !important;
+}
+.W60{
+	width: 60% !important;
+}
+.W70{
+	width: 70% !important;
+}
+.W80{
+	width: 80% !important;
+}
+.W90{
+	width: 90% !important;
+}
+.W100{
+	width: 100% !important;
+}
+
+.H0{
+	height: 0% !important;
+}
+.H10{
+	height: 10% !important;
+}
+.H20{
+	height: 20% !important;
+}
+.H30{
+	height: 30% !important;
+}
+.H40{
+	height: 40% !important;
+}
+.H50{
+	height: 50% !important;
+}
+.H60{
+	height: 60% !important;
+}
+.H70{
+	height: 70% !important;
+}
+.H80{
+	height: 80% !important;
+}
+.H90{
+	height: 90% !important;
+}
+.H100{
+	height: 100% !important;
+}
+.P-0{
+	padding: 0;
+}
+.MG-0{
+	margin: 0;
+}
+header{
+	width: 100%;
+	height: 140px;
+	margin-bottom: 20px;
+	/*background-color: red;*/
+}
+
+header .title{
+	width: 100%;
+	height: 100px;
+}
+header .title .logo{
+	float: left;
+	width: 250px;
+	height: 100px;
+	background-color: red;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .title .search{
+	float: right;
+	width: 300px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .title .search input{
+	width: 200px;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+header .title .search button{
+	width: 32px;
+	height: 32px;
+	border: 1px solid #ccc;
+	background-color: white;
+}
+header .title .order{
+	float: right;
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .title .order .bound_order{
+	width: 60%;
+	height: 32px;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header .title .order .bound_order_open{
+	position: relative;
+	width: 32px;
+	height: 32px;
+	border: 1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+header .title .order .bound_order_form{
+	display: none;
+	position: absolute;
+	top: 35px;
+	right: 0;
+	width: 300px;
+	height: 300px;
+	background-color: red;
+	z-index: 10000;
+}
+
+
+nav{
+	margin-top: 20px;
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background-color: red;
+	background: linear-gradient(#fff,#fff) padding-box,linear-gradient(90deg,#db1d60,#ed4f32) 0/50% no-repeat border-box,linear-gradient(-90deg,#eb7d01,#ed4f32 37.5vw, #eb7d01) 100% 101%/65% 50% no-repeat border-box;
+	border: 4px solid #f9111100;
+	border-radius: 50px 0 50px 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+nav::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	right: -47px;
+	width: 47px;
+	height: 47px;
+	border: inherit;
+	border-color: #eb7d01;
+	border-width: 4px 0 0 4px;
+	border-radius: 50px 0 0 0;
+}
+.bound_nav{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+header nav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+header nav ul li{
+	float: left;
+}
+header nav ul li a{
+	position: relative;
+	padding: 10px;
+	font-size: 16px;
+	/*color: #76aa6f;*/
+	color: #eb4a36;
+	transition: all 300ms ease;
+}
+header nav ul li a::after{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 5px;
+	background-color: #eb4a36;
+	transition: all 300ms ease;
+}
+
+
+header nav ul li a:hover{
+	background-color: white;
+	color: #eb7d01;
+	text-decoration: none;
+	transition: all 300ms ease;
+}
+header nav ul li a:hover:after{
+	width: 100%;
+	background-color: #eb7d01;
+}
+main{
+	margin: 30px 0;
+	width: 100%;
+	/*background-color: red;*/
+}
+main .content{
+	width: 100%;
+	overflow: hidden;
+}
+main .main{
+	margin: 20px 0; 
+	width: 100%;
+	height: 500px;
+}
+main .main .item1{
+	height: 440px;
+}
+main .main .item2{
+	height: 200px;
+}
+main .main .item{
+	width: 100%;
+	position: relative;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin: 20px 0;
+	overflow: hidden;
+}
+main .main .item .bound_image{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+main .main .item img{
+	width: 100%;
+}
+main .main .link{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	font-size: 24px;
+	background-color: rgba(0, 0, 0, .3);
+	text-decoration: none;
+	color: white;
+	opacity: 0;
+	transition: all 300ms ease;
+}
+
+main .main .link:hover{
+	opacity: 1;
+	transition: all 300ms ease;
+}
+
+
+main .allitem{
+	
+}
+
+main .allitem .title{
+	width: 100%;
+	height: 50px;
+	
+}
+main .allitem .title h1{
+	text-align: center;
+}
+main .allitem .item{
+	margin: 15px 0;
+	width: 100%;
+	height: 300px;
+	border: 1px solid #ccc;
+	transition: all 300ms ease;
+}
+main .allitem .item:hover{
+	/*transform: translateX(-2px) translateY(-2px);*/
+	/*background-color: #ccc;*/
+	box-shadow: 3px 3px 3px -2px;
+}
+main .allitem .item .bound_image{
+	padding: 10px;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+main .allitem .item .bound_image img{
+	width: 100%;
+}
+
+main .allitem .item .action{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main .allitem .item .action a{
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+	color: black;
+	transition: all 300ms ease;
+	margin: 10px;
+}
+main .allitem .item .action a:hover{
+	color: white;
+	background-color: black;
+}
+
+footer{
+	width: 100%;
+	height: 300px;
+	background-color: #ccc;
+}
+
+
+
+
+.glyphicon-chevron-left::before{
+	content: "" !important;
+}
+
+.glyphicon-chevron-right::before{
+	content: "" !important;
+}
+
+
+
+
+
+
+
+
+
+

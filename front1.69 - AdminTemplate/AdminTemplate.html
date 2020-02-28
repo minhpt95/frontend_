@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>[ R E A L T E A ]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/chosen.jquery.min.js"></script>
+		<link href="css/chosen.min.css" rel="stylesheet"/>
+		<script src="js/Chart.min.js"></script>
+		<script src="js/utils.js"></script>
+	</head>
+
+	<body> 
+		<aside>
+			<div class="logout">
+				<a href="">
+					<div class="logout_text">Logout</div>
+					<div class="icon"> <i class="fas fa-sign-out-alt"></i> </div>
+				</a>
+			</div>
+		</aside>
+		<nav>
+			<div class="control_nav">
+				<i class="fas fa-bars"></i>
+				<!-- <i class="fas fa-times"></i> -->
+			</div>
+			<div class="content">
+				<div class="fullname">TEMPUS</div>
+				<div class="subname">T</div>
+			</div>
+			<div class="admin">
+				
+			</div>
+			<div class="menu">
+				<ul class="listmenu">
+					<li class="itemmenu">
+						<a class="linkmenu">
+							<div class="icon"><i class="fas fa-copy"></i></div>
+							<div class="title">Bài Viết</div>
+							<div class="sub-icon"><i class="fas fa-caret-right"></i></div>
+						</a>
+						<ul>
+							<li class="sub-menu"><a href="" class="sub-link">Bài Viết 1</a></li>
+							<li class="sub-menu"><a href="" class="sub-link">Bài Viết 2</a></li>
+							<li class="sub-menu"><a href="" class="sub-link">Bài Viết 3</a></li>
+							<li class="sub-menu"><a href="" class="sub-link">Bài Viết 4</a></li>
+						</ul>
+					</li>
+					<li class="itemmenu">
+						<a class="linkmenu">
+							<div class="icon"><i class="fas fa-calendar-minus"></i></div>
+							<div class="title">Danh Mục</div>
+							<div class="sub-icon"><i class="fas fa-caret-right"></i></div>
+						</a>
+						<ul>
+							<li class="sub-menu"><a href="" class="sub-link">Danh Mục 1</a></li>
+							<li class="sub-menu"><a href="" class="sub-link">Danh Mục 2</a></li>
+							<li class="sub-menu"><a href="" class="sub-link">Danh Mục 3</a></li>
+							<li class="sub-menu"><a href="" class="sub-link">Danh Mục 4</a></li>
+						</ul>
+					</li>
+					<li class="itemmenu">
+						<a class="linkmenu">
+							<div class="icon"><i class="fas fa-users"></i></div>
+							<div class="title">Nhân Viên</div>
+							<div class="sub-icon"><i class="fas fa-caret-right"></i></div>
+						</a>
+					</li>
+					<li class="itemmenu">
+						<!-- <i class="fas fa-caret-right"></i> -->
+						<a class="linkmenu">
+							<div class="icon"><i class="fas fa-images"></i></div>
+							<div class="title">Hình Ảnh</div>
+							<div class="sub-icon"><i class="fas fa-caret-right"></i></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<main>
+			<div class="close_nav"></div>
+			<div class="main_in">
+				<div class="task_col">
+					<div class="task_body W100">
+						<div class="title header_title W100">
+							Thêm Sản Phẩm
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="task_col">
+							<div class="task_body W40">
+								<div class="title header_title W100">
+									Tên Sản Phẩm
+								</div>
+							</div>
+							<div class="task_body W60">
+								<input type="" name="" class="W100 inputName">
+							</div>
+						</div>
+						<div class="task_col">
+							<div class="task_body W40">
+								<div class="title header_title W100">
+									Hình Anh
+								</div>
+							</div>
+							<div class="task_body W60">
+								<label class="W100" for="LoadImage">
+									<i class="fas fa-upload"></i>
+								</label>
+								<input type="file" name="image" id="LoadImage" class="W100" style="display: none;">
+							</div>
+						</div>
+						<div class="task_col">
+							<div class="task_body W40">
+								<div class="title header_title W100">
+									Thuộc Tính
+								</div>
+							</div>
+							<div class="task_body W60">
+								<select class="W100">
+									<option>1</option>
+									<option>1</option>
+									<option>1</option>
+								</select>
+							</div>
+						</div>
+						<div class="task_col">
+							<div class="task_body W40">
+								<div class="title header_title W100">
+									Mô Tả
+								</div>
+							</div>
+							<div class="task_body W60">
+								<textarea class="W100 inputArea"></textarea>
+							</div>
+						</div>
+						<div class="task_col">
+							<div class="task_body W40">
+								<div class="title header_title W100">
+									Mô Tả
+								</div>
+							</div>
+							<div class="task_body W60">
+							    <div data-toggle="buttons">
+							        <label class="btn W50">
+							            <input type="radio" name="roles" value="1">1
+							        </label>
+							        <label class="btn W50">
+							            <input type="radio" name="roles" value="2">2
+							        </label>
+							        <label class="btn W50">
+							            <input type="radio" name="roles" value="1">1
+							        </label>
+							        <label class="btn W50">
+							            <input type="radio" name="roles" value="2">2
+							        </label>
+							        <label class="btn W50">
+							            <input type="radio" name="roles" value="1">1
+							        </label>
+							        <label class="btn W50">
+							            <input type="radio" name="roles" value="2">2
+							        </label>
+							    </div>
+							</div>
+						</div>
+						
+						<div class="bound_select">
+							<div class="select">
+								<select data-placeholder="Hôm Nay Bạn Có Gì ?" multiple class="chosen-select" name="test">
+								    <option value=""></option>
+								    <option>Rau Muống</option>
+								    <option>Thịt Bò</option>
+								    <option>THịt Lợn</option>
+								    <option>Thịt Gà</option>
+								    <option>1 chút cute :></option>
+								</select>
+								<input type="submit" name="" value="" style="display: none;">
+							</div>
+							<button><i class="fas fa-search"></i></button>
+						</div>
+						<div class="task_col">
+							<div class="task_body W40">
+								<div class="title header_title W100">
+									Mô Tả
+								</div>
+							</div>
+							<div class="task_body W60">
+							    <div data-toggle="buttons">
+							        <label class="btn W50">
+							            <input type="checkbox" name="roles" value="1">1
+							        </label>
+							        <label class="btn W50">
+							            <input type="checkbox" name="roles" value="2">2
+							        </label>
+							        <label class="btn W50">
+							            <input type="checkbox" name="roles" value="1">1
+							        </label>
+							        <label class="btn W50">
+							            <input type="checkbox" name="roles" value="2">2
+							        </label>
+							        <label class="btn W50">
+							            <input type="checkbox" name="roles" value="1">1
+							        </label>
+							        <label class="btn W50">
+							            <input type="checkbox" name="roles" value="2">2
+							        </label>
+							    </div>
+							</div>
+						</div>
+						<div id="canvas-holder" style="width:40%">
+							<canvas id="pie-area"></canvas>
+						</div>
+						<div id="canvas-holder" style="width:100%">
+							<canvas id="doughnut-area"></canvas>
+						</div>
+						<script>
+							var randomScalingFactor = function() {
+								return Math.round(Math.random() * 100);
+							};
+
+							var config_pie = {
+								type: 'pie',
+								data: {
+									datasets: [{
+										data: [
+											2,
+											3,
+										],
+										backgroundColor: [
+											window.chartColors.red,
+											window.chartColors.orange,
+										],
+										label: 'Thống Kê Đơn Hàng'
+									}],
+									labels: [
+										'Mua Tại Shop',
+										'Mua Tại Online'
+									]
+								},
+								options: {
+									responsive: true
+								}
+							};
+
+							var config_doughnut = {
+								type: 'doughnut',
+								data: {
+									datasets: [{
+										data: [
+											1,
+											2,
+											1
+										],
+										backgroundColor: ["#19D9B4", "#5598FF"],
+										label: 'Thống Kê Đơn Hàng',
+										weight: 3,
+									}],
+									labels: [
+										'내부공유',
+										'외부공유'
+									]
+								},
+								options: {
+									cutoutPercentage: 75,
+								    legend: {
+								        position: 'bottom',
+										labels: {
+										   	boxWidth: 15,
+											padding: 50,
+										},
+								    },
+									responsive: true
+								}
+							};
+
+							window.onload = function() {
+								var ctx = document.getElementById('pie-area').getContext('2d');
+								window.myPie = new Chart(ctx, config_pie);
+								var ctx = document.getElementById('doughnut-area').getContext('2d');
+								window.myPie = new Chart(ctx, config_doughnut);
+							};
+
+						</script>
+						<!-- <div class="task_col">
+
+							<div class="task_body">
+								<a href="">href</a>
+							</div>
+							<div class="task_body">
+								<button>button</button>
+							</div>
+							<div class="task_body">
+								<input type="" name="">
+							</div>
+							<div class="task_body">
+							    <div data-toggle="buttons">
+							        <label class="btn">
+							            <input type="radio" name="roles" value="1">1
+							        </label>
+							        <label class="btn">
+							            <input type="radio" name="roles" value="2">2
+							        </label>
+							    </div>
+							</div>
+						</div> -->
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="task_col">
+							<div class="task_body W100">
+								<div class="title header_title W100">
+									Xem Trước
+								</div>
+							</div>
+						</div>
+						<div class="task_col W100">
+							<div class="task_body W100">
+								<div class="bound_output" style="height: 150px;">
+									<div class="image">
+										<img src="" class="outimage">
+										<!-- <canvas id="canvas"></canvas> -->
+									</div>
+									<div class="content">
+										<div class="title_content">
+											
+										</div>
+										<div class="detail_content">
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+
+	<script type="text/javascript">
+		$(".chosen-select").chosen({
+        	width: '100%',
+		  	no_results_text: "Không tìm thấy kết quả :"
+		})
+	</script>
+	<script type="text/javascript">
+		$('#LoadImage').on('change', function(e){
+		    var img = new Image;
+		    img.src = URL.createObjectURL(e.target.files[0]);
+		    img.onload = function() {
+	        	$('.outimage').attr('src', URL.createObjectURL(e.target.files[0]))
+	    	}
+		})
+		$('.inputName').on('keyup',function(){
+    		var name =  $(this).val();
+    		$('.title_content').html(name);
+		});
+		$('.inputArea').on('keyup',function(){
+    		var name =  $(this).val();
+    		$('.detail_content').html(name);
+		});
+	</script>
+	<script src="js/bootstrap3.js"></script>
+	<script type="text/javascript" src="js/effect_custom.js"></script>
+</html>

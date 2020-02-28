@@ -1,0 +1,170 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Sans JP', 'poppins', sans-serif;
+  	font-size: 62.5%;
+}
+.I-information{
+	padding: 70px;
+	background-image: url("../images/bg_02.png");
+	background-color: #B59C63;
+}
+.I-information .information-wrapper{
+	margin: auto;
+	max-width: 1200px;
+	width: 100%;
+	overflow-y: hidden;
+}
+.I-information .information-controlblock{
+	display: none;
+}
+.I-information .information-block{
+	width: 50%;
+	float: left;
+	padding: 50px 15px 25px 45px;
+	background-color: #fff;
+}
+.I-information .information-block .title{
+	overflow-y: hidden;
+}
+.I-information .information-block .title .title-text{
+	float: left;
+	font-size: 2.2rem;
+}
+.I-information .information-block .title .title-seemore{
+	position: relative;
+	float: right;
+	display: block;
+	padding: 11px 38px 11px 32px;
+	background-color: #B59C63;
+}
+.I-information .information-block .title .title-seemore .title-seemore-text{
+	color: #fff;
+	font-size: 1.4rem;
+}
+.I-information .information-block .title .title-seemore .title-seemore-icon{
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+.I-information .information-block .content{
+	overflow-y: scroll;
+	margin-top: 40px;
+	height: 500px;
+}
+.I-information .information-block .content .infor-block{
+	padding: 25px 0;
+	border-bottom: 1px solid #EAEAEA;
+	overflow: hidden;
+}
+.I-information .information-block .infor-block .content-image{
+	float: left;
+	width: 160px;
+	overflow: hidden;
+}
+.I-information .information-block .infor-block .content-image img{
+	width: 100%;
+}
+.I-information .information-block .infor-block .content-title{
+	float: left;
+	margin-left: 20px;
+	width: calc( 100% - 180px);
+}
+.I-information .information-block .infor-block .content-title h4{
+	font-size: 1.6rem;
+	margin-bottom: 20px;
+}
+.I-information .information-block .infor-block .content-title a{
+	text-decoration: underline;
+	font-size: 1.4rem;
+	color: #8D7131;
+}
+.I-information .information-block .infor-block .content-infor{
+	float: left;
+	width: 100%;
+}
+.I-information .information-block .infor-block .content-infor .content-infor-item{
+	overflow: hidden;
+	margin: 4px 0;
+}
+.I-information .information-block .infor-block .content-infor .infor-title{
+	float: left;
+	width: 105px;
+	font-size: 1.4rem;
+}
+.I-information .information-block .infor-block .content-infor .infor-detail{
+	float: left;
+	width: calc( 100% - 105px);
+	font-size: 1.4rem;
+	padding: 0 0 0 5px;
+}
+.I-information .information-block .content .discount-block{
+	padding: 25px 0;
+	border-bottom: 1px solid #EAEAEA;
+	overflow: hidden;
+}
+.I-information .information-block .discount-block .content-image{
+	float: left;
+	width: 160px;
+	overflow: hidden;
+}
+.I-information .information-block .discount-block .content-image img{
+	width: 100%;
+}
+.I-information .information-block .discount-block .content-title{
+	float: left;
+	margin-left: 20px;
+	width: calc( 100% - 180px);
+}
+.I-information .information-block .discount-block .content-title h4{
+	font-size: 1.6rem;
+	margin-bottom: 20px;
+}
+.I-information .information-block .discount-block .content-action a{
+	text-decoration: underline;
+	font-size: 1.4rem;
+	color: #8D7131;
+	float: left;
+	margin: 0 30px 0 0;
+}
+.I-information .information-block .discount-block .content-infor{
+	float: left;
+	width: 100%;
+}
+.I-information .information-block .discount-block .content-infor .content-infor-item{
+	overflow: hidden;
+	margin: 4px 0;
+}
+.I-information .information-block .discount-block .content-infor .infor-title{
+	float: left;
+	width: 105px;
+	font-size: 1.4rem;
+}
+.I-information .information-block .discount-block .content-infor .infor-detail{
+	float: left;
+	width: calc( 100% - 105px);
+	font-size: 1.4rem;
+	padding: 0 0 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,209 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+/************
+4. 1024px
+************/
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+.I-information{
+	padding: 20px 0  35px 0;
+}
+.I-information .information-wrapper{
+	position: relative;
+	height: 845px;
+}
+.I-information .information-block{
+	display: none;
+	position: absolute;
+	width: 100%;
+	padding: 39px 15px 40px 30px;
+	background-color: #fff;
+}
+.I-information .information-block.is-selected{
+	display: block;
+}
+.I-information .information-controlblock{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-information .information-controlblock .open-block{
+	width: 170px;
+	height: 50px;
+	background-color: #C1B6A0;
+	color: #fff;
+	font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 2px;
+}
+.I-information .information-controlblock .open-block.is-selected{
+	color: #8D7131;
+	background-color: #fff;
+}
+
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+
+
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+
+
+}
+
+/************
+15. 320px
+************/
+
+@media only screen and (max-width: 320px)
+{
+
+
+}

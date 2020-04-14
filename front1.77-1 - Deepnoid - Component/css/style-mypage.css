@@ -33,6 +33,9 @@ body{
 .row.mg-0{
 	margin: 0;
 }
+a:hover{
+	text-decoration: none !important;
+}
 /*________________ End Overview ________________*/
 
 /* CARD */
@@ -61,9 +64,66 @@ body{
 .C_A_R_D-header .C_A_R_D-image img{
 	width: 100%;
 }
+.C_A_R_D-header .C_A_R_D-use{
+	margin: 0 0 3px 0;
+}
+.C_A_R_D-header .C_A_R_D-use .action_use{
+	float: right;
+	width: 26px;
+	height: 15px;
+	cursor: pointer;
+}
+.C_A_R_D-header .C_A_R_D-use .action_use .tg-btn{
+	border-radius: 15px;
+	position: relative;
+	background-color: #e1e1e1;
+	transition: all 300ms ease;
+}
+.C_A_R_D-header .C_A_R_D-use .action_use .tg-btn.active{
+	background-color: #2AA1AF;
+}
+.C_A_R_D-header .C_A_R_D-use .action_use .tg-btn .circle{
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	border-radius: 13px;
+	background-color: #fff;
+	top: 1px;
+	left: 2px;
+	transition: all 300ms ease;
+}
+.C_A_R_D-header .C_A_R_D-use .action_use .tg-btn.active .circle{
+	top: 1px;
+	left: 12px;
+}
+.C_A_R_D-header .C_A_R_D-use .text{
+	float: right;
+	font-size: 1.2rem;
+	line-height: 17px;
+	font-weight: bold;
+	margin: 0 0 0 10px;
+}
+.C_A_R_D-header .C_A_R_D-searches{
+	margin: 0 0 6px 0;
+}
+.C_A_R_D-header .C_A_R_D-searches .data{
+	float: right;
+	margin: 0 5px 0 0;
+	font-size: 1.2rem;
+	line-height: 17px;
+	font-weight: bold;
+	color: #EC8600;
+}
+.C_A_R_D-header .C_A_R_D-searches .text{
+	float: right;
+	font-size: 1.2rem;
+	line-height: 17px;
+	color: #02052E;
+}
+
 .C_A_R_D-header .C_A_R_D-vote{
 	float: right;
-	margin: 0 0 8px 0;
+	margin: 0 0 5px 0;
 }
 .C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item{
 	float: left;
@@ -114,6 +174,56 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+
+.C_A_R_D-update{
+	width: 100%;
+	height: 70px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.C_A_R_D-update .update_wrapper{
+	width: 100%;
+	overflow: hidden;
+}
+.C_A_R_D-update .update,
+.C_A_R_D-update .uninstall{
+	display: flex;
+	align-items: center;
+	padding: 0 0 0 35px;
+	width: 100%;
+	height: 30px;
+	border-radius: 4px;
+	border: 1px solid #E1E1E1;
+}
+.C_A_R_D-update .update:hover,
+.C_A_R_D-update .uninstall:hover{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+.C_A_R_D-update .uninstall{
+	border-radius: 4px;
+}
+.C_A_R_D-update .update{
+	margin: 0 0 10px 0;
+}
+.C_A_R_D-update .icon{
+	margin: 0 15px 0 0;
+	width: 15px;
+}
+.C_A_R_D-update .icon img{
+	width: 100%;
+}
+.C_A_R_D-update .update:hover img,
+.C_A_R_D-update .uninstall:hover img{
+	filter: invert(100%) sepia(24%) saturate(0%) hue-rotate(309deg) brightness(116%) contrast(100%);
+}
+.C_A_R_D-update .text{
+	font-size: 1.4rem;
+	line-height: 19px;
 }
 .C_A_R_D-footer{
 	padding: 0 5px;
@@ -313,6 +423,7 @@ body{
 /*________________ End Header ________________*/
 
 
+/*________________ End my_page ________________*/
 .I-my_page{
 	margin: 30px 0;
 	width: 100%;
@@ -383,6 +494,16 @@ body{
 	color: #000;
 	transition: all 100ms ease;
 }
+.I-my_page .sidebar_menu .select_form ul li a.is-select{
+	text-decoration: none;
+	font-weight: bold;
+	color: #fff;
+	border-radius: 5px;
+	background-color: #2AA1AF;
+}
+.I-my_page .sidebar_menu .select_form ul li a.is-select .icon img{
+	filter: invert(100%) sepia(94%) saturate(22%) hue-rotate(318deg) brightness(104%) contrast(107%);
+}
 .I-my_page .sidebar_menu .select_form ul li a .icon{
 	position: absolute;
 	top: 0;
@@ -401,15 +522,125 @@ body{
 	background-color: #2AA1AF;
 }
 .I-my_page .sidebar_menu .select_form ul li a:hover .icon img{
-	text-decoration: none;
-	font-weight: bold;
-	color: #fff;
-	border-radius: 5px;
-	background-color: #2AA1AF;
+	filter: invert(100%) sepia(94%) saturate(22%) hue-rotate(318deg) brightness(104%) contrast(107%);
 }
 
+.I-my_page .my_page-title{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #E1E1E1;
+}
+.I-my_page .my_page-title .my_page-text{ 
+	float: left;
+	position: relative;
+	font-size: 2rem;
+	line-height: 27px;
+	font-weight: bold;
+}
+.I-my_page .my_page-title .my_page-text::before{ 
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #2AA1AF;
+}
+.I-my_page .sort_wrapper{
+	margin: 20px 0;
+}
+.I-my_page .sort_wrapper .sort{
+	width: 100%;
+	height: 40px;
+	position: relative;
+}
+.I-my_page .sort_wrapper .sort .select-wrapper .option-wrapper{
+	top: 150px;
+	right: 0;
+}
+.I-my_page .sort_wrapper .sort .select-wrapper.is-open .option-wrapper{
+	top: 50px;
+	right: 0;
+}
 
+.I-my_page .my_page-category{
+	width: 100%;
+	height: 40px;
+	margin: 15px 0 0 0;
+	display: flex;
+	align-items: center;
+}
+.I-my_page .my_page-category .category-item{
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #000;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.I-my_page .my_page-category .category-item:hover{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+.I-my_page .my_page-category .category-item.is-select{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+.I-my_page .my_page-category .category-item.is-select:not(:last-child):before{
+	width: 0;
+}
+.I-my_page .my_page-category .category-item:hover:not(:last-child):before{
+	width: 0;
+}
+.I-my_page .my_page-category .action.all{
+	width: 40px;
+	padding: 10px;
+}
+.I-my_page .my_page-category .action{
+	display: block;
+	position: relative;
+	padding: 10px 25px;
+}
+.I-my_page .my_page-category .action:not(:last-child):before{
+	content: "";
+	position: absolute;
+	top: 10px; 
+	right: 0;
+	width: 2px;
+	height: 20px;
+	background-color: #E1E1E1;
+}
 
+.I-my_page .item_wrapper .pd-custom {
+    padding: 15px;
+}
+
+.I-my_page .pagination_list{
+	width: 100%;
+	height: 70px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+.I-my_page .pagination_list.is-active{
+	display: flex;
+}
+.I-my_page .pagination_list .pagination-item{
+	width: 25px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #000;
+	margin: 0 2px;
+	border: 1px solid #B7B6B6;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.I-my_page .pagination_list .pagination-item.is-select{
+	color: #fff;
+	background-color: #2AA1AF;
+	border: none;
+}
 /*________________ 8. Footer ________________*/
 .I-footer{
 	position: relative;

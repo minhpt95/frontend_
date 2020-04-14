@@ -1,0 +1,883 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+14. 376px
+
+******************************/
+/************
+1. 1920px
+************/
+
+@media only screen and (min-width: 1920px)
+{
+	
+
+#login-modal .modal-dialog{
+	width: 550px;
+	height: 550px;
+}
+#login-modal .modal-dialog .modal-header{
+	padding: 27px 45px;
+}
+#login-modal .modal-dialog .modal-header img{
+	width: 250px;
+}
+#login-modal .modal-dialog .modal-header button{
+	width: 13px;
+	height: 13px;
+}
+#login-modal .modal-dialog .modal-body{
+	padding: 0 45px;
+}
+#login-modal .modal-dialog .modal-body .item-form{
+	margin: 0 0 25px 0;
+}
+#login-modal .modal-dialog .modal-body .item-form .text{
+	font-size: 1.8rem;
+	line-height: 24px;
+	margin: 0 0 11px 0;
+}
+#login-modal .modal-dialog .modal-body .item-form .input{
+	height: 60px;
+}
+#login-modal .modal-dialog .modal-body .item-form .input input{
+	font-size: 1.8rem;
+	line-height: 24px;
+	color: #000;
+	padding: 21px 19px;
+}
+#login-modal .modal-dialog .modal-body .item-form .input input::placeholder{
+	color: #E1E1E1;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form{
+	width: 100%;
+	height: 20px;
+	display: flex;
+	align-items: center;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox .tick{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active .tick{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active .tick img{ }
+#login-modal .modal-dialog .modal-body .remember_email-form .text{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#login-modal .modal-dialog .modal-footer{
+	padding: 25px 45px 35px 45px;
+}
+#login-modal .modal-dialog .modal-footer button[type=submit]{
+	font-size: 2rem;
+	line-height: 27px;
+	height: 60px;
+}
+#login-modal .modal-dialog .modal-footer button[type=submit]:hover{ }
+
+
+#search_guild-modal .modal-dialog{
+	width: 1550px;
+	margin: calc(50vh - 350px) auto;
+}
+#search_guild-modal .modal-dialog .modal-content{
+	padding: 17px 20px 0 20px;
+}
+#search_guild-modal .modal-dialog .modal-content .modal-body{ }
+#search_guild-modal .modal-dialog .modal-content .title_modal{
+	height: 50px;
+}
+#search_guild-modal .modal-dialog .modal-content .title_modal button[type=button].close{ }
+#search_guild-modal .modal-dialog .modal-content .title_modal .text{
+	font-size: 2.8rem;
+	line-height: 38px;
+}
+#search_guild-modal .modal-dialog .modal-content .title_modal .text::before{
+	bottom: -12px;
+	height: 4px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal{ }
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item{
+	height: 50px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .wrapper_item{
+	height: 50px; 
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .icon{ }
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .icon img{ }
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .text{
+	font-size: 2.2rem;
+	line-height: 50px;
+}
+
+#search_guild-modal .modal-dialog .modal-content .main_modal ul{ }
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li{
+	height: 50px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text{
+	font-size: 1.8rem;
+	line-height: 50px;
+	width: calc(100% - 30px);
+	display: flex;
+	align-items: center;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote_point{
+	margin: 0 0 0 15px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote_point .vote-item {
+	margin: 0 8px 0 0px;
+}
+
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .wrapper_item::before{
+	bottom: 0px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part{
+	width: 545px;
+	height: 700px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .icon{
+	width: 10px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .text{ }
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .body_part_image{
+	height: 380px;
+	margin: 12px 0
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .body_part_image .image_wrapper{
+	width: 250px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .body_part_image .image_wrapper img{ }
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part ul li{
+	width: 275px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part ul li.row_01{
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part ul li:nth-child(even){
+	margin: 0 0 0 15px;
+	width: 150px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .legion{
+	width: 655px;
+	height: 700px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .legion ul li{
+	float: left;
+	width: 310px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .legion ul li:nth-child(even){
+	margin: 0 0 0 15px;
+}
+
+#search_guild-modal .modal-dialog .modal-content .main_modal .custom{
+	width: 285px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal{
+	height: 90px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal .text{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal .text.active{ }
+#search_guild-modal .modal-dialog .modal-content .action_modal .text .count{
+	font-size: 2.2rem;
+	line-height: 26px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button{
+	width: 160px;
+	height: 50px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button{
+	margin: 0 15px 0 0;
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button img{
+	margin: 0 0 0 20px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button.active{ }
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button.active img{
+	filter: invert(99%) sepia(56%) saturate(19%) hue-rotate(343deg) brightness(111%) contrast(101%);
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.reset_button{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.reset_button img{ }
+
+
+#card_modal .modal-dialog{
+	width: 1600px;
+	padding: 20px;
+	margin: auto;
+}
+
+#card_modal .app_header{ }
+#card_modal .app_header .app_header_content{ }
+#card_modal .app_header .app_header_content .app_logo{
+	width: 290px;
+	height: 290px;
+}
+#card_modal .app_header .app_header_content .app_logo img{ }
+#card_modal .app_header .app_header_content .app_describe{
+	width: 1235px;
+	padding: 0 0 0 20px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_property{
+	height: 35px;
+	margin: 0 0 15px 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_property .property-item{
+	width: 80px;
+	height: 35px;
+	font-size: 1.6rem;
+	line-height: 22px
+}
+#card_modal .app_header .app_header_content .app_describe .app_property .property-item:not(:last-child){
+	margin: 0 15px 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_category{
+	font-size: 2rem;
+	line-height: 27px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_name{
+	font-size: 4rem;
+	line-height: 55px;
+	margin: 0 0 20px 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .vote_point{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .vote_point .vote-item{
+	margin: 0 10px 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .vote_point .vote-item.is-active{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item .image{
+	float: left;
+	margin: 0 5px 0 0;
+	width: 17px;
+	height: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item .image img{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item .text{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time{ }
+#card_modal .app_header .app_header_content .app_describe .app_time .logo{
+	height: 60px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo .text{
+	font-size: 1.9rem;
+	line-height: 26px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo .image{
+	width: 60px;
+	height: 60px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo .image img{ }
+#card_modal .app_header .app_header_content .app_describe .app_time .time{
+	font-size: 1.6rem;
+	line-height: 22px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action{
+	height: 60px;
+	margin: 50px 0 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .install{
+	width: 225px;
+	height: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .install button{
+	font-size: 2rem;
+	line-height: 27px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .save{
+	width: 60px;
+	height: 60px;
+	margin: 0 20px 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .save button{ }
+#card_modal .app_header .app_header_content .app_describe .app_action .save button img{
+	width: 20px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_list_data{
+	margin: 15px 0 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data{
+	height: 65px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total{ }
+#card_modal .app_header .app_header_content .app_describe .app_data .total .total-text{
+	font-size: 1.6rem;
+	line-height: 25px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total .total-data{
+	font-size: 2rem;
+	line-height: 30px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total .total-data span{ }
+#card_modal .app_header .app_header_content .app_describe .app_data .rank{ }
+#card_modal .app_header .app_header_content .app_describe .app_data .rank:before{ height: 55px }
+#card_modal .app_header .app_header_content .app_describe .app_data .rank .rank-text{
+	font-size: 1.6rem;
+	line-height: 25px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .rank .rank-data span{ }
+#card_modal .app_header .app_header_content .app_describe .app_data .rank .rank-data{
+	font-size: 2rem;
+	line-height: 30px;
+}
+#card_modal .app_header .app_header_detail{  }
+#card_modal .app_header .app_header_detail .text-wrapper{ 
+    font-size: 1.8rem;
+    line-height: 24px;
+}
+#card_modal .app_header .app_header_detail .text-wrapper.is-open{  }
+#card_modal .app_header .app_header_detail .show_detail{  }
+#card_modal .app_header .app_header_detail .show_detail .show_detail_button{ 
+	width: 150px;
+	height: 45px;
+}
+#card_modal .app_header .app_header_detail .show_detail button{ 
+	font-size: 2rem;
+	line-height: 27px;
+}
+#card_modal .app_header .app_header_detail .show_detail button:hover{  }
+#card_modal .app_content{
+	
+}
+
+
+#card_modal .image_viewer{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	margin: 0 0 30px 0;
+}
+#card_modal .image_viewer .top{ }
+#card_modal .image_viewer .wrapper_image{
+	width: 100%;
+}
+#card_modal .image_viewer .wrapper_image img{
+	width: 100%;
+}
+#card_modal .app_content .app_content_viewimage{
+	position: relative;
+	height: 220px;
+}
+#card_modal .app_content .app_content_viewimage .slider_image{
+	width: 945px;
+	margin: auto;
+}
+#card_modal .app_content .app_content_viewimage .slider_image .item{
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+}
+#card_modal .app_content .app_content_viewimage .slider_image .item img{
+	width: 100%;
+}
+#card_modal .app_content .app_content_viewimage .control{
+	position: absolute;
+	top: 95px;
+	width: 30px;
+	height: 30px;
+	background-color: #B7B6B6;
+	z-index: 1000;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#card_modal .app_content .app_content_viewimage .control i{
+	color: #fff;
+}
+#card_modal .app_content .app_content_viewimage .control:hover{
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .app_content_viewimage .control.control_prev{
+	left: -8px;
+}
+#card_modal .app_content .app_content_viewimage .control.control_next{
+	right: -8px;
+}
+#card_modal .app_content .image_viewer .control{
+	position: absolute;
+	top: 95px;
+	width: 30px;
+	height: 30px;
+	background-color: #B7B6B6;
+	z-index: 1000;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#card_modal .app_content .image_viewer .control i{
+	color: #fff;
+}
+#card_modal .app_content .image_viewer .control:hover{
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .image_viewer .control.control_prev{
+	left: -8px;
+}
+#card_modal .app_content .image_viewer .control.control_next{
+	right: -8px;
+}
+/**/
+#card_modal .app_content.I-my_page .feedback-text_wrapper .text{
+	background-color: #F2F2F2;
+}
+#card_modal .app_content.I-my_page .feedback-text_wrapper .text::before{
+	background-color: #F2F2F2;
+}
+.carousel-container .carousel-wrapper{
+	height: 350px;
+}
+
+
+#card_modal .app_content .comment_action{
+	width: 100%;
+	height: 400px;
+	margin: 20px 0;
+	background-color: red;
+}
+#card_modal .app_content .comment_action .comment-action_wrapper{
+
+}
+#card_modal .app_content .comment_action .comment-action_wrapper .comment_sort{
+	width: 150px;
+	height: 40px;
+}
+
+#card_modal .app_content .title-extend{
+	height: 60px;
+	margin: 20px 0;
+}
+#card_modal .app_content .title-extend .title{
+	height: 60px;
+}
+#card_modal .app_content .title-extend .title .icon{
+	height: 60px;
+}
+#card_modal .app_content .title-extend.comment .title .icon{
+	width: 27px;
+}
+#card_modal .app_content .title-extend .title .icon img{ }
+#card_modal .app_content .title-extend .title .text{
+	height: 60px;
+	font-size: 3rem;
+	line-height: 41px;
+}
+#card_modal .app_content .title-extend .title .count{
+	height: 60px;
+	font-size: 2rem;
+	line-height: 27px;
+}
+#card_modal .app_content .title-extend .title .vote{
+	height: 60px;
+}
+#card_modal .app_content .title-extend .title .point_vote{
+	height: 60px;
+	font-size: 1.2rem;
+	line-height: 17px;
+}
+#card_modal .app_content .title-extend .action{}
+#card_modal .app_content .title-extend .action .sort_item{
+	width: 250px;
+	height: 60px;
+	margin: 0 20px 0 0;
+}
+#card_modal .app_content .title-extend .action .white_button{
+	float: left;
+	width: 250px;
+	height: 60px;
+}
+#card_modal .app_content .title-extend .action .white_button button{
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#card_modal .app_content .title-extend .action .white_button button:hover{ }
+#card_modal .app_content .title-extend{
+	height: 60px;
+}
+#card_modal .app_content .new_comment{
+	/*height: 155px;*/
+}
+#card_modal .app_content .new_comment.is-open{
+	display: block;
+}
+#card_modal .app_content .new_comment .title{
+	width: 100%;
+	height: 30px;
+	margin: 0 0 20px 0;
+}
+#card_modal .app_content .new_comment .title .text{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+
+#card_modal .app_content .new_comment .vote{ }
+#card_modal .app_content .new_comment .vote .vote_point .vote-item{ }
+#card_modal .app_content .new_comment .vote .vote_point .vote-item i{
+	font-size: 1.4rem;
+	line-height: 30px;
+}
+#card_modal .app_content .new_comment .vote .vote_point .vote-item.is-select i{ }
+#card_modal .app_content .new_comment .vote .vote_point .vote-item.active i{ }
+#card_modal .app_content .new_comment .vote_text{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+#card_modal .app_content .new_comment .area{
+	height: 100px;
+}
+#card_modal .app_content .new_comment .area textarea{
+	padding: 20px;
+	font-size: 1.8rem;
+	line-height: 25px;
+}
+#card_modal .app_content .new_comment .action{
+	height: 60px;
+}
+#card_modal .app_content .new_comment .action .count_text{
+	font-size: 2.2rem;
+	line-height: 30px;
+}
+#card_modal .app_content .new_comment .action .action_wrapper{ }
+#card_modal .app_content .new_comment .action .action_wrapper .button{
+	width: 100px;
+	height: 40px;
+	font-size: 2.1rem;
+	line-height: 28px;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button:not(:last-child){
+	margin: 0 20px 0 0;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button.save button{ }
+#card_modal .app_content .new_comment .action .action_wrapper .button.save button:hover{ }
+#card_modal .app_content .new_comment .action .action_wrapper .button.cancer button{ }
+#card_modal .app_content .new_QA{ }
+#card_modal .app_content .new_QA.is-open{ }
+#card_modal .app_content .new_QA .title{
+	height: 50px;
+}
+#card_modal .app_content .new_QA .title .title_QA{
+	width: 35px;
+	height: 50px;
+	font-size: 2.1rem;
+	line-height: 21px;
+}
+#card_modal .app_content .new_QA .title input{
+	width: calc(100% - 40px);
+	height: 46px;
+}
+#card_modal .app_content .new_QA .title .count_text{
+	width: 80px;
+	height: 46px;
+	font-size: 1.8rem;
+	line-height: 21px;
+}
+#card_modal .app_content .new_QA .area{
+	height: 130px;
+}
+#card_modal .app_content .new_QA .area textarea{
+	font-size: 1.8rem;
+	line-height: 25px;
+ }
+#card_modal .app_content .new_QA .action{
+	height: 40px;
+	margin: 20px 0 0 0;
+}
+#card_modal .app_content .new_QA .action .action_wrapper{ }
+#card_modal .app_content .new_QA .action .action_wrapper .button{
+	float: left;
+	width: 100px;
+	height: 40px;
+	font-size: 1.8rem;
+	line-height: 24px;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button:not(:last-child){
+	margin: 0 20px 0 0;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button.save button{ }
+#card_modal .app_content .new_QA .action .action_wrapper .button.save button:hover{ }
+#card_modal .app_content .new_QA .action .action_wrapper .button.cancer button{ }
+
+#card_modal .app_content .read_more{
+	width: 100%;
+	height: 45px;
+}
+#card_modal .app_content .read_more button{
+	width: 150px;
+	height: 45px;
+	font-size: 1.8rem;
+	line-height: 21px;
+}
+
+#card_modal .app_content .Similar_Apps{
+	padding: 30px 0;
+	border-bottom: 1px solid #E1E1E1;
+}
+#card_modal .app_content .Similar_Apps .title{
+	margin: 15px 0;
+	font-size: 2rem;
+	line-height: 32px;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper{ }
+#card_modal .app_content .Similar_Apps .item_wrapper .item{
+	width: 170px;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item img{
+	width: 100%;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item .text{
+	width: 100px;
+	margin: 10px 0;
+	text-align: center;
+	font-size: 1.8rem;
+	line-height: 25px;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item:not(:last-child){ }
+#card_modal .app_content .ranked{
+	padding: 20px 0;
+}
+#card_modal .app_content .ranked .infor{ }
+#card_modal .app_content .ranked .ranked_app{ }
+#card_modal .app_content .total_app{
+	
+}
+#card_modal .app_content .total_app .title{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #E1E1E1;
+}
+#card_modal .app_content .total_app .title .text{ 
+	float: left;
+	position: relative;
+	font-size: 2rem;
+	line-height: 27px;
+	font-weight: bold;
+}
+#card_modal .app_content .total_app .title .text span{ 
+	font-weight: bold;
+	font-size: 2.2rem;
+	line-height: 29px;
+	color: #2AA1AF;
+}
+#card_modal .app_content .total_app .title .text::before{ 
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .total_app .control-listitem{
+	float: right;
+}
+#card_modal .app_content .total_app .control-listitem img{
+	width: 100%;
+}
+#card_modal .app_content .total_app .listitem-prev{
+	float: left;
+	margin: 0 10px 0 0;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+#card_modal .app_content .total_app .listitem-next{
+	float: left;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+}
+/************
+1. 1600px
+************/
+
+@media only screen and (min-width: 1600px) and (max-width: 1919px)
+{
+	
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (min-width: 1440px) and (max-width: 1599px)
+{
+	
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (min-width: 1380px) and (max-width: 1439px)
+{
+
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px){
+	
+	
+
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+@media only screen and (min-width: 1024px)
+{
+
+}
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+
+}
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{	
+
+
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+	
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
+
+/************
+14. 376px
+************/
+
+@media only screen and (max-width: 376px)
+{
+	
+}

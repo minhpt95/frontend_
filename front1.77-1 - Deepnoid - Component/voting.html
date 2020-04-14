@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>[ D E E P N O I D ]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style-mypage.css" />
+		<link rel="stylesheet" href="css/style-overview.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<style type="text/css">
+			.voting{
+			}
+			.voting .vote-item{
+				width: 40px;height: 40px;
+				font-size: 30px;float: left;
+				/*padding: 10px;*/
+				overflow: hidden;
+				cursor: pointer;
+			}
+			.voting .vote-item.is-select{
+				color: yellow;
+			}
+			.voting .vote-item.active{
+				color: yellow;
+			}
+		</style>
+	</head>
+	<body> 
+		<div class="wrapper">
+			<div class="voting">
+				<div class="vote-item">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="vote-item">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="vote-item">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="vote-item">
+					<i class="fas fa-star"></i>
+				</div>
+				<div class="vote-item">
+					<i class="fas fa-star"></i>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		
+		$('.voting').find('.vote-item').on('click', function() {
+			for (var i = 0; i <= $(this).index(); i++) {
+				$('.vote-item').eq(i).addClass('active')
+			}
+		})
+		$('.voting').find('.vote-item').on('mouseenter', function() {
+			$('.vote-item').removeClass('active')
+			for (var i = 0; i <= $(this).index(); i++) {
+				$('.vote-item').eq(i).addClass('is-select')
+			}
+		})
+		$('.voting').find('.vote-item').on('mouseleave', function() {
+			$('.vote-item').removeClass('is-select')
+		})
+	</script>
+	<script src="js/bootstrap3.js"></script>
+	<script type="text/javascript" src="js/effect_custom.js"></script>
+</html>
+
+

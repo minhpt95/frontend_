@@ -1,0 +1,1194 @@
+#login-modal .modal-dialog{
+	width: 400px;
+	height: 400px;
+	margin: calc(50vh - 200px) auto;
+}
+#login-modal .modal-dialog .modal-header{
+	border: none;
+	padding: 15px 30px;
+	display: flex;
+	align-items: center;
+}
+#login-modal .modal-dialog .modal-header img{
+	margin-right: auto;
+}
+#login-modal .modal-dialog .modal-header button{
+	margin-left: auto;
+}
+#login-modal .modal-dialog .modal-body{
+	padding: 0 30px;
+}
+#login-modal .modal-dialog .modal-body .item-form{
+	margin: 0 0 15px 0;
+}
+#login-modal .modal-dialog .modal-body .item-form .text{
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #000;
+	margin: 0 0 5px 0;
+}
+#login-modal .modal-dialog .modal-body .item-form .input{
+	width: 100%;
+	height: 40px;
+}
+#login-modal .modal-dialog .modal-body .item-form .input input{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #E1E1E1;
+	border-radius: 5px;
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #000;
+	padding: 9px 14px;
+}
+#login-modal .modal-dialog .modal-body .item-form .input input::placeholder{
+	color: #E1E1E1;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form{
+	width: 100%;
+	height: 20px;
+	display: flex;
+	align-items: center;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox{
+	float: left;
+	width: 14px;
+	height: 14px;
+	border: 2px solid #E1E1E1;
+	padding: 0;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox .tick{
+	display: none;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active{
+	background-color: #2AA1AF;
+	border: 2px solid #2AA1AF;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active .tick{
+	width: 100%;
+	display: block;
+	height: 100%;
+	position: relative;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .remember_email-checkbox.active .tick img{
+	width: 8px;
+	position: absolute;
+	top: 2px;
+	left: 1px;
+}
+#login-modal .modal-dialog .modal-body .remember_email-form .text{
+	float: left;
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #000;
+	margin: 0 0 0 10px;
+}
+#login-modal .modal-dialog .modal-footer{
+	border: none;
+	padding: 15px 30px 25px 30px;
+}
+#login-modal .modal-dialog .modal-footer button[type=submit]{
+	width: 100%;
+	border: 2px solid #2AA1AF;
+	color: #2AA1AF;
+	font-size: 1.6rem;
+	line-height: 22px;
+	background-color: #fff;
+	transition: all 300ms ease;
+}
+#login-modal .modal-dialog .modal-footer button[type=submit]:hover{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+
+
+
+
+#search_guild-modal .modal-dialog{
+	width: 1170px;
+	height: auto;
+	margin: calc(50vh - 350px) auto;
+}
+#search_guild-modal .modal-dialog .modal-content{
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px 0 20px;
+}
+#search_guild-modal .modal-dialog .modal-content .modal-body{
+	padding: 0;
+}
+#search_guild-modal .modal-dialog .modal-content .title_modal{
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #E1E1E1;
+}
+#search_guild-modal .modal-dialog .modal-content .title_modal button[type=button].close{
+	float: right;
+}
+#search_guild-modal .modal-dialog .modal-content .title_modal .text{
+	position: relative;
+	font-size: 2rem;
+	line-height: 27px;
+	font-weight: bold;
+	float: left;
+}
+#search_guild-modal .modal-dialog .modal-content .title_modal .text::before{
+	position: absolute;
+	content: "";
+	bottom: -8px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #2AA1AF;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal{
+	width: 100%;
+	margin: 20px 0 0 0;
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid #E1E1E1;
+	overflow: hidden;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item{
+	margin: 3px 0 0 0;
+	width: 100%;
+	height: 35px;
+	border-bottom: 1px solid #E1E1E1;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .wrapper_item{
+	position: relative;
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 30px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .icon{
+	margin: 0 8px 0 0;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .icon img{
+	width: 100%;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .text{
+	font-size: 1.6rem;
+	line-height: 22px;
+	font-weight: bold;
+}
+
+#search_guild-modal .modal-dialog .modal-content .main_modal ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li{
+	/*width: 100%;*/
+	height: 37px;
+	cursor: pointer;
+	border-bottom: 1px dashed #B7B6B6;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button{
+	/*width: 15px;*/
+	/*height: 15px;*/
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn{
+	float: left;
+	padding: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #B7B6B6;
+	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn .check{
+	display: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn .uncheck{
+	display: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.active{
+	background-color: #2AA1AF;
+	border: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.select{
+	background-color: #2AA1AF;
+	border: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.active .check{
+	display: block;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.select .check{
+	display: block;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.remove{
+	background-color: #F92C00;
+	border: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.remove .check{
+	display: none;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .button .btn.remove .uncheck{
+	display: block;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text{
+	float: left;
+	font-size: 1.4rem;
+	line-height: 35px;
+	width: calc(100% - 30px);
+	margin: 0 0 0 5px;
+	display: flex;
+	align-items: center;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote{
+	float: left;
+	margin: 0 10px 0 0;
+	height: 35px;
+	display: flex;
+	align-items: center;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote .vote-item{
+	float: left;
+	width: 14px;
+	height: 14px;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background-color: #E1E1E1;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote .vote-item.is-select{
+	float: left;
+	width: 14px;
+	height: 14px;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+	background-color: #E1E1E1;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote .vote-item.is-select{
+	background-color: #FFE500;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote .vote-item:not(:last-child){
+	margin: 0 5px 0 0;
+}
+
+
+#search_guild-modal .modal-dialog .modal-content .main_modal .title_item .wrapper_item::before{
+	position: absolute;
+	content: "";
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: #2AA1AF;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part{
+	float: left;
+	width: 405px;
+	height: 505px;
+	background-color: #104358;
+	border-radius: 10px;
+	padding: 15px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .icon{
+	width: 10px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .text{
+	color: #fff;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .body_part_image{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .body_part_image .image_wrapper{
+	width: 185px;
+	overflow: hidden;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part .body_part_image .image_wrapper img{
+	width: 100%;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part ul li{
+	float: left;
+	width: 205px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part ul li.row_01{
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .body_part ul li:nth-child(even){
+	margin: 0 0 0 15px;
+	width: 150px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .legion{
+	float: left;
+	width: 470px;
+	height: 505px;
+	/*background-color: #104358;*/
+	border-radius: 10px;
+	margin: 0 0 0 10px;
+	padding: 15px 0;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .legion ul li{
+	float: left;
+	width: 225px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal .legion ul li:nth-child(even){
+	margin: 0 0 0 15px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote_point{
+	margin: 0 0 0 15px;
+}
+#search_guild-modal .modal-dialog .modal-content .main_modal ul li .text .vote_point .vote-item {
+	margin: 0 8px 0 0px;
+}
+
+#search_guild-modal .modal-dialog .modal-content .main_modal .custom{
+	float: left;
+	width: 225px;
+	height: auto;
+	border-radius: 10px;
+	margin: 0 0 0 10px;
+	padding: 15px 0;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal{
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal .text{
+	margin: 0 40px 0 0;
+	font-size: 1.4rem;
+	line-height: 19px;
+	display: none;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal .text.active{
+	display: block;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal .text .count{
+	color: #2AA1AF;
+	font-size: 1.8rem;
+	line-height: 24px;
+	font-weight: bold;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button{
+	width: 120px;
+	height: 40px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button{
+	margin: 0 10px 0 0;
+	font-size: 1.4rem;
+	line-height: 19px;
+	background-color: #E1E1E1;
+	border-radius: 5px;
+	border: none;
+	color: #000;
+	cursor: no-drop;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button img{
+	margin: 0 0 0 20px;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button.active{
+	background-color: #2AA1AF;
+	cursor: pointer;
+	color: #fff;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.search_button.active img{
+	filter: invert(99%) sepia(56%) saturate(19%) hue-rotate(343deg) brightness(111%) contrast(101%);
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.reset_button{
+	margin: 0 40px 0 0;
+	font-size: 1.4rem;
+	line-height: 19px;
+	background-color: #fff;
+	border-radius: 5px;
+	color: #000;
+	border: 1px solid #E1E1E1;
+}
+#search_guild-modal .modal-dialog .modal-content .action_modal button.reset_button img{
+	margin: 0 0 0 40px;
+}
+
+
+
+/*
+#card_modal{
+	width: 1000px;
+	padding: 20px;
+	margin: auto;
+}*/
+
+#card_modal .modal-dialog{
+	width: 1035px;
+	padding: 20px;
+	margin: auto;
+}
+#card_modal .app_header{
+	width: 100%;
+	margin: auto;
+}
+#card_modal .app_header .app_header_content{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+#card_modal .app_header .app_header_content .app_logo{
+	float: left;
+	width: 180px;
+	height: 180px;
+	overflow: hidden;
+}
+#card_modal .app_header .app_header_content .app_logo img{
+	width: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe{
+	float: left;
+	width: 780px;
+	padding: 0 0 0 20px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_property{
+	width: 100%;
+	height: 25px;
+	margin: 0 0 10px 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_property .property-item{
+	float: left;
+	width: 50px;
+	height: 25px;
+	background-color: #F2F2F2;
+	border-radius: 2px;
+	font-size: 1.2rem;
+	line-height: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#card_modal .app_header .app_header_content .app_describe .app_property .property-item:not(:last-child){
+	margin: 0 10px 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_category{
+	width: 100%;
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #60ABCB;
+}
+#card_modal .app_header .app_header_content .app_describe .app_name{
+	width: 100%;
+	font-weight: bold;
+	font-size: 3rem;
+	line-height: 41px;
+	color: #000;
+	margin: 0 0 10px 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate{
+	width: 100%;
+	height: 20px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .vote_point{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .vote_point .vote-item{
+	width: 20px;
+	height: 20px;
+	font-size: 18px;
+	margin: 0 5px 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .vote_point .vote-item.is-active{ }
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item{
+	float: left;
+	margin: 0 0 0 15px;
+	display: flex;
+	align-items: center;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item .image{
+	float: left;
+	margin: 0 5px 0 0;
+	width: 17px;
+	height: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item .image img{
+	width: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_evaluate .data_item .text{
+	float: left;
+	font-size: 1.2rem;
+	line-height: 17px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time{
+	width: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo .text{
+	font-size: 1.2rem;
+	line-height: 17px;
+	font-weight: bold;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo .image{
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	margin: 0 10px 0 0;	
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .logo .image img{
+	width: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_time .time{
+	width: 100%;
+	height: 20px;
+	font-size: 1.4rem;
+	line-height: 17px;
+	text-align: right;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action{
+	width: 100%;
+	height: 40px;
+	margin: 25px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .install{
+	width: 150px;
+	height: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .install button{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border-radius: 5px;
+	border: 1px solid #2AA1AF;
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #2AA1AF;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .save{
+	width: 40px;
+	height: 40px;
+	margin: 0 15px 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .save button{
+	width: 100%;
+	height: 100%;
+	background-color: #E1E1E1;
+	border-radius: 5px;
+	border: none;
+}
+#card_modal .app_header .app_header_content .app_describe .app_action .save button img{
+	width: 15px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_list_data{
+	margin: 15px 0 0 0;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data{
+	width: 100%;
+	height: 40px;
+	background-color: #F2F2F2;
+	text-align: center;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total .total-text{
+	font-size: 1.2rem;
+	line-height: 17px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total .total-data{
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #000;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .total .total-data span{
+	font-weight: bold;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .rank{
+	float: left;
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .rank:before{
+	position: absolute;
+	content: "";
+	top: 5px;
+	left: 0;
+	width: 2px;
+	height: 30px;
+	background-color: #B7B6B6;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .rank .rank-text{
+	font-size: 1.2rem;
+	line-height: 17px;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .rank .rank-data span{
+	font-weight: bold;
+	color: #2AA1AF;
+}
+#card_modal .app_header .app_header_content .app_describe .app_data .rank .rank-data{
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #000;
+}
+#card_modal .app_header .app_header_detail{ 
+	width: 100%;
+}
+#card_modal .app_header .app_header_detail .text-wrapper{ 
+	width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    line-height: 19px;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+#card_modal .app_header .app_header_detail .text-wrapper.is-open{ 
+    -webkit-line-clamp: none;
+}
+#card_modal .app_header .app_header_detail .show_detail{ 
+	width: 100%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#card_modal .app_header .app_header_detail .show_detail .show_detail_button{ 
+	width: 120px;
+	height: 35px;
+}
+#card_modal .app_header .app_header_detail .show_detail button{ 
+	border: 1px solid #B7B6B6;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #B7B6B6;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+#card_modal .app_header .app_header_detail .show_detail button:hover{ 
+	border: none;
+	color: #fff;
+	background-color: #2AA1AF;
+}
+#card_modal .app_content{
+	
+}
+
+
+#card_modal .image_viewer{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	margin: 0 0 30px 0;
+}
+#card_modal .image_viewer .top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: n-resize;
+}
+#card_modal .image_viewer .wrapper_image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	overflow: hidden;
+}
+#card_modal .image_viewer .wrapper_image img{
+	width: 100%;
+}
+#card_modal .app_content .app_content_viewimage{
+	position: relative;
+	height: 220px;
+}
+#card_modal .app_content .app_content_viewimage .slider_image{
+	width: 945px;
+	margin: auto;
+}
+#card_modal .app_content .app_content_viewimage .slider_image .item{
+	width: 220px;
+	height: 220px;
+	overflow: hidden;
+}
+#card_modal .app_content .app_content_viewimage .slider_image .item img{
+	width: 100%;
+}
+#card_modal .app_content .app_content_viewimage .control{
+	position: absolute;
+	top: 95px;
+	width: 30px;
+	height: 30px;
+	background-color: #B7B6B6;
+	z-index: 1000;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#card_modal .app_content .app_content_viewimage .control i{
+	color: #fff;
+}
+#card_modal .app_content .app_content_viewimage .control:hover{
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .app_content_viewimage .control.control_prev{
+	left: -8px;
+}
+#card_modal .app_content .app_content_viewimage .control.control_next{
+	right: -8px;
+}
+#card_modal .app_content .image_viewer .control{
+	position: absolute;
+	top: 95px;
+	width: 30px;
+	height: 30px;
+	background-color: #B7B6B6;
+	z-index: 1000;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#card_modal .app_content .image_viewer .control i{
+	color: #fff;
+}
+#card_modal .app_content .image_viewer .control:hover{
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .image_viewer .control.control_prev{
+	left: -8px;
+}
+#card_modal .app_content .image_viewer .control.control_next{
+	right: -8px;
+}
+/**/
+#card_modal .app_content.I-my_page .feedback-text_wrapper .text{
+	background-color: #F2F2F2;
+}
+#card_modal .app_content.I-my_page .feedback-text_wrapper .text::before{
+	background-color: #F2F2F2;
+}
+
+#card_modal .app_content .comment_action{
+	width: 100%;
+	height: 400px;
+	margin: 20px 0;
+	background-color: red;
+}
+#card_modal .app_content .comment_action .comment-action_wrapper{
+
+}
+#card_modal .app_content .comment_action .comment-action_wrapper .comment_sort{
+	width: 150px;
+	height: 40px;
+}
+
+#card_modal .app_content .title-extend{
+	width: 100%;
+	height: 40px;
+	margin: 20px 0;
+}
+#card_modal .app_content .title-extend .title{
+	float: left;
+	height: 40px;
+}
+#card_modal .app_content .title-extend .title .icon{
+	float: left;
+	display: flex;
+	align-items: center;
+	margin: 0 5px 0 0;
+	height: 40px;
+}
+#card_modal .app_content .title-extend.comment .title .icon{
+	width: 17px;
+}
+#card_modal .app_content .title-extend.comment .title .icon{
+	width: 27px;
+}
+#card_modal .app_content .title-extend .title .icon img{
+	width: 100%;
+}
+#card_modal .app_content .title-extend .title .text{
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	font-size: 2rem;
+	line-height: 27px;
+	font-weight: bold;
+	margin: 0 5px 0 0;
+}
+#card_modal .app_content .title-extend .title .count{
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	font-size: 1.2rem;
+	line-height: 17px;
+	margin: 0 5px 0 0;
+}
+#card_modal .app_content .title-extend .title .vote{
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	margin: 0 5px 0 0;
+}
+#card_modal .app_content .title-extend .title .point_vote{
+	float: left;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	font-size: 1.2rem;
+	line-height: 17px;
+}
+#card_modal .app_content .title-extend .action{
+	float: right;
+}
+#card_modal .app_content .title-extend .action .sort_item{
+	float: left;
+	width: 150px;
+	height: 40px;
+	margin: 0 20px 0 0;
+}
+#card_modal .app_content .title-extend .action .white_button{
+	float: left;
+	width: 150px;
+	height: 40px;
+}
+#card_modal .app_content .title-extend .action .white_button button{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #2AA1AF;
+	border-radius: 5px;
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #2AA1AF;
+	background-color: #fff;
+}
+#card_modal .app_content .title-extend .action .white_button button:hover{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .title-extend{
+	width: 100%;
+	height: 40px;
+	margin: 20px 0;
+}
+#card_modal .app_content .new_comment{
+	width: 100%;
+	/*height: 155px;*/
+	display: none;
+}
+#card_modal .app_content .new_comment.is-open{
+	display: block;
+}
+#card_modal .app_content .new_comment .title{
+	width: 100%;
+	height: 20px;
+	margin: 0 0 20px 0;
+}
+#card_modal .app_content .new_comment .title .text{
+	float: left;
+	font-size: 1.4rem;
+	line-height: 19px;
+	font-weight: bold;
+}
+
+#card_modal .app_content .new_comment .vote{
+	float: right;
+}
+#card_modal .app_content .new_comment .vote .vote_point .vote-item{
+	margin: 0 0 0 5px;
+	cursor: pointer;
+}
+#card_modal .app_content .new_comment .vote .vote_point .vote-item i{
+	font-size: 1.4rem;
+	line-height: 19px;
+}
+#card_modal .app_content .new_comment .vote .vote_point .vote-item.is-select i{
+	color: #FFE500
+}
+#card_modal .app_content .new_comment .vote .vote_point .vote-item.active i{
+	color: #FFE500
+}
+#card_modal .app_content .new_comment .vote_text{
+	float: right;
+}
+#card_modal .app_content .new_comment .area{
+	width: 100%;
+	height: 70px;
+}
+#card_modal .app_content .new_comment .area textarea{
+	width: 100%;
+	height: 100%;
+	resize: none;
+	border: 1px solid #E1E1E1;
+	border-radius: 3px;
+	padding: 10px;
+}
+#card_modal .app_content .new_comment .action{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	align-items: center;
+}
+#card_modal .app_content .new_comment .action .count_text{
+	font-size: 1.4rem;
+	line-height: 19px;
+	color: #B7B6B6;
+}
+#card_modal .app_content .new_comment .action .action_wrapper{
+	margin-left: auto;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button{
+	float: left;
+	width: 60px;
+	height: 25px;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button:not(:last-child){
+	margin: 0 15px 0 0;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button.save button{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #2AA1AF;
+	color: #2AA1AF;
+	background-color: #fff;
+	border-radius: 3px;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button.save button:hover{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .new_comment .action .action_wrapper .button.cancer button{
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	color: #000;
+	background-color: #E1E1E1;
+	border: none;
+}
+#card_modal .app_content .new_QA{
+	display: none;
+}
+#card_modal .app_content .new_QA.is-open{
+	display: block;
+}
+#card_modal .app_content .new_QA .title{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	margin: 0 0 15px 0;
+	border: 1px solid #E1E1E1;
+	border-radius: 3px;
+}
+#card_modal .app_content .new_QA .title .title_QA{
+	float: left;
+	width: 35px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.6rem;
+	line-height: 22px;
+	color: #2AA1AF;
+	font-weight: bold;
+}
+#card_modal .app_content .new_QA .title input{
+	float: left;
+	width: calc(100% - 40px);
+	height: 28px;
+	border: none;
+}
+#card_modal .app_content .new_QA .title .count_text{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #B7B6B6;
+	font-size: 1.4rem;
+	line-height: 19px;
+	background-color: #fff;
+}
+#card_modal .app_content .new_QA .area{
+	width: 100%;
+	height: 70px;
+}
+#card_modal .app_content .new_QA .area textarea{
+	width: 100%;
+	height: 100%;
+	resize: none;
+	border: 1px solid #E1E1E1;
+	border-radius: 3px;
+	padding: 10px;
+}
+#card_modal .app_content .new_QA .action{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	align-items: center;
+}
+#card_modal .app_content .new_QA .action .action_wrapper{
+	margin-left: auto;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button{
+	float: left;
+	width: 60px;
+	height: 25px;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button:not(:last-child){
+	margin: 0 15px 0 0;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button.save button{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #2AA1AF;
+	color: #2AA1AF;
+	background-color: #fff;
+	border-radius: 3px;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button.save button:hover{
+	color: #fff;
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .new_QA .action .action_wrapper .button.cancer button{
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+	color: #000;
+	background-color: #E1E1E1;
+	border: none;
+}
+
+#card_modal .app_content .read_more{
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0;
+}
+#card_modal .app_content .read_more button{
+	width: 120px;
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #B7B6B6;
+	color: #B7B6B6;
+	background-color: #fff;
+}
+
+#card_modal .app_content .Similar_Apps{
+	padding: 30px 0;
+	border-bottom: 1px solid #E1E1E1;
+}
+#card_modal .app_content .Similar_Apps .title{
+	width: 100%;
+	margin: 5px 0;
+	font-size: 2rem;
+	line-height: 32px;
+	font-weight: bold;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper{
+	overflow: hidden;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item{
+	float: left;
+	width: 100px;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item img{
+	width: 100px;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item .text{
+	width: 100px;
+	margin: 10px 0;
+	text-align: center;
+	font-size: 1.4rem;
+	line-height: 19px;
+}
+#card_modal .app_content .Similar_Apps .item_wrapper .item:not(:last-child){
+	margin: 0 22px 0 0;
+}
+#card_modal .app_content .ranked{
+	padding: 20px 0;
+}
+#card_modal .app_content .ranked .infor{
+	float: left;
+	width: 50%;
+	background-color: red;
+}
+#card_modal .app_content .ranked .ranked_app{
+	float: left;
+	width: 50%;
+	background-color: blue;
+}
+#card_modal .app_content .total_app{
+	
+}
+#card_modal .app_content .total_app .title{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #E1E1E1;
+}
+#card_modal .app_content .total_app .title .text{ 
+	float: left;
+	position: relative;
+	font-size: 2rem;
+	line-height: 27px;
+	font-weight: bold;
+}
+#card_modal .app_content .total_app .title .text span{ 
+	font-weight: bold;
+	font-size: 2.2rem;
+	line-height: 29px;
+	color: #2AA1AF;
+}
+#card_modal .app_content .total_app .title .text::before{ 
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #2AA1AF;
+}
+#card_modal .app_content .total_app .control-listitem{
+	float: right;
+}
+#card_modal .app_content .total_app .control-listitem img{
+	width: 100%;
+}
+#card_modal .app_content .total_app .listitem-prev{
+	float: left;
+	margin: 0 10px 0 0;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+#card_modal .app_content .total_app .listitem-next{
+	float: left;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+}
+
+
+#card_modal .app_content .carousel_app{
+	margin: 30px 0;
+}

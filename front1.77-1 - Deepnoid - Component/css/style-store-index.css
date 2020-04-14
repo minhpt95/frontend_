@@ -65,6 +65,12 @@ body{
 	float: right;
 	margin: 0 0 8px 0;
 }
+.C_A_R_D-header .C_A_R_D-vote .vote_point .vote-item{
+	width: 14px;
+	height: 14px;
+	font-size: 12px;
+	margin: 0 4px 0 0;
+}
 .C_A_R_D-header .C_A_R_D-vote .C_A_R_D-vote-item{
 	float: left;
 	width: 14px;

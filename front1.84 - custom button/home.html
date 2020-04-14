@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>[ E R P S ]</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+	</head>
+	<body> 
+		<div class="Create">
+			<i class="fas fa-plus"></i>
+		</div>
+		<h1>GRADIENT GALLERY</h1>
+		<div class="list_color">
+			<div class="color_item" data-toggle="modal" data-target="#color_modal">
+				<div class="color_wrapper" style="background-image: linear-gradient(0deg,#000000,#7164FA)">
+					
+				</div>
+				<div class="color_use">
+					used : <span>20</span>
+				</div>
+			</div>
+		</div>
+		<div id="color_modal" class="modal fade" role="dialog">
+		  	<div class="modal-dialog">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+		        		<h4 class="modal-title">Copy Color</h4>
+		      		</div>
+		      		<div class="modal-body">
+		        		<div class="color_modal_wrapper">
+		        			
+		        		</div>
+		        		<div class="color_copy" id="css_output">
+		        			<div class="top"></div>
+		        		</div>
+		      		</div>
+		      		<div class="modal-footer">
+		        		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      		</div>
+		    	</div>
+		  	</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/colors.js"></script>
+	<script type="text/javascript" src="js/jqColorPicker.js"></script>
+	<script type="text/javascript">
+	    $('.color').colorPicker({ });
+	</script>
+	<script src="js/bootstrap3.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript" src="js/effect_custom.js"></script>
+</html>
+
+

@@ -2,7 +2,6 @@ $('.toggle-button').find('input').css({ 'display': 'none' })
 $('.toggle-button').find('.tg-btn').on('click', function() {
 	console.log($(this).parent().attr('data-name'))
 	$('.'+$(this).parent().attr('data-name')).toggleClass('active')
-    // $(this).toggleClass('active')
 })
 
 $('.toggle-button').on('mouseenter', function() {

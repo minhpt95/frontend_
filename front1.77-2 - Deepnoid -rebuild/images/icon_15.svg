@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.759" height="11.994" viewBox="0 0 15.759 11.994">
+  <g id="Uninstal" transform="translate(-311 -540.694)">
+    <g id="setup" transform="translate(311 547.678)">
+      <path id="Path_3797" data-name="Path 3797" d="M14.546,18.967V21.83a.668.668,0,0,1-.606.716H1.818a.668.668,0,0,1-.606-.716V18.967H0V21.83a2,2,0,0,0,1.818,2.147H13.94a2,2,0,0,0,1.818-2.147V18.967Z" transform="translate(0 -18.967)" fill="#030104"/>
+    </g>
+    <g id="delete" transform="translate(316.01 542)">
+      <line id="Line_116" data-name="Line 116" x1="6" y2="6" transform="translate(-0.01 -0.245)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <line id="Line_117" data-name="Line 117" x2="6" y2="6" transform="translate(-0.01 -0.245)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

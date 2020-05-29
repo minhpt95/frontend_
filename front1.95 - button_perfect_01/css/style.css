@@ -1,0 +1,48 @@
+button{
+    margin: auto;
+    border: none;
+    display: block;
+    position: relative;
+    padding: 10px 30px;
+    background-color: transparent;
+    user-select: none;
+    overflow: hidden;
+}
+button span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: -1;
+    border: 5px solid #ccc;
+    border-radius: 1000px;
+}
+button span::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 200px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(0);
+    /*transition: all 50000ms ease;*/
+    animation-name: top;
+    animation-duration: 10000ms;
+    animation-timing-function: linear;  
+    animation-iteration-count: infinite;
+    border-radius: 1000px;
+}
+button:hover span::before{
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+@keyframes top {
+    0%{
+        transform: translate(-50%, -50%) rotate(0);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

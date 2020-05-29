@@ -55,6 +55,9 @@
 	display: flex;
 	align-items: center;
 }
+.I-header .content .wrapper .action .open_nav{
+	display: none;
+}
 .I-header .content .wrapper .action .language{
 	margin-right: auto;
 	height: 50px;

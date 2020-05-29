@@ -1,0 +1,9 @@
+.image_wrapper{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    background: url(../images/img_05.jpg), url(../images/img_02.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: screen;
+}

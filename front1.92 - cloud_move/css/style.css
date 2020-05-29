@@ -1,0 +1,68 @@
+.main{
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	overflow: hidden;
+}
+
+#swatch{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: multiply;
+	background-color: #fff;
+}
+
+/*
+
+#0087ff7a
+#97ff007a
+#00ff1c1c
+#ff00009e
+
+
+
+*/
+/*
+'normal',
+  'multiply',
+  'screen',
+  'overlay',
+  'darken',
+  'lighten',
+  'color-dodge',
+  'color-burn',
+  'hard-light',
+  'soft-light',
+  'difference',
+  'exclusion',
+  'hue',
+  'saturation',
+  'color',
+  'luminosity'
+
+  */
+img{
+	width: 100%;
+}
+.cloud_01{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	animation: example calc(8s * var(--i)) linear infinite;
+}
+@keyframes example {
+  0%   {
+	transform: translateX(-100%);
+  }
+  100% {
+	transform: translateX(100%);
+  }
+}
+
+
+
+
+

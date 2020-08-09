@@ -1,0 +1,16 @@
+.I-autoheight{
+	width: 100%;
+}
+.I-autoheight .height_wrapper{
+	width: 100%;
+	background-color: red;
+	display: flex;
+}
+.I-item{
+	width: 20%;
+	margin: 1px;
+	background-color: blue;
+	padding: 20px;
+}
+
+

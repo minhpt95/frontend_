@@ -7,135 +7,221 @@
 
 	    <link rel="stylesheet" href="css/bootstrap3.css" />
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-overview.css" />
 		<link rel="stylesheet" href="css/responsive.css" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 		<script src="js/jquery-3.4.1.min.js"></script>
 	</head>
-
-	<body> 
-		<div class="hidden_menu"> </div>
-
+	<body>
 		<header>
-			<div class="content">
-				<div class="list_component">
-					<div class="component open_menu">
-						<div class="open_button">
-							<i class="fas fa-bars"></i>
+			<div class="I-header">
+				<div class="wrapper">
+					<div class="header_wrapper">
+						<div class="logo_wrapper">
+							<div class="logo">
+								<img src="images/logox.png">
+							</div>
 						</div>
-					</div>
-					<div class="component logo">
-						<div class="bound_logo">
-							<img src="images/logox.png">
+						<div class="classify">
+							<div class="open_nav_respon">
+								<i class="fas fa-bars"></i>
+							</div>
+							<a href="#" class="action">Nam</a>
+							<a href="#" class="action">Nữ</a>
+							<div class="action open_search">
+								Tìm Kiếm
+							</div>
 						</div>
-						
-					</div>
-					<div class="component cart">
-						<div class="bound_cart">
-							<a href="">Giỏ Hàng</a>
-							<div class="C_A_R_T">
-								10
+						<div class="cart">
+							<a href="#" class="action">Giỏ Hàng</a>
+							<div class="action cart_data">
+								3
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<nav>
-				<ul class="list_item">
-					<li class="item sub_item">
-						<a class="link_item">item 1</a>
-						<div class="icon"><i class="fas fa-sort-down"></i></div>
+			<div class="I-navigation">
+				<div class="wrapper">
+					<div class="navigation_wrapper">
 						<ul>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
+							<li class="sub_navigation">
+								<a href="">Áo<i class="fas fa-caret-down"></i></a>
+								<div class="list_navigation">
+									<a href="" class="item_navigation">Áo 1</a>
+									<a href="" class="item_navigation">Áo 2</a>
+								</div>
+							</li>
+							<li class="sub_navigation">
+								<a href="">Quần<i class="fas fa-caret-down"></i></a>
+								<div class="list_navigation">
+									<a href="" class="item_navigation">Quần</a>
+									<a href="" class="item_navigation">Quần</a>
+								</div>
+							</li>
+							<li class="sub_navigation">
+								<a href="">Phụ Kiện<i class="fas fa-caret-down"></i></a>
+								<div class="list_navigation">
+									<a href="" class="item_navigation">Iphone</a>
+									<a href="" class="item_navigation">SamSung</a>
+								</div>
+							</li>
 						</ul>
-					</li>
-					<li class="item">
-						<a href="" class="link_item">item 1</a>
-					</li>
-					<li class="item sub_item">
-						<a class="link_item">item 1</a>
-						<div class="icon"><i class="fas fa-sort-down"></i></div>
-						<ul>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-						</ul>
-					</li>
-					<li class="item sub_item">
-						<a class="link_item">item 1</a>
-						<div class="icon"><i class="fas fa-sort-down"></i></div>
-						<ul>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-							<li><a href="">item 11</a></li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<main>
-			<section class="component">
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-						<table class="table">
-						    <thead>
-						      	<tr>
-							        <th> Hình Ảnh </th>
-							        <th> Số Lượng </th>
-							        <th> Thành Tiền</th>
-						      	</tr>
-						    </thead>
-						    <tbody>
-						      	<tr>
-							        <td>
-										<div class="image">
-											<img src="images/shoes_lager1.png">
-										</div>
-									</td>
-							        <td><input type="" name=""></td>
-							        <td>1.200.000</td>
-						      	</tr>
-						      	<tr>
-							        <td>
-										<div class="image">
-											<img src="images/shoes_lager1.png">
-										</div>
-									</td>
-							        <td><input type="" name=""></td>
-							        <td>1.200.000</td>
-						      	</tr>
-						    </tbody>
-						</table>
-						<h3>Tổng: 2.400.000</h3>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-						<form role="form" action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-							  	<label for="usr">Họ Và Tên:</label>
-								<input type="text" name="username" class="form-control" placeholder="Họ Và Tên">
-							</div>
-							<div class="form-group">
-							  	<label for="addr">Địa Chỉ:</label>
-								<input type="text" name="address" class="form-control" placeholder="Địa Chỉ">
-							</div> 	
-							<div class="form-group">
-							  	<label for="tele">Số Điện Thoại:</label>
-								<input type="text" name="phone" class="form-control" placeholder="Số Điện Thoại">
-							</div> 	
-						   	<button type="submit" class="btn btn-success" style="float: right;">Đặt hàng</button>
-						</form>
 					</div>
 				</div>
-			</section>
+			</div>
+			<div class="I-respon_nav">
+				<div class="sub_nav">
+					<div class="nav_wrapper">
+						<ul>
+							<li class="sub_menu_wrapper">
+								<a href="#">Sản Phẩm</a>
+								<div class="sub_menu">
+									<a href="">Iphone</a>
+									<a href="">SamSung</a>
+									<a href="">Iphone</a>
+									<a href="">SamSung</a>
+									<a href="">Iphone</a>
+									<a href="">SamSung</a>
+								</div>
+								<div class="open_subnav">
+									<i class="fas fa-caret-down"></i>
+								</div>
+							</li>
+							<li class="sub_menu_wrapper">
+								<a href="#">Sản Phẩm</a>
+								<div class="sub_menu">
+									<a href="">Iphone</a>
+									<a href="">SamSung</a>
+									<a href="">Iphone</a>
+									<a href="">SamSung</a>
+									<a href="">Iphone</a>
+									<a href="">SamSung</a>
+								</div>
+								<div class="open_subnav">
+									<i class="fas fa-caret-down"></i>
+								</div>
+							</li>
+							<li><a href="">Về Chúng Tôi</a></li>
+							<li><a href="">Liên Hệ</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="I-order">
+				<div class="wrapper">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<div class="order_form">
+								<form class="form-horizontal" action="">
+								  	<div class="form-group">
+									    <label class="control-label col-sm-4" for="username">Họ Và Tên</label>
+									    <div class="col-sm-8">
+									      	<input type="text" class="form-control" id="username" placeholder="Nhập Họ Và Tên">
+									    </div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label class="control-label col-sm-4" for="email">Email</label>
+								    	<div class="col-sm-8">
+								      		<input type="email" class="form-control" id="email" placeholder="Nhập Email">
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label class="control-label col-sm-4" for="address">Địa Chỉ</label>
+								    	<div class="col-sm-8">
+								      		<input type="text" class="form-control" id="address" placeholder="Nhập Địa Chỉ">
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<label class="control-label col-sm-4" for="telephone">Số Điện Thoại</label>
+								    	<div class="col-sm-8">
+								      		<input type="text" class="form-control" id="telephone" placeholder="Nhập Số Điện Thoại" pattern="[0-9]*">
+								    	</div>
+								  	</div>
+								  	<div class="form-group">
+								    	<div class="col-sm-offset-4 col-sm-8">
+								      		<button type="submit" class="btn btn-default">Gửi Đơn Hàng</button>
+								    	</div>
+								  	</div>
+								</form> 
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+							<div class="item_list_order">
+								<div class="item_order">
+									<div class="item_image">
+										<img src="images/ao1.jpg">
+									</div>
+									<div class="item_title">
+										<div class="item_name">
+											Áo 1
+										</div>
+										<div class="color_size">
+											Vàng - M
+										</div>
+									</div>
+									<div class="item_amount">
+										<span style="background-color: red">10</span>
+									</div>
+									<div class="item_prices">
+										1.000.000
+									</div>
+								</div>
+								<div class="item_order">
+									<div class="item_image">
+										<img src="images/ao1.jpg">
+									</div>
+									<div class="item_title">
+										<div class="item_name">
+											Áo 1
+										</div>
+										<div class="color_size">
+											Vàng - M
+										</div>
+									</div>
+									<div class="item_amount">
+										<span style="background-color: red">10</span>
+									</div>
+									<div class="item_prices">
+										1.000.000
+									</div>
+								</div>
+								<div class="item_order">
+									<div class="item_image">
+										<img src="images/ao1.jpg">
+									</div>
+									<div class="item_title">
+										<div class="item_name">
+											Áo 1
+										</div>
+										<div class="color_size">
+											Vàng - M
+										</div>
+									</div>
+									<div class="item_amount">
+										<span style="background-color: red">10</span>
+									</div>
+									<div class="item_prices">
+										1.000.000
+									</div>
+								</div>
+							</div>
+							<div class="item_total_price">
+								Tổng : 10.000.000
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main>
 		<footer>
-			
+			<div class="I-footer">
+				
+			</div>
 		</footer>
 	</body>
-
 	<script src="js/bootstrap3.js"></script>
 	<script type="text/javascript" src="js/effect_custom.js"></script>
 </html>

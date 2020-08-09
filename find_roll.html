@@ -1,0 +1,1744 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+    <title>CodePen - Auto-mappers</title>
+    <style>
+    html,
+    body,
+    h1 {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-color: black;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
+    }
+
+    #unexplored {
+        font-size: 80%;
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, .3)
+    }
+
+    #count {
+        font-size: 80%;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, .3)
+    }
+
+    svg {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .blocker {
+        transition: fill 5s;
+        fill: blue;
+    }
+
+    .base {
+        fill: black;
+    }
+
+    .solid1a {
+        fill: rgb(112, 195, 250);
+    }
+
+    .solid2a {
+        fill: rgb(182, 243, 16);
+    }
+
+    .solid3a {
+        fill: rgb(111, 5, 250);
+        ;
+    }
+
+    .solid4a {
+        fill: rgb(250, 8, 109);
+    }
+
+    .blue {
+        opacity: 1;
+        fill: rgb(14, 128, 204);
+        stroke: rgb(238, 124, 17);
+    }
+
+    .green {
+        opacity: 1;
+        fill: rgb(112, 185, 17);
+        stroke: red;
+    }
+
+    .purple {
+        opacity: 1;
+        fill: rgb(132, 5, 250);
+        stroke: rgb(22, 233, 50);
+    }
+
+    .red {
+        opacity: 1;
+        fill: rgb(236, 6, 6);
+        stroke: yellow;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    /*https://loading.io/css/*/
+    .lds-dual-ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 49%;
+        left: 49%;
+    }
+
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+    @keyframes lds-dual-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    </style>
+    <script>
+    window.console = window.console || function(t) {};
+    </script>
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+    }
+    </script>
+</head>
+
+<body translate="no">
+    <label id="unexplored" alt="unexplored tiles remaining" title="unexplored tiles remaining">Unexplored tiles:316</label>
+    <label id="count" alt="maze size" title="maze size">Map size:1026</label>
+    <div class="lds-dual-ring" style="display: none;"></div>
+    <svg class="rotate">
+        <g>
+            <rect x="0" y="0" row="0" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="0" row="0" col="1" width="23" height="23"></rect>
+            <rect x="48" y="0" row="0" col="2" width="23" height="23"></rect>
+            <rect x="72" y="0" row="0" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="0" row="0" col="4" width="23" height="23"></rect>
+            <rect x="120" y="0" row="0" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="0" row="0" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="0" row="0" col="7" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="192" y="0" row="0" col="8" width="23" height="23" class="" style=""></rect>
+            <rect x="216" y="0" row="0" col="9" width="23" height="23"></rect>
+            <rect x="240" y="0" row="0" col="10" width="23" height="23"></rect>
+            <rect x="264" y="0" row="0" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="0" row="0" col="12" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="312" y="0" row="0" col="13" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="336" y="0" row="0" col="14" width="23" height="23"></rect>
+            <rect x="360" y="0" row="0" col="15" width="23" height="23" class="" style=""></rect>
+            <rect x="384" y="0" row="0" col="16" width="23" height="23" class="" style=""></rect>
+            <rect x="408" y="0" row="0" col="17" width="23" height="23"></rect>
+            <rect x="432" y="0" row="0" col="18" width="23" height="23"></rect>
+            <rect x="456" y="0" row="0" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="0" row="0" col="20" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="504" y="0" row="0" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="0" row="0" col="22" width="23" height="23"></rect>
+            <rect x="552" y="0" row="0" col="23" width="23" height="23"></rect>
+            <rect x="576" y="0" row="0" col="24" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="600" y="0" row="0" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="0" row="0" col="26" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="648" y="0" row="0" col="27" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="672" y="0" row="0" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="0" row="0" col="29" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="720" y="0" row="0" col="30" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="744" y="0" row="0" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="0" row="0" col="32" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="792" y="0" row="0" col="33" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="816" y="0" row="0" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="0" row="0" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="0" row="0" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="0" row="0" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="0" row="0" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="0" row="0" col="39" width="23" height="23" class="" style=""></rect>
+            <rect x="960" y="0" row="0" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="0" row="0" col="41" width="23" height="23"></rect>
+            <rect x="1008" y="0" row="0" col="42" width="23" height="23" class="" style=""></rect>
+            <rect x="1032" y="0" row="0" col="43" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1056" y="0" row="0" col="44" width="23" height="23"></rect>
+            <rect x="1080" y="0" row="0" col="45" width="23" height="23" class="" style=""></rect>
+            <rect x="1104" y="0" row="0" col="46" width="23" height="23"></rect>
+            <rect x="1128" y="0" row="0" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="0" row="0" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="0" row="0" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="0" row="0" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="0" row="0" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="0" row="0" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="0" row="0" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="0" row="0" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="0" row="0" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="0" row="0" col="56" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="0" y="24" row="1" col="0" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="24" y="24" row="1" col="1" width="23" height="23"></rect>
+            <rect x="48" y="24" row="1" col="2" width="23" height="23"></rect>
+            <rect x="72" y="24" row="1" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="24" row="1" col="4" width="23" height="23"></rect>
+            <rect x="120" y="24" row="1" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="24" row="1" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="24" row="1" col="7" width="23" height="23" class="" style=""></rect>
+            <rect x="192" y="24" row="1" col="8" width="23" height="23"></rect>
+            <rect x="216" y="24" row="1" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="24" row="1" col="10" width="23" height="23"></rect>
+            <rect x="264" y="24" row="1" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="24" row="1" col="12" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="312" y="24" row="1" col="13" width="23" height="23"></rect>
+            <rect x="336" y="24" row="1" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="24" row="1" col="15" width="23" height="23" class="" style=""></rect>
+            <rect x="384" y="24" row="1" col="16" width="23" height="23"></rect>
+            <rect x="408" y="24" row="1" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="24" row="1" col="18" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="456" y="24" row="1" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="24" row="1" col="20" width="23" height="23" class="solid1a green" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="24" row="1" col="21" width="23" height="23" class="solid1a blue" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="528" y="24" row="1" col="22" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="552" y="24" row="1" col="23" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="576" y="24" row="1" col="24" width="23" height="23" class="" style=""></rect>
+            <rect x="600" y="24" row="1" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="24" row="1" col="26" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="648" y="24" row="1" col="27" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="672" y="24" row="1" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="24" row="1" col="29" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="720" y="24" row="1" col="30" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="744" y="24" row="1" col="31" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="768" y="24" row="1" col="32" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="792" y="24" row="1" col="33" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="816" y="24" row="1" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="24" row="1" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="24" row="1" col="36" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="888" y="24" row="1" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="24" row="1" col="38" width="23" height="23"></rect>
+            <rect x="936" y="24" row="1" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="24" row="1" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="24" row="1" col="41" width="23" height="23"></rect>
+            <rect x="1008" y="24" row="1" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="24" row="1" col="43" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1056" y="24" row="1" col="44" width="23" height="23"></rect>
+            <rect x="1080" y="24" row="1" col="45" width="23" height="23" class="" style=""></rect>
+            <rect x="1104" y="24" row="1" col="46" width="23" height="23"></rect>
+            <rect x="1128" y="24" row="1" col="47" width="23" height="23" class="" style=""></rect>
+            <rect x="1152" y="24" row="1" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="24" row="1" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="24" row="1" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="24" row="1" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="24" row="1" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="24" row="1" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="24" row="1" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="24" row="1" col="55" width="23" height="23" class="" style=""></rect>
+            <rect x="1344" y="24" row="1" col="56" width="23" height="23"></rect>
+            <rect x="0" y="48" row="2" col="0" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="24" y="48" row="2" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="48" row="2" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="48" row="2" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="48" row="2" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="48" row="2" col="5" width="23" height="23"></rect>
+            <rect x="144" y="48" row="2" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="48" row="2" col="7" width="23" height="23"></rect>
+            <rect x="192" y="48" row="2" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="48" row="2" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="48" row="2" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="48" row="2" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="48" row="2" col="12" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="312" y="48" row="2" col="13" width="23" height="23"></rect>
+            <rect x="336" y="48" row="2" col="14" width="23" height="23" class="" style=""></rect>
+            <rect x="360" y="48" row="2" col="15" width="23" height="23" class="" style=""></rect>
+            <rect x="384" y="48" row="2" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="48" row="2" col="17" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="432" y="48" row="2" col="18" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="456" y="48" row="2" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="48" row="2" col="20" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="48" row="2" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="48" row="2" col="22" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="552" y="48" row="2" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="48" row="2" col="24" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="600" y="48" row="2" col="25" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="624" y="48" row="2" col="26" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="648" y="48" row="2" col="27" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="672" y="48" row="2" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="48" row="2" col="29" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="720" y="48" row="2" col="30" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="744" y="48" row="2" col="31" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="768" y="48" row="2" col="32" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="792" y="48" row="2" col="33" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="816" y="48" row="2" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="48" row="2" col="35" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="864" y="48" row="2" col="36" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="888" y="48" row="2" col="37" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="912" y="48" row="2" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="48" row="2" col="39" width="23" height="23" class="" style=""></rect>
+            <rect x="960" y="48" row="2" col="40" width="23" height="23"></rect>
+            <rect x="984" y="48" row="2" col="41" width="23" height="23"></rect>
+            <rect x="1008" y="48" row="2" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="48" row="2" col="43" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1056" y="48" row="2" col="44" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1080" y="48" row="2" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="48" row="2" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="48" row="2" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="48" row="2" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="48" row="2" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="48" row="2" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="48" row="2" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="48" row="2" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="48" row="2" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="48" row="2" col="54" width="23" height="23"></rect>
+            <rect x="1320" y="48" row="2" col="55" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1344" y="48" row="2" col="56" width="23" height="23"></rect>
+            <rect x="0" y="72" row="3" col="0" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="24" y="72" row="3" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="72" row="3" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="72" row="3" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="72" row="3" col="4" width="23" height="23"></rect>
+            <rect x="120" y="72" row="3" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="72" row="3" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="72" row="3" col="7" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="192" y="72" row="3" col="8" width="23" height="23"></rect>
+            <rect x="216" y="72" row="3" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="72" row="3" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="72" row="3" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="72" row="3" col="12" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="312" y="72" row="3" col="13" width="23" height="23" class="" style=""></rect>
+            <rect x="336" y="72" row="3" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="72" row="3" col="15" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="384" y="72" row="3" col="16" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="408" y="72" row="3" col="17" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="432" y="72" row="3" col="18" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="456" y="72" row="3" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="72" row="3" col="20" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="72" row="3" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="72" row="3" col="22" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="552" y="72" row="3" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="72" row="3" col="24" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="72" row="3" col="25" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="624" y="72" row="3" col="26" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="648" y="72" row="3" col="27" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="672" y="72" row="3" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="72" row="3" col="29" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="720" y="72" row="3" col="30" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="744" y="72" row="3" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="72" row="3" col="32" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="792" y="72" row="3" col="33" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="816" y="72" row="3" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="72" row="3" col="35" width="23" height="23" class="solid1a purple blue" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="864" y="72" row="3" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="72" row="3" col="37" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="912" y="72" row="3" col="38" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="936" y="72" row="3" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="72" row="3" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="72" row="3" col="41" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1008" y="72" row="3" col="42" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1032" y="72" row="3" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="72" row="3" col="44" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="72" row="3" col="45" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1104" y="72" row="3" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="72" row="3" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="72" row="3" col="48" width="23" height="23"></rect>
+            <rect x="1176" y="72" row="3" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="72" row="3" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="72" row="3" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="72" row="3" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="72" row="3" col="53" width="23" height="23" class="" style=""></rect>
+            <rect x="1296" y="72" row="3" col="54" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1320" y="72" row="3" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="72" row="3" col="56" width="23" height="23"></rect>
+            <rect x="0" y="96" row="4" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="96" row="4" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="96" row="4" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="96" row="4" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="96" row="4" col="4" width="23" height="23" class="" style=""></rect>
+            <rect x="120" y="96" row="4" col="5" width="23" height="23"></rect>
+            <rect x="144" y="96" row="4" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="96" row="4" col="7" width="23" height="23"></rect>
+            <rect x="192" y="96" row="4" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="96" row="4" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="96" row="4" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="96" row="4" col="11" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="288" y="96" row="4" col="12" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="312" y="96" row="4" col="13" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="336" y="96" row="4" col="14" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="360" y="96" row="4" col="15" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="384" y="96" row="4" col="16" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="408" y="96" row="4" col="17" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="432" y="96" row="4" col="18" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="456" y="96" row="4" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="96" row="4" col="20" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="96" row="4" col="21" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="528" y="96" row="4" col="22" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="552" y="96" row="4" col="23" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="576" y="96" row="4" col="24" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="96" row="4" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="96" row="4" col="26" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="648" y="96" row="4" col="27" width="23" height="23" class="solid4a purple" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="672" y="96" row="4" col="28" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="696" y="96" row="4" col="29" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="96" row="4" col="30" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="744" y="96" row="4" col="31" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="768" y="96" row="4" col="32" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="792" y="96" row="4" col="33" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="96" row="4" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="96" row="4" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="96" row="4" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="96" row="4" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="96" row="4" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="96" row="4" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="96" row="4" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="96" row="4" col="41" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1008" y="96" row="4" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="96" row="4" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="96" row="4" col="44" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="96" row="4" col="45" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1104" y="96" row="4" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="96" row="4" col="47" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1152" y="96" row="4" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="96" row="4" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="96" row="4" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="96" row="4" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="96" row="4" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="96" row="4" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="96" row="4" col="54" width="23" height="23"></rect>
+            <rect x="1320" y="96" row="4" col="55" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1344" y="96" row="4" col="56" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="0" y="120" row="5" col="0" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="24" y="120" row="5" col="1" width="23" height="23"></rect>
+            <rect x="48" y="120" row="5" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="120" row="5" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="120" row="5" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="120" row="5" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="120" row="5" col="6" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="168" y="120" row="5" col="7" width="23" height="23"></rect>
+            <rect x="192" y="120" row="5" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="120" row="5" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="120" row="5" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="120" row="5" col="11" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="288" y="120" row="5" col="12" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="312" y="120" row="5" col="13" width="23" height="23"></rect>
+            <rect x="336" y="120" row="5" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="120" row="5" col="15" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="384" y="120" row="5" col="16" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="408" y="120" row="5" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="120" row="5" col="18" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="456" y="120" row="5" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="120" row="5" col="20" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="504" y="120" row="5" col="21" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="528" y="120" row="5" col="22" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="552" y="120" row="5" col="23" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="576" y="120" row="5" col="24" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="120" row="5" col="25" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="624" y="120" row="5" col="26" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="648" y="120" row="5" col="27" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="672" y="120" row="5" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="120" row="5" col="29" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="720" y="120" row="5" col="30" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="744" y="120" row="5" col="31" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="768" y="120" row="5" col="32" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="792" y="120" row="5" col="33" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="816" y="120" row="5" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="120" row="5" col="35" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="864" y="120" row="5" col="36" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="888" y="120" row="5" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="120" row="5" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="120" row="5" col="39" width="23" height="23" class="" style=""></rect>
+            <rect x="960" y="120" row="5" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="120" row="5" col="41" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1008" y="120" row="5" col="42" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1032" y="120" row="5" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="120" row="5" col="44" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="120" row="5" col="45" width="23" height="23" class="solid2a blue" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1104" y="120" row="5" col="46" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1128" y="120" row="5" col="47" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1152" y="120" row="5" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="120" row="5" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="120" row="5" col="50" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1224" y="120" row="5" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="120" row="5" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="120" row="5" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="120" row="5" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="120" row="5" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="120" row="5" col="56" width="23" height="23"></rect>
+            <rect x="0" y="144" row="6" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="144" row="6" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="144" row="6" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="144" row="6" col="3" width="23" height="23"></rect>
+            <rect x="96" y="144" row="6" col="4" width="23" height="23"></rect>
+            <rect x="120" y="144" row="6" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="144" row="6" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="144" row="6" col="7" width="23" height="23"></rect>
+            <rect x="192" y="144" row="6" col="8" width="23" height="23"></rect>
+            <rect x="216" y="144" row="6" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="144" row="6" col="10" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="264" y="144" row="6" col="11" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="288" y="144" row="6" col="12" width="23" height="23" class="solid1a red" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="312" y="144" row="6" col="13" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="336" y="144" row="6" col="14" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="360" y="144" row="6" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="144" row="6" col="16" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="408" y="144" row="6" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="144" row="6" col="18" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="456" y="144" row="6" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="144" row="6" col="20" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="504" y="144" row="6" col="21" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="528" y="144" row="6" col="22" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="552" y="144" row="6" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="144" row="6" col="24" width="23" height="23" class="solid2a red" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="144" row="6" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="144" row="6" col="26" width="23" height="23" class="solid2a purple" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="648" y="144" row="6" col="27" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="672" y="144" row="6" col="28" width="23" height="23" class="solid4a green" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="144" row="6" col="29" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="720" y="144" row="6" col="30" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="744" y="144" row="6" col="31" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="768" y="144" row="6" col="32" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="792" y="144" row="6" col="33" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="144" row="6" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="144" row="6" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="144" row="6" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="144" row="6" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="144" row="6" col="38" width="23" height="23"></rect>
+            <rect x="936" y="144" row="6" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="144" row="6" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="144" row="6" col="41" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1008" y="144" row="6" col="42" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1032" y="144" row="6" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="144" row="6" col="44" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1080" y="144" row="6" col="45" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1104" y="144" row="6" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="144" row="6" col="47" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1152" y="144" row="6" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="144" row="6" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="144" row="6" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="144" row="6" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="144" row="6" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="144" row="6" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="144" row="6" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="144" row="6" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="144" row="6" col="56" width="23" height="23"></rect>
+            <rect x="0" y="168" row="7" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="168" row="7" col="1" width="23" height="23" class="" style=""></rect>
+            <rect x="48" y="168" row="7" col="2" width="23" height="23"></rect>
+            <rect x="72" y="168" row="7" col="3" width="23" height="23"></rect>
+            <rect x="96" y="168" row="7" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="168" row="7" col="5" width="23" height="23"></rect>
+            <rect x="144" y="168" row="7" col="6" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="168" y="168" row="7" col="7" width="23" height="23"></rect>
+            <rect x="192" y="168" row="7" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="168" row="7" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="168" row="7" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="168" row="7" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="168" row="7" col="12" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="312" y="168" row="7" col="13" width="23" height="23" class="solid1a green" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="336" y="168" row="7" col="14" width="23" height="23" class="solid1a red" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="360" y="168" row="7" col="15" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="384" y="168" row="7" col="16" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="408" y="168" row="7" col="17" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="432" y="168" row="7" col="18" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="456" y="168" row="7" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="168" row="7" col="20" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="168" row="7" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="168" row="7" col="22" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="552" y="168" row="7" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="168" row="7" col="24" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="600" y="168" row="7" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="168" row="7" col="26" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="648" y="168" row="7" col="27" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="672" y="168" row="7" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="168" row="7" col="29" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="720" y="168" row="7" col="30" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="744" y="168" row="7" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="168" row="7" col="32" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="792" y="168" row="7" col="33" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="168" row="7" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="168" row="7" col="35" width="23" height="23"></rect>
+            <rect x="864" y="168" row="7" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="168" row="7" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="168" row="7" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="168" row="7" col="39" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="960" y="168" row="7" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="168" row="7" col="41" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1008" y="168" row="7" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="168" row="7" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="168" row="7" col="44" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="168" row="7" col="45" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1104" y="168" row="7" col="46" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1128" y="168" row="7" col="47" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1152" y="168" row="7" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="168" row="7" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="168" row="7" col="50" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1224" y="168" row="7" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="168" row="7" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="168" row="7" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="168" row="7" col="54" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1320" y="168" row="7" col="55" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1344" y="168" row="7" col="56" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="0" y="192" row="8" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="192" row="8" col="1" width="23" height="23"></rect>
+            <rect x="48" y="192" row="8" col="2" width="23" height="23"></rect>
+            <rect x="72" y="192" row="8" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="192" row="8" col="4" width="23" height="23"></rect>
+            <rect x="120" y="192" row="8" col="5" width="23" height="23"></rect>
+            <rect x="144" y="192" row="8" col="6" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="168" y="192" row="8" col="7" width="23" height="23"></rect>
+            <rect x="192" y="192" row="8" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="192" row="8" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="192" row="8" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="192" row="8" col="11" width="23" height="23"></rect>
+            <rect x="288" y="192" row="8" col="12" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="312" y="192" row="8" col="13" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="336" y="192" row="8" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="192" row="8" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="192" row="8" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="192" row="8" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="192" row="8" col="18" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="456" y="192" row="8" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="192" row="8" col="20" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="504" y="192" row="8" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="192" row="8" col="22" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="552" y="192" row="8" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="192" row="8" col="24" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="600" y="192" row="8" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="192" row="8" col="26" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="648" y="192" row="8" col="27" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="672" y="192" row="8" col="28" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="696" y="192" row="8" col="29" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="720" y="192" row="8" col="30" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="744" y="192" row="8" col="31" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="768" y="192" row="8" col="32" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="792" y="192" row="8" col="33" width="23" height="23" class="solid1a blue" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="192" row="8" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="192" row="8" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="192" row="8" col="36" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="888" y="192" row="8" col="37" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="912" y="192" row="8" col="38" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="936" y="192" row="8" col="39" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="960" y="192" row="8" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="192" row="8" col="41" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1008" y="192" row="8" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="192" row="8" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="192" row="8" col="44" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="192" row="8" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="192" row="8" col="46" width="23" height="23"></rect>
+            <rect x="1128" y="192" row="8" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="192" row="8" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="192" row="8" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="192" row="8" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="192" row="8" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="192" row="8" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="192" row="8" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="192" row="8" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="192" row="8" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="192" row="8" col="56" width="23" height="23" class="" style=""></rect>
+            <rect x="0" y="216" row="9" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="216" row="9" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="216" row="9" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="216" row="9" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="216" row="9" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="216" row="9" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="216" row="9" col="6" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="168" y="216" row="9" col="7" width="23" height="23" class="" style=""></rect>
+            <rect x="192" y="216" row="9" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="216" row="9" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="216" row="9" col="10" width="23" height="23"></rect>
+            <rect x="264" y="216" row="9" col="11" width="23" height="23"></rect>
+            <rect x="288" y="216" row="9" col="12" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="312" y="216" row="9" col="13" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="336" y="216" row="9" col="14" width="23" height="23"></rect>
+            <rect x="360" y="216" row="9" col="15" width="23" height="23" class="" style=""></rect>
+            <rect x="384" y="216" row="9" col="16" width="23" height="23"></rect>
+            <rect x="408" y="216" row="9" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="216" row="9" col="18" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="456" y="216" row="9" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="216" row="9" col="20" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="504" y="216" row="9" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="216" row="9" col="22" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="552" y="216" row="9" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="216" row="9" col="24" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="216" row="9" col="25" width="23" height="23" class="solid2a purple" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="216" row="9" col="26" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="648" y="216" row="9" col="27" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="672" y="216" row="9" col="28" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="216" row="9" col="29" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="720" y="216" row="9" col="30" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="744" y="216" row="9" col="31" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="768" y="216" row="9" col="32" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="792" y="216" row="9" col="33" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="816" y="216" row="9" col="34" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="840" y="216" row="9" col="35" width="23" height="23" class="solid2a red" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="864" y="216" row="9" col="36" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="888" y="216" row="9" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="216" row="9" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="216" row="9" col="39" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="960" y="216" row="9" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="216" row="9" col="41" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1008" y="216" row="9" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="216" row="9" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="216" row="9" col="44" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1080" y="216" row="9" col="45" width="23" height="23" class="" style=""></rect>
+            <rect x="1104" y="216" row="9" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="216" row="9" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="216" row="9" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="216" row="9" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="216" row="9" col="50" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1224" y="216" row="9" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="216" row="9" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="216" row="9" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="216" row="9" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="216" row="9" col="55" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1344" y="216" row="9" col="56" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="0" y="240" row="10" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="240" row="10" col="1" width="23" height="23"></rect>
+            <rect x="48" y="240" row="10" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="240" row="10" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="240" row="10" col="4" width="23" height="23"></rect>
+            <rect x="120" y="240" row="10" col="5" width="23" height="23"></rect>
+            <rect x="144" y="240" row="10" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="240" row="10" col="7" width="23" height="23"></rect>
+            <rect x="192" y="240" row="10" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="240" row="10" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="240" row="10" col="10" width="23" height="23"></rect>
+            <rect x="264" y="240" row="10" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="240" row="10" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="240" row="10" col="13" width="23" height="23"></rect>
+            <rect x="336" y="240" row="10" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="240" row="10" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="240" row="10" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="240" row="10" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="240" row="10" col="18" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="456" y="240" row="10" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="240" row="10" col="20" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="504" y="240" row="10" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="240" row="10" col="22" width="23" height="23" class="solid2a green" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="552" y="240" row="10" col="23" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="576" y="240" row="10" col="24" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="240" row="10" col="25" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="624" y="240" row="10" col="26" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="648" y="240" row="10" col="27" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="672" y="240" row="10" col="28" width="23" height="23" class="solid1a purple" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="240" row="10" col="29" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="240" row="10" col="30" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="744" y="240" row="10" col="31" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="768" y="240" row="10" col="32" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="792" y="240" row="10" col="33" width="23" height="23" class="solid1a blue" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="240" row="10" col="34" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="840" y="240" row="10" col="35" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="864" y="240" row="10" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="240" row="10" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="240" row="10" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="240" row="10" col="39" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="960" y="240" row="10" col="40" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="984" y="240" row="10" col="41" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1008" y="240" row="10" col="42" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1032" y="240" row="10" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="240" row="10" col="44" width="23" height="23" class="solid2a green" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="240" row="10" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="240" row="10" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="240" row="10" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="240" row="10" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="240" row="10" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="240" row="10" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="240" row="10" col="51" width="23" height="23"></rect>
+            <rect x="1248" y="240" row="10" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="240" row="10" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="240" row="10" col="54" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1320" y="240" row="10" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="240" row="10" col="56" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="0" y="264" row="11" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="264" row="11" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="264" row="11" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="264" row="11" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="264" row="11" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="264" row="11" col="5" width="23" height="23" class="" style=""></rect>
+            <rect x="144" y="264" row="11" col="6" width="23" height="23"></rect>
+            <rect x="168" y="264" row="11" col="7" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="192" y="264" row="11" col="8" width="23" height="23"></rect>
+            <rect x="216" y="264" row="11" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="264" row="11" col="10" width="23" height="23"></rect>
+            <rect x="264" y="264" row="11" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="264" row="11" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="264" row="11" col="13" width="23" height="23"></rect>
+            <rect x="336" y="264" row="11" col="14" width="23" height="23"></rect>
+            <rect x="360" y="264" row="11" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="264" row="11" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="264" row="11" col="17" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="432" y="264" row="11" col="18" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="456" y="264" row="11" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="264" row="11" col="20" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="264" row="11" col="21" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="528" y="264" row="11" col="22" width="23" height="23" class="solid3a purple" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="552" y="264" row="11" col="23" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="576" y="264" row="11" col="24" width="23" height="23" class="solid2a red" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="600" y="264" row="11" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="264" row="11" col="26" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="648" y="264" row="11" col="27" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="672" y="264" row="11" col="28" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="264" row="11" col="29" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="264" row="11" col="30" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="744" y="264" row="11" col="31" width="23" height="23" class="solid4a green" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="768" y="264" row="11" col="32" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="792" y="264" row="11" col="33" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="264" row="11" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="264" row="11" col="35" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="864" y="264" row="11" col="36" width="23" height="23" class="solid1a purple" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="888" y="264" row="11" col="37" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="912" y="264" row="11" col="38" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="936" y="264" row="11" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="264" row="11" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="264" row="11" col="41" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1008" y="264" row="11" col="42" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1032" y="264" row="11" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="264" row="11" col="44" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1080" y="264" row="11" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="264" row="11" col="46" width="23" height="23"></rect>
+            <rect x="1128" y="264" row="11" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="264" row="11" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="264" row="11" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="264" row="11" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="264" row="11" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="264" row="11" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="264" row="11" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="264" row="11" col="54" width="23" height="23"></rect>
+            <rect x="1320" y="264" row="11" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="264" row="11" col="56" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="0" y="288" row="12" col="0" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="24" y="288" row="12" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="288" row="12" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="288" row="12" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="288" row="12" col="4" width="23" height="23" class="" style=""></rect>
+            <rect x="120" y="288" row="12" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="288" row="12" col="6" width="23" height="23"></rect>
+            <rect x="168" y="288" row="12" col="7" width="23" height="23"></rect>
+            <rect x="192" y="288" row="12" col="8" width="23" height="23"></rect>
+            <rect x="216" y="288" row="12" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="288" row="12" col="10" width="23" height="23"></rect>
+            <rect x="264" y="288" row="12" col="11" width="23" height="23"></rect>
+            <rect x="288" y="288" row="12" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="288" row="12" col="13" width="23" height="23"></rect>
+            <rect x="336" y="288" row="12" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="288" row="12" col="15" width="23" height="23" class="" style=""></rect>
+            <rect x="384" y="288" row="12" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="288" row="12" col="17" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="432" y="288" row="12" col="18" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="456" y="288" row="12" col="19" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="480" y="288" row="12" col="20" width="23" height="23" class="solid1a blue" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="504" y="288" row="12" col="21" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="528" y="288" row="12" col="22" width="23" height="23" class="solid1a red" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="552" y="288" row="12" col="23" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="576" y="288" row="12" col="24" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="600" y="288" row="12" col="25" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="624" y="288" row="12" col="26" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="648" y="288" row="12" col="27" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="672" y="288" row="12" col="28" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="288" row="12" col="29" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="288" row="12" col="30" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="744" y="288" row="12" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="288" row="12" col="32" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="792" y="288" row="12" col="33" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="816" y="288" row="12" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="288" row="12" col="35" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="864" y="288" row="12" col="36" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="888" y="288" row="12" col="37" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="912" y="288" row="12" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="288" row="12" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="288" row="12" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="288" row="12" col="41" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1008" y="288" row="12" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="288" row="12" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="288" row="12" col="44" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1080" y="288" row="12" col="45" width="23" height="23" class="" style=""></rect>
+            <rect x="1104" y="288" row="12" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="288" row="12" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="288" row="12" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="288" row="12" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="288" row="12" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="288" row="12" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="288" row="12" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="288" row="12" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="288" row="12" col="54" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1320" y="288" row="12" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="288" row="12" col="56" width="23" height="23"></rect>
+            <rect x="0" y="312" row="13" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="312" row="13" col="1" width="23" height="23"></rect>
+            <rect x="48" y="312" row="13" col="2" width="23" height="23"></rect>
+            <rect x="72" y="312" row="13" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="312" row="13" col="4" width="23" height="23"></rect>
+            <rect x="120" y="312" row="13" col="5" width="23" height="23"></rect>
+            <rect x="144" y="312" row="13" col="6" width="23" height="23"></rect>
+            <rect x="168" y="312" row="13" col="7" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="192" y="312" row="13" col="8" width="23" height="23"></rect>
+            <rect x="216" y="312" row="13" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="312" row="13" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="312" row="13" col="11" width="23" height="23" class="" style=""></rect>
+            <rect x="288" y="312" row="13" col="12" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="312" y="312" row="13" col="13" width="23" height="23"></rect>
+            <rect x="336" y="312" row="13" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="312" row="13" col="15" width="23" height="23" class="" style=""></rect>
+            <rect x="384" y="312" row="13" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="312" row="13" col="17" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="432" y="312" row="13" col="18" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="456" y="312" row="13" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="312" row="13" col="20" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="504" y="312" row="13" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="312" row="13" col="22" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="552" y="312" row="13" col="23" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="576" y="312" row="13" col="24" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="600" y="312" row="13" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="312" row="13" col="26" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="648" y="312" row="13" col="27" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="672" y="312" row="13" col="28" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="312" row="13" col="29" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="720" y="312" row="13" col="30" width="23" height="23" class="solid3a" style="fill: rgb(116, 0, 239);"></rect>
+            <rect x="744" y="312" row="13" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="312" row="13" col="32" width="23" height="23"></rect>
+            <rect x="792" y="312" row="13" col="33" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="816" y="312" row="13" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="312" row="13" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="312" row="13" col="36" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="888" y="312" row="13" col="37" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="912" y="312" row="13" col="38" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="936" y="312" row="13" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="312" row="13" col="40" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="984" y="312" row="13" col="41" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="1008" y="312" row="13" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="312" row="13" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="312" row="13" col="44" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1080" y="312" row="13" col="45" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1104" y="312" row="13" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="312" row="13" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="312" row="13" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="312" row="13" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="312" row="13" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="312" row="13" col="51" width="23" height="23"></rect>
+            <rect x="1248" y="312" row="13" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="312" row="13" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="312" row="13" col="54" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1320" y="312" row="13" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="312" row="13" col="56" width="23" height="23"></rect>
+            <rect x="0" y="336" row="14" col="0" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="24" y="336" row="14" col="1" width="23" height="23"></rect>
+            <rect x="48" y="336" row="14" col="2" width="23" height="23" class="" style=""></rect>
+            <rect x="72" y="336" row="14" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="336" row="14" col="4" width="23" height="23"></rect>
+            <rect x="120" y="336" row="14" col="5" width="23" height="23"></rect>
+            <rect x="144" y="336" row="14" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="336" row="14" col="7" width="23" height="23"></rect>
+            <rect x="192" y="336" row="14" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="336" row="14" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="336" row="14" col="10" width="23" height="23" class="" style=""></rect>
+            <rect x="264" y="336" row="14" col="11" width="23" height="23"></rect>
+            <rect x="288" y="336" row="14" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="336" row="14" col="13" width="23" height="23"></rect>
+            <rect x="336" y="336" row="14" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="336" row="14" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="336" row="14" col="16" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="408" y="336" row="14" col="17" width="23" height="23" class="solid4a green" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="432" y="336" row="14" col="18" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="456" y="336" row="14" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="336" row="14" col="20" width="23" height="23"></rect>
+            <rect x="504" y="336" row="14" col="21" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="528" y="336" row="14" col="22" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="552" y="336" row="14" col="23" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="576" y="336" row="14" col="24" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="600" y="336" row="14" col="25" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="624" y="336" row="14" col="26" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="648" y="336" row="14" col="27" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="672" y="336" row="14" col="28" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="336" row="14" col="29" width="23" height="23" class="solid1a purple" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="336" row="14" col="30" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="744" y="336" row="14" col="31" width="23" height="23"></rect>
+            <rect x="768" y="336" row="14" col="32" width="23" height="23"></rect>
+            <rect x="792" y="336" row="14" col="33" width="23" height="23"></rect>
+            <rect x="816" y="336" row="14" col="34" width="23" height="23" class="" style=""></rect>
+            <rect x="840" y="336" row="14" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="336" row="14" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="336" row="14" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="336" row="14" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="336" row="14" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="336" row="14" col="40" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="984" y="336" row="14" col="41" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1008" y="336" row="14" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="336" row="14" col="43" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="1056" y="336" row="14" col="44" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1080" y="336" row="14" col="45" width="23" height="23" class="" style=""></rect>
+            <rect x="1104" y="336" row="14" col="46" width="23" height="23"></rect>
+            <rect x="1128" y="336" row="14" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="336" row="14" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="336" row="14" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="336" row="14" col="50" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1224" y="336" row="14" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="336" row="14" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="336" row="14" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="336" row="14" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="336" row="14" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="336" row="14" col="56" width="23" height="23"></rect>
+            <rect x="0" y="360" row="15" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="360" row="15" col="1" width="23" height="23" class="" style=""></rect>
+            <rect x="48" y="360" row="15" col="2" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="72" y="360" row="15" col="3" width="23" height="23" class="" style=""></rect>
+            <rect x="96" y="360" row="15" col="4" width="23" height="23"></rect>
+            <rect x="120" y="360" row="15" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="360" row="15" col="6" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="168" y="360" row="15" col="7" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="192" y="360" row="15" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="360" row="15" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="360" row="15" col="10" width="23" height="23"></rect>
+            <rect x="264" y="360" row="15" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="360" row="15" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="360" row="15" col="13" width="23" height="23"></rect>
+            <rect x="336" y="360" row="15" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="360" row="15" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="360" row="15" col="16" width="23" height="23" class="solid4a" style="fill: rgb(252, 137, 6);"></rect>
+            <rect x="408" y="360" row="15" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="360" row="15" col="18" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="456" y="360" row="15" col="19" width="23" height="23"></rect>
+            <rect x="480" y="360" row="15" col="20" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="504" y="360" row="15" col="21" width="23" height="23" class="" style=""></rect>
+            <rect x="528" y="360" row="15" col="22" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="552" y="360" row="15" col="23" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="576" y="360" row="15" col="24" width="23" height="23" class="solid1a red" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="600" y="360" row="15" col="25" width="23" height="23" class="solid2a" style="fill: rgb(19, 42, 255);"></rect>
+            <rect x="624" y="360" row="15" col="26" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="648" y="360" row="15" col="27" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="672" y="360" row="15" col="28" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="696" y="360" row="15" col="29" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="360" row="15" col="30" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="744" y="360" row="15" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="360" row="15" col="32" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="792" y="360" row="15" col="33" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="816" y="360" row="15" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="360" row="15" col="35" width="23" height="23"></rect>
+            <rect x="864" y="360" row="15" col="36" width="23" height="23"></rect>
+            <rect x="888" y="360" row="15" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="360" row="15" col="38" width="23" height="23"></rect>
+            <rect x="936" y="360" row="15" col="39" width="23" height="23" class="" style=""></rect>
+            <rect x="960" y="360" row="15" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="360" row="15" col="41" width="23" height="23"></rect>
+            <rect x="1008" y="360" row="15" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="360" row="15" col="43" width="23" height="23"></rect>
+            <rect x="1056" y="360" row="15" col="44" width="23" height="23"></rect>
+            <rect x="1080" y="360" row="15" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="360" row="15" col="46" width="23" height="23"></rect>
+            <rect x="1128" y="360" row="15" col="47" width="23" height="23"></rect>
+            <rect x="1152" y="360" row="15" col="48" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1176" y="360" row="15" col="49" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1200" y="360" row="15" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="360" row="15" col="51" width="23" height="23" class="" style=""></rect>
+            <rect x="1248" y="360" row="15" col="52" width="23" height="23"></rect>
+            <rect x="1272" y="360" row="15" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="360" row="15" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="360" row="15" col="55" width="23" height="23"></rect>
+            <rect x="1344" y="360" row="15" col="56" width="23" height="23"></rect>
+            <rect x="0" y="384" row="16" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="384" row="16" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="384" row="16" col="2" width="23" height="23"></rect>
+            <rect x="72" y="384" row="16" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="384" row="16" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="384" row="16" col="5" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="144" y="384" row="16" col="6" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="168" y="384" row="16" col="7" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="192" y="384" row="16" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="384" row="16" col="9" width="23" height="23" class="" style=""></rect>
+            <rect x="240" y="384" row="16" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="384" row="16" col="11" width="23" height="23"></rect>
+            <rect x="288" y="384" row="16" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="384" row="16" col="13" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="336" y="384" row="16" col="14" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="360" y="384" row="16" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="384" row="16" col="16" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="408" y="384" row="16" col="17" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="432" y="384" row="16" col="18" width="23" height="23" class="" style=""></rect>
+            <rect x="456" y="384" row="16" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="384" row="16" col="20" width="23" height="23"></rect>
+            <rect x="504" y="384" row="16" col="21" width="23" height="23" class="" style=""></rect>
+            <rect x="528" y="384" row="16" col="22" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="552" y="384" row="16" col="23" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="576" y="384" row="16" col="24" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="600" y="384" row="16" col="25" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="624" y="384" row="16" col="26" width="23" height="23"></rect>
+            <rect x="648" y="384" row="16" col="27" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="672" y="384" row="16" col="28" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="696" y="384" row="16" col="29" width="23" height="23" class="solid1a" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="384" row="16" col="30" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="744" y="384" row="16" col="31" width="23" height="23"></rect>
+            <rect x="768" y="384" row="16" col="32" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="792" y="384" row="16" col="33" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="816" y="384" row="16" col="34" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="840" y="384" row="16" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="384" row="16" col="36" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="888" y="384" row="16" col="37" width="23" height="23"></rect>
+            <rect x="912" y="384" row="16" col="38" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="936" y="384" row="16" col="39" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="960" y="384" row="16" col="40" width="23" height="23" class="" style=""></rect>
+            <rect x="984" y="384" row="16" col="41" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1008" y="384" row="16" col="42" width="23" height="23" class="" style=""></rect>
+            <rect x="1032" y="384" row="16" col="43" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1056" y="384" row="16" col="44" width="23" height="23"></rect>
+            <rect x="1080" y="384" row="16" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="384" row="16" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="384" row="16" col="47" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1152" y="384" row="16" col="48" width="23" height="23" class="" style=""></rect>
+            <rect x="1176" y="384" row="16" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="384" row="16" col="50" width="23" height="23"></rect>
+            <rect x="1224" y="384" row="16" col="51" width="23" height="23"></rect>
+            <rect x="1248" y="384" row="16" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="384" row="16" col="53" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1296" y="384" row="16" col="54" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1320" y="384" row="16" col="55" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1344" y="384" row="16" col="56" width="23" height="23" class="" style=""></rect>
+            <rect x="0" y="408" row="17" col="0" width="23" height="23" class="" style=""></rect>
+            <rect x="24" y="408" row="17" col="1" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="48" y="408" row="17" col="2" width="23" height="23"></rect>
+            <rect x="72" y="408" row="17" col="3" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="96" y="408" row="17" col="4" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="120" y="408" row="17" col="5" width="23" height="23"></rect>
+            <rect x="144" y="408" row="17" col="6" width="23" height="23" class="" style=""></rect>
+            <rect x="168" y="408" row="17" col="7" width="23" height="23" class="" style=""></rect>
+            <rect x="192" y="408" row="17" col="8" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="216" y="408" row="17" col="9" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="240" y="408" row="17" col="10" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="264" y="408" row="17" col="11" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="288" y="408" row="17" col="12" width="23" height="23" class="" style=""></rect>
+            <rect x="312" y="408" row="17" col="13" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="336" y="408" row="17" col="14" width="23" height="23"></rect>
+            <rect x="360" y="408" row="17" col="15" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="384" y="408" row="17" col="16" width="23" height="23"></rect>
+            <rect x="408" y="408" row="17" col="17" width="23" height="23"></rect>
+            <rect x="432" y="408" row="17" col="18" width="23" height="23" class="" style=""></rect>
+            <rect x="456" y="408" row="17" col="19" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="480" y="408" row="17" col="20" width="23" height="23"></rect>
+            <rect x="504" y="408" row="17" col="21" width="23" height="23"></rect>
+            <rect x="528" y="408" row="17" col="22" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="552" y="408" row="17" col="23" width="23" height="23"></rect>
+            <rect x="576" y="408" row="17" col="24" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="600" y="408" row="17" col="25" width="23" height="23"></rect>
+            <rect x="624" y="408" row="17" col="26" width="23" height="23"></rect>
+            <rect x="648" y="408" row="17" col="27" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="672" y="408" row="17" col="28" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="696" y="408" row="17" col="29" width="23" height="23" class="solid1a blue" style="fill: rgb(184, 0, 83);"></rect>
+            <rect x="720" y="408" row="17" col="30" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="744" y="408" row="17" col="31" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="768" y="408" row="17" col="32" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="792" y="408" row="17" col="33" width="23" height="23" class="" style=""></rect>
+            <rect x="816" y="408" row="17" col="34" width="23" height="23"></rect>
+            <rect x="840" y="408" row="17" col="35" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="864" y="408" row="17" col="36" width="23" height="23" class="" style=""></rect>
+            <rect x="888" y="408" row="17" col="37" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="912" y="408" row="17" col="38" width="23" height="23"></rect>
+            <rect x="936" y="408" row="17" col="39" width="23" height="23" class="" style=""></rect>
+            <rect x="960" y="408" row="17" col="40" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="984" y="408" row="17" col="41" width="23" height="23"></rect>
+            <rect x="1008" y="408" row="17" col="42" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1032" y="408" row="17" col="43" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1056" y="408" row="17" col="44" width="23" height="23"></rect>
+            <rect x="1080" y="408" row="17" col="45" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1104" y="408" row="17" col="46" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1128" y="408" row="17" col="47" width="23" height="23" class="" style=""></rect>
+            <rect x="1152" y="408" row="17" col="48" width="23" height="23"></rect>
+            <rect x="1176" y="408" row="17" col="49" width="23" height="23"></rect>
+            <rect x="1200" y="408" row="17" col="50" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1224" y="408" row="17" col="51" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1248" y="408" row="17" col="52" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1272" y="408" row="17" col="53" width="23" height="23"></rect>
+            <rect x="1296" y="408" row="17" col="54" width="23" height="23" class="" style=""></rect>
+            <rect x="1320" y="408" row="17" col="55" width="23" height="23" class="blocker" style="fill: rgb(109, 157, 246);"></rect>
+            <rect x="1344" y="408" row="17" col="56" width="23" height="23"></rect>
+        </g>
+    </svg>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script src="https://codepen.io/sweaver2112/pen/3501aed02e05c9672fca5e6fad236d38.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script id="rendered-js">
+    (function() {
+
+        /*INIT*/
+        window.CP && (window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 60000);
+        var svg = document.getElementsByTagName("svg")[0];
+        var body = document.getElementsByTagName("body")[0];
+        var g = svg.querySelector("g");
+        var WIDTH, COLS, ROWS, TOTAL;
+        var parameters; //this object controls the teams' behaviors with parameters
+        var origin; //center of screen.
+        var maxFactor; //max screen dimension.
+        var visitedClasses = ["solid1a", "solid2a", "solid3a", "solid4a"];
+        var selectedClasses = ["purple", "blue", "green", "red"];
+        var unexploredRemaining;
+        var unexplored = $('#unexplored');
+        body.addEventListener("click", async function(ev) {
+
+            $(".lds-dual-ring").show();
+            let reset = chance(.8);
+            if (reset) {
+                buildGrid();
+                Object.keys(parameters).forEach(k => parameters[k].abort = true);
+                await delay(1500);
+                $('rect').removeClass("blocker").removeClass(visitedClasses).removeClass(selectedClasses).css("fill", "");
+                Object.keys(parameters).forEach(k => parameters[k].abort = false);
+                maze(true);
+            } else {
+                $('rect').removeClass("blocker").removeClass(visitedClasses).removeClass(selectedClasses).css("fill", "");
+                maze(false);
+            }
+        });
+        body.onload = async () => {
+            //await delay(1000)
+            buildGrid();
+            maze(true);
+        };
+        /*END INIT SECTION*/
+
+        function setWindowValues(options) {
+
+            maxFactor = Math.max(body.clientWidth, body.clientHeight);
+            let minWidth = maxFactor > 3000 ? 17 : maxFactor > 2000 ? 14 : maxFactor > 1500 ? 12 : maxFactor > 950 ? 10 : 7;
+            let maxWidth = maxFactor > 2500 ? 35 : maxFactor > 2000 ? 30 : maxFactor > 950 ? 25 : 20;
+            WIDTH = getRandomInt(minWidth, maxWidth);
+            COLS = Math.floor(body.clientWidth / WIDTH);
+            ROWS = Math.floor(body.clientHeight / WIDTH);
+            COLS++;
+            ROWS++;
+            TOTAL = ROWS * COLS;
+
+            if (TOTAL <= 10) {
+                console.log("No width on body element detected!?");
+                ROWS = Math.floor(2000 / 30);
+                COLS = Math.floor(2000 / 30);
+                TOTAL = COLS * ROWS;
+            }
+            console.log(`setWindowValues(): cell WIDTH was ${WIDTH}, max dimension was: ${maxFactor}, total cells was ${TOTAL}`);
+            $("#count").text(`Map size:${TOTAL}`);
+        }
+
+        /*this function also sets the initial behavior parameters*/
+        function buildGrid(options) {
+
+            setWindowValues(options);
+            $('rect').remove();
+            $("#unexplored").text(`--`);
+            buildBoxes("red", gutter = pick([0, 1, 2]));
+            origin = getTarget(Math.floor(ROWS / 2), Math.floor(COLS / 2));
+            let randomColor = chance(.3);
+            let singleColor = !randomColor && chance(.3);
+
+            parameters = {
+                "randomColor": randomColor,
+                "singleColor": singleColor,
+                "fillColor": tinycolor.random().saturate(40).toHexString(),
+                "green": {
+                    key: "green", //yellow
+                    explorerFactor: Math.random(),
+                    randomMoveFactor: Math.random(),
+                    carefulFactor: Math.random(),
+                    visitedClass: "solid2a",
+                    fillColor: tinycolor.random().saturate(40).toHexString()
+                },
+
+                "blue": {
+                    key: "blue",
+                    explorerFactor: Math.random(),
+                    randomMoveFactor: Math.random(),
+                    carefulFactor: Math.random(),
+                    visitedClass: "solid1a",
+                    fillColor: tinycolor.random().saturate(40).toHexString()
+                },
+
+                "red": {
+                    key: "red",
+                    explorerFactor: Math.random(),
+                    randomMoveFactor: Math.random(),
+                    carefulFactor: Math.random(),
+                    visitedClass: "solid4a",
+                    fillColor: tinycolor.random().saturate(40).toHexString(),
+                    get complement() {
+                        return comp(this.fillColor);
+                    }
+                },
+
+                "purple": {
+                    key: "purple",
+                    explorerFactor: Math.random(),
+                    randomMoveFactor: Math.random(),
+                    carefulFactor: Math.random(),
+                    visitedClass: "solid3a",
+                    fillColor: tinycolor.random().saturate(40).toHexString()
+                }
+            };
+
+        }
+
+        /*MAIN function, calls the maze builder and defines & places the explorers*/
+        async function maze(firstTime) {
+
+            let time = TOTAL > 10000 ? 0 : TOTAL > 8000 ? 10 : TOTAL > 6000 ? 20 : TOTAL > 4000 ? 30 : TOTAL > 1000 ? 35 : 40;
+
+            origin = getTarget(Math.floor(ROWS / 2), Math.floor(COLS / 2));
+            let globalIndex = 0;
+            let clearCenter = chance();
+            let clearPerimeter = !clearCenter && chance(.75);
+            let mazeColor = chance(.3) ? "blue" : chance(.3) ? "red" : tinycolor.random().toHexString();
+
+            //for whatever maze we're drawing, calculate parameters and call that function.
+            let rando = Math.random();
+            let pureBlankSpaceInstead = chance(.08);
+            if (!pureBlankSpaceInstead) {
+                if (rando < .25) { //RANDOM MAZE
+                    let allowedAsWalls = .27 + Math.random() * .2;
+                    randomMaze(allowedAsWalls, clearCenter, clearPerimeter, mazeColor);
+                } else if (rando < .5) { //10 PRINT MAZE
+                    let eliminatePercent = .05 + Math.random() * .25;
+                    tenPrintMaze(eliminatePercent, clearCenter, clearPerimeter, mazeColor);
+                } else if (rando < .75) { //SYMMETRIC MAZE
+                    let mod1 = getRandomInt(3, 10);
+                    let mod2;
+                    do { if (window.CP.shouldStopExecution(0)) break;
+                        mod2 = getRandomInt(3, 10); } while (mod2 == mod1);
+                    window.CP.exitedLoop(0);
+                    let baselineEliminate = mod1 <= 4 || mod2 <= 4 ? .15 : .05; //because we're putting a wall every mod1 and every mod2 cell, if this sum is low, the wall density will be higher, so need to remove more squares to make it navigable.
+                    let eliminatePercent = baselineEliminate + Math.random() * .22;
+                    symmetricMaze(eliminatePercent, mod1, mod2, clearCenter, clearPerimeter, mazeColor);
+                } else { //CIRCULAR MAZE
+
+                    let gaps = [];
+                    let gapWidth = getRandomInt(100, 200);
+                    let stripeWidth = getRandomInt(50, gapWidth * .45);
+                    let baseLimit = .45;
+                    for (let i = 0; i < 10; i++) {
+                        if (window.CP.shouldStopExecution(1)) break;
+                        gaps.push(gapWidth * i);
+                    }
+                    window.CP.exitedLoop(1);
+                    circularMaze(baseLimit + Math.random() * .2, gaps, stripeWidth, mazeColor);
+                }
+            }
+
+            unexploredRemaining = $('rect').not('.blocker').length;
+            $("#unexplored").text(`Unexplored tiles:${unexploredRemaining}`);
+            await delay(1000);
+
+            //now, activate the mappers and let them go
+            let placeInCenter = clearCenter || !clearCenter && !clearPerimeter;
+            if (firstTime) {
+                if (pureBlankSpaceInstead || !placeInCenter) { //place on perimeter
+                    for (let i = 0; i < 4; i++) {
+                        if (window.CP.shouldStopExecution(2)) break;
+                        lostSquare(getTarget(1, 1), time, undefined, "south", "blue");
+                        lostSquare(getTarget(1, COLS - 1), time, undefined, "west", "green");
+                        lostSquare(getTarget(ROWS - 1, 1), time, undefined, "north", "red");
+                        lostSquare(getTarget(ROWS - 1, COLS - 1), time, undefined, "north", "purple");
+                    }
+                    window.CP.exitedLoop(2);
+                }
+
+                if (!pureBlankSpaceInstead && placeInCenter) {
+                    let r = origin.getAttribute("row");
+                    let c = origin.getAttribute("col");
+                    for (let i = 0; i < 4; i++) {
+                        if (window.CP.shouldStopExecution(3)) break; //place in center
+                        lostSquare(getTarget(r, c), time, undefined, "south", "blue");
+                        lostSquare(getTarget(r, c), time, undefined, "west", "green");
+                        lostSquare(getTarget(r, c), time, undefined, "north", "red");
+                        lostSquare(getTarget(r, c), time, undefined, "north", "purple");
+                    }
+                    window.CP.exitedLoop(3);
+                }
+            }
+            $('.lds-dual-ring').hide();
+
+            //the "explorer" function that defines how the squares move
+            //lastblockedDirection not being used.
+            async function lostSquare(target, time, lastBlockedDirection, direction, classId) {
+                if (parameters[classId].abort) {
+                    return false;
+                }
+                globalIndex++;
+
+                //update to hopefully better parameters every once in a while.  keep the best two, set worst to randomized, set second worst to that of best performer.  reset the counts after the update.
+                if (globalIndex % 3000 == 0) {
+
+                    let params = Object.values(parameters).filter(val => typeof val == "object");
+                    let sorted = params.sort((a, b) => { return b.count - a.count; });
+                    parameters[sorted[2].key].explorerFactor = parameters[sorted[0].key].explorerFactor;
+                    parameters[sorted[2].key].randomMoveFactor = parameters[sorted[0].key].randomMoveFactor;
+                    parameters[sorted[2].key].carefulFactor = parameters[sorted[0].key].carefulFactor;
+                    parameters[sorted[3].key].carefulFactor = Math.random();
+                    parameters[sorted[3].key].explorerFactor = Math.random();
+                    parameters[sorted[3].key].randomMoveFactor = Math.random();
+
+                    console.log(`Keeping ${sorted[0].key}(${sorted[0].count}) and ${sorted[1].key}(${sorted[1].count}), setting ${sorted[2].key}(${sorted[2].count}) to best setting, randomizing ${sorted[3].key}(${sorted[3].count})`);
+                    Object.values(parameters).filter(val => typeof val == "object").forEach(p => p.count = 0);
+
+                }
+
+                let currentTargetExplored = visitedClasses.some(cl => target.classList.contains(cl));
+                target.classList.remove("base");
+                target.classList.add(classId);
+
+                let currentPoint = new Point(target.getAttribute("row"), target.getAttribute("col"));
+                let nextPoint = getNextPointInDirection(currentPoint, direction);
+                let nextTarget = getTarget(nextPoint.row, nextPoint.col);
+
+                //update color and increment count only if not explored:
+                if (!currentTargetExplored) {
+                    target.classList.remove("blocker");
+                    $(unexplored).text(`Unexplored tiles:${--unexploredRemaining}`);
+                    parameters[classId].count ? parameters[classId].count++ : parameters[classId].count = 1;
+                    target.classList.add(parameters[classId].visitedClass);
+                    if (parameters.randomColor) $(target).css("fill", parameters[classId].fillColor);
+                    if (parameters.singleColor) $(target).css("fill", parameters.fillColor);
+                }
+
+                await delay(time);
+                target.classList.remove(classId);
+
+                //main logic branch to decide where to move:
+                if (!nextTarget || nextTarget.classList.contains("blocker")) {
+
+                    let newDirection = getRandomDirection(direction);
+                    lostSquare(target, time, lastBlockedDirection, newDirection, classId);
+                } else {
+                    //nextTarget is not blocked
+                    let nextHasBeenExplored = visitedClasses.some(cl => nextTarget.classList.contains(cl));
+
+                    //if next target has been explored, and we're an 'explorer', possibly retry randomly OR check adjacent squares 
+                    if (nextHasBeenExplored && chance(parameters[classId].explorerFactor)) {
+
+                        let beCareful = chance(parameters[classId].carefulFactor);
+                        if (beCareful) {
+
+                            let els = getSurroundingPoints(currentPoint).map(p => ({ "direction": p.type, "target": getTarget(p.row, p.col) }));
+                            let valid = els.filter(el => el.target && !["blocker", ...visitedClasses].some(cl => el.target.classList.contains(cl)));
+                            if (valid.length > 0) {
+                                lostSquare(valid[0].target, time, lastBlockedDirection, valid[0].direction, classId);
+                            } else {
+                                //we checked adjacent tiles, but there were no unexplored tiles available, just go into nextTarget
+                                chance(parameters[classId].randomMoveFactor) ?
+                                    lostSquare(nextTarget, time, lastBlockedDirection, getRandomDirection(undefined), classId) :
+                                    lostSquare(nextTarget, time, lastBlockedDirection, direction, classId);
+                            }
+
+                        } else { //we're an explorer, next has been explored already, but we're not carefully checking adjacent tiles (so what to do?) => either try a random *different* move from this same square, or proceed grudgingly into the explored square.
+
+                            if (chance(parameters[classId].randomMoveFactor)) {
+                                //tring new direction on same target:
+                                let newDirection = getRandomDirection();
+                                lostSquare(target, time, lastBlockedDirection, newDirection, classId);
+                            } else {
+                                //next is explored but not blocked now we're doing a random move. 'direction' at this point is valid (send in undefined for that param)
+                                lostSquare(nextTarget, time, lastBlockedDirection, direction, classId);
+                            }
+
+                        }
+
+                    } else { //unexplored or we don't care about unexplored tiles.
+                        //no loops => sometimes move randomly anyway
+                        if (Math.random() < parameters[classId].randomMoveFactor) {
+                            lostSquare(nextTarget, time, lastBlockedDirection, getRandomDirection(undefined), classId);
+                        } else {
+                            lostSquare(nextTarget, time, lastBlockedDirection, direction, classId);
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        /*MAZE building functions*/
+        function tenPrintMaze(limit, clearCenter, clearPerimeter, color) {
+
+            let modulus = 3;
+            for (let i = 0; i <= TOTAL; i++) {
+                if (window.CP.shouldStopExecution(4)) break;
+                let row = Math.floor(i / COLS);
+                let col = i % COLS;
+                let el = getTarget(row, col);
+                if (!el) {
+                    console.log(`tenPrintMaze found no element at ${i}, returning false`);
+                    return false;
+                }
+
+                let x = el.getAttribute("x");
+                let y = el.getAttribute("y");
+                let distance = centerDistance(x, y);
+
+                let distanceRequirement = clearCenter ? distance > getRandomInt(40, 100) : clearPerimeter ? distance < maxFactor / 1.8 : true;
+                if (distanceRequirement && row % modulus == 0) {
+                    if (col % modulus == 0) {
+
+                        let leftToRight = Math.random() > .5;
+                        let els;
+                        if (leftToRight) {
+                            els = [el, getTarget(row + 1, col + 1), getTarget(row + 2, col + 2)];
+                        } else {
+                            els = [getTarget(row + 2, col), getTarget(row + 1, col + 1), getTarget(row, col + 2)];
+                        }
+                        [...els].forEach(el => el && Math.random() > limit && $(el).addClass("blocker").css("fill", color));
+
+                    }
+                } else {
+                    //skip this square
+                }
+            }
+            window.CP.exitedLoop(4);
+        }
+
+        function randomMaze(allow, clearCenter, clearPerimeter, color) {
+            console.log("random");
+            for (let i = 0; i < TOTAL; i++) {
+                if (window.CP.shouldStopExecution(5)) break;
+                let row = Math.floor(i / COLS);
+                let col = i % COLS;
+                let el = getTarget(row, col);
+                if (!el) {
+                    console.log(`randomMaze found no element at ${i}, returning false`);
+                    return false;
+                }
+                let x = el.getAttribute("x");
+                let y = el.getAttribute("y");
+                let distance = centerDistance(x, y);
+                //let farEnoughFromCorner = (row + col) > 5 && (row+col) < (ROWS+COLS-5)
+                let distanceRequirement = clearCenter ? distance > getRandomInt(40, 200) : clearPerimeter ? distance < maxFactor / 1.8 : true;
+
+                if (distanceRequirement && Math.random() < allow) {
+                    $(el).addClass("blocker").css("fill", color);
+                }
+
+            }
+            window.CP.exitedLoop(5);
+        }
+
+        function symmetricMaze(limit, mod1, mod2, clearCenter, clearPerimeter, color) {
+            //wall every nth (mod1 and mod2)
+            for (let i = 0; i < TOTAL; i++) {
+                if (window.CP.shouldStopExecution(6)) break;
+                let row = Math.floor(i / COLS);
+                let col = i % COLS;
+                let el = getTarget(row, col);
+                if (!el) {
+                    console.log(`symmetricMaze found no element at ${i}, returning false`);
+                    return false;
+                }
+                let x = el.getAttribute("x");
+                let y = el.getAttribute("y");
+                let distance = centerDistance(x, y);
+                let distanceRequirement = clearCenter ? distance > getRandomInt(40, 300) :
+                    clearPerimeter ? distance < getRandomInt(400, 1000) : true;
+
+                if (distanceRequirement && (i % mod1 == 0 || i % mod2 == 0) && Math.random() > limit) {
+                    $(el).addClass("blocker").css("fill", color);
+                }
+            }
+            window.CP.exitedLoop(6);
+        }
+
+        function circularMaze(limit, gaps, stripeWidth, color) {
+
+            console.log(`circularMaze(): gaps were ${gaps} and strip width was ${stripeWidth}`);
+            for (let i = 0; i < TOTAL; i++) {
+                if (window.CP.shouldStopExecution(7)) break;
+                let row = Math.floor(i / COLS);
+                let col = i % COLS;
+                let el = getTarget(row, col);
+                if (!el) {
+                    console.log(`circularMaze found no element at ${i}, returning false`);
+                    return false;
+                }
+                let x = el.getAttribute("x");
+                let y = el.getAttribute("y");
+                let distance = centerDistance(x, y);
+                let distanceRequirement = distance > 70 && gaps.some(g => Math.abs(g - distance) < stripeWidth);
+
+                if (distanceRequirement && Math.random() > limit) {
+                    $(el).addClass("blocker").css("fill", color);
+                }
+            }
+            window.CP.exitedLoop(7);
+        }
+
+        /* helpers */
+        function getSurroundingPoints(from) {
+            let newPoints = [];
+            let p = from;
+            newPoints.push(new Point(p.row + 1, p.col, "south"));
+            newPoints.push(new Point(p.row - 1, p.col, "north"));
+            newPoints.push(new Point(p.row, p.col + 1, "east"));
+            newPoints.push(new Point(p.row, p.col - 1, "west"));
+            return newPoints;
+        }
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function centerDistance(fromX, fromY) {
+            return Math.sqrt(Math.pow(origin.getAttribute("x") - fromX, 2) + Math.pow(origin.getAttribute("y") - fromY, 2));
+        }
+
+        function pick(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        function chance(limit = .5) {
+            return Math.random() < limit;
+        }
+
+        function buildBoxes(color, gutter) {
+            gutter = gutter === undefined ? 1 : gutter;
+            for (var row = 0; row < ROWS; row++) {
+                if (window.CP.shouldStopExecution(8)) break;
+                for (var col = 0; col < COLS; col++) {
+                    if (window.CP.shouldStopExecution(9)) break;
+                    let x = WIDTH * col;
+                    let y = WIDTH * row;
+                    drawSquare(row, col, x, y, WIDTH - gutter, WIDTH - gutter, color);
+                }
+                window.CP.exitedLoop(9);
+            }
+            window.CP.exitedLoop(8);
+        }
+
+        function Point(row, col, type) {
+            this.col = parseInt(col);
+            this.row = parseInt(row);
+            this.type = type;
+        }
+
+        function getNextPointInDirection(point, direction) {
+            let row = point.row;
+            let col = point.col;
+            switch (direction) {
+                case "north":
+                    return new Point(row - 1, col);
+                    break;
+                case "south":
+                    return new Point(row + 1, col);
+                    break;
+                case "east":
+                    return new Point(row, col + 1);
+                    break;
+                case "west":
+                    return new Point(row, col - 1);
+                    break;
+                case "northeast":
+                    return new Point(row - 1, col + 1);
+                    break;
+                case "southeast":
+                    return new Point(row + 1, col + 1);
+                    break;
+                case "northwest":
+                    return new Point(row - 1, col - 1);
+                    break;
+                case "southwest":
+                    return new Point(row + 1, col - 1);
+                    break;
+            }
+
+        }
+
+        function getRandomDirection(not) {
+
+            if (not == undefined) {
+                let r = Math.random();
+                return r < .25 ? "north" : r < .5 ? "south" : r < .75 ? "west" : "east";
+            }
+            let preferEastOrWest = not == "south" || not == "north";
+            let backwards = preferEastOrWest ? ["north", "south"].filter(d => d != not)[0] : ["east", "west"].filter(d => d != not)[0];
+            var generate = () => {
+                let seed = Math.random();
+                //if(seed>.5 && prefer) return prefer;
+                if (preferEastOrWest) {
+                    return seed < .4 ? "east" : seed < .8 ? "west" : backwards;
+                } else {
+                    return seed < .4 ? "north" : seed < .8 ? "south" : backwards;
+                }
+
+            };
+            let which = generate();
+            //while (not && which == not) {
+            //  which = generate();
+            //}
+            return which;
+        }
+
+        function getRandomDirectionAny(not) {
+            /*unused*/
+            var generate = () => {
+                return pick(directions);
+            };
+            let which = generate();
+            while (not && which == not) {
+                if (window.CP.shouldStopExecution(10)) break;
+                which = generate();
+            }
+            window.CP.exitedLoop(10);
+            return which;
+        }
+
+        function getTarget(row, col) {
+            return document.querySelector(`rect[col='${col}'][row='${row}']`);
+        }
+
+        function delay(ms) {
+            return new Promise(done => setTimeout(() => {
+                done();
+            }, ms));
+        }
+
+        function drawSquare(row, col, x, y, w, h, color) {
+            const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+            rect.setAttribute("x", x);
+            rect.setAttribute("y", y);
+            rect.setAttribute("row", row);
+            rect.setAttribute("col", col);
+            rect.setAttribute("width", w);
+            rect.setAttribute("height", h);
+            g.appendChild(rect);
+
+        }
+    })("Visit me at sweaverD.com!");
+    //# sourceURL=pen.js
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+
+.I-carousel{
+	width: 100%;
+	height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.I-carousel .carouser_wrapper{
+	width: 100%;
+	height: 100%;
+}
+.I-carousel .item .item_wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.I-carousel .wrapper_subimage{
+	position: relative;
+	float: left;
+	width: 10%;
+	height: 100%;
+	overflow: hidden;
+}
+.I-carousel .sub_image{
+	position: absolute;
+	width: 1000%;
+	height: 100%;
+	overflow: hidden;
+	transition: all 2000ms ease;
+	opacity: 0;
+}
+.I-carousel .sub_image img{
+	width: 100%;
+}
+.I-carousel .item.active .wrapper_subimage .sub_image{
+	opacity: 1;
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(2) .sub_image{
+	transform: translateX(-10%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(3) .sub_image{
+	transform: translateX(-20%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(4) .sub_image{
+	transform: translateX(-30%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(5) .sub_image{
+	transform: translateX(-40%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(6) .sub_image{
+	transform: translateX(-50%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(7) .sub_image{
+	transform: translateX(-60%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(8) .sub_image{
+	transform: translateX(-70%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(9) .sub_image{
+	transform: translateX(-80%);
+}
+.I-carousel .item.active .wrapper_subimage:nth-child(10) .sub_image{
+	transform: translateX(-90%);
+}

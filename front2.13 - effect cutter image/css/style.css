@@ -1,0 +1,53 @@
+.bg{
+	position: relative;
+	width: 1000px;
+	overflow: hidden;
+	height: 600px;
+}
+.bg img{
+	opacity: 0;
+	width: 100%;
+}
+.bg .image_wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    background: url(../images/chainos-solution.png);
+	background-size: cover;
+	-webkit-text-fill-color: transparent; 
+    background-repeat: no-repeat;
+	/*-webkit-background-clip: text;*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bg .image_wrapper:before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+    background: #fff;
+}
+.bg span{
+	background-size: 1000px;
+	float: left;
+	width: 100px;
+	display: block;
+	background-image: inherit;
+  	background-position: -10px 0; 
+}
+
+/*
+	position X  = width_div + margin*2
+	position Y = ( height_image - height_div )/ 2
+*/
+
+
+
+
+
+

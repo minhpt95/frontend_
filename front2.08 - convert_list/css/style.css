@@ -1,0 +1,89 @@
+.list-convert{
+	float: left;
+	margin: 200px;
+	width: 200px;
+	height: 200px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.list-convert .prev-control{
+	width: 100%;
+	height: 30px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.list-convert .next-control{
+	width: 100%;
+	height: 30px;
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.list-convert .list-item-wrapper{
+	position: relative;
+	width: 100%;
+	height: 138px;
+	overflow: hidden;
+}
+.list-convert .list-item-wrapper::before{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	content: "";
+	background: linear-gradient(#fff, transparent, #fff);
+	z-index: 2;
+}
+.list-convert .list-item-wrapper .list-item{
+	width: 100%;
+	position: absolute;
+	top: 46px;
+	left: 0;
+	transition: all 300ms ease;
+}
+
+.list-convert .list-item-wrapper .list-item .item{
+	width: 100%;
+	height: 46px;
+	color: #000;
+	opacity: .5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	transition: all 300ms ease;
+}
+.list-convert .list-item-wrapper .list-item .item.not-active{
+	height: 0;
+}
+.list-convert .list-item-wrapper .list-item .item .title{
+	width: 100%;
+	padding: 0 20px;
+	text-align: center;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+.list-convert .list-item-wrapper .item.is-select{
+	opacity: 1;
+}
+.list-convert .item_output{
+	display: none;
+}
+.list-convert select{
+	display: none;
+}
+
+
+
+
+
+

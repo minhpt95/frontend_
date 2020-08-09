@@ -1,0 +1,72 @@
+
+.I-piano{
+	width: 100%;
+}
+.I-piano .piano_wrapper{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-self: center;
+	justify-content: center;
+}
+.I-piano .piano_wrapper .piano_component{
+	position: relative;
+	width: 280px;
+	height: 300px;
+}
+.I-piano .piano_wrapper .piano_component .piano_white_button{
+	cursor: pointer;
+	float: left;
+	width: 40px;
+	height: 100%;
+	border: 1px solid #000;
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient( #ccc, #fff);
+}
+.I-piano .piano_wrapper .piano_component .piano_white_button.is-click{
+	background: linear-gradient( #fff, #ccc);
+}
+.I-piano .piano_wrapper .piano_component .piano_black_list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	padding: 0 20px;
+}
+.I-piano .piano_wrapper .piano_component .piano_black_list .piano_black_button{
+	cursor: pointer;
+	float: left;
+	margin: 0 5px;
+	width: 30px;
+	height: 100%;
+	border: 1px solid #000;
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient( #ccc, #000);
+}
+.I-piano .piano_wrapper .piano_component .piano_black_list .piano_black_button.is-click{
+	background: linear-gradient( #000, #ccc);
+}
+.I-piano .piano_wrapper .piano_component .piano_black_list .piano_none_button{
+	float: left;
+	margin: 0 5px;
+	width: 30px;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

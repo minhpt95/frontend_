@@ -56,6 +56,8 @@
 @media only screen and (max-width: 1280px)
 {
 	
+
+
 }
 
 /************
@@ -64,6 +66,121 @@
 
 @media only screen and (max-width: 1199px){
 	
+	
+header{
+    height: 80px;
+}
+body {
+    background-color: #fff;
+}  
+main{
+    padding: 90px 0 0 0; 
+    margin: 0;
+    width: 100%;
+} 
+.wrapper {
+    width: 100%;
+    padding: 0 20px;
+}
+.I-header .open_nav_respon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 32px;
+}
+.I-respon_nav{
+    display: block;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100% - 80px);
+    background-color: #fff;
+    z-index: 1000;
+    transition: all 300ms ease;
+}
+.I-respon_nav.is-open{
+    left: 0%;
+}
+
+.I-header .classify .action{
+    display: none;
+}
+
+.I-respon_nav .sub_nav .nav_wrapper ul{
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    list-style-type: none;
+    overflow: hidden;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li{
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li.sub_menu_wrapper{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 50px;
+    padding: 0 30px;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li.sub_menu_wrapper .open_subnav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li.sub_menu_wrapper.is-open{
+    height: auto;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li.sub_menu_wrapper.is-open .open_subnav i{
+    transform: rotate(180deg);
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li.sub_menu_wrapper .sub_menu{
+    width: 100%;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li.sub_menu_wrapper .sub_menu a{
+    padding: 0 0 0 30px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li a{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.I-respon_nav .sub_nav .nav_wrapper ul li a:hover{
+    color: #FFDC00; 
+}
+.I-navigation{
+    display: none;
+}
+
+.I-item_detail .item_detail_wrapper .item_image_wrapper{
+    float: right;
+    width: 100%;
+}
+.I-item_detail .item_detail_wrapper .item_title_wrapper{
+    float: right;
+    width: 100%;
+}
 }
 
 /************
@@ -95,82 +212,6 @@
 @media only screen and (max-width: 991px)
 {
 	
-
-header{
-	height: 85px;
-}
-header .content .list_component .component.open_menu .open_button{
-	display: block;
-}
-
-header nav{
-	position: fixed;
-	top: 85px;
-	left: -100%;
-	width: 50%;
-	max-width: 300px;
-	height: calc(100vh - 85px);
-	background-color: white;
-	border-right: 1px solid #ccc;
-	transition: all 300ms ease;
-}
-header nav ul.list_item{
-	width: 100%;
-	max-width: 1200px;
-	height: 100%;
-	margin: 0 auto;
-	padding: 0;
-	list-style-type: none;
-	overflow: hidden;
-}
-header nav ul li.item{
-	width: 100%;
-	border-bottom: 1px solid #ccc;
-}
-header nav ul li a.link_item{
-	padding: 7px 20px;
-	display: block;
-	color: black;
-}
-header nav ul li a.link_item:hover{
-	text-decoration: none;
-}
-header nav ul.list_item .item.sub_item{
-	position: relative;
-	cursor: pointer;
-}
-header nav ul.list_item .item.sub_item .icon{
-	position: absolute;
-	top: 5px;
-	right: 10%;
-}
-header nav ul.list_item .item.sub_item ul{
-	position: static;
-	margin: 5px 0 5px 20px;
-	padding: 0;
-	list-style-type: none;
-	width: 100%;
-	border: none;
-	border-radius: 5px;
-	padding: 5px;
-	display: none;
-	border: 1px solid #ccc;
-}
-header nav ul.list_item .item.sub_item ul li{
-
-}
-header nav ul.list_item .item.sub_item ul li a{
-	text-decoration: none;
-	display: block;
-	width: 100%;
-	padding: 5px;
-	color: black;
-	border-radius: 5px;
-	transition: all 300ms ease;
-}
-
-
-
 }
 
 /************
@@ -195,8 +236,8 @@ header nav ul.list_item .item.sub_item ul li a{
 ************/
 
 @media only screen and (max-width: 768px)
-{	
-	
+{
+    
 }
 
 /************
@@ -205,7 +246,7 @@ header nav ul.list_item .item.sub_item ul li a{
 
 @media only screen and (max-width: 767px)
 {
-	
+
 }
 
 /************

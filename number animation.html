@@ -1,0 +1,297 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Number-flipping counter</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+.numCounter {
+  display: inline-block;
+  height: 90px;
+  line-height: 90px;
+  text-shadow: 0 0 2px #fff;
+  font-weight: bold;
+  white-space: normal;
+  font-size: 60px;
+}
+.numCounter > div {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+.numCounter > div > b {
+  display: inline-block;
+  width: 64.2857142857px;
+  height: 100%;
+  margin: 0 .1em;
+  border-radius: 8px;
+  text-align: center;
+  text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1) inset, -2px -2px 2px rgba(255, 255, 255, 0.12) inset;
+  overflow: hidden;
+}
+.numCounter > div > b::before {
+  content: ' 0 1 2 3 4 5 6 7 8 9 ';
+  display: block;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-transition: 0.5s cubic-bezier(0.75, 0.15, 0.6, 1.15), text-shadow 150ms;
+  transition: 0.5s cubic-bezier(0.75, 0.15, 0.6, 1.15), text-shadow 150ms;
+}
+.numCounter > div > b.blur {
+  opacity: .8;
+  text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.2), 0 0.1em 2px rgba(255, 255, 255, 0.6), 0 0.3em 3px rgba(255, 255, 255, 0.3), 0 -0.1em 2px rgba(255, 255, 255, 0.6), 0 -0.3em 3px rgba(255, 255, 255, 0.3);
+}
+.numCounter > div > b[data-value="1"]::before {
+  margin-top: -90px;
+}
+.numCounter > div > b[data-value="2"]::before {
+  margin-top: -180px;
+}
+.numCounter > div > b[data-value="3"]::before {
+  margin-top: -270px;
+}
+.numCounter > div > b[data-value="4"]::before {
+  margin-top: -360px;
+}
+.numCounter > div > b[data-value="5"]::before {
+  margin-top: -450px;
+}
+.numCounter > div > b[data-value="6"]::before {
+  margin-top: -540px;
+}
+.numCounter > div > b[data-value="7"]::before {
+  margin-top: -630px;
+}
+.numCounter > div > b[data-value="8"]::before {
+  margin-top: -720px;
+}
+.numCounter > div > b[data-value="9"]::before {
+  margin-top: -810px;
+}
+.numCounter > div:nth-last-child(3n):not(:first-child)::before {
+  content: ",";
+  display: inline;
+  font-size: 1.1em;
+  opacity: .6;
+  color: white;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  background: #55b9f3;
+  font-family: 'Fjalla One', Arial;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+aside {
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-bottom-right-radius: 16px;
+  overflow: hidden;
+}
+
+fieldset {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: .9em;
+  border: 0;
+  padding: 0;
+  color: #0a5c8c;
+}
+fieldset label {
+  padding: .8em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  height: 18px;
+  border-top: 1px solid #55b9f3;
+}
+fieldset label:hover {
+  background: #e4f4fd;
+}
+fieldset label > span {
+  width: 180px;
+  padding-right: 1em;
+}
+
+.numCounter {
+  overflow: hidden;
+  padding: .4em;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  background: linear-gradient(330deg, #6fc4f6, #3ea2dc);
+  box-shadow: -20px -20px 60px #308fc6, 20px 20px 60px #7dcbf9;
+}
+.numCounter b {
+  background: #40aae8;
+  background: linear-gradient(-30deg, #62bff5, #2f99d7);
+  color: white;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<aside>
+<fieldset>
+<label><span>number of digits</span>
+<input type="range" min="1" max="12" value="7" name="numberOfDigits">
+</label>
+<label><span title="Delayed transition between a digit to the next one">Delay</span>
+<input type="range" min="0" max="400" value="200" step="25" name="delay">
+</label>
+<label><span title="Direction of digits animation">Animate right-to-left</span>
+<input type="checkbox" checked="checked" name="animationDirection">
+</label>
+</fieldset>
+</aside>
+<div class="numCounter" data-value="1234567"><div><b data-value="6" class=""></b></div><div><b data-value="7" class=""></b></div><div><b data-value="2"></b></div><div><b data-value="3" class=""></b></div><div><b data-value="0" class=""></b></div><div><b data-value="2" class=""></b></div><div><b data-value="1" class=""></b></div></div>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script id="rendered-js">
+function Counter(selector, settings) {
+  this.settings = Object.assign({
+    digits: 5,
+    delay: 250, // ms
+    direction: '' // ltr is default
+  }, settings || {});
+
+  this.DOM = {};
+  this.build(selector);
+
+  this.DOM.scope.addEventListener('transitionend', e => {
+    if (e.pseudoElement === "::before" && e.propertyName == 'margin-top') {
+      e.target.classList.remove('blur');
+    }
+  });
+
+  this.count();
+}
+
+Counter.prototype = {
+  // generate digits markup
+  build(selector) {
+    var scopeElm = typeof selector == 'string' ?
+    document.querySelector(selector) :
+    selector;
+
+    scopeElm.innerHTML = Array(this.settings.digits + 1).
+    join('<div><b data-value="0"></b></div>');
+
+    this.DOM = {
+      scope: scopeElm,
+      digits: scopeElm.querySelectorAll('b') };
+
+  },
+
+  count(newVal) {
+    var countTo,className,
+    settings = this.settings,
+    digitsElms = this.DOM.digits;
+
+    // update instance's value
+    this.value = newVal || this.DOM.scope.dataset.value | 0;
+
+    if (!this.value) return;
+
+    // convert value into an array of numbers
+    countTo = (this.value + '').split('');
+
+    if (settings.direction == 'rtl') {
+      countTo = countTo.reverse();
+      digitsElms = [].slice.call(digitsElms).reverse();
+    }
+
+    // loop on each number element and change it
+    digitsElms.forEach(function (item, i) {
+      if (+item.dataset.value != countTo[i] && countTo[i] >= 0)
+      setTimeout(function (j) {
+        var diff = Math.abs(countTo[j] - +item.dataset.value);
+        item.dataset.value = countTo[j];
+        if (diff > 3)
+        item.className = 'blur';
+      }, i * settings.delay, i);
+    });
+  } };
+
+
+
+
+/////////////// create new counter for this demo ///////////////////////
+
+var numberOfDigitsInputElm = document.querySelector('input[name=numberOfDigits]');
+var delayInputElm = document.querySelector('input[name=delay]');
+var animationDirectionElm = document.querySelector('input[name=animationDirection]');
+
+var numberOfDigits = +numberOfDigitsInputElm.value;
+var counter = new Counter('.numCounter', {
+  direction: 'rtl',
+  delay: delayInputElm.value,
+  digits: numberOfDigits });
+
+
+// change counter value every N seconds
+var counterInterval = setInterval(randomCount, 3000);
+
+function randomCount() {
+  counter.count(+("" + Math.random()).substring(2, 2 + numberOfDigits));
+}
+
+function getRandomNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+
+/////////////// Controls ///////////////////////
+
+numberOfDigitsInputElm.addEventListener('change', onLengthChange);
+delayInputElm.addEventListener('change', onDelayChange);
+animationDirectionElm.addEventListener('change', onAnimationDirectionElmChange);
+
+// controls' callbacks
+function onLengthChange(e) {
+  clearInterval(counterInterval);
+  numberOfDigits = +e.target.value;
+  counter.settings.digits = numberOfDigits;
+  counter.build();
+  counterInterval = setInterval(randomCount, 3000);
+  randomCount();
+}
+
+function onDelayChange(e) {
+  counter.settings.delay = +e.target.value;
+}
+
+function onAnimationDirectionElmChange(e) {
+  counter.settings.direction = e.target.checked ? "rtl" : "";
+}
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>

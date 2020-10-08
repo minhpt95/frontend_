@@ -1,0 +1,14 @@
+.I-main{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+.I-player{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #f00;
+	
+}

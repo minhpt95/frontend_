@@ -5,17 +5,24 @@ window.onscroll = function() {
 };
 
 function NavFixed() {
-    if (window.pageYOffset > stickyNav) {
-        $('header').css({
-            'background-color': "#fff",
-            'height': '60px'
-        })
-    } else {
-        $('header').css({
-            'background-color': "#ffffff00",
-            'height': '80px'
+    function NavFixed() {
+        let marginTop = window.pageYOffset > stickyNav ? "0" : "230px";
+
+        $('.modal-dialog.modal-dialog-search.area.modal-dialog-centered').css({
+            'margin-top': marginTop,
         })
     }
+    // if (window.pageYOffset > stickyNav) {
+    //     $('header').css({
+    //         'background-color': "#fff",
+    //         'height': '60px'
+    //     })
+    // } else {
+    //     $('header').css({
+    //         'background-color': "#ffffff00",
+    //         'height': '80px'
+    //     })
+    // }
 }
 
 // Open Search Form in Header

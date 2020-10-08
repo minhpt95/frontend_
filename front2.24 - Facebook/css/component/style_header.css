@@ -1,0 +1,125 @@
+.I-header{
+	width: 100%;
+	height: 100%;
+	padding: 7px 0;
+	display: flex;
+	align-items: center;
+}
+.I-header .left_side{
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.I-header .right_side{
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+.I-header .logo{
+	position: relative;
+	width: 25px;
+	height: 25px;
+	border-radius: 1px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.I-header .logo img{
+	width: 100%;
+}
+.I-header .search_wrapper{
+	position: relative;
+	width: 450px;
+	height: 25px;
+	background-color: #fff;
+	border-radius: 2px;
+	margin: 0 0 0 5px;
+	overflow: hidden;
+}
+.I-header .search_wrapper input{
+	width: 100%;
+	height: 100%;
+	padding: 0 80px 0 5px;
+	border: none;
+	font-size: 12px;
+	line-height: 22px;
+}
+.I-header .search_wrapper button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #f5f6f7;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666b76;
+}
+.I-header .navigation{
+	height: 100%;
+}
+.I-header .navigation ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+.I-header .navigation ul li{
+	position: relative;
+	float: left;
+	display: flex;
+	padding: 0 12px;
+}
+.I-header .navigation ul li.border::before{
+	position: absolute;
+	content: 0;
+	top: 3px;
+	left: 0;
+	background: #0000001a;
+	content: '';
+	display: block;
+	height: 18px;
+	width: 1px;
+}
+.I-header .navigation ul li .dropdown{
+	width: 24px;
+	height: 24px;
+	margin: 0 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.I-header .navigation ul li a{
+	height: 25px;
+	color: #fff;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+}
+.I-header .navigation ul li a{
+	font-weight: 600;
+}
+.I-header .navigation ul li a.customer .avatar{
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	margin: 0 5px;
+	overflow: hidden;
+}
+.I-header .navigation ul li a.customer .avatar img{
+	width: 100%;
+}
+.I-header .navigation ul li a.customer{
+	
+}
+
+
+
+
+
+

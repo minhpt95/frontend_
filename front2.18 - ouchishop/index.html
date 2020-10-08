@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Store</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style-overview.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!----------------------------------- Animation On Scroll ------------------------------------------------->
+		<link rel="stylesheet" href="css/aos.css" />
+		<script src="js/aos.js"></script>
+		<style type="text/css">
+			.loader{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 1000;
+				background-color: #f00;
+			}
+		</style>
+	</head>
+	<body onload="preloader()"> 
+		<div class="loader"></div>
+		<header>
+			<div class="I-header" style="background-image: url(images/header_bg.jpg);">
+				<div class="logo">
+					<img src="images/winvs.png">
+				</div>
+				<div class="open_info">
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="info">
+					<div class="info_wrapper">
+						Office Name：<span>ユースマイル別府店</span>
+					</div>
+					<div class="info_wrapper">
+						Name：<span>アイ・ティ・シー</span>
+					</div>
+					<a href="" class="logout">ログアウト</a>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<div class="open_sidebar">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="I-navigation">
+				<ul>
+					<li><a href="">会員管理</a></li>
+					<li><a href="">店舗オーダー</a></li>
+					<li><a href="">自宅オーダー</a></li>
+					<li><a href="">マスタ管理</a></li>
+					<li><a href="">基本設定</a></li>
+					<li><a href="">データ共有</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main>
+			<aside>
+				<div class="close_aside"></div>
+				<div class="I-aside">
+					<ul>
+						<li><a href="">共有通知</a></li>
+						<li><a href="" class="is-select">通知一覧</a></li>
+					</ul>
+				</div>
+			</aside>
+			<section>
+				<div class="I-content">
+					<div class="content_wrapper">
+						<div class="content_header">
+							共有通知
+						</div>
+						<div class="content_warning">
+							<div class="warning_wrapper">
+								<div class="warning_title">
+									Please fix the following input errors:
+								</div>
+								<div class="warning_body">
+									<ul>
+										<li>撮影種類 cannot be blank.</li>
+										<li>アップロード枚数 cannot be blank.</li>
+										<li>情報を入力してください</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="content_form">
+							<div class="form_header">
+								<span>*</span>Fields that are marked are required 
+							</div>
+							<div class="form_body">
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										アップ <span>*</span> 	
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<input type="radio" id="お客様" name="gender" value="お客様">
+									  	<label for="お客様">お客様</label>
+									  	<input type="radio" id="カメラマン" name="gender" value="カメラマン">
+									  	<label for="カメラマン">カメラマン</label>
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										 お客様 SSID 
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<input type="text" name="">
+									  	<button>検索</button>
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										 カメラマン SSID 	
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<input type="text" name="" class="error">
+									  	<button>検索</button>
+									  	<div class="text"> 情報を入力してください</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										撮影種類  <span>*</span> 	
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<input type="text" name="" class="error">
+									  	<div class="text">撮影種類 cannot be blank.</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										撮影日   <span>*</span> 
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<input type="datatime" name="">
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										アップロード枚数  <span>*</span> 	
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<input type="text" name="" class="error">
+									  	<div class="text">アップロード枚数 cannot be blank.</div>
+									</div>
+								</div>
+								<div class="form_row">
+									<div class="title col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+										
+									</div>
+									<div class="content col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">	
+									  	<button>登録</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="I-footer">
+				Copyright © 2020 yousmile All Rights Reserved.
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		function preloader() {
+			$('.loader').css({
+				'display': 'none'
+			}, 10000)
+		}
+	</script>
+	<script src="js/bootstrap3.js"></script>
+	<script src="js/effect_custom.js"></script>
+	<script src="js/aos.js"></script>
+	<script>
+	  	if (!window.Cypress) AOS.init();
+	</script>
+</html>
+
+

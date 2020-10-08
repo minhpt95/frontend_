@@ -1,0 +1,204 @@
+.I-login{
+	width: 100%;
+	height: 100vh;
+	background-color: #f0f2f5;
+}
+.I-login .content_wrapper{
+	float: left;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.I-login .content_wrapper .content_login{
+	width: 100%;
+}
+.I-login .content_wrapper .content_login .content_title{
+	width: 100%;
+	color: #1877f2;
+	font-size: 50px;
+}
+.I-login .content_wrapper .content_login .content_detail{
+	font-size: 28px;
+	color: #1c1e21;
+}
+.I-login .form_wrapper{
+	float: left;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 0 100px;
+}
+.I-login .form_wrapper form{
+	width: 100%;
+	box-shadow: 0 2px 4px #0000001a, 0 8px 16px #0000001a;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+}
+.I-login .form_wrapper form input{
+	width: 100%;
+	height: 52px;
+	font-size: 17px;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    background-color: #fff;
+    margin: 0 0 12px 0;
+}
+.I-login .form_wrapper form input:focus{
+	outline: none;
+}
+.I-login .form_wrapper form button.login_button{
+	width: 100%;
+	height: 52px;
+	font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    background-color: #166fe5;
+    margin: 0 0 12px 0;
+    font-weight: bold;
+}
+.I-login .form_wrapper form .forgot_wrapper{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+}
+.I-login .form_wrapper form .forgot_wrapper button.forgot_password{
+	color: #1877f2;
+	border: none;
+	background-color: #ffff;
+}
+.I-login .form_wrapper form .forgot_wrapper button.forgot_password:focus{
+	outline: none;
+}
+.I-login .form_wrapper form .create_wrapper{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80px;
+}
+.I-login .form_wrapper form .create_wrapper button.register_button{
+	padding: 0 16px;
+	height: 50px;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	background-color: #42b72a;
+	font-size: 17px;
+	border-radius: 6px;
+}
+
+#register_form{
+	
+}
+#register_form .row{
+	margin: 0 -5px;
+}
+#register_form .row .custom_col{
+	padding: 5px;
+}
+#register_form .row .custom_col p{
+	margin: 10px 0;
+}
+#register_form .row .custom_col input{
+	width: 100%;
+	height: 42px;
+	background-color: #f5f6f7;
+	border: 1px solid #ccd0d5;
+	border-radius: 5px;
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px;
+}
+#register_form .row .custom_col input:focus{
+	outline: none;
+}
+#register_form .row .custom_col select{
+	width: 100%;
+	height: 42px;
+	background-color: #fff;
+	border: 1px solid #ccd0d5;
+	border-radius: 5px;
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px;
+}
+#register_form .row .custom_col .radio{
+	width: 100%;
+	height: 42px;
+	margin: 0;
+}
+#register_form .row .custom_col .radio label{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #ccd0d5;
+	border-radius: 5px;
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+}
+#register_form .row .custom_col .radio input{
+	width: 20px;
+	height: 20px;
+	position: inherit;
+	margin: 0;
+	margin-left: auto;
+}
+#register_form .row .custom_col button.register_button{
+	width: 100%;
+	padding: 0 16px;
+	height: 50px;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	background-color: #42b72a;
+	font-size: 17px;
+	border-radius: 6px;
+}
+
+#forgot_form{
+
+}
+#forgot_form .row{
+	margin: 0 -5px;
+}
+#forgot_form .row .custom_col{
+	padding: 5px;
+}
+#forgot_form .row .custom_col p{
+	margin: 10px 0;
+}
+#forgot_form .row .custom_col input{
+	width: 100%;
+	height: 42px;
+	background-color: #fff;
+	border: 1px solid #ccd0d5;
+	border-radius: 5px;
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px;
+}
+#forgot_form .row .custom_col input:focus{
+	outline: none;
+}
+#forgot_form .row .custom_col button.forgot_button{
+	width: 100%;
+	padding: 0 16px;
+	height: 50px;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+	background-color: #166fe5;
+	font-size: 17px;
+	border-radius: 6px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Solute</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="images/favicon.png" />
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style-overview.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!----------------------------------- Animation On Scroll ------------------------------------------------->
+		<link rel="stylesheet" href="css/aos.css" />
+		<script src="js/aos.js"></script>
+		<style type="text/css">
+			td{
+				border: 1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body> 
+		<table>
+			<tr>
+				<td rowspan="2">stt</td>
+				<td rowspan="2">Ho va ten</td>
+				<td colspan="3">
+					<td></td>
+				</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				
+			</tr>
+		</table>
+	</body>
+	<script src="js/bootstrap3.js"></script>
+	<script src="js/effect_custom.js"></script>
+	<script src="js/aos.js"></script>
+	<script>
+	  	if (!window.Cypress) AOS.init();
+	</script>
+	 <!-- <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+    <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script id="rendered-js">
+    // external js: isotope.pkgd.js
+
+
+    // init Isotope
+    var $grid = $('.grid').isotope({
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows',
+        getSortData: {
+            name: '.name',
+            symbol: '.symbol',
+            number: '.number parseInt',
+            category: '[data-category]',
+            weight: function(itemElem) {
+                var weight = $(itemElem).find('.weight').text();
+                return parseFloat(weight.replace(/[\(\)]/g, ''));
+            }
+        }
+    });
+
+
+
+    // filter functions
+    var filterFns = {
+        // show if number is greater than 50
+        numberGreaterThan50: function() {
+            var number = $(this).find('.number').text();
+            return parseInt(number, 10) > 50;
+        },
+        // show if name ends with -ium
+        ium: function() {
+            var name = $(this).find('.name').text();
+            return name.match(/ium$/);
+        }
+    };
+
+
+    // bind filter button click
+    $('#filters').on('click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        // use filterFn if matches value
+        filterValue = filterFns[filterValue] || filterValue;
+        $grid.isotope({ filter: filterValue });
+    });
+
+    // bind sort button click
+    $('#sorts').on('click', 'button', function() {
+        var sortByValue = $(this).attr('data-sort-by');
+        $grid.isotope({ sortBy: sortByValue });
+    });
+
+    // change is-checked class on buttons
+    $('.button-group').each(function(i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function() {
+            $buttonGroup.find('.is-checked').removeClass('is-checked');
+            $(this).addClass('is-checked');
+        });
+    });
+    //# sourceURL=pen.js
+    </script>
+</html>
+
+

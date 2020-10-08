@@ -1,0 +1,79 @@
+.I-header{
+	width: 100%;
+	height: 120px;
+	background-color: #fff;
+}
+.I-header .header_top{
+	width: 100%;
+	height: 90px;
+}
+.I-header .header_top .logo{
+	float: left;
+	width: 25%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-header .header_top .logo img{
+	height: 50px;
+}
+.I-header .header_top .search{
+	float: left;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-header .header_top .search .search_wrapper{
+	width: 80%;
+	max-width: 500px;
+	height: 30px;
+	background-color: red;
+	display: flex;
+}
+.I-header .header_top .search .search_wrapper input{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+	padding: 0 5px;
+}
+.I-header .header_top .search .search_wrapper button{
+	width: 120px;
+	height: 100%;
+	border: 1px solid #ccc;
+	background-color: #e65d5d;
+	color: #fff;
+}
+.I-header .header_top .shopping_cart{
+	float: left;
+	width: 25%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.I-header .header_top .shopping_cart .cart_wrapper{
+	width: 100%;
+	max-width: 150px;
+	height: 30px;
+	color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.I-header .header_top .shopping_cart .cart_wrapper span{
+	font-weight: bold;
+	color: #e65d5d;
+	margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+

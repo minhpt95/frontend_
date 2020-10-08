@@ -1,0 +1,102 @@
+.I-grid_wrapper{
+	width: 100%;
+	display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+}
+.I-grid_wrapper::before{
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+.item:first-child {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.item{
+	position: relative;
+	background-color: red;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+.item .item_content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10%;
+}
+.item .item_content .item_title{
+	width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 3;
+    height: 75px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    color: #fff;
+    margin: 0 0 20px 0;
+}
+.item .item_content .item_readmore{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.item .item_content .item_readmore a{
+	color: #fff;
+	line-height: 24px;
+	border-bottom: 1px solid #ccc;
+}
+.item_background{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+.item_background::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+}
+.item_background:hover{
+	transform: scale(1.1);
+}
+.item img{
+	width: 100%;
+}
+.item-1 {
+	grid-row-end: span 2;
+	grid-column-end: span 2;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 50% 50%, 50% 100%, 0% 100%);
+}
+.item-1-1 {	
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+.item-2 {	
+	grid-area: auto / auto / span 1 / span 2;
+}
+.item-3 {	
+	grid-area: auto / auto / span 3 / span 1;
+}
+.item-4 {	
+	grid-area: auto / auto / span 1 / span 1;
+}
+.item-5 {	
+	grid-area: auto / auto / span 2 / span 1;
+}

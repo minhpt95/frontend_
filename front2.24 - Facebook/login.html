@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tech Chat</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="css/bootstrap3.css" />
+		<link rel="stylesheet" href="css/style-overview.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!----------------------------------- Animation On Scroll ------------------------------------------------->
+		<link rel="stylesheet" href="css/aos.css" />
+		<script src="js/aos.js"></script>
+	</head>
+	<body>
+		<main>
+			<div class="I-login">
+				<div class="wrapper">
+						<div class="content_wrapper">
+							<div class="content_login">
+								<div class="content_title">
+									Tech Chat
+								</div>
+								<div class="content_detail">
+									Social Chat giúp bạn kết nối và chia sẻ công nghệ với mọi người trong cuộc sống của bạn.
+								</div>
+							</div>
+						</div>
+						<div class="form_wrapper">
+							<form>
+								<input type="text" name="" placeholder="Email">
+								<input type="password" name="" placeholder="Mật khẩu">
+								<button type="button" class="login_button">Đăng nhập</button>
+								<div class="forgot_wrapper"><button type="button" class="forgot_password" data-toggle="modal" data-target="#forgot_form">Quên mật khẩu</button></div>
+								<div class="create_wrapper"><button type="button" class="register_button" data-toggle="modal" data-target="#register_form">Tạo tài khoản mới</button></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Forgot -->
+		<div id="forgot_form" class="modal fade" role="dialog">
+		  	<div class="modal-dialog">
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      	<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h3 class="modal-title">Quên mật khẩu</h3>
+			      	</div>
+			      	<div class="modal-body">
+			      		<div class="row">
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<p>Nhập Email của bạn</p>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<input type="" name="" placeholder="Email" required="">
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-md-offset-3 col-lg-offset-3 col-xl-offset-3 custom_col">
+			      				<button type="" class="forgot_button">Gửi</button>
+			      			</div>
+			      		</div>
+			      	</div>
+			    </div>
+		  	</div>
+		</div>
+
+		<!-- Register -->
+		<div id="register_form" class="modal fade" role="dialog">
+		  	<div class="modal-dialog">
+			    <!-- Modal content-->
+			    <div class="modal-content">
+			      	<div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h3 class="modal-title">Tạo tài khoản mới</h3>
+			      	</div>
+			      	<div class="modal-body">
+			      		<div class="row">
+			      			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 custom_col">
+			      				<input type="" name="" placeholder="Họ" required="">
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 custom_col">
+			      				<input type="" name="" placeholder="Tên" required="">
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<input type="" name="" placeholder="Email" required="">
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<input type="" name="" placeholder="Mật khẩu" required="">
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<p>Ngày sinh</p>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 custom_col">
+			      				<select>
+			      					<option></option>
+			      				</select>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 custom_col">
+			      				<select>
+			      					<option></option>
+			      				</select>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 custom_col">
+			      				<select>
+			      					<option></option>
+			      				</select>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<p>Giới tính</p>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 custom_col">
+			      				<div class="radio">
+								  	<label>Nam<input type="radio" name="optradio"></label>
+								</div>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 custom_col">
+			      				<div class="radio">
+								  	<label>Nữ<input type="radio" name="optradio"></label>
+								</div>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 custom_col">
+			      				<div class="radio">
+								  	<label>Khác<input type="radio" name="optradio"></label>
+								</div>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 custom_col">
+			      				<h6>Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, Chính sách dữ liệu và Chính sách cookie của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.</h6>
+			      			</div>
+			      			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-md-offset-3 col-lg-offset-3 col-xl-offset-3 custom_col">
+			      				<button type="" class="register_button">Đăng kí</button>
+			      			</div>
+			      		</div>
+			      	</div>
+			    </div>
+		  	</div>
+		</div>
+	</body>
+	<script src="js/bootstrap3.js"></script>
+	<script src="js/effect_custom.js"></script>
+	<script src="js/aos.js"></script>
+	<script>
+	  	if (!window.Cypress) AOS.init();
+	</script>
+</html>
+
+

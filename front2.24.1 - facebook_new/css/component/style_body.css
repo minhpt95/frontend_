@@ -1,0 +1,385 @@
+.I-main{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	min-height: 100vh;
+}
+.I-main .sidebar{
+	position: fixed;
+	top: 60px;
+	left: 0;
+	float: left;
+	width: calc(50% - 300px );
+	height: 100%;
+	padding: 0 16px;
+	padding: 16px 0;
+	height: calc( 100vh - 60px);
+}
+.I-main .sidebar .sidebar_item{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	padding: 0 16px;
+}
+.I-main .sidebar .sidebar_item:hover{
+	background-color: #0003
+}
+.I-main .sidebar .sidebar_item .icon{
+	width: 35px;
+	height: 35px;
+	border-radius: 35px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 24px;
+}
+.I-main .sidebar .sidebar_item .icon.friend{
+	color: #7bded0;
+}
+.I-main .sidebar .sidebar_item .icon.message{
+	color: #22aafc;
+}
+.I-main .sidebar .sidebar_item .icon.flag{
+	color: #f36c2c;
+}
+.I-main .sidebar .sidebar_item .icon img{
+	width: 100%;
+}
+.I-main .sidebar .sidebar_item .title{
+	margin: 0 10px;
+	color: #fff;
+}
+.I-main .content{
+	margin: auto;
+	padding: 20px 0;
+	width: 600px;
+	height: 100%;
+}
+.I-main .content .create_status{
+	width: 100%;
+	padding: 12px 16px;
+	background-color: #242526;
+	border-radius: 5px;
+}
+.I-main .content .create_status .input_wrapper{
+	width: 100%;
+	height: 40px;
+	margin: 0 0 10px 0;
+}
+.I-main .content .create_status .input_wrapper .avatar{
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.I-main .content .create_status .input_wrapper .avatar img{
+	width: 100%;
+}
+.I-main .content .create_status .input_wrapper .open_create_status{
+	position: relative;
+	float: right;
+	width: calc(100% - 50px);
+	height: 100%;
+	background-color: #3a3b3c;
+	border-radius: 40px;
+}
+.I-main .content .create_status .input_wrapper .open_create_status::before{
+	position: absolute;
+	top: 5px;
+	left: 15px;
+	content: "Bạn đang nghĩ gì ?";
+	color: #b0b3b8;
+	font-size: 18px;
+}
+.I-main .content .create_status .function_wrapper{
+	border-top: 1px solid #b0b3b8;
+	width: 100%;
+	height: 50px;
+	padding: 10px 0 0 0;
+	display: flex;
+	align-items: center;
+}
+.I-main .content .create_status .function_wrapper .function_item{
+	width: 33%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	color: #b0b3b8;
+	border-radius: 5px;
+}
+.I-main .content .create_status .function_wrapper .function_item:hover{
+	background-color: #b0b3b83b;
+}
+.I-main .content .create_status .function_wrapper .function_item .icon{
+	width: 30px;
+	height: 30px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.I-main .content .create_status .function_wrapper .function_item .icon.video{
+	color: #ed2748;
+}
+.I-main .content .create_status .function_wrapper .function_item .icon.image{
+	color: #44bd61;
+}
+.I-main .content .create_status .function_wrapper .function_item .icon.emoji{
+	color: #f6ba27;
+}
+.I-main .content .create_status .function_wrapper .function_item .icon img{
+	width: 100%;
+}
+.I-main .content .create_status .function_wrapper .function_item .title{
+	margin: 0 5px;
+}
+.I-main .content .status_component{
+	width: 100%;
+	margin: 15px 0 0 0;
+	border-radius: 5px;
+	background-color: #242526;
+}
+.I-main .content .status_component .header_status{
+	width: 100%;
+	height: 60px;
+	padding: 16px 12px;
+	display: flex;
+	align-items: center;
+}
+.I-main .content .status_component .header_status .avatar{
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.I-main .content .status_component .header_status .avatar img{
+	width: 100%;
+}
+.I-main .content .status_component .header_status .user_wrapper{
+	width: calc(100% - 60px);
+	height: 40px;
+	padding: 0 10px;
+}
+.I-main .content .status_component .header_status .user_wrapper .user_name{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+.I-main .content .status_component .header_status .user_wrapper .status_time{
+	width: 100%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+.I-main .content .status_component .header_status .action_status{
+	width: 20px;
+	height: 100%;
+	color: #fff;
+}
+.I-main .content .status_component .title_status{
+	width: 100%;
+	overflow: hidden;
+	padding: 0 12px;
+	font-size: 16px;
+	color: #fff;
+	margin: 0 0 10px 0;
+}
+.I-main .content .status_component .content_status{
+	width: 100%;
+	max-height: 500px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.I-main .content .status_component .content_status img{
+	width: 100%;
+}
+.I-main .content .status_component .detail_status{
+	width: 100%;
+	overflow: hidden;
+	padding: 10px;
+}
+.I-main .content .status_component .detail_status .react_info{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #B0B3B8;
+	align-items: center;
+}
+.I-main .content .status_component .detail_status .react_info .like_wrapper{
+	display: flex;
+	align-items: center;
+	margin-right: auto;
+}
+.I-main .content .status_component .detail_status .react_info .like_wrapper .count_like{
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #016ee0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	color: #fff;
+}
+.I-main .content .status_component .detail_status .react_info .count_comment_wrapper{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	color: #fff;
+}
+.I-main .content .status_component .detail_status .react_info .like_wrapper .amount_like{
+	height: 30px;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	margin: 0 5px;
+}
+.I-main .content .status_component .detail_status .react_status{
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #B0B3B8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-main .content .status_component .detail_status .react_status .react_item{
+	width: 33.33%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #a2a4ab;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.I-main .content .status_component .detail_status .react_status .react_item i{
+	margin: 0 5px;
+}
+.I-main .content .status_component .detail_status .react_status .react_item:hover{
+	background-color: #66666652;
+}
+.I-main .content .status_component .detail_status .comment_wrapper{
+	width: 100%;
+	overflow: hidden;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .show_more{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	color: #b0b3b8;
+	font-size: 16px;
+	cursor: pointer;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment{
+	width: 100%;
+	overflow: hidden;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment .user_comment{
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 10px 0;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment .user_comment .avatar{
+	float: left;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 35px;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment .user_comment .avatar img{
+	width: 100%;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment .user_comment .detail_user{
+	float: right;
+	width: calc(100% - 50px);
+	overflow: hidden;
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 5px;
+	background-color: #3a3b3c;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment .user_comment .detail_user .user_name{
+	width: 100%;
+	font-weight: bold;
+}
+.I-main .content .status_component .detail_status .comment_wrapper .list_comment .user_comment .detail_user .user_detail{
+	width: 100%;
+	overflow: hidden;
+}
+.I-main .content .status_component .detail_status .comment_action{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+.I-main .content .status_component .detail_status .comment_action .avatar{
+	margin-right: auto;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 35px;
+}
+.I-main .content .status_component .detail_status .comment_action .input_wrapper{
+	margin-left: auto;
+	width: calc(100% - 50px);
+	height: 35px;
+	border-radius: 35px;
+	overflow: hidden;
+}
+.I-main .content .status_component .detail_status .comment_action .input_wrapper input{
+	width: 100%;
+	height: 100%;
+	border: none;
+	border-radius: 35px;
+	background-color: #3a3b3c;
+	color: #fff;
+	padding: 0 15px;
+}
+
+.I-main .action{
+	position: fixed;
+	top: 60px;
+	right: 0;
+	width: calc(50% - 300px);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: calc( 100vh - 60px);
+}
+
+
+
+
+
+
+
+
+
+

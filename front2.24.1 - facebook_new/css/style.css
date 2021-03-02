@@ -10,6 +10,7 @@
 @import "component/style_header.css";
 @import "component/style_body.css";
 @import "component/style_footer.css";
+@import "component/I-message.css";
 
 /* Responsive */
 @import "responsive.css";

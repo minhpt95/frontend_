@@ -1,0 +1,41 @@
+.I-blockchain{
+	width: 100%;
+	padding: 100px 0;
+}
+.I-blockchain h2.title{
+	color: #0a0a0a;
+	font-size: 34px;
+	margin: 0 0 50px 0;
+	text-align: center;
+}
+.I-blockchain .blockchain_item{
+	width: 100%;
+	margin: 0 0 50px 0;
+}
+
+.I-blockchain .blockchain_item .bc_image{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 0 20px 0;
+}
+.I-blockchain .blockchain_item .bc_image img{
+	width: 200px;
+}
+
+.I-blockchain .blockchain_item h4.bc_title{
+	color: #1f1f1f;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.I-blockchain .blockchain_item p.bc_detail{
+	text-align: justify;
+	padding: 0 20px;
+	color: #828282;
+	font-size: 14px;
+}
+
+

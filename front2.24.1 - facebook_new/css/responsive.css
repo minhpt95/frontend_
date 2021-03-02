@@ -65,11 +65,105 @@ body {
 }
 main{
     padding: 0; 
-    margin: 0;
+    margin: 50px 0 0 0;
     width: 100%;
 } 
 .large_wrapper{
 	display: none;
+}
+
+.I-login .content_wrapper{
+	width: 100%;
+	height: auto;
+	padding: 50px 0;
+}
+.I-login .content_wrapper .content_login{
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+}
+.I-login .form_wrapper{
+	width: 100%;
+	height: auto;
+	padding: 0;
+}
+.I-login .form_wrapper form{
+	width: 100%;
+	max-width: 500px;
+	margin: auto;
+}
+.I-header .action_wrapper{
+	width: calc(50% - 150px);
+}
+.I-header .action_wrapper .search_wrapper .search_bound{
+	width: 150px;
+}
+.I-header .action_wrapper .search_wrapper .search_bound .search_inside{
+	width: 150px;
+}
+.I-header .action_wrapper.is-open .search_wrapper .search_bound .search_inside{
+	width: 180px;
+}
+.I-header .navigation_wrapper{
+	width: 300px;
+}
+.I-header .detail_wrapper .user_wrapper{
+	display: none;
+}
+.I-header .detail_wrapper{
+	width: calc(50% - 150px);
+}
+.I-header .navigation_wrapper .navigation_item.figma_button{
+	display: none;
+}
+.I-header .navigation_wrapper .navigation_item.menu_button{
+	display: block;
+}
+.I-main .content{
+	width: 100%;
+	padding: 20px 10px;
+}
+.I-main .sidebar{
+	width: 100%;
+	left: -100%;
+	transition: all 200ms ease;
+}
+.I-main.side-open .sidebar{
+	width: 100%;
+	left: 0%;
+}
+
+.I-message .message-list_user{
+	width: 100px;
+}
+.I-message .message-content{
+	position: relative;
+	float: left;
+	height: calc(100vh - 60px);
+	width: calc(100% - 65px);
+	background-color: #3a3b3c;
+}
+.I-message .message-content .message-header{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #2f3031;
+}
+.I-message .message-content .message-chat{
+	width: 100%;
+}
+.I-message .message-content .message-detail_user{
+	position: absolute;
+	top: 60px;
+	right: 0;
+	width: 100%;
+	height: calc(100% - 60px);
+	background-color: red;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_content{
+	display: none;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_avatar{
+	margin: 0;
 }
 
 }
@@ -147,6 +241,29 @@ main{
 
 @media only screen and (max-width: 767px)
 {
+.I-header .action_wrapper{
+	width: 130px;
+}
+.I-header .action_wrapper .search_wrapper .search_bound{
+	width: 40px;
+}
+.I-header .action_wrapper .search_wrapper .search_bound .search_inside{
+	width: 40px;
+}
+.I-header .navigation_wrapper{
+	width: auto;
+}
+.I-header .navigation_wrapper .navigation_item{
+	display: none;
+}
+.I-header .navigation_wrapper .navigation_item.menu_button{
+	display: block;
+}
+.I-header .detail_wrapper{
+	float: right;
+}
+
+
 
 }
 

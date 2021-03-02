@@ -1,0 +1,1074 @@
+.wrapper-site{
+	width: 100%;
+	margin: auto;
+	max-width: 192rem;
+}
+.LP{
+	display: block;
+}
+.SP{
+	display: none;
+}
+.ruby_text{
+	position: relative;
+	letter-spacing: 1px;
+}
+.ruby_subtext{
+	position: relative;
+}
+.ruby_subtext .text_detail{
+	position: absolute;
+	top: -6px;
+	font-size: 10px!important;
+	left: 0;
+	letter-spacing: -.5px!important;
+	line-height: 10px !important;
+}
+.LP_drop_line{
+	display: block;
+}
+.I-header{
+	width: 100%;
+}
+.I-header .header-content{
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--background-color-header);
+	padding: 85px 66px 117px 66px;
+}
+.I-header .header-content .header-content-title{
+	position: relative;
+	width: 540px;
+	margin: 0 auto 73px auto;
+}
+.I-header .header-content .header-content-title .image_bg{
+	width: 100%;
+}
+.I-header .header-content .header-content-title .image_bg img{
+	width: 100%;
+}
+.I-header .header-content .header-content-title .title_wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0 60px;
+	text-align: center;
+	color: var(--text-color-01);
+	font-size: 5rem;
+	line-height: 6.5rem;
+	font-family: 'NotoSansCJKjp-Thin';
+}
+.I-header .header-content .header-content-description{
+	margin: 0 0 72px 0;
+	width: 100%;
+	color: var(--text-color-02);
+	font-size: 8.3rem;
+	font-weight: 400;
+	line-height: 10.8rem;
+	text-transform: uppercase;
+	letter-spacing: normal;
+	text-align: center;
+	font-family: 'NotoSansCJKjp-Regular';
+}
+.I-header .header-content .header-content-name{
+	width: 100%;
+	color: var(--text-color-01);
+	font-size: 6.9rem;
+	font-weight: 700;
+	line-height: 6.6rem;
+	text-align: center;
+	font-family: 'DIN-BoldAlternate';
+	letter-spacing: -4px;
+	font-weight: bold;
+}
+.I-header .header-image{
+	width: 100%;
+}
+.I-header .header-image img{
+	width: 100%;
+}
+
+.I-navigation{
+	padding: 100px 0;
+	width: 100%;
+}
+.I-navigation .wrapper{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-navigation .wrapper .navigation-list{
+	margin: 0 -10px 100px -10px;
+	overflow: hidden;
+}
+.I-navigation .wrapper .navigation-list .navigation-item{
+	float: left;
+	width: 33.33%;
+	height: 70px;
+	padding: 0 10px;
+}
+.I-navigation .wrapper .navigation-list .navigation-item:nth-child(1) a{
+	background-color: var(--button-item-1);
+}
+.I-navigation .wrapper .navigation-list .navigation-item:nth-child(2) a{
+	background-color: var(--button-item-2);
+}
+.I-navigation .wrapper .navigation-list .navigation-item:nth-child(3) a{
+	background-color: var(--button-item-3);
+}
+.I-navigation .wrapper .navigation-list .navigation-item a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Thin";
+	font-size: 2.4rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.5rem;
+	text-align: center;
+}
+.I-navigation .wrapper .navigation-description{
+	margin: auto;
+	font-family: "NotoSansCJKjp-Regular";
+	width: 640px;
+	font-size: 1.9rem;
+	text-align: center;
+	color: var(--text-color-03);
+}
+.I-navigation .wrapper .navigation-description p{
+	margin: 0 0 25px 0;
+}
+.I-navigation .wrapper .navigation-description p.bottom{
+	margin: 35px 0 0 0;
+	background-color: var(--text-color-02);
+	display: inline-block;
+}
+
+.I-chart{
+	padding: 100px 0;
+	width: 100%;
+	background-color: var(--background-color-2);
+}
+.I-chart .wrapper{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-chart .wrapper .chart-title{
+	position: relative;
+	width: 100%;
+	padding: 0 0 50px 0;
+	margin: auto;
+}
+.I-chart .wrapper .chart-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--color-dot);
+}
+.I-chart .wrapper .chart-title p{
+	width: 100%;
+	margin: 0;
+	color: #000000;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 4.8rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: -1px;
+	line-height: 6.7rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.I-chart .wrapper .chart-image{
+	width: 1000px;
+	margin: 50px auto;
+	overflow: hidden;
+}
+.I-chart .wrapper .chart-image .image-item{
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.I-chart .wrapper .chart-image .image-item img{
+	width: 100%;
+}
+.I-chart .wrapper .chart-content{
+	color: #000000;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 1.4rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3rem;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+
+.I-description{
+	padding: 100px 0 0 0;
+	width: 100%;
+	background-color: var(--background-color-1);
+}
+.I-description .wrapper{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-description .wrapper .description-title{
+	position: relative;
+	width: 800px;
+	padding: 0 0 50px 0;
+	margin: auto;
+}
+.I-description .wrapper .description-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--color-dot);
+}
+.I-description .wrapper .description-title p{
+	width: 100%;
+	margin: 0;
+	color: #000000;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 4.8rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: -1px;
+	line-height: 6.7rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.I-description .description-content{
+	width: 100%;
+	margin: 50px auto 0 auto;
+	overflow: hidden;
+}
+.I-description .description-image{
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.I-description .description-image img{
+	width: 100%;
+}
+.I-description .description-detail_wrapper{
+	width: 100%;
+	height: 500px;
+	background-color: var(--color-dot);
+	padding: 78px 0 0 70px;
+}
+.I-description .description-detail_wrapper .detail-title{
+	position: relative;
+	width: 100%;
+	padding: 0 0 40px 0;
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 3.6rem;
+	font-weight: 500;
+	line-height: 6.7rem;
+}
+.I-description .description-detail_wrapper .detail-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--background-color-1);
+}
+.I-description .description-detail_wrapper .detail-list{
+	margin: 40px 0 0 0;
+}
+.I-description .description-detail_wrapper .detail-list p.detail-item{
+	padding: 0;
+	margin: 0 0 10px 0;
+	font-size: 2.4rem;
+	color: var(--text-color-01);
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 4rem;
+	text-align: left;
+	text-transform: uppercase;
+}
+.I-description .description-detail_wrapper .detail-list p.detail-item::before{
+	content: '■';
+	color: var(--text-color-02);
+	font-size: 4rem;
+	margin: 0 5px 0 0;
+}
+
+.I-tech{
+	padding: 100px 0;
+	width: 100%;
+}
+.I-tech.tech-java{
+	background-color: var(--background-color-2);
+}
+.I-tech.tech-unity{
+	background-color: var(--background-color-1);
+}
+.I-tech.tech-video{
+	background-color: var(--background-color-1);
+}
+.I-tech .wrapper{
+	width: 100%;
+	max-width: 990px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-tech .tech-logo{
+	float: left;
+	width: 300px;
+	height: 300px;
+	border-radius: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 50px 0 0;
+}
+.I-tech.tech-java .tech-logo{
+	background-color: var(--background-color-1);
+}
+.I-tech.tech-unity .tech-logo{
+	background-color: var(--background-color-2);
+}
+.I-tech .tech-logo img{
+	width: 187px;
+}
+.I-tech .tech-description{
+	float: left;
+	width: calc(100% - 350px);
+	padding: 23px 0 0 0;
+}
+.I-tech .tech-description .description-title{
+	width: 320px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-color-01);
+	font-size: 2.4rem;
+	font-weight: 400;
+	font-family: "NotoSansCJKjp-Regular";
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0 0 38px 0;
+}
+.I-tech.tech-java .tech-description .description-title{
+	background-color: var(--button-item-1);
+}
+.I-tech.tech-unity .tech-description .description-title{
+	background-color: var(--button-item-2);
+}
+.I-tech .tech-description .description-detail p{
+	margin: 0;
+	width: 100%;
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.1rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.8rem;
+	text-align: left;
+}
+
+
+.I-tech_detail{
+	padding: 100px 0;
+	width: 100%;
+}
+.I-tech_detail.tech-java{
+	background-color: var(--background-color-1);
+}
+.I-tech_detail.tech-unity{
+	background-color: var(--background-color-2);
+}
+.I-tech_detail .wrapper{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-tech_detail .tech_detail-main{
+	width: 100%;
+	margin: 0 0 100px 0;
+	overflow: hidden;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_image{
+	position: relative;
+	float: left;
+	width: 50%;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_image img{
+	width: 100%;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_image .image_top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_image .image_top .title{
+	width: 320px;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-color-01);
+	background-color: var(--button-item-3);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.4rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.5rem;
+	text-align: center;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_detail{
+	width: 50%;
+	height: 500px;
+	float: left;
+	padding: 55px 90px;
+	background-color: var(--background-color-3);
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_detail p{
+	color: #ffffff;
+	font-family: "NotoSansCJKjp-Thin";
+	font-size: 2.2rem;
+	font-weight: 300;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.7rem;
+	text-align: left;
+	margin: 0;
+}
+.I-tech_detail .tech_detail-title{
+	position: relative;
+	width: 1080px;
+	padding: 0 0 50px 0;
+	margin: auto;
+}
+.I-tech_detail .tech_detail-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--color-dot);
+}
+.I-tech_detail .tech_detail-title p{
+	width: 100%;
+	margin: 0;
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 4.7rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: -1px;
+	line-height: 6.7rem;
+	text-align: center;
+}
+.I-tech_detail .tech_detail-image{
+	width: 450px;
+	margin: 100px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-tech_detail .tech_detail-image img{
+	width: 100%;
+}
+.I-tech_detail .tech_detail-title_sub{
+	color: var(--text-color-03);
+	margin: 50px 0;
+	width: 100%;
+}
+.I-tech_detail .tech_detail-title_sub p{
+	color: var(--text-color-03);
+	width: 100%;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.1rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.8rem;
+	text-align: center;
+}
+.I-tech_detail .tech_detail-description{
+	color: var(--text-color-03);
+	margin: 50px 0;
+	width: 100%;
+}
+.I-tech_detail .tech_detail-description p{
+	color: var(--text-color-03);
+	width: 100%;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.4rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3rem;
+	text-align: center;
+}
+.I-tech_detail .tech_detail-list{
+	margin: 0 -10px 50px -10px;
+	overflow: hidden;
+}
+.I-tech_detail .tech_detail-list .tech_detail-item{
+	float: left;
+	padding: 10px;
+	width: 33.33%;
+	height: 100px;
+}
+.I-tech_detail .tech_detail-list .tech_detail-item a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	border-radius: 100px;
+	background-color: var(--background-color-3);
+}
+.I-tech_detail .tech_detail-list .tech_detail-item:last-child{
+	width: 100%;
+}
+.I-tech_detail .tech_detail-list .tech_detail-item:last-child a{
+	background-color: var(--background-color-4);
+}
+.I-tech_detail .tech_detail-list .tech_detail-item p{
+	margin: 0;
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.4rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.5rem;
+	text-align: center;
+}
+.I-tech_detail .tech_detail-note{
+
+}
+.I-tech_detail .tech_detail-note .tech_detail-noteItem{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.4rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3rem;
+	text-align: left;
+	border-bottom: 1px solid #000;
+	padding: 24px 0;
+}
+.I-tech_detail .tech_detail-note .tech_detail-noteItem:first-child{
+	border-top: 1px solid #000;
+}
+
+.I-lecturer_introduction{
+	padding: 100px 0;
+	width: 100%;
+}
+.I-lecturer_introduction.lecturer_java{
+	background-color: var(--background-color-2);
+}
+.I-lecturer_introduction.lecturer_unity{
+	padding: 100px 0 0 0;
+	background-color: var(--background-color-1);
+}
+.I-lecturer_introduction.lecturer_support{
+	padding: 100px 0 50px 0;
+	background-color: var(--background-color-2);
+}
+.I-lecturer_introduction .wrapper{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-lecturer_introduction .lecturer_introduction-title{
+	position: relative;
+	width: 1080px;
+	padding: 0 0 50px 0;
+	margin: auto;
+}
+.I-lecturer_introduction .lecturer_introduction-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--color-dot);
+}
+.I-lecturer_introduction .lecturer_introduction-title p{
+	width: 100%;
+	margin: 0;
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 4.8rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: -1px;
+	line-height: 6.7rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.I-lecturer_introduction .lecturer_introduction-description{
+	color: var(--text-color-03);
+	margin: 50px 0;
+	width: 100%;
+}
+.I-lecturer_introduction .lecturer_introduction-description p{
+	color: var(--text-color-03);
+	margin: 00;
+	width: 100%;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 1.9rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.9rem;
+	text-align: left;
+}
+.I-lecturer_introduction .lecturer_item{
+	margin: 100px -18px 0 -18px;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component{
+	width: 50%;
+	float: left;
+	padding: 0 18px;
+	height: 575px;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .description{
+	padding: 0 0 20px 0;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #000;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .description .position{
+	padding: 9px 12px;
+	margin: 0 30px 0 0;
+	background-color: var(--background-color-3);
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .description .name{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 3.6rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .detail{
+
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .detail span{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.1rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.6rem;
+	text-transform: uppercase;
+	display: inline-block;
+	letter-spacing: -1px;
+	margin: 30px 0 0 0;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .lecturer_image{
+	position: absolute;
+	width: 575px;
+	display: flex;
+	align-items: center;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .lecturer_image img{
+	width: 100%;
+}
+.I-lecturer_introduction.introduction-card.lecturer_support .introduction-list{
+	margin: 100px -25px 0px -25px;
+}
+.I-lecturer_introduction.introduction-card.lecturer_java .introduction-list .introduction-item{
+	height: 580px;
+}
+.I-lecturer_introduction.introduction-card.lecturer_support .introduction-list .introduction-item{
+	margin: 0 0 50px 0;
+	height: 570px;
+}
+.I-lecturer_introduction.introduction-card.lecturer_java .introduction-list .introduction-item .card{
+	padding: 44px 0 0 0;
+}
+.I-lecturer_introduction.introduction-card.lecturer_support .introduction-list .introduction-item .card{
+	padding: 80px 0 0 0;
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card::before{
+	background-color: var(--background-color-3);
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card::before{
+	background-color: var(--background-color-5);
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card .image{
+	width: 210px;
+	height: 210px;
+	border-radius: 210px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin: 0 auto 30px auto;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .image{
+	width: 305px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin: 0 auto 40px auto;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .image.height_size img{
+	width: auto;
+	height: 100%;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .image img{
+	width: 100%;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .description{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .description .position{
+	margin: 0 20px 0 0;
+	width: 80px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-color-3);
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Thin";
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+	text-transform: uppercase;
+
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .description .name{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.1rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card .detail{
+	margin: 20px 0 0 0;
+	padding: 0 34px;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .detail{
+	margin: 35px 0 0 0;
+	padding: 0 34px;
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card .detail span{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 1.4rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 2.2rem;
+	text-transform: uppercase;
+	display: inline-block;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .detail span{
+	color: #333;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.2rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.7rem;
+	text-transform: uppercase;
+	display: inline-block;
+	letter-spacing: -.8px;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .content{
+	width: 100%;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .content p{
+	margin: 0;
+	color: #0090a8;
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 24px;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 21px;
+	text-align: center;
+}
+
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .detail span.highlight{
+	color: var(--text-color-04);
+}
+.I-lecturer_introduction .course{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-lecturer_introduction .course .logo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 79px;
+	margin: 0 30px 0 0;
+}
+.I-lecturer_introduction .course .logo img{
+	width: 100%;
+}
+.I-lecturer_introduction .course p{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 3rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.I-assistant_instructor{
+	padding: 15px 0 0 0;
+	background-color: var(--background-color-2);
+}
+.I-assistant_instructor .wrapper{
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	align-items: center;
+}
+.I-assistant_instructor .assistant_image{
+	float: left;
+	width: 140px;
+	margin: 0 25px 0 0;
+}
+.I-assistant_instructor .assistant_image img{
+	width: 100%;
+}
+.I-assistant_instructor .assistant_content{
+	float: right;
+	width: calc(100% - 165px);
+	height: 240px;
+	display: flex;
+	align-items: center;
+}
+.I-assistant_instructor .assistant_content .description{
+	display: flex;
+	align-items: center;
+}
+.I-assistant_instructor .assistant_content .description .position{
+	margin: 0 20px 0 0;
+	padding: 10px 12px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--background-color-3);
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Thin";
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+	text-transform: uppercase;
+
+}
+.I-assistant_instructor .assistant_content .description .name{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.4rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+}
+.I-assistant_instructor .assistant_content .detail{
+	margin: 30px 0 0 0;
+}
+.I-assistant_instructor .assistant_content .detail span{
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.1rem;
+	font-weight: 400;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.8rem;
+	display: inline-block;
+}
+
+.I-vr_support{
+	padding: 100px 0;
+	width: 100%;
+	background-color: var(--background-color-1);
+}
+.I-vr_support .wrapper{
+	width: 100%;
+	max-width: 1255px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-vr_support .vr_support-title{
+	position: relative;
+	width: 100%;
+	padding: 0 0 50px 0;
+	margin: auto;
+}
+.I-vr_support .vr_support-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--background-color-3);
+}
+.I-vr_support .vr_support-title p{
+	width: 100%;
+	margin: 0;
+	color: var(--text-color-03);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 4.7rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: -1px;
+	line-height: 6.7rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+.I-vr_support .vr_support-list{
+	margin: 100px -50px 0 -50px;
+}
+.I-vr_support .vr_support-list .vr_support-item{
+	float: left;
+	padding: 0 50px;
+	width: 33.33%;
+	display: flex;
+	align-items: center;
+}
+.I-vr_support .vr_support-list .vr_support-item img{
+	width: 100%;
+}
+
+.I-carousel{
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--background-color-2);
+}
+.I-carousel img{
+	float: left;
+	height: 228px;
+	overflow: hidden;
+}
+.I-carousel img:nth-child(1){
+	width: 265px;
+}
+.I-carousel img:nth-child(2){
+	width: 21.35%;
+}
+.I-carousel img:nth-child(3){
+	width: 21.35%;
+}
+.I-carousel img:nth-child(4){
+	width: 19%;
+}
+.I-carousel img:nth-child(5){
+	width: 24.2%;
+}
+
+.I-footer{
+	width: 100%;
+	background-color: var(--background-color-6);
+	padding: 90px 0 65px 0;
+}
+.I-footer .title_wrapper{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-footer .title_wrapper .title_item{
+	padding: 0 15px;
+}
+
+.I-footer p{
+	margin: 0 0 60px 0;
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 2.1rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.2rem;
+	text-align: center;
+}
+.I-footer .image_wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.I-footer .image_wrapper img{
+	width: 320px;
+}
+.I-footer span{
+	display: block;
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 3.2rem;
+	text-align: center;
+}
+

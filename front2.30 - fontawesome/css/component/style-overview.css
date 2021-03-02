@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+@font-face {
+    font-family: 'axis';
+    src: url('../../fonts/axis/axis.otf');
+}
+@font-face {
+    font-family: 'axisstd-regular';
+    src: url('../../fonts/axis/axisstd-regular.otf');
+}
+@font-face {
+    font-family: 'axis-extrabold';
+    src: url('../../fonts/axis/Axis-Extrabold.otf');
+}
+@font-face {
+    font-family: 'HelveticaNeue-BoldCond';
+    src: url('../../fonts/axis/HelveticaNeue-BoldCond.otf');
+}
+@font-face {
+    font-family: 'HelveticaNeue-Light';
+    src: url('../../fonts/axis/HelveticaNeue-Light.otf');
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-size: 14px;
+    /*font-family: 'Oswald';*/
+}
+a{
+    color: #000;
+}
+a:hover{
+    text-decoration: none;
+}
+.wrapper {
+    width: 1170px;
+    height: 100%;
+    margin: auto;
+}

@@ -1,0 +1,372 @@
+#root{
+	margin: 50px auto;
+	width: 500px;
+	height: 350px;
+	transition: all 200ms ease;
+}
+.bound{
+	margin: 50px auto;
+	width: 500px;
+	height: 350px;
+	transition: all 200ms ease;
+}
+
+
+.calendar-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.calendar-wrapper *{
+	margin: 0;
+}
+.calendar-wrapper .calendar-header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #004f6a;
+	border-radius: 10px;
+}
+.calendar-wrapper .calendar-header .calendar-title{
+	width: 200px;
+	height: 100%;
+	padding: 15px;
+	color: #fff;
+}
+.calendar-wrapper .calendar-header .calendar-title .year{
+	margin: 0 0 20px 0;
+}
+.calendar-wrapper .calendar-header .calendar-title .week{
+	font-size: 24px;
+}
+.calendar-wrapper .calendar-header .calendar-title .month{
+	font-size: 24px;
+}
+.calendar-wrapper .calendar-header .calendar-title .day{
+	font-size: 24px;
+}
+.calendar-wrapper .calendar-main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0 0 0 200px;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	transition: all 300ms ease;
+}
+.calendar-wrapper .calendar-main .calendar-days-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	box-shadow: 0 0 4px 1px #3e3e3e;
+}
+
+/* Select Day Wrapper */
+.calendar-wrapper .calendar-main .calendar-days{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 1;
+}
+.calendar-wrapper .calendar-main .calendar-days .navigation-wrapper{
+	width: 100%;
+	height: 50px;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.calendar-wrapper .calendar-main .calendar-days .navigation-wrapper .prev-month{
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.calendar-wrapper .calendar-main .calendar-days .navigation-wrapper .next-month{
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.calendar-wrapper .calendar-main .calendar-days .navigation-wrapper .month-wrapper{
+	width: calc(100% - 100px);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.calendar-wrapper .calendar-main .calendar-days .days-wrapper{
+	width: 100%;
+	padding: 0 20px;
+	display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 1fr;
+ 	grid-gap: 8px;
+}
+.calendar-wrapper .calendar-main .calendar-days .days-wrapper::before{
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+.calendar-wrapper .calendar-main .calendar-days .days-wrapper .days-item:first-child {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.calendar-wrapper .calendar-main .calendar-days .days-wrapper .days-item{
+    /*grid-row-start: 1;*/
+    /*grid-column-start: 1;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.calendar-wrapper .calendar-main .calendar-days .days-wrapper .days-item.disabled{
+	color: #ccc;
+	cursor: no-drop;
+}
+.calendar-wrapper .calendar-main .calendar-days .days-wrapper .days-item.selected{
+	background-color: #004f6a;
+	color: #fff;
+	border-radius: 50px;
+}
+/* END Select Day Wrapper */
+
+
+/* Select Time Wrapper */
+.calendar-wrapper .calendar-main .calendar-time{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	z-index: 2;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper{
+	width: 210px;
+	height: 150px;
+	display: flex;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker{
+	position: relative;
+	margin-right: auto;
+	width: 100px;
+	height: 100%;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-control{
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	color: #004f6a;
+	/*border: 1px solid #004f6a;*/
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-control.disabled{
+	color: #ccc;
+	/*border: 1px solid #ccc;*/
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-control.hour-up{
+	top: 0;
+	left: 0;
+	border-radius: 5px 5px 0 0;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-control.hour-down{
+	bottom: 0;
+	left: 0;
+	border-radius: 0 0 5px 5px;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-value{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	color: #004f6a;
+	font-style: 24px;
+	font-weight: bold;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-value .hour-listitem{
+	position: relative;
+	width: 100%;
+	height: 35px;
+	overflow: hidden;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-value .hour-listitem .hour-item{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 35px;
+	background-color: #fff;
+	transition: all 300ms ease;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .hour-picker .hour-value .hour-listitem .hour-item.selected{
+	top: 0;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .minute-picker{
+	margin-left: auto;
+	width: 100px;
+	height: 100%;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .minute-picker .minute-item{
+	width: 100%;
+	height: 35px;
+	border: 1px solid #004f6a;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	font-style: 24px;
+	color: #004f6a;
+	cursor: pointer;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .minute-picker .minute-item:not(:last-child){
+	margin: 0 0 3px 0;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .minute-picker .minute-item.selected{
+	background-color: #004f6a;
+	color: #fff;
+}
+.calendar-wrapper .calendar-main .calendar-time .calendar-time-wrapper .minute-picker .minute-item.disabled{
+	background-color: #ccc;
+	color: #fff;
+	border: 1px solid #ccc;
+	cursor: no-drop;
+}
+/* END Select Time Wrapper */
+
+/* Control Wrapper */
+.calendar-wrapper .calendar-main .calendar-controls{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	z-index: 1000;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	/*border: 1px solid #fff;*/
+	overflow: hidden;
+	color: #fff;
+	cursor: pointer;
+	transition: all 300ms ease;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button.f-calendar i{
+	position: absolute;
+	top: 26px;
+	left: 8px;
+	z-index: 1;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button.f-calendar::before{
+	position: absolute;
+	content: "";
+	top: 15px;
+	left: -35px;
+	width: 70px;
+	height: 70px;
+	transform: rotate(45deg);
+	background-color: #004f6a;
+	z-index: 0;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button.f-clock i{
+	position: absolute;
+	top: 26px;
+	right: 8px;
+	z-index: 1;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button.f-clock::before{
+	position: absolute;
+	content: "";
+	top: 15px;
+	right: -35px;
+	width: 70px;
+	height: 70px;
+	transform: rotate(45deg);
+	background-color: #004f6a;
+	z-index: 0;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button.f-info i{
+	position: absolute;
+	top: 26px;
+	right: 8px;
+	z-index: 1;
+}
+.calendar-wrapper .calendar-main .calendar-controls .calendar-button.f-info::before{
+	position: absolute;
+	content: "";
+	top: 15px;
+	right: -35px;
+	width: 70px;
+	height: 70px;
+	transform: rotate(45deg);
+	background-color: #004f6a;
+	z-index: 0;
+}
+.calendar-wrapper .calendar-main.show-calendar .calendar-days{
+	top: 0;
+	left: 0;
+	transition: all 300ms ease;
+}
+.calendar-wrapper .calendar-main.show-calendar .calendar-time{
+	top: 0;
+	left: 100%;
+	transition: all 300ms ease;
+}
+.calendar-wrapper .calendar-main.show-calendar .calendar-controls .calendar-button.f-calendar{
+	bottom: 0;
+	left: -100%;
+}
+.calendar-wrapper .calendar-main.show-calendar .calendar-controls .calendar-button.f-clock{
+	bottom: 0;
+	right: 0;
+}
+.calendar-wrapper .calendar-main.show-calendar .calendar-controls .calendar-button.f-info{
+	bottom: 0;
+	right: -100%;
+}
+.calendar-wrapper .calendar-main.show-clock .calendar-days{
+	top: 0;
+	left: -100%;
+}
+.calendar-wrapper .calendar-main.show-clock .calendar-time{
+	top: 0;
+	left: 0;
+}
+.calendar-wrapper .calendar-main.show-clock .calendar-controls .calendar-button.f-calendar{
+	bottom: 0;
+	left: 0;
+}
+.calendar-wrapper .calendar-main.show-clock .calendar-controls .calendar-button.f-clock{
+	bottom: -100%;
+	right: 0;
+}
+.calendar-wrapper .calendar-main.show-clock .calendar-controls .calendar-button.f-info{
+	bottom: 0;
+	right: 0;
+}
+/*END Control Wrapper */
+

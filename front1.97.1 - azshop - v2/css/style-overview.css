@@ -13,7 +13,8 @@ body {
     font-family: 'Montserrat', 'poppins', 'Noto Sans', sans-serif;
     background-color: #fff;
     font-family: 'Josefin Sans';
-    background: url(../images/header_bg.png);
+    /*background: url(../images/header_bg.png);*/
+    background-color: #0800ff3d;
     background-size: cover;
 }
 a{
@@ -34,7 +35,8 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background: url(../images/header_bg.png);
+    /*background: url(../images/header_bg.png);*/
+    background-color: #c8c6ff;
     /*background-size: cover;*/
     z-index: 1000;
 }

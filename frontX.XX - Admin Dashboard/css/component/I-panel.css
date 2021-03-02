@@ -1,0 +1,63 @@
+.I-panel{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(45deg, var(--color-root1), var(--color-root2));
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	z-index: 2;
+}
+.I-panel .panel-main{
+	position: absolute;
+	top: 60px;
+	right: 0;
+	width: calc(100% - 250px);
+	height: calc(100vh - 60px);
+	transition: all 200ms ease;
+	z-index: 2;
+}
+.I-panel .panel-main .panel-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.I-panel .panel-main .panel-wrapper .panel-title{
+	width: 100%;
+	height: 60px;
+	padding: 0 15px;
+	color: #fff;
+	background-color: #36476aa3;
+}
+.I-panel .panel-main .panel-wrapper .panel-content{
+	width: 100%;
+	height: calc(100% - 60px);
+	overflow-y: scroll;
+	padding: 15px;
+}
+
+
+
+.I-panel .row{
+	margin: 0 -7.5px;
+}
+.I-panel .col-xs-1, .I-panel .col-sm-1, .I-panel .col-md-1, .I-panel .col-lg-1, .I-panel .col-xs-2, .I-panel .col-sm-2, .I-panel .col-md-2, .I-panel .col-lg-2, .I-panel .col-xs-3, .I-panel .col-sm-3, .I-panel .col-md-3, .I-panel .col-lg-3, .I-panel .col-xs-4, .I-panel .col-sm-4, .I-panel .col-md-4, .I-panel .col-lg-4, .I-panel .col-xs-5, .I-panel .col-sm-5, .I-panel .col-md-5, .I-panel .col-lg-5, .I-panel .col-xs-6, .I-panel .col-sm-6, .I-panel .col-md-6, .I-panel .col-lg-6, .I-panel .col-xs-7, .I-panel .col-sm-7, .I-panel .col-md-7, .I-panel .col-lg-7, .I-panel .col-xs-8, .I-panel .col-sm-8, .I-panel .col-md-8, .I-panel .col-lg-8, .I-panel .col-xs-9, .I-panel .col-sm-9, .I-panel .col-md-9, .I-panel .col-lg-9, .I-panel .col-xs-10, .I-panel .col-sm-10, .I-panel .col-md-10, .I-panel .col-lg-10, .I-panel .col-xs-11, .I-panel .col-sm-11, .I-panel .col-md-11, .I-panel .col-lg-11, .I-panel .col-xs-12, .I-panel .col-sm-12, .I-panel .col-md-12, .I-panel .col-lg-12{
+	padding: 0 7.5px;
+}
+.I-panel .panel-component{
+	margin: 0 0 15px 0;
+}
+.I-panel .component{
+	width: 100%;
+	padding: 15px;
+	background-color: #fffffff2;
+	border: 1px solid #E5E5E5;
+}
+
+
+
+.I-panel .panel-main.is-open{
+	width: calc(100% - 60px);
+}
+
+

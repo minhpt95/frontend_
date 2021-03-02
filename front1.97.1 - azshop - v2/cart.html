@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image X Image</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/bootstrap3.css" />
+        <link rel="stylesheet" href="css/style-overview.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <script src="js/jquery-3.4.1.min.js"></script>
+    </head>
+    <body> 
+        <header>
+            <div class="I-navigation">
+                <div class="navigation_wrapper">
+                    <div class="wrapper">
+                        <ul>
+                            <li><a href="">Trang Chủ</a></li>
+                            <li class="sub_navigation">
+                                <a href="">Sản Phẩm<i class="fas fa-caret-down"></i></a>
+                                <div class="list_navigation">
+                                    <a href="" class="item_navigation">Iphone</a>
+                                    <a href="" class="item_navigation">SamSung</a>
+                                </div>
+                            </li>
+                            <li><a href="">Về Chúng Tôi</a></li>
+                            <li><a href="">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="I-cart">
+                <div class="wrapper">
+                    <div class="cart_wrapper">
+                        <div class="title">
+                            Giỏ Hàng
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                                <div class="cart_item_wrapper">
+                                    <div class="title_cart">
+                                        <div class="name">
+                                            Tên mặt Hàng
+                                        </div>
+                                        <div class="price">
+                                            đơn giá
+                                        </div>
+                                        <div class="quantity">
+                                            số lượng
+                                        </div>
+                                        <div class="subtotal">
+                                            tổng tiền
+                                        </div>
+                                    </div>
+                                    <div class="item_cart">
+                                        <div class="remove_item">
+                                            <button>
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="image_item">
+                                            <img src="images/oppo.png">
+                                        </div>
+                                        <div class="title_item">
+                                            <a href="">
+                                                Oppo
+                                            </a>
+                                        </div>
+                                        <div class="price_item">
+                                            1.000.000 ₫
+                                        </div>
+                                        <div class="quantity_item">
+                                            <input type="number" name="qty" value="1" class="cart-update" style="float: left; width: 70%;">
+                                        </div>
+                                        <div class="subtotal_item">
+                                            1.000.000 ₫
+                                        </div>
+                                    </div>
+                                    <div class="item_cart">
+                                        <div class="remove_item">
+                                            <button>
+                                                <i class="fas fa-times"></i>
+                                            </button>
+                                        </div>
+                                        <div class="image_item">
+                                            <img src="images/oppo.png">
+                                        </div>
+                                        <div class="title_item">
+                                            <a href="">
+                                                Oppo
+                                            </a>
+                                        </div>
+                                        <div class="price_item">
+                                            1.000.000 ₫
+                                        </div>
+                                        <div class="quantity_item">
+                                            <input type="number" name="qty" value="1" class="cart-update" style="float: left; width: 70%;">
+                                        </div>
+                                        <div class="subtotal_item">
+                                            1.000.000 ₫
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+                                <div class="cart_total">
+                                    <div class="title_total">
+                                        Tổng giá trị đơn hàng:
+                                    </div>
+                                    <div class="price_total">
+                                        Tổng: <span>2.000.000 ₫</span>
+                                    </div>
+                                    <div class="checkout">
+                                        <a class="order" href="{{ route('indexOrder') }}">
+                                            <button>Đặt Hàng</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="I-footer">
+                <div class="footer_contact">
+                    <div class="wrapper">
+                        <div class="row">
+                            <div class="col-xs-12 col-xm-12 col-md-6 col-lg-3 col-xl-3">
+                                <a href="" class="full_logo">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-12 col-xm-12 col-md-6 col-lg-3 col-xl-3">
+                                <div class="contact_wrapper">
+                                    <div class="contact_title">
+                                        <h5>Mobile Shop</h5>
+                                    </div>
+                                    <div class="contact_content">
+                                        <span><i class="flag-icon flag-icon-vn" title="vn" id="vn"></i>273 an dương vương phường 3 quận 5</span>
+                                        <span><i class="fas fa-phone"></i> <a href="tel:0819563276" class="telephone">0819563276</a></span>
+                                        <span><i class="fas fa-envelope"></i> <a href="mailto:dvb22122001@gmail.com" class="time">dvb22122001@gmail.com</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xm-12 col-md-6 col-lg-3 col-xl-3">
+                                <div class="contact_wrapper">
+                                    <div class="contact_title">
+                                        <h5>Danh mục</h5>
+                                    </div>
+                                    <div class="contact_content">
+                                        <span><a href="">Iphone</a></span>
+                                        <span><a href="">Realme</a></span>
+                                        <span><a href="">Oppo</a></span>
+                                        <span><a href="">Xiaomi</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-xm-12 col-md-6 col-lg-3 col-xl-3">
+                                <div class="contact_wrapper">
+                                    <div class="contact_title">
+                                        <h5>Theo dõi chúng tôi tại:</h5>
+                                    </div>
+                                    <div class="contact_content">
+                                        <div class="social_wrapper">
+                                            <a class="social-item" href="<?php echo $info->fb ?>"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="social-item" href="<?php echo $info->linkin ?>"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="wrapper">
+                        <div class="pull-left">
+                            Copyright © Chainos Solution 2020. All rights reserved. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="js/bootstrap3.js"></script>
+    <script src="js/effect_custom.js"></script>
+</html>

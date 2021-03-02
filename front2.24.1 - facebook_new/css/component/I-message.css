@@ -1,0 +1,101 @@
+.I-message{
+	overflow: hidden;
+	width: 100%;
+}
+.I-message .message-list_user{
+	float: left;
+	height: calc(100vh - 60px);
+	overflow-y: scroll; 
+	width: 350px;
+	background-color: #242526;
+	border-bottom: 1px solid #3a3b3c;
+}
+.I-message .message-list_user .user_item_wrapper{
+	width: 100%;
+	height: 65px;
+	padding: 0 8px
+}
+.I-message .message-list_user .user_item_wrapper .user_item{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	border-radius: 5px;
+}
+.I-message .message-list_user .user_item_wrapper .user_item.is-select{
+	background-color: #18191a;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_avatar{
+	width: 49px;
+	height: 49px;
+	border-radius: 49px;
+	margin: 0 12px 0 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_avatar img{
+	width: 100%;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_content{
+	width: calc(100% - 65px);
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_content .user_name{
+	width: 100%;
+	font-size: 15px;
+	color: #fff;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_content .user_chat_new{
+	width: 100%;
+	font-size: 13px;
+	color: #ffffff70;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_content .user_chat_new .user_chat_text{
+	float: left;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+	width: calc(100% - 55px);
+	font-size: 13px;
+}
+.I-message .message-list_user .user_item_wrapper .user_item .user_content .user_chat_new .user_chat_time{
+	float: left;
+	width: 55px;
+	height: 100%;
+	text-align: right;
+}
+.I-message .message-content{
+	float: left;
+	height: calc(100vh - 60px);
+	width: calc(100% - 350px);
+	background-color: #242526;
+	border-bottom: 1px solid #3a3b3c;
+}
+.I-message .message-content .message-header{
+	width: 100%;
+	height: 60px;
+	background-color: #242526;
+	border-bottom: 1px solid #3a3b3c;
+}
+.I-message .message-content .message-chat{
+	float: left;
+	height: calc(100% - 60px);
+	width: calc(100% - 350px);
+	background-color: #18191a;
+	overflow-y: scroll; 
+}
+.I-message .message-content .message-detail_user{
+	float: left;
+	height: calc(100% - 60px);
+	overflow-y: scroll; 
+	width: 350px;
+	overflow-y: scroll; 
+	background-color: #242526;
+	border-bottom: 1px solid #3a3b3c;
+}
+
+
+
+

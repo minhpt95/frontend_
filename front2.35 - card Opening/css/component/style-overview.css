@@ -1,0 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
+
+:root {
+
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    line-height: 10px;
+}
+body{
+    font-family: 'Oswald';
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1000;
+    transition: all 200ms ease;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+footer {
+    
+}

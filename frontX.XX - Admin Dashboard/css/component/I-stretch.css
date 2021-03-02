@@ -1,0 +1,34 @@
+.I-stretch{
+	width: 100%;
+}
+.I-stretch .component{
+	padding: 15px 15px 0 15px;
+}
+.I-stretch .stretch-card{
+	width: 100%;
+	margin: 0 0 15px 0;
+}
+.I-stretch .stretch-card .card-title{
+	width: 100%;
+	margin: 0 0 10px 0;
+	letter-spacing: .5px;
+}
+.I-stretch .stretch-card .card-data{
+	width: 100%;
+	margin: 0 0 10px 0;
+	font-weight: bold;
+}
+.I-stretch .stretch-card .card-bar{
+	width: 100%;
+	height: 30px;
+}
+.I-stretch .stretch-card .card-bar .bar-percent{ }
+.I-stretch .stretch-card .card-bar .bar-line{ }
+.I-stretch .stretch-card .card-bar .bar-line .bar-value{ }
+
+
+
+
+
+
+

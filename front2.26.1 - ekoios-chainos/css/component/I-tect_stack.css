@@ -1,0 +1,109 @@
+
+.I-tect_stack{
+	position: relative;
+	width: 100%;
+	padding: 100px 0;
+	background-color: #f7f9fb;
+    font-family: 'Ubuntu' !important;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+.I-tect_stack .tect_stack_wrapper{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.I-tect_stack .tect_stack_wrapper .text_stack_title{
+
+}
+.I-tect_stack .tect_stack_wrapper .text_stack_title h2{
+	font-size: 34px;
+	color: #1f1f1f;
+	/*color: #fff;*/
+	text-align: center;
+	font-weight: 500;
+}
+.I-tect_stack .tect_stack_wrapper .text_stack_subtitle{
+	margin: 0 0 40px 0;
+	display: flex;
+	justify-content: center;
+}
+.I-tect_stack .tect_stack_wrapper .text_stack_subtitle h6{
+	width: 100%;
+	max-width: 575px;
+	font-size: 18px;
+	color: #828282;
+	/*color: #fff;*/
+	padding: 15px;
+	text-align: center;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem{
+	width: 100%;
+	display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: 1fr;
+ 	grid-gap: 15px;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem::before{
+    content: '';
+    width: 0;
+    padding-bottom: 100%;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item:first-child {
+    grid-row-start: 1;
+    grid-column-start: 1;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item{
+	background-color: #fff;
+	padding: 15px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item .item_wrapper{
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item .item_wrapper .item_icon{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item .item_wrapper .item_icon img{
+	height: 100%;
+	transition: all 10000ms linear;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item .item_wrapper .item_icon:hover img{
+	transform: rotateY(1080deg);
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item .item_wrapper .item_name{
+	margin: 20px 0 0 0;
+	width: 100%;
+	text-align: center;
+	/*text-transform: uppercase;*/
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_listItem .tect_stack_item .item_wrapper .item_name h6{
+	color: #1f1f1f;
+	font-size: 16px;
+	font-weight: 600;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_more{
+	width: 100%;
+	height: 75px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin: 30px 0 0 0;
+}
+.I-tect_stack .tect_stack_wrapper .tect_stack_more a{
+	color: #5F6368;
+	font-weight: 600;
+}

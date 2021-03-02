@@ -1,0 +1,47 @@
+
+/* vendon */
+@import "vendon/bootstrap3.css";
+@import "vendon/aos.css";
+
+/* Overview */
+@import "component/style-overview.css";
+
+/* Component */
+@import "component/bg_animation.css";
+@import "component/I-preloader.css";
+@import "component/I-carousel.css";
+@import "component/I-blog.css";
+@import "component/I-carousel.css";
+@import "component/I-contact.css";
+@import "component/I-feature.css";
+@import "component/I-footer.css";
+@import "component/I-header.css";
+@import "component/I-header_page.css";
+@import "component/I-ourwork.css";
+@import "component/I-service.css";
+@import "component/I-service_sub.css";
+@import "component/I-tect_stack.css";
+@import "component/I-header_service.css";
+@import "component/I-mobile_app.css";
+@import "component/I-other_detail.css";
+@import "component/I-blockchain.css";
+@import "component/I-ai.css";
+@import "component/I-web_service.css";
+@import "component/I-tech_sub.css";
+@import "component/I-cardvisit.css";
+@import "component/I-staff.css";
+@import "component/I-footer_map.css";
+@import "component/I-project_detail.css";
+@import "component/I-about_us.css";
+
+
+/* Responsive */
+@import "responsive.css";
+
+
+
+
+
+
+
+

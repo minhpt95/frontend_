@@ -1,0 +1,61 @@
+.I-term_service{
+	padding: 50px 0;
+}
+.I-term_service h2{
+	text-align: center;
+	font-weight: bold;
+	margin: 20px 0;
+}
+.I-term_service h5{
+	font-weight: bold;
+	text-decoration: underline;
+}
+ol{
+  	counter-reset: section;
+  	list-style-type: none;
+    margin: 5px 0;
+    font-weight: bold;
+}
+ol > li{
+	margin: 3px 0;
+}
+ol > li::before {
+  	counter-increment: section;
+  	content: counters(section, ".")  ". ";
+}
+ol > li > ol > li{
+	padding: 0 0 0 30px;
+	position: relative;
+	font-weight: normal;
+}
+ol > li > ol > li::before{
+	position: absolute;
+	top: 0;
+	left: 0px;
+}
+
+.I-term_service ul.type_text{
+  	counter-reset: text-count;
+  	list-style-type: none;
+	padding: 0;
+	margin: 5px 0;
+}
+.I-term_service p{
+	margin: 3px 0;
+}
+.I-term_service ul.type_text > li{
+	padding: 0 0 0 20px;
+	position: relative;
+}
+.I-term_service ul.type_text > li::before{
+	position: absolute;
+	top: 0;
+	left: 0px;
+  	counter-increment: text-count;
+  	content: counter(text-count, lower-alpha) ". ";
+}
+.I-term_service ul.type_text > li > ul{
+  	counter-reset: none;
+  	list-style-type: "- "
+}
+

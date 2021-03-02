@@ -121,6 +121,9 @@
 	width: 20%;
 	height: 100%;
 }
+.I-header .navigation_wrapper .navigation_item.menu_button{
+	display: none;
+}
 .I-header .navigation_wrapper .navigation_item a{
 	position: relative;
 	display: flex;
@@ -194,7 +197,6 @@
 	margin: 0 5px;
 	color: #fff;
 	font-size: 16px;
-	font-weight: bold;
 }
 
 

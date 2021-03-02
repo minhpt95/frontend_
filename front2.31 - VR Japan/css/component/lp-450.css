@@ -1,0 +1,673 @@
+@media only screen and (max-width: 749px)
+{
+	
+.wrapper-site{
+	max-width: 45rem;
+}
+
+.I-header{ }
+.I-header .header-content{
+	padding: 39px 31px;
+}
+.I-header .header-content .header-content-title{
+	width: 300px;
+	margin: 0 auto 34px auto;
+}
+.I-header .header-content .header-content-title .image_bg{ }
+.I-header .header-content .header-content-title .image_bg img{ }
+.I-header .header-content .header-content-title .title_wrapper{
+	padding: 0 20px;
+	font-size: 2.2rem;
+	line-height: 2.6rem;
+}
+.I-header .header-content .header-content-description{
+	margin: 0 0 33px 0;
+	font-size: 3.8rem;
+	line-height: 4.5rem;
+}
+.I-header .header-content .header-content-name{
+	font-size: 3rem;
+	line-height: 3.8rem;
+}
+.I-header .header-image{ }
+.I-header .header-image img{ }
+
+
+.I-navigation{
+	padding: 30px 0 60px 0;
+}
+.I-navigation .wrapper{
+	max-width: 300px;
+}
+.I-navigation .wrapper .navigation-list{
+	margin: 0 -0 9px -0;
+}
+.I-navigation .wrapper .navigation-list .navigation-item{
+	float: left;
+	width: 100%;
+	height: 67px;
+	padding: 0;
+	margin: 0 0 17px 0;
+}
+.I-navigation .wrapper .navigation-list .navigation-item a{
+	font-size: 2.3rem;
+	line-height: 3.3rem;
+}
+.I-navigation .wrapper .navigation-description{
+	width: 305px;
+	font-size: 1.8rem;
+}
+.I-navigation .wrapper .navigation-description p{
+	margin: 0 0 20px 0;
+}
+.I-navigation .wrapper .navigation-description p.bottom{
+	margin: 10px 0 0 0;
+	font-size: 1.6rem;
+}
+
+
+.I-chart{
+	padding: 60px 0;
+}
+.I-chart .wrapper{
+	max-width: 450px;
+}
+.I-chart .wrapper .chart-title{
+	width: 400px;
+	padding: 0 0 30px 0;
+}
+.I-chart .wrapper .chart-title::before{
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+}
+.I-chart .wrapper .chart-title p{
+	font-size: 2.8rem;
+	line-height: 4rem;
+}
+.I-chart .wrapper .chart-image{
+	width: 400px;
+	margin: 50px auto 0 auto;
+	overflow: hidden;
+}
+.I-chart .wrapper .chart-image .image-item{
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 60px 0;
+}
+.I-chart .wrapper .chart-image .image-item img{ }
+.I-chart .wrapper .chart-content{
+	font-size: 1.3rem;
+	line-height: 3rem;
+}
+
+
+.I-description{
+	padding: 60px 0 0 0;
+}
+.I-description .wrapper{
+	max-width: 450px;
+}
+.I-description .wrapper .description-title{
+	width: 450px;
+	padding: 0 0 30px 0;
+}
+.I-description .wrapper .description-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--color-dot);
+}
+.I-description .wrapper .description-title p{
+	font-size: 2.2rem;
+	line-height: 4rem;
+}
+.I-description .description-content{
+	width: 100%;
+	margin: 30px auto 0 auto;
+	overflow: hidden;
+}
+.I-description .description-image{
+	width: 100%;
+	height: auto;
+}
+.I-description .description-image img{ }
+.I-description .description-detail_wrapper{
+	height: auto;
+	padding: 35px 20px;
+}
+.I-description .description-detail_wrapper .detail-title{
+	padding: 0 0 17px 0;
+	font-size: 1.8rem;
+	line-height: 3.1rem;
+}
+.I-description .description-detail_wrapper .detail-title::before{ }
+.I-description .description-detail_wrapper .detail-list{
+	margin: 12px 0 0 0;
+	width: 380px;
+}
+.I-description .description-detail_wrapper .detail-list p.detail-item{
+	position: relative;
+	margin: 0 0 15px 0;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	padding: 0 0 0 30px;
+}
+.I-description .description-detail_wrapper .detail-list p.detail-item::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	content: '■';
+	color: var(--text-color-02);
+	font-size: 4rem;
+	margin: -5px 0 0 0;
+}
+
+.I-tech{
+	padding: 60px 0;
+}
+.I-tech .wrapper{
+	width: 100%;
+	max-width: 430px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-tech .logo_bound{
+	float: left;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 0 30px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-tech .tech-logo{
+	float: left;
+	width: 180px;
+	height: 180px;
+	border-radius: 180px;
+	margin: 0;
+}
+.I-tech .tech-logo img{
+	width: 113px;
+}
+.I-tech .tech-description{
+	float: left;
+	width: 100%;
+	padding: 0;
+}
+.I-tech .tech-description .description-title{
+	width: 300px;
+	height: 65px;
+	font-size: 2.3rem;
+	line-height: 3.3rem;
+	margin: 0 auto 28px auto;
+}
+.I-tech .tech-description .description-detail p{
+	font-size: 1.5rem;
+	line-height: 2.8rem;
+}
+
+.I-tech_detail{
+	padding: 60px 0;
+	width: 100%;
+}
+.I-tech_detail .wrapper{
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+	overflow: hidden;
+}
+.I-tech_detail.tech-unity{
+	padding: 60px 0 35px 0;
+}
+.I-tech_detail.tech-video{
+	padding: 47px 0 60px 0;
+}
+.I-tech_detail .tech_detail-main{
+	margin: 0 0 60px 0;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_image{ 
+	width: 100%;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_image img{  }
+.I-tech_detail .tech_detail-main .tech_detail-main_image .image_top{ }
+.I-tech_detail .tech_detail-main .tech_detail-main_image .image_top .title{
+	width: 300px;
+	height: 66px;
+	font-size: 2.3rem;
+	line-height: 3.3rem;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_detail{
+	width: 100%;
+	height: auto;
+	float: left;
+	padding: 42px;
+}
+.I-tech_detail .tech_detail-main .tech_detail-main_detail p{
+	font-size: 2.2rem;
+	line-height: 3.5rem;
+}
+.I-tech_detail .tech_detail-title{
+	width: 455px;
+	padding: 0 0 30px 0;
+}
+.I-tech_detail .tech_detail-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+	background-color: var(--color-dot);
+}
+.I-tech_detail .tech_detail-title p{
+	font-size: 2.6rem;
+	line-height: 4rem;
+}
+
+
+.I-tech_detail .tech_detail-image{
+	width: 270px;
+	margin: 60px auto;
+}
+.I-tech_detail .tech_detail-image img{ }
+.I-tech_detail .tech_detail-title_sub{
+	margin: 42px 0 29px 0;
+}
+.I-tech_detail .tech_detail-title_sub p{
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+}
+.I-tech_detail .tech_detail-description{
+	margin: 30px 0 35px 0;
+}
+.I-tech_detail .tech_detail-description p{
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+}
+.I-tech_detail .detail_list_wrapper{
+	margin: auto;
+	width: 360px;
+}
+.I-tech_detail .tech_detail-list{
+	margin: 0 -5px 30px -5px;
+	overflow: hidden;
+}
+.I-tech_detail .tech_detail-list .tech_detail-item{
+	padding: 5px;
+	width: 100%;
+	height: 70px;
+}
+.I-tech_detail .tech_detail-list .tech_detail-item a{ }
+.I-tech_detail .tech_detail-list .tech_detail-item:last-child{ }
+.I-tech_detail .tech_detail-list .tech_detail-item:last-child a{ }
+.I-tech_detail .tech_detail-list .tech_detail-item p{
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+}
+.I-tech_detail .tech_detail-note{ }
+.I-tech_detail .tech_detail-note .tech_detail-noteItem{
+	font-size: 1.45rem;
+	line-height: 2rem;
+	padding: 16px 0;
+}
+.I-tech_detail .tech_detail-note .tech_detail-noteItem:first-child{ }
+
+
+.I-lecturer_introduction{
+	padding: 60px 0;
+}
+.I-lecturer_introduction.lecturer_java{}
+.I-lecturer_introduction.lecturer_unity{
+	padding: 60px 0 0 0;
+}
+.I-lecturer_introduction.lecturer_support{
+	padding: 60px 0 30px 0;
+}
+.I-lecturer_introduction .wrapper{
+	max-width: 450px;
+}
+.I-lecturer_introduction .lecturer_introduction-title{
+	width: 100%;
+	padding: 0 0 30px 0;
+}
+.I-lecturer_introduction .lecturer_introduction-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+}
+.I-lecturer_introduction .lecturer_introduction-title p{
+	font-size: 2.9rem;
+	line-height: 3.7rem;
+}
+.I-lecturer_introduction .lecturer_introduction-description{
+	margin: 30px 0;
+	width: 100%;
+}
+.I-lecturer_introduction .lecturer_introduction-description p{
+	font-size: 1.7rem;
+	line-height: 3.2rem;
+}
+.I-lecturer_introduction .lecturer_item{
+	margin: 30px 0 0 0;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .description{
+	padding: 0 0 20px 0;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .description .position{
+	padding: 8px 13px;
+	margin: 0 26px 0 0;
+	font-size: 1.1rem;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .description .name{
+	font-size: 3.3rem;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .detail{
+
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .detail span{
+	font-size: 1.6rem;
+	line-height: 3.4rem;
+	margin: 23px 0 0 0;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .lecturer_image{
+	position: static;
+	width: 345px;
+	margin: 62px auto 0 auto;
+}
+.I-lecturer_introduction .lecturer_item .lecturer_component .lecturer_image img{ }
+.I-lecturer_introduction.introduction-card.lecturer_support .introduction-list{
+	margin: 30px 0 0 0;
+}
+.I-lecturer_introduction.introduction-card.lecturer_java .introduction-list .introduction-item{
+	height: 480px;
+	margin: 0 0 30px 0;
+}
+.I-lecturer_introduction.introduction-card.lecturer_support .introduction-list .introduction-item{
+	margin: 0 0 18px 0;
+	height: 550px;
+}
+.I-lecturer_introduction.introduction-card.lecturer_java .introduction-list .introduction-item .card{
+	padding: 39px 0 0 0;
+}
+.I-lecturer_introduction.introduction-card.lecturer_support .introduction-list .introduction-item .card{
+	padding: 74px 0 0 0;
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card::before{ }
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card::before{ }
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card .image{
+	width: 190px;
+	height: 190px;
+	border-radius: 190px;
+	margin: 0 auto 26px auto;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .image{
+	width: 273px;
+	height: 80px;
+	margin: 0 auto 50px auto;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .image.height_size img{
+	width: auto;
+	height: 100%;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .image img{ }
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .description{ }
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .description .position{
+	margin: 0 17px 0 0;
+	width: 72px;
+	height: 27px;
+	font-size: 1.1rem;
+}
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .description .name{
+	font-size: 1.9rem;
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card .detail{
+	margin: 23px 0 0 0;
+	padding: 0 30px;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .detail{
+	margin: 32px 0 0 0;
+	padding: 0 33px;
+}
+.I-lecturer_introduction.lecturer_java.introduction-card .introduction-list .introduction-item .card .detail span{
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	letter-spacing: 0px;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .detail span{
+	font-size: 2rem;
+	line-height: 3.2rem;
+	letter-spacing: 0px;
+}
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .content{ }
+.I-lecturer_introduction.lecturer_support.introduction-card .introduction-list .introduction-item .card .content p{
+	font-size: 2.2rem;
+	line-height: 1.8rem;
+}
+
+.I-lecturer_introduction.introduction-card .introduction-list .introduction-item .card .detail span.highlight{ }
+.I-lecturer_introduction .course{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-lecturer_introduction .course .logo{
+	width: 60px;
+	margin: 0 22px 0 0;
+}
+.I-lecturer_introduction .course .logo img{ }
+.I-lecturer_introduction .course p{
+	font-size: 2.4rem;
+}
+
+.I-assistant_instructor{
+	padding: 0 0 0 0;
+}
+.I-assistant_instructor .wrapper{
+	max-width: 420px;
+	display: block;
+}
+.I-assistant_instructor .assistant_image{
+	float: right;
+	width: 100%;
+	margin: 30px 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-assistant_instructor .assistant_image img{
+	width: 123px;
+	margin: auto;
+}
+.I-assistant_instructor .assistant_content{
+	float: right;
+	width: 100%;
+	margin: 60px 0 0 0;
+	height: auto;
+}
+.I-assistant_instructor .assistant_content .description{ }
+.I-assistant_instructor .assistant_content .description .position{
+	margin: 0 20px 0 0;
+	padding: 8px 10px;
+	height: 25px;
+	font-size: 1rem;
+
+}
+.I-assistant_instructor .assistant_content .description .name{
+	font-size: 1.9rem;
+}
+.I-assistant_instructor .assistant_content .detail{
+	margin: 25px 0 0 0;
+}
+.I-assistant_instructor .assistant_content .detail span{
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+}
+
+.I-vr_support{
+	padding: 60px 0;
+}
+.I-vr_support .wrapper{
+	width: 100%;
+	max-width: 420px;
+}
+.I-vr_support .vr_support-title{
+	padding: 0 0 30px 0;
+}
+.I-vr_support .vr_support-title::before{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: calc(50% - 15px);
+	width: 30px;
+	height: 7px;
+}
+.I-vr_support .vr_support-title p{
+	width: 100%;
+	font-size: 2.5rem;
+	line-height: 4rem;
+}
+.I-vr_support .vr_support-list{
+	margin: 0 auto;
+}
+.I-vr_support .vr_support-list .vr_support-item{
+	float: left;
+	padding: 0;
+	width: 100%;
+	margin: 60px 0 0 0;
+	justify-content: center;
+}
+.I-vr_support .vr_support-list .vr_support-item img{
+	width: 100%;
+	width: 185px;
+}
+
+.I-carousel{
+	width: 100%;
+	overflow: hidden;
+	background-color: var(--background-color-2);
+}
+.I-carousel img{
+	float: left;
+	height: 95px;
+	overflow: hidden;
+}
+.I-carousel img:nth-child(1){
+	width: 110px;
+}
+.I-carousel img:nth-child(2){
+	width: 170px;
+}
+.I-carousel img:nth-child(3){
+	width: 170px;
+}
+.I-carousel img:nth-child(4){
+	width: 195px;
+}
+.I-carousel img:nth-child(5){
+	width: 255px;
+}
+
+.I-footer{
+	padding: 60px 0;
+}
+.I-footer .title_wrapper{
+	display: block;
+	width: 275px;
+	margin: 0 auto 45px auto;
+}
+.I-footer .title_wrapper .title_item{
+	padding: 0;
+	margin: 0 0 20px 0;
+}
+.I-footer p{
+	margin: 0 0 60px 0;
+	font-size: 1.4rem;
+	line-height: 3rem;
+}
+.I-footer p span{
+	font-size: 1.4rem;
+	line-height: 3rem;
+}
+.I-footer .image_wrapper{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.I-footer .image_wrapper img{
+	width: 220px;
+}
+.I-footer span{
+	display: block;
+	color: var(--text-color-01);
+	font-family: "NotoSansCJKjp-Regular";
+	font-size: 1.1rem;
+	font-weight: 500;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 2.2rem;
+	text-align: center;
+}
+
+
+/*Intrduction Card*/
+
+.introduction-card .introduction-list{
+  margin: 0;
+}
+.introduction-card .introduction-list .introduction-item{
+  padding: 0;
+  width: 100%;
+}
+.introduction-card .introduction-list .introduction-item .card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color-1);
+}
+.introduction-card .introduction-list .introduction-item .card::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 36px;
+  height: 36px;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+}
+
+}
+
+@media only screen and (max-width: 449px)
+{
+    .wrapper{
+    	max-width: 100% !important;
+    	padding: 0 10px;
+    }
+    .I-description .wrapper .description-title{
+        width: 100%;
+    }
+    .I-tech_detail .tech_detail-title{
+        width: 100%;
+    }
+    .I-tech_detail .tech_detail-title{
+        width: 100%;
+    }
+}

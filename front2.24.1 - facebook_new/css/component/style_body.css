@@ -14,6 +14,8 @@
 	padding: 0 16px;
 	padding: 16px 0;
 	height: calc( 100vh - 60px);
+	background-color: #18191a;
+	z-index: 2;
 }
 .I-main .sidebar .sidebar_item{
 	width: 100%;

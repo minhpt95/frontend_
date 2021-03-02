@@ -1,0 +1,117 @@
+.I-login{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(45deg, var(--color-root1), var(--color-root2));  
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.I-login .login-wrapper{
+	position: relative;
+	width: calc(100% - 20px);
+	max-width: 350px;
+	padding: 40px 30px;
+	border-radius: 20px;
+	background-color: #fff9;
+	overflow: hidden;
+	transition: all 300ms ease;
+	z-index: 2;
+}
+.I-login .login-wrapper .login-form{
+	width: 100%;
+	height: 100%;
+}
+.I-login .login-wrapper .login-form h2{
+	position: relative;
+	color: #3a3a3a;
+	text-align: center;
+	margin: 0 0 30px 0;
+}
+.I-login .login-wrapper .login-form h5{
+	position: relative;
+	color: #3a3a3a;
+	text-align: center;
+	margin: 15px 0;
+}
+.I-login .login-wrapper .login-form h2::before{
+	position: absolute;
+	bottom: -15px;
+	left: calc(50% - 20px);
+	width: 40px;
+	height: 3px;
+	content: "";
+	background-color: #3a3a3a;
+}
+.I-login .login-wrapper .login-form .login-social{
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-login .login-wrapper .login-form .login-social .social-item{
+	margin: 0 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #3a3a3a;
+	font-size: 16px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	border: 1px solid #748c88;
+}
+.I-login .login-wrapper .login-form .login-social .social-item:hover{
+	color: var(--color-root1);
+}
+.I-login .login-wrapper .login-form .title-wrapper *{
+    font-weight: bold;
+}
+
+.I-login .login-wrapper .login-remember{
+	display: flex;
+	align-items: center;
+}
+.I-login .login-wrapper .login-remember label{
+	position: relative;
+	float: left;
+	margin: 0 5px 0 0;
+}
+.I-login .login-wrapper .login-remember label::before{
+	position: absolute;
+	content: "";
+	top: 11px;
+	left: 1px;
+	transform: rotate(50deg);
+	width: 0;
+	height: 2px;
+	background-color: var(--color-root1);
+	transition: all 300ms ease;
+}
+.I-login .login-wrapper .login-remember label::after{
+	position: absolute;
+	content: "";
+	top: 9px;
+	left: 5px;
+	transform: rotate(-55deg);
+	width: 0;
+	height: 2px;
+	background-color: var(--color-root1);
+	transition: all 300ms ease;
+}
+.I-login .login-wrapper .login-remember label.is-checked::before{
+	width: 9px;
+}
+.I-login .login-wrapper .login-remember label.is-checked::after{
+	width: 15px;
+}
+.I-login .login-wrapper .login-action{
+	padding: 10px 0;
+} 
+.login-forgot{
+	display: flex;
+	justify-content: flex-end;
+}
+

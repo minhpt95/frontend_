@@ -1,0 +1,56 @@
+.I-other_detail{
+	width: 100%;
+	padding: 100px 0;
+	background-color: #f7f9fb;
+}
+.I-other_detail h2.other_detail_title{
+	font-size: 34px;
+	line-height: 1.3;
+	color: #1f1f1f;
+	text-align: center;
+}
+.I-other_detail .list_other{
+	width: 100%;
+	padding: 50px 0;
+	overflow: hidden;
+}
+.I-other_detail .list_other .item_other{
+	float: left;
+	width: 50%;
+	min-height: 180px;
+	display: flex;
+	padding: 30px;
+}
+.I-other_detail .list_other .item_other .icon{
+	width: 70px;
+	padding: 0 20px 0 0;
+	margin: 0 0 15px 0;
+}
+.I-other_detail .list_other .item_other .icon img{
+	width: 50px;
+}
+.I-other_detail .list_other .item_other .content{
+	width: calc(100% - 70px);
+}
+.I-other_detail .list_other .item_other .content h6.title_content{
+	width: 100%;
+	margin: 0 0 15px 0;
+	font-weight: 600;
+	font-size: 16px;
+	color: #1f1f1f;
+}
+.I-other_detail .list_other .item_other .content p.detail_content{
+	width: 100%;
+	line-height: 1.6;
+	color: #828282;
+	text-align: justify;
+}
+
+
+
+
+
+
+
+
+

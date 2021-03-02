@@ -1,0 +1,42 @@
+.I-ai{
+	width: 100%;
+	padding: 100px 0 50px 0;
+}
+.I-ai h2.title_ai{
+	color: #0a0a0a;
+	font-size: 34px;
+	margin: 0 0 50px 0;
+	text-align: center;
+}
+.I-ai .ai_item{
+	width: 100%;
+	padding: 0 30px;
+	margin: 0 0 100px 0;
+}
+.I-ai .ai_item .ai_image{
+	width: 100%;
+}
+.I-ai .ai_item .ai_image img{
+	width: 100%;
+}
+.I-ai .ai_item h2.ai_title{
+	width: 100%;
+	font-size: 34px;
+	color: #1f1f1f;
+	margin: 0 0 10px 0;
+}
+.I-ai .ai_item h6.ai_detail{
+	width: 100%;
+	font-weight: 400;
+	font-size: 18px;
+	color: #828282;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+.I-ai .ai_item.side_item h2.ai_title{
+	margin: 30px 0 10px 0;
+}
+
+
+
+

@@ -647,11 +647,265 @@
 	height: 400px;
 	background-color: #f0f0f0;
 }
+.I-footer .footer_contact{
+	width: 100%;
+	padding: 60px 0 40px 0;
+	background-color: #001633;
+}
+.I-footer .footer_contact .full_logo{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 0 0 30px 0;
+	font-size: 48px;
+	color: #fff;
+}
+.I-footer .footer_contact .full_logo img{
+	width: 100px;
+	height: 100px;
+}
+.I-footer .footer_contact .contact_wrapper{
+	width: 100%;
+	overflow: hidden;
+	margin: 0 0 20px 0;
+}
+.I-footer .footer_contact .contact_wrapper .contact_title{
+	width: 100%;
+}
+.I-footer .footer_contact .contact_wrapper .contact_title h5{
+	margin: 0 0 20px 0;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: 0;
+	color: #fff;
+}
+.I-footer .footer_contact .contact_wrapper .contact_content{
+	width: 100%;
+}
+.I-footer .footer_contact .contact_wrapper .contact_content span{
+	float: left;
+	width: 90%;
+	margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+}
+.I-footer .footer_contact .contact_wrapper .contact_content span a{
+    color: #fff;
+}
+.I-footer .footer_contact .contact_wrapper .contact_content span i{
+	margin: 0 10px 0 0;
+}
+.I-footer .social_wrapper{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 -6px;
+}
+.I-footer .social_wrapper .social-item{
+	/*width: 16px;*/
+	height: 16px;
+	padding: 0 6px;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+    transition: all 300ms ease;
+    color: #fff;
+}
+.I-footer .copyright{
+	padding: 25px 0;
+	background-color: #00122b;
+	overflow: hidden;
+}
+.I-footer .copyright .pull-left{
+	float: left;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 25px;
+	color: #fff;
+}
+
+.pagination_wrapper{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 
 
 
-
-
+.I-cart{
+    width: 100%;
+    padding: 50px 0;
+    background-color: #fff;
+}
+.I-cart .cart_wrapper{
+    width: 100%;
+}
+.I-cart .cart_wrapper .title{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+.I-cart .cart_wrapper .cart_item_wrapper{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .title_cart{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .title_cart .name{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .title_cart .price{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .title_cart .quantity{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .title_cart .subtotal{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart{
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 130px;
+    border-bottom: 1px solid #ddd;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .remove_item{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .remove_item:hover{
+    color: #d96488;
+    cursor: pointer;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .image_item{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .image_item img{
+    height: 100%;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .title_item{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .price_item{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .quantity_item{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .item_cart .subtotal_item{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .cart_update{
+    width: 100%;
+    padding: 0 50px;
+    background-color: #fffafb;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .cart_update button{
+    background-color: rgba(0, 0, 0, 0);
+    color: #fb9dab;
+    border: none;
+    padding: 10px;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .cart_update button i{
+    margin: 0 10px;
+}
+.I-cart .cart_wrapper .cart_item_wrapper .cart_update button:hover{
+    color: #000;
+}
+.I-cart .cart_wrapper .cart_total{
+    width: 100%;
+    padding: 10px 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.I-cart .cart_wrapper .cart_total .title_total{
+    width: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.I-cart .cart_wrapper .cart_total .price_total{
+    width: 100%;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.I-cart .cart_wrapper .cart_total .price_total span{
+    margin: 0 10px;
+    font-size: 20px;
+    color: #fb9dab;
+}
+.I-cart .cart_wrapper .cart_total .checkout{
+    width: 100%;
+}
+.I-cart .cart_wrapper .cart_total .checkout button{
+    width: 100%;
+    border: none;
+    background-color: #fb9dab;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 100%;
+}
 
 

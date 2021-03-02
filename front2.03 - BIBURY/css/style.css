@@ -28,7 +28,7 @@
 	color: #000;
 }
 .I-header .header_wrapper .header_logo span{
-	color: #d96488;
+	color: #6864d9;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -310,7 +310,7 @@
 	text-transform: uppercase;
 }
 .I-service .service_row .service_col .service_item:hover{
-	color: #d96488;
+	color: #6864d9;
 }
 .I-service .service_row .service_col .service_item .icon{
 	width: 50px;
@@ -373,10 +373,10 @@
 	cursor: pointer;
 }
 .I-listItem .listItem_select ul li:hover{
-	color: #d96488;
+	color: #6864d9;
 }
 .I-listItem .listItem_select ul li.is-select{
-	color: #d96488;
+	color: #6864d9;
 }
 .I-listItem .listItem_select ul li:not(:last-child){
 	border-right: 1px solid #f0f0f0;
@@ -429,7 +429,7 @@
 	align-items: center;
 	justify-content: flex-end;
 	padding: 0 20px;
-	color: #d96488;
+	color: #6864d9;
 	z-index: 2;
 }
 .I-item .item_top{
@@ -461,7 +461,7 @@
 	height: 40px;
 	border-radius: 40px;
 	background-color: #fff;
-	color: #d96488;
+	color: #6864d9;
 	margin: 0 30px;
 	opacity: 0;
 	transition: all 300ms ease;
@@ -487,7 +487,7 @@
     text-overflow: ellipsis;
     margin: 0;
     line-height: 40px;
-    color: #d96488;
+    color: #6864d9;
 }
 .I-item .item_price{
 	width: 100%;
@@ -592,7 +592,7 @@
 	float: left;
 	color: #fff;
 	padding: 3px 7px;
-	background-color: #d96488;
+	background-color: #6864d9;
 }
 .I-detail_item .detail_item_wrapper .item_detail_wrapper .item_detail .name{
 	padding: 5px 0;
@@ -604,7 +604,7 @@
 .I-detail_item .detail_item_wrapper .item_detail_wrapper .item_detail .prices{
 	padding: 30px 0;
 	font-size: 22px;
-	color: #d96488;
+	color: #6864d9;
 }
 .I-detail_item .detail_item_wrapper .item_detail_wrapper .item_detail .prices span{
 	text-decoration: line-through;
@@ -638,7 +638,7 @@
 	width: 150px;
 	height: 40px;
 	background-color: #fff;
-	color: #d96488;
+	color: #6864d9;
 	border: 1px solid #ddd;
 }
 .I-detail_item .detail_item_wrapper .item_detail_wrapper .item_detail .item_tag{
@@ -647,7 +647,7 @@
 	font-size: 16px;
 }
 .I-detail_item .detail_item_wrapper .item_detail_wrapper .item_detail .item_tag a{
-	color: #d96488;
+	color: #6864d9;
 	font-weight: normal;
 	padding: 0 10px;
 }
@@ -785,7 +785,7 @@
 	justify-content: center;
 }
 .I-cart .cart_wrapper .cart_item_wrapper .item_cart .remove_item:hover{
-	color: #d96488;
+	color: #6864d9;
 	cursor: pointer;
 }
 .I-cart .cart_wrapper .cart_item_wrapper .item_cart .image_item{
@@ -947,7 +947,7 @@
 .I-footer{
 	width: 100%;
 	height: 50px;
-	background-color: #d96488;
+	background-color: #6864d9;
 	display: flex;
 	align-items: center;
 	justify-content: center;

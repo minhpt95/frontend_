@@ -1,0 +1,297 @@
+.I-carousel{
+	position: relative;
+	height: 600px;
+}
+.I-carousel::before{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0003;
+	/*background-image: linear-gradient(#00000061  2%, transparent);*/
+	z-index: 2;
+}
+/*.I-carousel::after{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(0deg, #0000008f    2%, transparent, transparent, transparent);
+	z-index: 1;
+}*/
+.I-carousel .wrapper{
+	height: 100%;
+}
+.I-carousel .carousel-image{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 0;
+	transition: all 1000ms ease;
+}
+.I-carousel .carousel-image.is-select{
+	opacity: 0.8;
+	visibility: visible;
+	z-index: 1;
+}
+.I-carousel .carousel-image img{
+	position: relative;
+	width: 100%;
+	transition: all 200ms ease;
+}
+.I-carousel .carousel-top{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.I-carousel .carousel-top .carousel-content_wrapper{
+	position: absolute;
+	top: 0%;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	z-index: 2;
+	padding: 0 50px 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper{
+	width: 100%;
+	background-color: #00000047;
+	padding: 0 20px;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper h1{
+	font-size: 50px;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper h3{
+	position: relative;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper h3::before{
+	position: absolute;
+	content: "";
+	top: -10px;
+	left: 0;
+	width: 30px;
+	height: 3px;
+	background-color: #fff;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper a{
+	margin: 30px 0;
+	width: 150px;
+	height: 50px;
+	border-radius: 5px;
+	border: 2px solid #fff;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 2;
+    height: 50px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper{
+	position: absolute;
+	bottom: 5%;
+	right: 0;
+	width: 50%;
+	height: 50%;
+	z-index: 2;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem {
+	width: 100%;
+	height: 100%;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem .item {
+	position: relative;
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border-radius: 10px;
+  	box-shadow: 5px 6px 5px 3px #0006;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem .item .data {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background-image: linear-gradient(0deg, #000000db, #000000db, transparent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	color: #fff;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem .item .data .title {
+	display: none;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem .item .data .detail{
+	display: none;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem .item .data .link{
+	display: none;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem .item img{
+	width: auto;
+	cursor: pointer;
+	height: 100%;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-controlItem{
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	width: 400px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-controlItem .line_image{
+	position: relative;
+	width: 350px;
+	height: 2px;
+	background-color: #ccc;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-controlItem .line_image .line_count{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2px;
+	background-color: #e5ae41;
+	transition: all 400ms ease;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-controlItem .count_image{
+	width: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+
+.owl-carousel .owl-stage-outer{
+	padding: 10px 0;
+}
+.owl-nav{
+	position: absolute;
+	bottom: -60px;
+	left: 0;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	width: 90px;
+}
+.owl-carousel .owl-nav button.owl-prev{
+	margin-right: auto;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+  	background: initial; 
+  	border: 1px solid #fff;
+  	color: #fff;
+  	font-size: 24px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+.owl-carousel .owl-nav button.owl-next{
+	margin-left: auto;
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+  	background: initial; 
+  	border: 1px solid #fff;
+  	color: #fff;
+  	font-size: 24px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 1199px)
+{
+.I-carousel{
+	position: relative;
+	height: 800px;
+}
+.I-carousel .carousel-image img{
+	position: relative;
+	width: auto;
+	height: 100%;
+	transition: all 200ms ease;
+}
+.I-carousel .carousel-top{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.I-carousel .carousel-top .carousel-content_wrapper{
+	position: static;
+	top: 0%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	padding: 70px 0 0 0;
+	display: block;
+	color: #fff;
+}
+.I-carousel .carousel-top .carousel-content_wrapper .content_wrapper{
+	padding: 20px;
+}
+
+.I-carousel .carousel-top .carousel-listItem_wrapper{
+	position: relative;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-listItem {
+	width: 100%;
+	height: 100%;
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-controlItem{
+	position: absolute;
+	bottom: -60px;
+	width: calc(100% - 100px);
+}
+.I-carousel .carousel-top .carousel-listItem_wrapper .carousel-controlItem .line_image{
+	position: relative;
+	width: calc(100% - 100px);
+	height: 2px;
+	background-color: #ccc;
+}
+
+
+
+
+}

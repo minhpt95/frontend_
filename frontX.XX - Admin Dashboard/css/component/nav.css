@@ -1,0 +1,93 @@
+nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100vh;
+	background-color: #fff9;
+	z-index: 3;
+	transition: all 200ms ease;
+}
+nav .logo{
+	width: 100%;
+	height: 60px;
+}
+nav .logo .logo-wrapper{
+	display: none;
+}
+nav .navigation-bar{
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 60px);
+	border-right: 1px solid #E5E5E5;
+}
+nav .navigation-bar > ul{
+	padding: 10px 0;
+}
+nav .navigation-bar > ul > li{
+	width: 100%;
+	height: 60px;
+}
+nav .navigation-bar > ul > li > .navigation-item{
+	height: 100%;
+	padding: 0 40px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+nav .navigation-bar > ul > li > .navigation-item > i{
+	font-size: 16px;
+	margin: 0 10px 0 0;
+}
+nav .navigation-bar > ul > li > .navigation-item.is-active{
+	font-weight: bold;
+	color: #fff;
+	background-color: var(--color-root1);
+	border-radius: 60px 0 0 60px;
+}
+nav .navigation-bar > ul > li > .navigation-item.navigation-sub{
+	position: relative;
+}
+nav .navigation-bar > ul > li > .navigation-item.navigation-sub > ul{
+	position: absolute;
+	top: 0;
+	right: -270px;
+	width: 250px;
+	background-color: #fff;
+	text-transform: none;
+	opacity: 0;
+	visibility: hidden;
+	z-index: -1;
+	transition: all 200ms ease;
+}
+nav .navigation-bar > ul > li > .navigation-item.navigation-sub > ul > li{
+	width: 100%;
+	height: 60px;
+}
+nav .navigation-bar > ul > li > .navigation-item.navigation-sub > ul > li > a{
+	height: 100%;
+	padding: 0 20px;
+}
+nav .navigation-bar > ul > li > .navigation-item:hover{
+	background-color: #fff;
+	color: #3a3a3a;
+}
+nav .navigation-bar > ul > li > .navigation-item.navigation-sub:hover > ul{
+	right: -250px;
+	opacity: 1;
+	visibility: visible;
+	z-index: 10;
+}
+
+
+nav.is-sub{
+	width: 60px;
+}
+nav.is-sub .navigation-bar > ul > li > .navigation-item{
+	padding: 0;
+}
+nav.is-sub .navigation-bar > ul > li > .navigation-item > span{
+	display: none;
+}
+nav.is-sub .navigation-bar > ul > li > .navigation-item > i{
+	margin: 0;
+}

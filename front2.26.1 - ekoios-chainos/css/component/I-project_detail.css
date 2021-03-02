@@ -1,0 +1,109 @@
+.I-project_detail{
+	width: 100%;
+	padding: 80px 0;
+}
+.I-project_detail .head_title{
+	width: 100%;
+	text-align: center;
+}
+.I-project_detail .head_title h2{
+	width: 100%;
+	font-size: 34px;
+	margin-bottom: 10px;
+}
+.I-project_detail .content_service{
+	width: 100%;
+	padding: 50px 0;
+	overflow: hidden;
+}
+.I-project_detail .content_service .content_component .service_item{
+	float: left;
+	width: 100%;
+	height: 180px;
+	padding: 0 60px;
+}
+.I-project_detail .content_service .content_component .service_item .list_tech{
+
+}
+.I-project_detail .content_service .content_component .service_item .tech_item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	overflow: hidden;
+	float: right;
+	margin: 0 5px;
+}
+.I-project_detail .content_service .content_component .service_item .tech_item img{
+	width: 70%;
+}
+.I-project_detail .content_service .content_component .service_item .list_services{
+	
+}
+.I-project_detail .content_service .content_component .service_item .list_services .service_project{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.I-project_detail .content_service .content_component .service_item .list_services .service_project .service_p_wrapper{
+	display: flex;
+	align-items: center;
+	color: #5f6368;
+	min-width: 130px;
+	float: left;
+}
+.I-project_detail .content_service .content_component .service_item .list_services .service_project .service_p_wrapper i{
+	margin: 0 10px 0 0;
+}
+.I-project_detail .content_service .content_component .service_item .icon{
+	font-size: 36px;
+	margin: 0 0 20px 0;
+	color: #5F6368;
+}
+.I-project_detail .content_service .content_component .service_item h4.title_service{
+	color: #1f1f1f;
+	font-size: 24px;
+	margin: 0 0 20px 0;
+}
+.I-project_detail .content_service .content_component .service_item p.detail_service{
+	line-height: 1.6;
+	color: #828282;
+}
+.I-project_detail .content_service .content_component .image_service{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+.I-project_detail .content_service .content_component .image_service img{
+	width: 100%;
+	max-width: 390px;
+}
+.I-project_detail .content_service .content_component:nth-child(1){
+	width: 30%;
+	float: left;
+	text-align: right;
+}
+.I-project_detail .content_service .content_component:nth-child(2){
+	width: 30%;
+	float: right;
+	text-align: left;
+}
+.I-project_detail .content_service .content_component:nth-child(3){
+	width: 40%;
+	float: left;
+}
+
+.I-project_detail .detail_project{
+	width: 100%;
+	max-width: 600px;
+	height: 200px;
+	margin: auto;
+	padding: 30px 0;
+}
+
+

@@ -1,0 +1,25 @@
+.I-notification{
+	padding: 0 !important;
+	overflow: hidden;
+}
+.I-notification .filter-wrapper{
+	width: 100px;
+}
+.I-notification .notification-wrapper .notification-header{
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+	padding: 0 15px;
+}
+.I-notification .notification-wrapper .notification-header h6{
+	font-weight: bold;
+}
+.I-notification .notification-wrapper .notification-content{
+	width: 100%;
+	height: 500px;
+}
+
+
+
+
+

@@ -1,0 +1,68 @@
+.I-staff{
+	width: 100%;
+}
+.I-staff .image_top{
+	width: 100%;
+}
+.I-staff .image_top img{
+	width: 100%;
+}
+.I-staff .list_staff{
+	width: 100%;
+	padding: 0 50px;
+	transform: translateY(-60px);
+}
+.I-staff .list_staff .staff_wrapper{
+	width: 100%;
+	padding: 50px;
+	background-color: #ffffffde;
+}
+.I-staff .list_staff .staff_wrapper h2.staff_title{
+	font-size: 36px;
+	color: #08152e;
+	margin: 0;
+	font-size: "Ubuntu";
+}
+.I-staff .list_staff .staff_wrapper .staff_main{
+	width: 100%;
+	margin: 50px 0;
+}
+.I-staff .list_staff .staff_wrapper .staff_main .staff_item{
+	width: 100%;
+	margin: 0 0 15px 0;
+}
+.I-staff .list_staff .staff_wrapper .staff_main .staff_item .staff_image{
+	width: 100%;
+	margin: 0 0 25px 0;
+}
+.I-staff .list_staff .staff_wrapper .staff_main .staff_item .staff_image img{
+	width: 100%;
+}
+.I-staff .list_staff .staff_wrapper .staff_main .staff_item h3.staff_name{
+	width: 100%;
+	font-size: 24px;
+	color: #000;
+	margin: 0 0 10px 0;
+}
+.I-staff .list_staff .staff_wrapper .staff_main .staff_item h4.staff_position{
+	width: 100%;
+	color: #345579;
+	font-size: 12px;
+	margin: 0 0 25px 0;
+}
+.I-staff .list_staff .staff_wrapper .staff_main .staff_item .staff_detail{
+	width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 25px;
+    -webkit-line-clamp: 5;
+    height: 125px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+	color: #000;
+	text-align: justify;
+}
+
+
+

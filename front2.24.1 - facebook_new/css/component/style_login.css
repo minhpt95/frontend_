@@ -59,7 +59,6 @@
     color: #fff;
     background-color: #166fe5;
     margin: 0 0 12px 0;
-    font-weight: bold;
 }
 .I-login .form_wrapper form .forgot_wrapper{
 	width: 100%;
@@ -87,7 +86,6 @@
 .I-login .form_wrapper form .create_wrapper button.register_button{
 	padding: 0 16px;
 	height: 50px;
-	font-weight: bold;
 	color: #fff;
 	border: none;
 	background-color: #42b72a;
@@ -195,7 +193,6 @@
 	width: 100%;
 	padding: 0 16px;
 	height: 50px;
-	font-weight: bold;
 	color: #fff;
 	border: none;
 	background-color: #166fe5;

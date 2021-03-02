@@ -1,0 +1,133 @@
+.I-pay{
+	width: 100%;
+	padding: 100px 0;
+	background-color: #e5e5e5;
+}
+
+.I-pay .pay_wrapper{
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+}
+.I-pay .pay_wrapper .pay_01{
+
+}
+.I-pay .option_wrapper{
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+.I-pay .option_wrapper .option_item{
+	display: flex;
+	align-items: center;
+}
+.I-pay .option_wrapper .option_item input{
+	margin: 0 10px 0 0;
+}
+.I-pay .option_wrapper .option_item span{
+
+}
+.I-pay .pay_wrapper .infor_wrapper{
+
+}
+.I-pay .pay_wrapper .row_wrapper{
+	margin: 0 0 5px 0;
+}
+.I-pay .pay_wrapper .infor_wrapper .infor_item{
+	width: 100%;
+}
+.I-pay .pay_wrapper .infor_wrapper .infor_item input{
+	margin: 0 0 10px 0;
+	width: 100%;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.I-pay .pay_wrapper .infor_wrapper .infor_item span{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 0 10px 0;
+}
+.I-pay .pay_wrapper .infor_wrapper .infor_item select{
+	margin: 0 0 10px 0;
+	width: 100%;
+	padding: 0 10px;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.I-pay .pay_wrapper button{
+	margin: 0 0 10px 0;
+	width: 100%;
+	padding: 0 10px;
+	height: 32px;
+	/*border: 1px solid #ccc;*/
+	border: none;
+	border-radius: 5px;
+	background-color: #e5e5e5;
+	box-shadow: 1px 1px 2px 0 #283b5933, -1px -1px 2px #fff;
+}
+.I-pay .pay_wrapper button.on-click{
+	box-shadow: 1px 1px 2px 0 #283b5933, -1px -1px 2px #fff, inset -4px -4px 6px 0 #ffffff80, inset 2px 2px 4px 0 #0d27502e;
+}
+
+.I-pay .title_wrapper{
+	width: 100%;
+	margin: 30px 0 20px 0;
+	display: flex;
+	align-items: center;
+}
+.I-pay .title_wrapper i{
+	font-size: 24px;
+}
+.I-pay .title_wrapper span{
+	font-size: 20px;
+	margin: 0 0 0 10px;
+}
+.I-pay .data_wrapper{
+	
+} 
+.I-pay .data_wrapper .row_wrapper{
+	margin: 0 0 5px 0;
+}
+.I-pay .data_wrapper .data_text{
+	width: 100%;
+	height: 32px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	margin: 0 0 10px 0;
+} 
+.I-pay .data_wrapper .data_clear{
+} 
+.I-pay .data_wrapper p{
+	position: relative;
+	font-size: 18px;
+	padding: 0 20px;
+} 
+.I-pay .data_wrapper p::before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	font-size: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	content: "."
+} 
+.I-pay .data_wrapper p span{
+	font-size: 22px;
+} 
+
+
+
+
+
+
+
+

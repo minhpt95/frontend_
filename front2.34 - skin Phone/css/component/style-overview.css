@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'NotoSansCJKjp-Black';
+    src: url('../../fonts/NotoSansCJKjp/NotoSansCJKjp-Black.otf');
+}
+@font-face {
+    font-family: 'NotoSansCJKjp-Thin';
+    src: url('../../fonts/NotoSansCJKjp/NotoSansCJKjp-Thin.otf');
+}
+@font-face {
+    font-family: 'NotoSansCJKjp-Regular';
+    src: url('../../fonts/NotoSansCJKjp/NotoSansCJKjp-Regular.otf');
+}
+@font-face {
+    font-family: 'NotoSansCJKjp-Medium';
+    src: url('../../fonts/NotoSansCJKjp/NotoSansCJKjp-Medium.otf');
+}
+@font-face {
+    font-family: 'DIN-Regular';
+    src: url('../../fonts/DIN/DIN-Regular.ttf');
+}
+@font-face {
+    font-family: 'DIN-BoldAlternate';
+    src: url('../../fonts/DIN/DIN-BoldAlternate.ttf');
+}
+
+:root {
+  --background-color-header : #0090a8;
+  --background-color-1      : #ffffff;
+  --background-color-2      : #f2f2f2;
+  --background-color-3      : #0090a8;
+  --background-color-4      : #005968;
+  --background-color-5      : #dc205a;
+  --background-color-6      : #000000;
+  --text-color-01           : #ffffff;
+  --text-color-02           : #ffff00;
+  --text-color-03           : #000000;
+  --text-color-04           : #0090a8;
+  --button-item-1           : #005968;
+  --button-item-2           : #00d2f4;
+  --button-item-3           : #009bb5;
+  --color-dot               : #0090a8;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+    line-height: 10px;
+}
+a:hover{
+    text-decoration: none;
+}
+header{
+    overflow: hidden;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+footer{
+    
+}
+
+.body-row{
+    width: 100%;
+}
+.body-row .body-col{
+    padding: 0;
+}
+/*Intrduction Card*/
+.introduction-card .introduction-list{
+  margin: 104px -25px 80px -25px;
+  overflow: hidden;
+}
+.introduction-card .introduction-list .introduction-item{
+  float: left;
+  padding: 0 25px;
+  width: 50%;
+}
+.introduction-card .introduction-list .introduction-item .card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color-1);
+}
+.introduction-card .introduction-list .introduction-item .card::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 41px;
+  height: 41px;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+}

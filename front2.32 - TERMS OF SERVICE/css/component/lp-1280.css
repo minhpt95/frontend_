@@ -1,0 +1,31 @@
+
+
+/*
+.I-term_service ul.decimal_type{
+	list-style-type: decimal ;
+}
+.I-term_service ul.decimal_type > li{
+	font-weight: bold;
+}
+
+.I-term_service ul.decimal_type > li > ol{
+    counter-reset: section;
+    list-style-type: none;
+    font-weight: normal;
+    margin: 5px 0;
+}
+.I-term_service ul.decimal_type > li > ol > li{
+	position: relative;
+	margin: 3px 0;
+}
+.I-term_service ul.decimal_type > li > ol > li:before {
+	position: absolute;
+	top: 0;
+	left: -30px;
+    counter-increment: section;
+    content: counters(section, ".") ". " counters(section, ".") " ";
+}
+.I-term_service ul.decimal_type > li > ol > li > ul{
+    list-style-type: lower-alpha;
+}
+*/
